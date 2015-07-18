@@ -1,0 +1,455 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: Controller.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Controller.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Controller"
+Output Format                      : NGC
+Target Device                      : xc6slx100-3-fgg676
+
+---- Source Options
+Top Module Name                    : Controller
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Controller.vhd" into library work
+Parsing entity <Controller>.
+Parsing architecture <Behavioral> of entity <controller>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Controller> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Controller.vhd" Line 670. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Controller>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Controller.vhd".
+    Found 3-bit register for signal <g_state>.
+    Found 1-bit register for signal <PCWrite>.
+    Found 1-bit register for signal <IorD>.
+    Found 1-bit register for signal <TLBWrite>.
+    Found 1-bit register for signal <MemRead>.
+    Found 1-bit register for signal <MemWrite>.
+    Found 1-bit register for signal <MemDataSrc>.
+    Found 2-bit register for signal <MemAddrSrc>.
+    Found 1-bit register for signal <IRWrite>.
+    Found 2-bit register for signal <RegDst>.
+    Found 3-bit register for signal <RegDataSrc>.
+    Found 2-bit register for signal <RegDataCtrl>.
+    Found 1-bit register for signal <RegWrite>.
+    Found 2-bit register for signal <ALUSrcA>.
+    Found 3-bit register for signal <ALUSrcB>.
+    Found 4-bit register for signal <ALUOp>.
+    Found 3-bit register for signal <ExtendOp>.
+    Found 3-bit register for signal <PCSrc>.
+    Found 3-bit register for signal <PCWriteCond>.
+    Found 1-bit register for signal <HISrc>.
+    Found 1-bit register for signal <LOSrc>.
+    Found 1-bit register for signal <HIWrite>.
+    Found 1-bit register for signal <LOWrite>.
+    Found 1-bit register for signal <ALUOutWrite>.
+    Found 1-bit register for signal <RPCWrite>.
+    Found 1-bit register for signal <CP0Write>.
+    Found 5-bit register for signal <exc_code>.
+    Found 1-bit register for signal <EPCWrite>.
+    Found finite state machine <FSM_0> for signal <g_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 73                                             |
+    | Inputs             | 26                                             |
+    | Outputs            | 16                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | initialize                                     |
+    | Power Up State     | initialize                                     |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  48 D-type flip-flop(s).
+	inferred  77 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Controller> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 27
+ 1-bit register                                        : 16
+ 2-bit register                                        : 4
+ 3-bit register                                        : 5
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+# Multiplexers                                         : 77
+ 1-bit 2-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 15
+ 3-bit 2-to-1 multiplexer                              : 31
+ 4-bit 2-to-1 multiplexer                              : 16
+ 5-bit 2-to-1 multiplexer                              : 13
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <EPCWrite> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+# Multiplexers                                         : 77
+ 1-bit 2-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 15
+ 3-bit 2-to-1 multiplexer                              : 31
+ 4-bit 2-to-1 multiplexer                              : 16
+ 5-bit 2-to-1 multiplexer                              : 13
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <EPCWrite> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <g_state[1:3]> with sequential encoding.
+-------------------------------
+ State             | Encoding
+-------------------------------
+ initialize        | 000
+ instruction_fetch | 001
+ decode            | 010
+ execute           | 011
+ mem_access        | 110
+ write_back        | 101
+ interrupt         | 100
+-------------------------------
+WARNING:Xst:1710 - FF/Latch <exc_code_0> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <exc_code_2> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <exc_code_4> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Controller> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Controller, actual ratio is 0.
+FlipFlop g_state_FSM_FFd1 has been replicated 4 time(s)
+FlipFlop g_state_FSM_FFd2 has been replicated 5 time(s)
+FlipFlop g_state_FSM_FFd3 has been replicated 5 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 61
+ Flip-Flops                                            : 61
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Controller.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 251
+#      GND                         : 1
+#      INV                         : 10
+#      LUT2                        : 8
+#      LUT3                        : 38
+#      LUT4                        : 27
+#      LUT5                        : 48
+#      LUT6                        : 116
+#      MUXF7                       : 3
+# FlipFlops/Latches                : 61
+#      FD                          : 27
+#      FDC                         : 17
+#      FDE                         : 17
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 81
+#      IBUF                        : 33
+#      OBUF                        : 48
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx100fgg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              61  out of  126576     0%  
+ Number of Slice LUTs:                  247  out of  63288     0%  
+    Number used as Logic:               247  out of  63288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    257
+   Number with an unused Flip Flop:     196  out of    257    76%  
+   Number with an unused LUT:            10  out of    257     3%  
+   Number of fully used LUT-FF pairs:    51  out of    257    19%  
+   Number of unique control sets:        11
+
+IO Utilization: 
+ Number of IOs:                          82
+ Number of bonded IOBs:                  82  out of    480    17%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 61    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.835ns (Maximum Frequency: 352.678MHz)
+   Minimum input arrival time before clock: 9.397ns
+   Maximum output required time after clock: 3.668ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.835ns (frequency: 352.678MHz)
+  Total number of paths / destination ports: 322 / 78
+-------------------------------------------------------------------------
+Delay:               2.835ns (Levels of Logic = 2)
+  Source:            g_state_FSM_FFd1_2 (FF)
+  Destination:       RegDst_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: g_state_FSM_FFd1_2 to RegDst_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             13   0.447   1.161  g_state_FSM_FFd1_2 (g_state_FSM_FFd1_2)
+     LUT6:I3->O            5   0.205   0.715  _n1108_inv10 (_n1108_inv)
+     LUT3:I2->O            1   0.205   0.000  RegDst_1_rstpot (RegDst_1_rstpot)
+     FD:D                      0.102          RegDst_1
+    ----------------------------------------
+    Total                      2.835ns (0.959ns logic, 1.876ns route)
+                                       (33.8% logic, 66.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 4950 / 78
+-------------------------------------------------------------------------
+Offset:              9.397ns (Levels of Logic = 9)
+  Source:            instructions<10> (PAD)
+  Destination:       RegDst_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: instructions<10> to RegDst_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.924  instructions_10_IBUF (instructions_10_IBUF)
+     LUT5:I0->O           36   0.203   1.596  PWR_3_o_instructions[25]_equal_110_o<25>121 (PWR_3_o_instructions[25]_equal_110_o<25>12)
+     LUT6:I2->O            2   0.203   0.617  PWR_3_o_instructions[25]_equal_110_o<25>13 (PWR_3_o_instructions[25]_equal_110_o<25>1)
+     LUT4:I3->O            5   0.205   1.079  PWR_3_o_instructions[25]_equal_111_o<25>1 (PWR_3_o_instructions[25]_equal_111_o)
+     LUT6:I0->O            3   0.203   0.651  _n1086<30>11 (_n1086<30>1)
+     LUT6:I5->O            1   0.205   0.000  _n1108_inv9_SW0_G (N125)
+     MUXF7:I1->O           1   0.140   0.924  _n1108_inv9_SW0 (N44)
+     LUT6:I1->O            5   0.203   0.715  _n1108_inv10 (_n1108_inv)
+     LUT3:I2->O            1   0.205   0.000  RegDst_1_rstpot (RegDst_1_rstpot)
+     FD:D                      0.102          RegDst_1
+    ----------------------------------------
+    Total                      9.397ns (2.891ns logic, 6.506ns route)
+                                       (30.8% logic, 69.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 44 / 44
+-------------------------------------------------------------------------
+Offset:              3.668ns (Levels of Logic = 1)
+  Source:            RegDataCtrl_1 (FF)
+  Destination:       RegDataCtrl<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: RegDataCtrl_1 to RegDataCtrl<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.650  RegDataCtrl_1 (RegDataCtrl_1)
+     OBUF:I->O                 2.571          RegDataCtrl_1_OBUF (RegDataCtrl<1>)
+    ----------------------------------------
+    Total                      3.668ns (3.018ns logic, 0.650ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.835|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.33 secs
+ 
+--> 
+
+Total memory usage is 274220 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

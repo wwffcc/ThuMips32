@@ -1,0 +1,630 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: mm_manager.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mm_manager.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mm_manager"
+Output Format                      : NGC
+Target Device                      : xc6slx100-3-fgg676
+
+---- Source Options
+Top Module Name                    : mm_manager
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\TLB.vhd" into library work
+Parsing entity <TLB>.
+Parsing architecture <Behavioral> of entity <tlb>.
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Rom.vhd" into library work
+Parsing entity <Rom>.
+Parsing architecture <Behavioral> of entity <rom>.
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" into library work
+Parsing entity <mm_manager>.
+Parsing architecture <Behavioral> of entity <mm_manager>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <mm_manager> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <TLB> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Rom> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mm_manager>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd".
+INFO:Xst:3210 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" line 102: Output port <flag_missing> of the instance <mmu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" line 102: Output port <flag_writable> of the instance <mmu> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <ready>.
+    Found 1-bit register for signal <Ram1OE>.
+    Found 1-bit register for signal <Ram1WE>.
+    Found 32-bit register for signal <Ram1Addr>.
+    Found 32-bit register for signal <Ram1Data>.
+    Found 3-bit register for signal <cur_state>.
+    Found 32-bit register for signal <Data_out>.
+    Found 1-bit register for signal <Ram1EN>.
+    Found finite state machine <FSM_0> for signal <cur_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 30                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | init_state                                     |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit comparator lessequal for signal <n0000> created at line 94
+    Found 32-bit comparator lessequal for signal <n0002> created at line 94
+    Found 32-bit comparator lessequal for signal <n0005> created at line 95
+    Found 32-bit comparator lessequal for signal <n0007> created at line 96
+    Found 32-bit comparator lessequal for signal <n0009> created at line 96
+    Found 32-bit comparator lessequal for signal <n0012> created at line 97
+    Found 32-bit comparator lessequal for signal <n0014> created at line 97
+    Summary:
+	inferred 100 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred  14 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <mm_manager> synthesized.
+
+Synthesizing Unit <TLB>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\TLB.vhd".
+WARNING:Xst:647 - Input <Index<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <EntryLo0<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <EntryLo0<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <EntryLo0<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <EntryLo1<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <EntryLo1<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <EntryLo1<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <EntryHi<12:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 63-bit register for signal <tlb<14>>.
+    Found 63-bit register for signal <tlb<13>>.
+    Found 63-bit register for signal <tlb<12>>.
+    Found 63-bit register for signal <tlb<11>>.
+    Found 63-bit register for signal <tlb<10>>.
+    Found 63-bit register for signal <tlb<9>>.
+    Found 63-bit register for signal <tlb<8>>.
+    Found 63-bit register for signal <tlb<7>>.
+    Found 63-bit register for signal <tlb<6>>.
+    Found 63-bit register for signal <tlb<5>>.
+    Found 63-bit register for signal <tlb<4>>.
+    Found 63-bit register for signal <tlb<3>>.
+    Found 63-bit register for signal <tlb<2>>.
+    Found 63-bit register for signal <tlb<1>>.
+    Found 63-bit register for signal <tlb<0>>.
+    Found 63-bit register for signal <tlb<15>>.
+    Found 32-bit comparator lessequal for signal <n0000> created at line 56
+    Found 32-bit comparator greater for signal <Vaddr[31]_PWR_6_o_LessThan_2_o> created at line 56
+    Found 19-bit comparator equal for signal <tlb[0][62]_Vaddr[31]_equal_3_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[1][62]_Vaddr[31]_equal_4_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[2][62]_Vaddr[31]_equal_5_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[3][62]_Vaddr[31]_equal_6_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[4][62]_Vaddr[31]_equal_7_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[5][62]_Vaddr[31]_equal_8_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[6][62]_Vaddr[31]_equal_9_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[7][62]_Vaddr[31]_equal_10_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[8][62]_Vaddr[31]_equal_11_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[9][62]_Vaddr[31]_equal_12_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[10][62]_Vaddr[31]_equal_13_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[11][62]_Vaddr[31]_equal_14_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[12][62]_Vaddr[31]_equal_15_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[13][62]_Vaddr[31]_equal_16_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[14][62]_Vaddr[31]_equal_17_o> created at line 65
+    Found 19-bit comparator equal for signal <tlb[15][62]_Vaddr[31]_equal_18_o> created at line 65
+    Summary:
+	inferred 1008 D-type flip-flop(s).
+	inferred  18 Comparator(s).
+	inferred 726 Multiplexer(s).
+Unit <TLB> synthesized.
+
+Synthesizing Unit <Rom>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Rom.vhd".
+WARNING:Xst:647 - Input <Paddr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'rom', unconnected in block 'Rom', is tied to its initial value.
+    Found 1024x32-bit single-port Read Only RAM <Mram_rom> for signal <rom>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <Rom> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x32-bit single-port Read Only RAM                 : 1
+# Registers                                            : 23
+ 1-bit register                                        : 4
+ 32-bit register                                       : 3
+ 63-bit register                                       : 16
+# Comparators                                          : 25
+ 19-bit comparator equal                               : 16
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 8
+# Multiplexers                                         : 740
+ 1-bit 2-to-1 multiplexer                              : 739
+ 32-bit 2-to-1 multiplexer                             : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <tlb_14_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_14_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_11_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_11_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_13_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_13_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_12_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_12_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_8_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_8_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_10_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_10_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_9_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_9_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_5_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_5_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_7_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_7_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_6_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_6_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_2_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_2_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_4_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_4_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_3_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_3_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_15_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_15_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_1_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_1_22> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_0_0> of sequential type is unconnected in block <mmu>.
+WARNING:Xst:2677 - Node <tlb_0_22> of sequential type is unconnected in block <mmu>.
+
+Synthesizing (advanced) Unit <Rom>.
+INFO:Xst:3217 - HDL ADVISOR - Register <Data_out> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_rom> for implementation on block RAM resources if you made this reset synchronous instead.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Paddr>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_rom> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+Unit <Rom> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x32-bit single-port distributed Read Only RAM     : 1
+# Registers                                            : 1108
+ Flip-Flops                                            : 1108
+# Comparators                                          : 25
+ 19-bit comparator equal                               : 16
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 8
+# Multiplexers                                         : 770
+ 1-bit 2-to-1 multiplexer                              : 770
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <cur_state[1:3]> with user encoding.
+------------------------
+ State      | Encoding
+------------------------
+ init_state | 000
+ ram1read0  | 001
+ ram1read1  | 010
+ ram1write0 | 011
+ ram1write1 | 100
+------------------------
+
+Optimizing unit <mm_manager> ...
+
+Optimizing unit <TLB> ...
+WARNING:Xst:2677 - Node <mmu/tlb_0_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_0_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_1_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_1_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_15_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_15_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_3_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_3_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_4_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_4_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_2_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_2_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_6_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_6_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_7_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_7_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_5_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_5_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_9_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_9_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_10_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_10_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_8_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_8_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_12_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_12_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_13_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_13_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_11_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_11_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_14_22> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2677 - Node <mmu/tlb_14_0> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:1710 - FF/Latch <Ram1Addr_22> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_23> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_24> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_25> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_26> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_27> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_28> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_29> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_30> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_31> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:3203 - The FF/Latch <Ram1WE> in Unit <mm_manager> is the opposite to the following FF/Latch, which will be removed : <cur_state_FSM_FFd1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mm_manager, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1068
+ Flip-Flops                                            : 1068
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mm_manager.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 861
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 20
+#      LUT3                        : 110
+#      LUT4                        : 114
+#      LUT5                        : 123
+#      LUT6                        : 376
+#      MUXCY                       : 112
+#      MUXF7                       : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 1068
+#      FD                          : 4
+#      FDC                         : 33
+#      FDCE                        : 976
+#      FDE                         : 22
+#      FDP                         : 1
+#      FDRE                        : 32
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 235
+#      IBUF                        : 132
+#      OBUF                        : 103
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx100fgg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1068  out of  126576     0%  
+ Number of Slice LUTs:                  746  out of  63288     1%  
+    Number used as Logic:               746  out of  63288     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1291
+   Number with an unused Flip Flop:     223  out of   1291    17%  
+   Number with an unused LUT:           545  out of   1291    42%  
+   Number of fully used LUT-FF pairs:   523  out of   1291    40%  
+   Number of unique control sets:        20
+
+IO Utilization: 
+ Number of IOs:                         366
+ Number of bonded IOBs:                 237  out of    480    49%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 92    |
+TLBWrite                           | BUFGP                  | 976   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.458ns (Maximum Frequency: 289.173MHz)
+   Minimum input arrival time before clock: 28.471ns
+   Maximum output required time after clock: 3.926ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.458ns (frequency: 289.173MHz)
+  Total number of paths / destination ports: 493 / 178
+-------------------------------------------------------------------------
+Delay:               3.458ns (Levels of Logic = 1)
+  Source:            cur_state_FSM_FFd2 (FF)
+  Destination:       Ram1Data_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cur_state_FSM_FFd2 to Ram1Data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.447   1.085  cur_state_FSM_FFd2 (cur_state_FSM_FFd2)
+     LUT6:I3->O           32   0.205   1.291  _n02171 (_n0217)
+     FDRE:R                    0.430          Ram1Data_0
+    ----------------------------------------
+    Total                      3.458ns (1.082ns logic, 2.376ns route)
+                                       (31.3% logic, 68.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 43335621 / 158
+-------------------------------------------------------------------------
+Offset:              28.471ns (Levels of Logic = 18)
+  Source:            Vaddr<12> (PAD)
+  Destination:       Ram1Data_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: Vaddr<12> to Ram1Data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           169   1.222   2.254  Vaddr_12_IBUF (Vaddr_12_IBUF)
+     LUT3:I0->O            2   0.205   0.961  mmu/Mmux_Paddr<12>813611_SW0 (mmu/GND_6_o_GND_6_o_OR_51_o1)
+     LUT6:I1->O           42   0.203   1.434  mmu/GND_6_o_GND_6_o_OR_51_o3 (mmu/GND_6_o_GND_6_o_OR_51_o)
+     LUT5:I4->O           28   0.205   1.579  mmu/GND_6_o_GND_6_o_OR_52_o1 (mmu/Mmux_Paddr<12>6146)
+     LUT5:I0->O           26   0.203   1.207  mmu/GND_6_o_GND_6_o_OR_54_o (mmu/GND_6_o_GND_6_o_OR_54_o)
+     LUT5:I4->O           23   0.205   1.154  mmu/GND_6_o_GND_6_o_OR_55_o1 (mmu/GND_6_o_GND_6_o_OR_55_o)
+     LUT5:I4->O           25   0.205   1.297  mmu/GND_6_o_GND_6_o_OR_56_o2 (mmu/GND_6_o_GND_6_o_OR_56_o)
+     LUT6:I4->O           42   0.203   1.434  mmu/GND_6_o_GND_6_o_OR_58_o2 (mmu/GND_6_o_GND_6_o_OR_58_o)
+     LUT5:I4->O           28   0.205   1.579  mmu/GND_6_o_GND_6_o_OR_59_o1 (mmu/Mmux_Paddr<12>620)
+     LUT5:I0->O           24   0.203   1.277  mmu/GND_6_o_GND_6_o_OR_61_o (mmu/GND_6_o_GND_6_o_OR_61_o)
+     LUT3:I1->O           17   0.203   1.392  mmu/Mmux_Paddr<12>6211 (mmu/Mmux_Paddr<12>621)
+     LUT6:I0->O            1   0.203   0.924  mmu/Mmux_Paddr<12>8805 (mmu/Mmux_Paddr<12>8804)
+     LUT5:I0->O            1   0.203   0.827  mmu/Mmux_Paddr<12>88022_SW0 (N85)
+     LUT6:I2->O           38   0.203   1.624  mmu/Mmux_Paddr<12>88022 (Paddr<22>)
+     LUT6:I2->O            3   0.203   0.651  GND_3_o_Paddr[31]_equal_8_o<31>11 (GND_3_o_Paddr[31]_equal_8_o<31>11)
+     LUT3:I2->O           36   0.205   1.349  GND_3_o_Paddr[31]_equal_8_o<31>13 (GND_3_o_Paddr[31]_equal_8_o<31>1)
+     LUT5:I4->O            7   0.205   1.118  _n0318_inv21 (_n0318_inv2)
+     LUT6:I1->O           32   0.203   1.291  _n02171 (_n0217)
+     FDRE:R                    0.430          Ram1Data_0
+    ----------------------------------------
+    Total                     28.471ns (5.117ns logic, 23.354ns route)
+                                       (18.0% logic, 82.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'TLBWrite'
+  Total number of paths / destination ports: 5856 / 2928
+-------------------------------------------------------------------------
+Offset:              4.741ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       mmu/tlb_0_62 (FF)
+  Destination Clock: TLBWrite rising
+
+  Data Path: rst to mmu/tlb_0_62
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.683  rst_IBUF (rst_IBUF)
+     INV:I->O            976   0.206   2.201  mmu/rst_inv1_INV_0 (mmu/rst_inv)
+     FDCE:CLR                  0.430          mmu/tlb_14_1
+    ----------------------------------------
+    Total                      4.741ns (1.858ns logic, 2.883ns route)
+                                       (39.2% logic, 60.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 90 / 90
+-------------------------------------------------------------------------
+Offset:              3.926ns (Levels of Logic = 1)
+  Source:            Ram1WE (FF)
+  Destination:       Ram1WE (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Ram1WE to Ram1WE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              12   0.447   0.908  Ram1WE (Ram1WE_OBUF)
+     OBUF:I->O                 2.571          Ram1WE_OBUF (Ram1WE)
+    ----------------------------------------
+    Total                      3.926ns (3.018ns logic, 0.908ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+TLBWrite       |   26.918|         |         |         |
+clk            |    3.458|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 25.27 secs
+ 
+--> 
+
+Total memory usage is 278868 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   84 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

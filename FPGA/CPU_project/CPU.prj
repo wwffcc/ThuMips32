@@ -1,0 +1,4 @@
+vhdl work "TLB.vhd"
+vhdl work "Rom.vhd"
+vhdl work "mm_manager.vhd"
+vhdl work "CPU.vhd"

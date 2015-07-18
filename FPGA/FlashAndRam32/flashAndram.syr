@@ -1,0 +1,948 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: flashAndram.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "flashAndram.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "flashAndram"
+Output Format                      : NGC
+Target Device                      : xc6slx100-3-fgg676
+
+---- Source Options
+Top Module Name                    : flashAndram
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" into library work
+Parsing entity <flashAndram>.
+Parsing architecture <Behavioral> of entity <flashandram>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <flashAndram> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 158. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 216. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 370: fr_state should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 390: sw should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 391: recv_byte should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 392: recv_byte should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 393: paddr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 394: paddr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 395: final_addr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 396: final_addr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 398: flashwrite should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 399: cond2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 400: flag_next should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 401: data_ready should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 402: temp_data should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 403: temp_data should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 404: cond_flash should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 405: flashdatax should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 406: flashdatax should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 407: flashdata should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 429: flashwrite should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 556: flash_state should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 427: Assignment to cond4 ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <flashAndram>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd".
+WARNING:Xst:647 - Input <SW<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk50> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <wrn>.
+    Found 1-bit register for signal <rdn>.
+    Found 1-bit register for signal <Ram1EN>.
+    Found 1-bit register for signal <Ram2EN>.
+    Found 1-bit register for signal <Ram1WE>.
+    Found 1-bit register for signal <Ram1OE>.
+    Found 1-bit register for signal <Ram2WE>.
+    Found 1-bit register for signal <Ram2OE>.
+    Found 2-bit register for signal <flag_next>.
+    Found 2-bit register for signal <flag>.
+    Found 32-bit register for signal <Paddr>.
+    Found 32-bit register for signal <final_addr>.
+    Found 32-bit register for signal <recv_byte>.
+    Found 6-bit register for signal <fr_state>.
+    Found 4-bit register for signal <cond>.
+    Found 2-bit register for signal <cond2>.
+    Found 3-bit register for signal <cond3>.
+    Found 1-bit register for signal <flashWrite>.
+    Found 1-bit register for signal <flashRead>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_78>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_79>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_80>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_81>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_82>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_83>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_84>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_85>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_86>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_87>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_88>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_89>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_90>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_91>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_92>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_93>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_94>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_95>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_96>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_97>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_98>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_99>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_100>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_101>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_102>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_103>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_104>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_105>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_106>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_107>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_108>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_109>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_110>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_111>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_112>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_113>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_114>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_115>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_116>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_117>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_118>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_119>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_120>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_121>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_122>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_123>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_124>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_125>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_126>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_127>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_128>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_129>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_130>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_131>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_132>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_133>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_134>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_135>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_136>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_137>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_138>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_139>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_140>.
+    Found 1-bit register for signal <fr_state[5]_clk11_DFF_141>.
+    Found 32-bit register for signal <fr_state[5]_dff_83_OUT>.
+    Found 32-bit register for signal <fr_state[5]_dff_84_OUT>.
+    Found 20-bit register for signal <Ram1Addr>.
+    Found 20-bit register for signal <Ram2Addr>.
+    Found 32-bit register for signal <temp_data>.
+    Found 1-bit register for signal <flashReady>.
+    Found 1-bit register for signal <FlashOE>.
+    Found 1-bit register for signal <FlashWE>.
+    Found 32-bit register for signal <flashDatax>.
+    Found 2-bit register for signal <cond_flash>.
+    Found 6-bit register for signal <flash_state>.
+    Found 16-bit register for signal <flash_state[5]_dff_411_OUT>.
+    Found 23-bit register for signal <FlashAddr>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_184>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_185>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_186>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_187>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_188>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_189>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_190>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_191>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_192>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_193>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_194>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_195>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_196>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_197>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_198>.
+    Found 1-bit register for signal <flash_state[5]_clk11_DFF_199>.
+    Found finite state machine <FSM_1> for signal <cond>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 41                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk11 (rising_edge)                            |
+    | Reset              | rst (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+INFO:Xst:1799 - State recv0 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ctrl is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State send0 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State send1 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State send2 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State send3 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram1_save0 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram1_save1 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram2_save0 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram2_save1 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram_save is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State flash_save0 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State check_state is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram1_check0 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram1_check1 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram1_check2 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram1_check3 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram2_check0 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram2_check1 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram2_check2 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State ram2_check3 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State send_check0 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State send_check1 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State send_check2 is never reached in FSM <flash_state>.
+INFO:Xst:1799 - State send_check3 is never reached in FSM <flash_state>.
+    Found finite state machine <FSM_2> for signal <flash_state>.
+    -----------------------------------------------------------------------
+    | States             | 47                                             |
+    | Transitions        | 26                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 17                                             |
+    | Clock              | clk11 (rising_edge)                            |
+    | Reset              | rst_flashWrite_OR_82_o (positive)              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init_state                                     |
+    | Power Up State     | init_state                                     |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+INFO:Xst:1799 - State ram1_check3 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State ram2_check3 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_cash0 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_cash1 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_cash2 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_cash3 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_cash4 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_ready0 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_ready1 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_ready2 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_ready3 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_ready4 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_write0 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_write1 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_write2 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_write3 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_write4 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_check1 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_check2 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_check3 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_check4 is never reached in FSM <fr_state>.
+INFO:Xst:1799 - State flash_check5 is never reached in FSM <fr_state>.
+    Found finite state machine <FSM_0> for signal <fr_state>.
+    -----------------------------------------------------------------------
+    | States             | 47                                             |
+    | Transitions        | 45                                             |
+    | Inputs             | 18                                             |
+    | Outputs            | 22                                             |
+    | Clock              | clk11 (rising_edge)                            |
+    | Reset              | rst (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init_state                                     |
+    | Power Up State     | init_state                                     |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit adder for signal <cond2[1]_GND_5_o_add_8_OUT> created at line 187.
+    Found 3-bit adder for signal <cond3[2]_GND_5_o_add_45_OUT> created at line 326.
+    Found 32-bit adder for signal <Paddr[31]_GND_5_o_add_51_OUT> created at line 341.
+    Found 22-bit adder for signal <Paddr[22]_GND_5_o_add_394_OUT> created at line 512.
+    Found 2-bit adder for signal <cond_flash[1]_GND_5_o_add_397_OUT> created at line 521.
+    Found 8x1-bit Read Only RAM for signal <cond3[2]_GND_78_o_Mux_214_o>
+    Found 4x1-bit Read Only RAM for signal <cond_flash[1]_GND_198_o_Mux_418_o>
+    Found 32-bit 4-to-1 multiplexer for signal <cond2[1]_Ram1Data[7]_wide_mux_2_OUT> created at line 149.
+    Found 1-bit 4-to-1 multiplexer for signal <cond3[2]_Ram1Data[4]_Mux_231_o> created at line 309.
+    Found 1-bit 4-to-1 multiplexer for signal <cond3[2]_Ram1Data[7]_Mux_213_o> created at line 309.
+    Found 1-bit 4-to-1 multiplexer for signal <cond3[2]_Ram1Data[0]_Mux_255_o> created at line 309.
+    Found 1-bit 4-to-1 multiplexer for signal <cond3[2]_Ram1Data[6]_Mux_219_o> created at line 309.
+    Found 1-bit 4-to-1 multiplexer for signal <cond3[2]_Ram1Data[2]_Mux_243_o> created at line 309.
+    Found 1-bit 4-to-1 multiplexer for signal <cond3[2]_Ram1Data[5]_Mux_225_o> created at line 309.
+    Found 1-bit 4-to-1 multiplexer for signal <cond3[2]_Ram1Data[3]_Mux_237_o> created at line 309.
+    Found 1-bit 4-to-1 multiplexer for signal <cond3[2]_Ram1Data[1]_Mux_249_o> created at line 309.
+    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<31>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<30>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<29>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<28>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<27>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<26>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<25>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<24>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<23>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<22>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<21>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<20>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<19>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<18>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<17>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<16>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<15>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<14>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<13>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<12>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<11>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<10>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<9>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<8>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<7>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<6>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<5>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<4>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<3>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<2>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<1>> created at line 109
+    Found 1-bit tristate buffer for signal <Ram2Data<0>> created at line 109
+    Found 1-bit tristate buffer for signal <FlashData<15>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<14>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<13>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<12>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<11>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<10>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<9>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<8>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<7>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<6>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<5>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<4>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<3>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<2>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<1>> created at line 427
+    Found 1-bit tristate buffer for signal <FlashData<0>> created at line 427
+    Found 32-bit comparator greater for signal <n0027> created at line 266
+    Found 32-bit comparator greater for signal <n0029> created at line 268
+    Found 32-bit comparator greater for signal <n0031> created at line 270
+    Found 32-bit comparator greater for signal <n0033> created at line 270
+    Found 32-bit comparator equal for signal <Paddr[31]_final_addr[31]_equal_51_o> created at line 338
+    Summary:
+	inferred   2 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred 407 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred 112 Multiplexer(s).
+	inferred  80 Tristate(s).
+	inferred   3 Finite State Machine(s).
+Unit <flashAndram> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x1-bit single-port Read Only RAM                     : 1
+ 8x1-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 5
+ 2-bit adder                                           : 2
+ 22-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 109
+ 1-bit register                                        : 93
+ 16-bit register                                       : 1
+ 2-bit register                                        : 4
+ 20-bit register                                       : 2
+ 23-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 7
+# Comparators                                          : 5
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 4
+# Multiplexers                                         : 112
+ 1-bit 2-to-1 multiplexer                              : 83
+ 1-bit 4-to-1 multiplexer                              : 8
+ 16-bit 2-to-1 multiplexer                             : 7
+ 2-bit 2-to-1 multiplexer                              : 1
+ 23-bit 2-to-1 multiplexer                             : 4
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 7
+ 32-bit 4-to-1 multiplexer                             : 1
+# Tristates                                            : 80
+ 1-bit tristate buffer                                 : 80
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <flashAndram>.
+The following registers are absorbed into counter <cond2>: 1 register on signal <cond2>.
+The following registers are absorbed into counter <cond3>: 1 register on signal <cond3>.
+The following registers are absorbed into counter <cond_flash>: 1 register on signal <cond_flash>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cond3[2]_GND_78_o_Mux_214_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cond3>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cond_flash[1]_GND_198_o_Mux_418_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cond_flash>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <flashAndram> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x1-bit single-port distributed Read Only RAM         : 1
+ 8x1-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 2
+ 22-bit adder                                          : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 3
+ 2-bit up counter                                      : 2
+ 3-bit up counter                                      : 1
+# Registers                                            : 400
+ Flip-Flops                                            : 400
+# Comparators                                          : 5
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 4
+# Multiplexers                                         : 109
+ 1-bit 2-to-1 multiplexer                              : 82
+ 1-bit 4-to-1 multiplexer                              : 8
+ 16-bit 2-to-1 multiplexer                             : 7
+ 23-bit 2-to-1 multiplexer                             : 4
+ 32-bit 2-to-1 multiplexer                             : 7
+ 32-bit 4-to-1 multiplexer                             : 1
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <fr_state[5]_clk11_DFF_103> in Unit <flashAndram> is equivalent to the following 7 FFs/Latches, which will be removed : <fr_state[5]_clk11_DFF_102> <fr_state[5]_clk11_DFF_104> <fr_state[5]_clk11_DFF_105> <fr_state[5]_clk11_DFF_108> <fr_state[5]_clk11_DFF_106> <fr_state[5]_clk11_DFF_107> <fr_state[5]_clk11_DFF_109> 
+INFO:Xst:2261 - The FF/Latch <flash_state[5]_clk11_DFF_186> in Unit <flashAndram> is equivalent to the following 15 FFs/Latches, which will be removed : <flash_state[5]_clk11_DFF_184> <flash_state[5]_clk11_DFF_185> <flash_state[5]_clk11_DFF_187> <flash_state[5]_clk11_DFF_188> <flash_state[5]_clk11_DFF_191> <flash_state[5]_clk11_DFF_189> <flash_state[5]_clk11_DFF_190> <flash_state[5]_clk11_DFF_192> <flash_state[5]_clk11_DFF_193> <flash_state[5]_clk11_DFF_196> <flash_state[5]_clk11_DFF_194> <flash_state[5]_clk11_DFF_195> <flash_state[5]_clk11_DFF_197> <flash_state[5]_clk11_DFF_198> <flash_state[5]_clk11_DFF_199> 
+INFO:Xst:2261 - The FF/Latch <fr_state[5]_clk11_DFF_110> in Unit <flashAndram> is equivalent to the following 31 FFs/Latches, which will be removed : <fr_state[5]_clk11_DFF_113> <fr_state[5]_clk11_DFF_111> <fr_state[5]_clk11_DFF_112> <fr_state[5]_clk11_DFF_114> <fr_state[5]_clk11_DFF_115> <fr_state[5]_clk11_DFF_118> <fr_state[5]_clk11_DFF_116> <fr_state[5]_clk11_DFF_117> <fr_state[5]_clk11_DFF_119> <fr_state[5]_clk11_DFF_120> <fr_state[5]_clk11_DFF_123> <fr_state[5]_clk11_DFF_121> <fr_state[5]_clk11_DFF_122> <fr_state[5]_clk11_DFF_124> <fr_state[5]_clk11_DFF_125> <fr_state[5]_clk11_DFF_128> <fr_state[5]_clk11_DFF_126> <fr_state[5]_clk11_DFF_127> <fr_state[5]_clk11_DFF_129> <fr_state[5]_clk11_DFF_130> <fr_state[5]_clk11_DFF_133> <fr_state[5]_clk11_DFF_131> <fr_state[5]_clk11_DFF_132> <fr_state[5]_clk11_DFF_134> <fr_state[5]_clk11_DFF_135> <fr_state[5]_clk11_DFF_136> <fr_state[5]_clk11_DFF_137> <fr_state[5]_clk11_DFF_138> <fr_state[5]_clk11_DFF_139> <fr_state[5]_clk11_DFF_140> <fr_state[5]_clk11_DFF_141> 
+INFO:Xst:2261 - The FF/Latch <fr_state[5]_clk11_DFF_79> in Unit <flashAndram> is equivalent to the following 23 FFs/Latches, which will be removed : <fr_state[5]_clk11_DFF_78> <fr_state[5]_clk11_DFF_80> <fr_state[5]_clk11_DFF_81> <fr_state[5]_clk11_DFF_84> <fr_state[5]_clk11_DFF_82> <fr_state[5]_clk11_DFF_83> <fr_state[5]_clk11_DFF_85> <fr_state[5]_clk11_DFF_86> <fr_state[5]_clk11_DFF_89> <fr_state[5]_clk11_DFF_87> <fr_state[5]_clk11_DFF_88> <fr_state[5]_clk11_DFF_90> <fr_state[5]_clk11_DFF_91> <fr_state[5]_clk11_DFF_94> <fr_state[5]_clk11_DFF_92> <fr_state[5]_clk11_DFF_93> <fr_state[5]_clk11_DFF_95> <fr_state[5]_clk11_DFF_96> <fr_state[5]_clk11_DFF_97> <fr_state[5]_clk11_DFF_98> <fr_state[5]_clk11_DFF_99> <fr_state[5]_clk11_DFF_100> <fr_state[5]_clk11_DFF_101> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_2> on signal <flash_state[1:22]> with one-hot encoding.
+----------------------------------------
+ State        | Encoding
+----------------------------------------
+ init_state   | 0000000000000000000001
+ recv0        | unreached
+ ctrl         | unreached
+ send0        | unreached
+ send1        | unreached
+ send2        | unreached
+ send3        | unreached
+ ram1_save0   | unreached
+ ram1_save1   | unreached
+ ram2_save0   | unreached
+ ram2_save1   | unreached
+ ram_save     | unreached
+ flash_save0  | unreached
+ check_state  | unreached
+ ram1_check0  | unreached
+ ram1_check1  | unreached
+ ram1_check2  | unreached
+ ram1_check3  | unreached
+ ram2_check0  | unreached
+ ram2_check1  | unreached
+ ram2_check2  | unreached
+ ram2_check3  | unreached
+ flash_check0 | 0000000000000000000010
+ send_check0  | unreached
+ send_check1  | unreached
+ send_check2  | unreached
+ send_check3  | unreached
+ flash_cash0  | 0000000000000000001000
+ flash_cash1  | 0000000000000000100000
+ flash_cash2  | 0000000000000001000000
+ flash_cash3  | 0000000000000010000000
+ flash_cash4  | 0000000000000100000000
+ flash_ready0 | 0000000000001000000000
+ flash_ready1 | 0000000000010000000000
+ flash_ready2 | 0000000000100000000000
+ flash_ready3 | 0000000001000000000000
+ flash_ready4 | 0000000010000000000000
+ flash_write0 | 0000000000000000000100
+ flash_write1 | 0000000100000000000000
+ flash_write2 | 0000001000000000000000
+ flash_write3 | 0000010000000000000000
+ flash_write4 | 0000100000000000000000
+ flash_check1 | 0000000000000000010000
+ flash_check2 | 0001000000000000000000
+ flash_check3 | 0010000000000000000000
+ flash_check4 | 0100000000000000000000
+ flash_check5 | 1000000000000000000000
+----------------------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <fr_state[1:6]> with user encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ init_state   | 000000
+ recv0        | 000001
+ ctrl         | 000010
+ send0        | 000011
+ send1        | 000100
+ send2        | 000101
+ send3        | 000110
+ ram1_save0   | 000111
+ ram1_save1   | 001000
+ ram2_save0   | 001001
+ ram2_save1   | 001010
+ ram_save     | 001011
+ flash_save0  | 001100
+ check_state  | 001101
+ ram1_check0  | 001110
+ ram1_check1  | 001111
+ ram1_check2  | 010000
+ ram1_check3  | unreached
+ ram2_check0  | 010010
+ ram2_check1  | 010011
+ ram2_check2  | 010100
+ ram2_check3  | unreached
+ flash_check0 | 010110
+ send_check0  | 010111
+ send_check1  | 011000
+ send_check2  | 011001
+ send_check3  | 011010
+ flash_cash0  | unreached
+ flash_cash1  | unreached
+ flash_cash2  | unreached
+ flash_cash3  | unreached
+ flash_cash4  | unreached
+ flash_ready0 | unreached
+ flash_ready1 | unreached
+ flash_ready2 | unreached
+ flash_ready3 | unreached
+ flash_ready4 | unreached
+ flash_write0 | unreached
+ flash_write1 | unreached
+ flash_write2 | unreached
+ flash_write3 | unreached
+ flash_write4 | unreached
+ flash_check1 | unreached
+ flash_check2 | unreached
+ flash_check3 | unreached
+ flash_check4 | unreached
+ flash_check5 | unreached
+--------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_1> on signal <cond[1:3]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 000
+ 0001  | 001
+ 0010  | 010
+ 0011  | 011
+ 0100  | 100
+ 0101  | 101
+-------------------
+WARNING:Xst:1710 - FF/Latch <FlashAddr_0> (without init value) has a constant value of 0 in block <flashAndram>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <flashAndram> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block flashAndram, actual ratio is 1.
+FlipFlop cond2_0 has been replicated 1 time(s)
+FlipFlop cond2_1 has been replicated 1 time(s)
+FlipFlop fr_state_FSM_FFd2 has been replicated 2 time(s)
+FlipFlop fr_state_FSM_FFd3 has been replicated 2 time(s)
+FlipFlop fr_state_FSM_FFd4 has been replicated 1 time(s)
+FlipFlop fr_state_FSM_FFd5 has been replicated 2 time(s)
+FlipFlop fr_state_FSM_FFd6 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 371
+ Flip-Flops                                            : 371
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : flashAndram.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 763
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 50
+#      LUT2                        : 16
+#      LUT3                        : 129
+#      LUT4                        : 77
+#      LUT5                        : 126
+#      LUT6                        : 235
+#      MUXCY                       : 63
+#      MUXF7                       : 5
+#      VCC                         : 1
+#      XORCY                       : 52
+# FlipFlops/Latches                : 371
+#      FD                          : 81
+#      FDC                         : 73
+#      FDCE                        : 108
+#      FDE                         : 94
+#      FDP                         : 11
+#      FDPE                        : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 209
+#      IBUF                        : 20
+#      IOBUF                       : 80
+#      OBUF                        : 109
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx100fgg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             371  out of  126576     0%  
+ Number of Slice LUTs:                  641  out of  63288     1%  
+    Number used as Logic:               641  out of  63288     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    689
+   Number with an unused Flip Flop:     318  out of    689    46%  
+   Number with an unused LUT:            48  out of    689     6%  
+   Number of fully used LUT-FF pairs:   323  out of    689    46%  
+   Number of unique control sets:        16
+
+IO Utilization: 
+ Number of IOs:                         227
+ Number of bonded IOBs:                 210  out of    480    43%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk11                              | BUFGP                  | 371   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.714ns (Maximum Frequency: 212.148MHz)
+   Minimum input arrival time before clock: 5.091ns
+   Maximum output required time after clock: 7.423ns
+   Maximum combinational path delay: 15.367ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk11'
+  Clock period: 4.714ns (frequency: 212.148MHz)
+  Total number of paths / destination ports: 8690 / 636
+-------------------------------------------------------------------------
+Delay:               4.714ns (Levels of Logic = 4)
+  Source:            flash_state_FSM_FFd20 (FF)
+  Destination:       FlashData_8 (FF)
+  Source Clock:      clk11 rising
+  Destination Clock: clk11 rising
+
+  Data Path: flash_state_FSM_FFd20 to FlashData_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              9   0.447   1.077  flash_state_FSM_FFd20 (flash_state_FSM_FFd20)
+     LUT4:I0->O            4   0.203   0.684  flash_state__n25281 (_n2528)
+     LUT6:I5->O            1   0.205   0.684  flash_state_rst_flash_state[5]_AND_29_o1_SW0 (N254)
+     LUT6:I4->O            8   0.203   0.907  Mmux_n071113111 (Mmux_n07111311)
+     LUT6:I4->O            1   0.203   0.000  Mmux_n071117 (n0711<15>)
+     FD:D                      0.102          FlashData_15
+    ----------------------------------------
+    Total                      4.714ns (1.363ns logic, 3.351ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk11'
+  Total number of paths / destination ports: 606 / 492
+-------------------------------------------------------------------------
+Offset:              5.091ns (Levels of Logic = 5)
+  Source:            rst (PAD)
+  Destination:       FlashData_4 (FF)
+  Destination Clock: clk11 rising
+
+  Data Path: rst to FlashData_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   1.031  rst_IBUF (rst_IBUF)
+     LUT3:I0->O            2   0.205   0.617  rst_flashWrite_OR_82_o1_1 (rst_flashWrite_OR_82_o1)
+     LUT6:I5->O            1   0.205   0.684  flash_state_n0711<4>11_SW0 (N29)
+     LUT5:I3->O            2   0.203   0.617  flash_state_n0711<4>11 (flash_state_n0711<4>11)
+     LUT6:I5->O            1   0.205   0.000  flash_state_n0711<6> (n0711<6>)
+     FD:D                      0.102          FlashData_6
+    ----------------------------------------
+    Total                      5.091ns (2.142ns logic, 2.949ns route)
+                                       (42.1% logic, 57.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk11'
+  Total number of paths / destination ports: 508 / 182
+-------------------------------------------------------------------------
+Offset:              7.423ns (Levels of Logic = 4)
+  Source:            cond_flash_0 (FF)
+  Destination:       LED<0> (PAD)
+  Source Clock:      clk11 rising
+
+  Data Path: cond_flash_0 to LED<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            45   0.447   1.581  cond_flash_0 (cond_flash_0)
+     LUT6:I4->O            1   0.203   0.808  LED<16>4 (LED<16>3)
+     LUT6:I3->O            1   0.205   0.827  LED<16>5 (LED<16>4)
+     LUT4:I0->O            1   0.203   0.579  LED<16>10 (LED_0_OBUF)
+     OBUF:I->O                 2.571          LED_0_OBUF (LED<0>)
+    ----------------------------------------
+    Total                      7.423ns (3.629ns logic, 3.794ns route)
+                                       (48.9% logic, 51.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4161 / 16
+-------------------------------------------------------------------------
+Delay:               15.367ns (Levels of Logic = 12)
+  Source:            SW<10> (PAD)
+  Destination:       LED<2> (PAD)
+
+  Data Path: SW<10> to LED<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.222   0.973  SW_10_IBUF (SW_10_IBUF)
+     LUT3:I0->O            5   0.205   0.962  GND_5_o_SW[15]_equal_113_o<15>1211 (GND_5_o_SW[15]_equal_113_o<15>121)
+     LUT6:I2->O            5   0.203   0.943  GND_5_o_SW[15]_equal_100_o<15>11 (GND_5_o_SW[15]_equal_100_o<15>1)
+     LUT3:I0->O            5   0.205   0.715  GND_5_o_SW[15]_equal_100_o<15>21 (GND_5_o_SW[15]_equal_100_o<15>2)
+     LUT5:I4->O           17   0.205   1.256  GND_5_o_SW[15]_equal_103_o<15>11 (GND_5_o_SW[15]_equal_103_o<15>1)
+     LUT3:I0->O            1   0.205   0.684  out3_SW0 (N281)
+     LUT6:I4->O            1   0.203   0.684  out3 (out2)
+     LUT6:I4->O            1   0.203   0.580  out8_SW0 (N283)
+     LUT6:I5->O           16   0.205   1.349  out8 (n0118)
+     LUT6:I1->O            1   0.203   0.808  LED<18>8_SW0 (N279)
+     LUT6:I3->O            1   0.205   0.579  LED<18>8 (LED_2_OBUF)
+     OBUF:I->O                 2.571          LED_2_OBUF (LED<2>)
+    ----------------------------------------
+    Total                     15.367ns (5.835ns logic, 9.532ns route)
+                                       (38.0% logic, 62.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk11
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk11          |    4.714|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 16.91 secs
+ 
+--> 
+
+Total memory usage is 282964 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
+Number of infos    :   53 (   0 filtered)
+

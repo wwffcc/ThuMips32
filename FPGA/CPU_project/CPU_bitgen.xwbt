@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.ncd
+OUTFILE=C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.bit
+FAMILY=Spartan6
+PART=xc6slx100-3fgg676
+WORKINGDIR=C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project
+LICENSE=ISE
+USER_INFO=__0_0_0

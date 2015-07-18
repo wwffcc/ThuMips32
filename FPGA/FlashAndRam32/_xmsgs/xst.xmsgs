@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 370: <arg fmt="%s" index="1">fr_state</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 390: <arg fmt="%s" index="1">sw</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 391: <arg fmt="%s" index="1">recv_byte</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 392: <arg fmt="%s" index="1">recv_byte</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 393: <arg fmt="%s" index="1">paddr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 394: <arg fmt="%s" index="1">paddr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 395: <arg fmt="%s" index="1">final_addr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 396: <arg fmt="%s" index="1">final_addr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 398: <arg fmt="%s" index="1">flashwrite</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 399: <arg fmt="%s" index="1">cond2</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 400: <arg fmt="%s" index="1">flag_next</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 401: <arg fmt="%s" index="1">data_ready</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 402: <arg fmt="%s" index="1">temp_data</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 403: <arg fmt="%s" index="1">temp_data</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 404: <arg fmt="%s" index="1">cond_flash</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 405: <arg fmt="%s" index="1">flashdatax</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 406: <arg fmt="%s" index="1">flashdatax</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 407: <arg fmt="%s" index="1">flashdata</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 429: <arg fmt="%s" index="1">flashwrite</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 556: <arg fmt="%s" index="1">flash_state</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\FlashAndRam32\flashAndram.vhd" Line 427: Assignment to <arg fmt="%s" index="1">cond4</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SW&lt;31:16&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk50</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">recv0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ctrl</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">send0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">send1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">send2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">send3</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram1_save0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram1_save1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram2_save0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram2_save1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram_save</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_save0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">check_state</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram1_check0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram1_check1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram1_check2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram1_check3</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram2_check0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram2_check1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram2_check2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram2_check3</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">send_check0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">send_check1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">send_check2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">send_check3</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">flash_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram1_check3</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">ram2_check3</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_cash0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_cash1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_cash2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_cash3</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_cash4</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_ready0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_ready1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_ready2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_ready3</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_ready4</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_write0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_write1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_write2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_write3</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_write4</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_check1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_check2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_check3</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_check4</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">flash_check5</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_cond3[2]_GND_78_o_Mux_214_o</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_cond_flash[1]_GND_198_o_Mux_418_o</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">fr_state[5]_clk11_DFF_103</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">flashAndram</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;fr_state[5]_clk11_DFF_102&gt; &lt;fr_state[5]_clk11_DFF_104&gt; &lt;fr_state[5]_clk11_DFF_105&gt; &lt;fr_state[5]_clk11_DFF_108&gt; &lt;fr_state[5]_clk11_DFF_106&gt; &lt;fr_state[5]_clk11_DFF_107&gt; &lt;fr_state[5]_clk11_DFF_109&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">flash_state[5]_clk11_DFF_186</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">flashAndram</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flash_state[5]_clk11_DFF_184&gt; &lt;flash_state[5]_clk11_DFF_185&gt; &lt;flash_state[5]_clk11_DFF_187&gt; &lt;flash_state[5]_clk11_DFF_188&gt; &lt;flash_state[5]_clk11_DFF_191&gt; &lt;flash_state[5]_clk11_DFF_189&gt; &lt;flash_state[5]_clk11_DFF_190&gt; &lt;flash_state[5]_clk11_DFF_192&gt; &lt;flash_state[5]_clk11_DFF_193&gt; &lt;flash_state[5]_clk11_DFF_196&gt; &lt;flash_state[5]_clk11_DFF_194&gt; &lt;flash_state[5]_clk11_DFF_195&gt; &lt;flash_state[5]_clk11_DFF_197&gt; &lt;flash_state[5]_clk11_DFF_198&gt; &lt;flash_state[5]_clk11_DFF_199&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">fr_state[5]_clk11_DFF_110</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">flashAndram</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;fr_state[5]_clk11_DFF_113&gt; &lt;fr_state[5]_clk11_DFF_111&gt; &lt;fr_state[5]_clk11_DFF_112&gt; &lt;fr_state[5]_clk11_DFF_114&gt; &lt;fr_state[5]_clk11_DFF_115&gt; &lt;fr_state[5]_clk11_DFF_118&gt; &lt;fr_state[5]_clk11_DFF_116&gt; &lt;fr_state[5]_clk11_DFF_117&gt; &lt;fr_state[5]_clk11_DFF_119&gt; &lt;fr_state[5]_clk11_DFF_120&gt; &lt;fr_state[5]_clk11_DFF_123&gt; &lt;fr_state[5]_clk11_DFF_121&gt; &lt;fr_state[5]_clk11_DFF_122&gt; &lt;fr_state[5]_clk11_DFF_124&gt; &lt;fr_state[5]_clk11_DFF_125&gt; &lt;fr_state[5]_clk11_DFF_128&gt; &lt;fr_state[5]_clk11_DFF_126&gt; &lt;fr_state[5]_clk11_DFF_127&gt; &lt;fr_state[5]_clk11_DFF_129&gt; &lt;fr_state[5]_clk11_DFF_130&gt; &lt;fr_state[5]_clk11_DFF_133&gt; &lt;fr_state[5]_clk11_DFF_131&gt; &lt;fr_state[5]_clk11_DFF_132&gt; &lt;fr_state[5]_clk11_DFF_134&gt; &lt;fr_state[5]_clk11_DFF_135&gt; &lt;fr_state[5]_clk11_DFF_136&gt; &lt;fr_state[5]_clk11_DFF_137&gt; &lt;fr_state[5]_clk11_DFF_138&gt; &lt;fr_state[5]_clk11_DFF_139&gt; &lt;fr_state[5]_clk11_DFF_140&gt; &lt;fr_state[5]_clk11_DFF_141&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">fr_state[5]_clk11_DFF_79</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">flashAndram</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">23 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;fr_state[5]_clk11_DFF_78&gt; &lt;fr_state[5]_clk11_DFF_80&gt; &lt;fr_state[5]_clk11_DFF_81&gt; &lt;fr_state[5]_clk11_DFF_84&gt; &lt;fr_state[5]_clk11_DFF_82&gt; &lt;fr_state[5]_clk11_DFF_83&gt; &lt;fr_state[5]_clk11_DFF_85&gt; &lt;fr_state[5]_clk11_DFF_86&gt; &lt;fr_state[5]_clk11_DFF_89&gt; &lt;fr_state[5]_clk11_DFF_87&gt; &lt;fr_state[5]_clk11_DFF_88&gt; &lt;fr_state[5]_clk11_DFF_90&gt; &lt;fr_state[5]_clk11_DFF_91&gt; &lt;fr_state[5]_clk11_DFF_94&gt; &lt;fr_state[5]_clk11_DFF_92&gt; &lt;fr_state[5]_clk11_DFF_93&gt; &lt;fr_state[5]_clk11_DFF_95&gt; &lt;fr_state[5]_clk11_DFF_96&gt; &lt;fr_state[5]_clk11_DFF_97&gt; &lt;fr_state[5]_clk11_DFF_98&gt; &lt;fr_state[5]_clk11_DFF_99&gt; &lt;fr_state[5]_clk11_DFF_100&gt; &lt;fr_state[5]_clk11_DFF_101&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">FlashAddr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">flashAndram</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+</messages>
+

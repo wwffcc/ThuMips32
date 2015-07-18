@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/MUL.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/MUL.syr" 
