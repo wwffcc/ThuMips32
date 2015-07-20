@@ -1,0 +1,477 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: Device_Ram1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Device_Ram1.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Device_Ram1"
+Output Format                      : NGC
+Target Device                      : xc6slx100-3-fgg676
+
+---- Source Options
+Top Module Name                    : Device_Ram1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram1.vhd" into library work
+Parsing entity <Device_Ram1>.
+Parsing architecture <Behavioral> of entity <device_ram1>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Device_Ram1> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram1.vhd" Line 89. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Device_Ram1>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram1.vhd".
+    Found 1-bit register for signal <Ram1_Ready>.
+    Found 1-bit register for signal <Ram1OE>.
+    Found 1-bit register for signal <Ram1WE>.
+    Found 3-bit register for signal <Ram1_State>.
+    Found 20-bit register for signal <Ram1Addr>.
+    Found 32-bit register for signal <Ram1_State[2]_dff_13_OUT>.
+    Found 32-bit register for signal <data_out>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_60>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_61>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_62>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_63>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_64>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_65>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_66>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_67>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_68>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_69>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_70>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_71>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_72>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_73>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_74>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_75>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_76>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_77>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_78>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_79>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_80>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_81>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_82>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_83>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_84>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_85>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_86>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_87>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_88>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_89>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_90>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_91>.
+    Found 1-bit register for signal <Ram1EN>.
+    Found finite state machine <FSM_0> for signal <Ram1_State>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | ram1_init                                      |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 52
+    Summary:
+	inferred 120 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred  32 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <Device_Ram1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 39
+ 1-bit register                                        : 36
+ 20-bit register                                       : 1
+ 32-bit register                                       : 2
+# Multiplexers                                         : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+# Tristates                                            : 32
+ 1-bit tristate buffer                                 : 32
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 120
+ Flip-Flops                                            : 120
+# Multiplexers                                         : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <Ram1_State[2]_clk_DFF_60> in Unit <Device_Ram1> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram1_State[2]_clk_DFF_61> <Ram1_State[2]_clk_DFF_64> <Ram1_State[2]_clk_DFF_62> <Ram1_State[2]_clk_DFF_63> <Ram1_State[2]_clk_DFF_65> <Ram1_State[2]_clk_DFF_66> <Ram1_State[2]_clk_DFF_67> <Ram1_State[2]_clk_DFF_68> <Ram1_State[2]_clk_DFF_69> <Ram1_State[2]_clk_DFF_70> <Ram1_State[2]_clk_DFF_73> <Ram1_State[2]_clk_DFF_71> <Ram1_State[2]_clk_DFF_72> <Ram1_State[2]_clk_DFF_74> <Ram1_State[2]_clk_DFF_75> <Ram1_State[2]_clk_DFF_76> <Ram1_State[2]_clk_DFF_77> <Ram1_State[2]_clk_DFF_78> <Ram1_State[2]_clk_DFF_79> <Ram1_State[2]_clk_DFF_82> <Ram1_State[2]_clk_DFF_80> <Ram1_State[2]_clk_DFF_81> <Ram1_State[2]_clk_DFF_83> <Ram1_State[2]_clk_DFF_84> <Ram1_State[2]_clk_DFF_85> <Ram1_State[2]_clk_DFF_86> <Ram1_State[2]_clk_DFF_87> <Ram1_State[2]_clk_DFF_88> <Ram1_State[2]_clk_DFF_91> <Ram1_State[2]_clk_DFF_89> <Ram1_State[2]_clk_DFF_90> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <Ram1_State[1:3]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ ram1_init   | 000
+ ram1_read0  | 001
+ ram1_read1  | 010
+ ram1_read2  | 011
+ ram1_write0 | 100
+ ram1_write1 | 101
+-------------------------
+
+Optimizing unit <Device_Ram1> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Device_Ram1, actual ratio is 0.
+FlipFlop Ram1_State_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop Ram1_State_FSM_FFd2 has been replicated 3 time(s)
+FlipFlop Ram1_State_FSM_FFd3 has been replicated 3 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 99
+ Flip-Flops                                            : 99
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Device_Ram1.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 95
+#      INV                         : 2
+#      LUT3                        : 2
+#      LUT4                        : 3
+#      LUT5                        : 33
+#      LUT6                        : 55
+# FlipFlops/Latches                : 99
+#      FD                          : 63
+#      FDC                         : 1
+#      FDE                         : 32
+#      FDP                         : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 143
+#      IBUF                        : 55
+#      IOBUF                       : 32
+#      OBUF                        : 56
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx100fgg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              99  out of  126576     0%  
+ Number of Slice LUTs:                   95  out of  63288     0%  
+    Number used as Logic:                95  out of  63288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    100
+   Number with an unused Flip Flop:       1  out of    100     1%  
+   Number with an unused LUT:             5  out of    100     5%  
+   Number of fully used LUT-FF pairs:    94  out of    100    94%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                         144
+ Number of bonded IOBs:                 144  out of    480    30%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 99    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.845ns (Maximum Frequency: 351.490MHz)
+   Minimum input arrival time before clock: 4.793ns
+   Maximum output required time after clock: 5.131ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.845ns (frequency: 351.490MHz)
+  Total number of paths / destination ports: 353 / 131
+-------------------------------------------------------------------------
+Delay:               2.845ns (Levels of Logic = 1)
+  Source:            Ram1_State_FSM_FFd1_1 (FF)
+  Destination:       data_out_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Ram1_State_FSM_FFd1_1 to data_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  Ram1_State_FSM_FFd1_1 (Ram1_State_FSM_FFd1_1)
+     INV:I->O             32   0.206   1.291  _n0398_inv1_cepot_INV_0 (_n0398_inv1_cepot)
+     FDE:CE                    0.322          data_out_0
+    ----------------------------------------
+    Total                      2.845ns (0.975ns logic, 1.870ns route)
+                                       (34.3% logic, 65.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 413 / 99
+-------------------------------------------------------------------------
+Offset:              4.793ns (Levels of Logic = 3)
+  Source:            Ram1Read (PAD)
+  Destination:       Ram1Data_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: Ram1Read to Ram1Data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.912  Ram1Read_IBUF (Ram1Read_IBUF)
+     LUT3:I0->O           89   0.205   2.149  rst_Ram1Write_OR_1_o1 (rst_Ram1Write_OR_1_o)
+     LUT5:I0->O            1   0.203   0.000  Ram1_State[2]_clk_DFF_60_rstpot (Ram1_State[2]_clk_DFF_60_rstpot)
+     FD:D                      0.102          Ram1_State[2]_clk_DFF_60
+    ----------------------------------------
+    Total                      4.793ns (1.732ns logic, 3.061ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 120 / 88
+-------------------------------------------------------------------------
+Offset:              5.131ns (Levels of Logic = 2)
+  Source:            Ram1_State[2]_clk_DFF_60 (FF)
+  Destination:       Ram1Data<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Ram1_State[2]_clk_DFF_60 to Ram1Data<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  Ram1_State[2]_clk_DFF_60 (Ram1_State[2]_clk_DFF_60)
+     INV:I->O             32   0.206   1.291  Ram1_State[2]_clk_DFF_60_inv1_INV_0 (Ram1_State[2]_clk_DFF_60_inv)
+     IOBUF:T->IO               2.571          Ram1Data_31_IOBUF (Ram1Data<31>)
+    ----------------------------------------
+    Total                      5.131ns (3.224ns logic, 1.907ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.845|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.88 secs
+ 
+--> 
+
+Total memory usage is 271380 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

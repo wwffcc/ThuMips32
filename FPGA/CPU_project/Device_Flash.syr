@@ -1,0 +1,516 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: Device_Flash.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Device_Flash.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Device_Flash"
+Output Format                      : NGC
+Target Device                      : xc6slx100-3-fgg676
+
+---- Source Options
+Top Module Name                    : Device_Flash
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Flash.vhd" into library work
+Parsing entity <Device_Flash>.
+Parsing architecture <Behavioral> of entity <device_flash>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Device_Flash> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Flash.vhd" Line 184. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Device_Flash>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Flash.vhd".
+WARNING:Xst:647 - Input <Paddr<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <FlashOE>.
+    Found 2-bit register for signal <cond_flash>.
+    Found 5-bit register for signal <flash_state>.
+    Found 16-bit register for signal <flash_state[4]_dff_21_OUT>.
+    Found 23-bit register for signal <FlashAddr>.
+    Found 32-bit register for signal <Data_out>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_82>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_83>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_84>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_85>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_86>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_87>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_88>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_89>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_90>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_91>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_92>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_93>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_94>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_95>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_96>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_97>.
+    Found 1-bit register for signal <Flash_Ready>.
+    Found 1-bit register for signal <FlashWE>.
+    Found finite state machine <FSM_0> for signal <flash_state>.
+    -----------------------------------------------------------------------
+    | States             | 22                                             |
+    | Transitions        | 26                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 9                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_FlashWrite_OR_1_o (positive)               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | flash_init                                     |
+    | Power Up State     | flash_init                                     |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 22-bit adder for signal <Paddr[22]_GND_5_o_add_7_OUT> created at line 148.
+    Found 2-bit adder for signal <cond_flash[1]_GND_5_o_add_10_OUT> created at line 156.
+    Found 4x1-bit Read Only RAM for signal <cond_flash[1]_GND_6_o_Mux_29_o>
+    Found 1-bit tristate buffer for signal <FlashData<15>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<14>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<13>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<12>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<11>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<10>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<9>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<8>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<7>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<6>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<5>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<4>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<3>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<2>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<1>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<0>> created at line 67
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  92 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+	inferred  16 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <Device_Flash> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x1-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 2
+ 2-bit adder                                           : 1
+ 22-bit adder                                          : 1
+# Registers                                            : 23
+ 1-bit register                                        : 19
+ 16-bit register                                       : 1
+ 2-bit register                                        : 1
+ 23-bit register                                       : 1
+ 32-bit register                                       : 1
+# Multiplexers                                         : 14
+ 1-bit 2-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 7
+ 2-bit 2-to-1 multiplexer                              : 1
+ 23-bit 2-to-1 multiplexer                             : 4
+ 32-bit 2-to-1 multiplexer                             : 1
+# Tristates                                            : 16
+ 1-bit tristate buffer                                 : 16
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Device_Flash>.
+The following registers are absorbed into counter <cond_flash>: 1 register on signal <cond_flash>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cond_flash[1]_GND_6_o_Mux_29_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cond_flash>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Device_Flash> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x1-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 1
+ 22-bit adder                                          : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 90
+ Flip-Flops                                            : 90
+# Multiplexers                                         : 12
+ 16-bit 2-to-1 multiplexer                             : 7
+ 23-bit 2-to-1 multiplexer                             : 4
+ 32-bit 2-to-1 multiplexer                             : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <flash_state[4]_clk_DFF_90> in Unit <Device_Flash> is equivalent to the following 15 FFs/Latches, which will be removed : <flash_state[4]_clk_DFF_83> <flash_state[4]_clk_DFF_82> <flash_state[4]_clk_DFF_84> <flash_state[4]_clk_DFF_85> <flash_state[4]_clk_DFF_86> <flash_state[4]_clk_DFF_87> <flash_state[4]_clk_DFF_88> <flash_state[4]_clk_DFF_89> <flash_state[4]_clk_DFF_91> <flash_state[4]_clk_DFF_92> <flash_state[4]_clk_DFF_93> <flash_state[4]_clk_DFF_94> <flash_state[4]_clk_DFF_97> <flash_state[4]_clk_DFF_95> <flash_state[4]_clk_DFF_96> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <flash_state[1:22]> with one-hot encoding.
+----------------------------------------
+ State        | Encoding
+----------------------------------------
+ flash_init   | 0000000000000000000001
+ flash_cash0  | 0000000000000000001000
+ flash_cash1  | 0000000000000000010000
+ flash_cash2  | 0000000000000000100000
+ flash_cash3  | 0000000000000001000000
+ flash_cash4  | 0000000000000010000000
+ flash_write0 | 0000000000000000000100
+ flash_write1 | 0000000000001000000000
+ flash_write2 | 0000000000010000000000
+ flash_write3 | 0000000000100000000000
+ flash_write4 | 0000000001000000000000
+ flash_ready0 | 0000000000000100000000
+ flash_ready1 | 0000000010000000000000
+ flash_ready2 | 0000000100000000000000
+ flash_ready3 | 0000001000000000000000
+ flash_ready4 | 0000010000000000000000
+ flash_check0 | 0000000000000000000010
+ flash_check1 | 0000100000000000000000
+ flash_check2 | 0001000000000000000000
+ flash_check3 | 0010000000000000000000
+ flash_check4 | 0100000000000000000000
+ flash_check5 | 1000000000000000000000
+----------------------------------------
+WARNING:Xst:1710 - FF/Latch <FlashAddr_0> (without init value) has a constant value of 0 in block <Device_Flash>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Device_Flash> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Device_Flash, actual ratio is 0.
+FlipFlop flash_state_FSM_FFd11 has been replicated 1 time(s)
+FlipFlop flash_state_FSM_FFd8 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 100
+ Flip-Flops                                            : 100
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Device_Flash.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 250
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 21
+#      LUT2                        : 7
+#      LUT3                        : 50
+#      LUT4                        : 5
+#      LUT5                        : 13
+#      LUT6                        : 107
+#      MUXCY                       : 21
+#      VCC                         : 1
+#      XORCY                       : 22
+# FlipFlops/Latches                : 100
+#      FD                          : 17
+#      FDC                         : 24
+#      FDCE                        : 2
+#      FDE                         : 54
+#      FDP                         : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 137
+#      IBUF                        : 57
+#      IOBUF                       : 16
+#      OBUF                        : 64
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx100fgg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             100  out of  126576     0%  
+ Number of Slice LUTs:                  205  out of  63288     0%  
+    Number used as Logic:               205  out of  63288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    220
+   Number with an unused Flip Flop:     120  out of    220    54%  
+   Number with an unused LUT:            15  out of    220     6%  
+   Number of fully used LUT-FF pairs:    85  out of    220    38%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                         139
+ Number of bonded IOBs:                 138  out of    480    28%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 100   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.365ns (Maximum Frequency: 229.085MHz)
+   Minimum input arrival time before clock: 5.963ns
+   Maximum output required time after clock: 4.844ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.365ns (frequency: 229.085MHz)
+  Total number of paths / destination ports: 1823 / 156
+-------------------------------------------------------------------------
+Delay:               4.365ns (Levels of Logic = 4)
+  Source:            flash_state_FSM_FFd18 (FF)
+  Destination:       FlashData_4 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: flash_state_FSM_FFd18 to FlashData_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.447   0.912  flash_state_FSM_FFd18 (flash_state_FSM_FFd18)
+     LUT4:I1->O            4   0.205   0.788  flash_state_n0169<4>11231 (flash_state_n0169<4>1123)
+     LUT6:I4->O            1   0.203   0.684  flash_state_n0169<4>112_1 (flash_state_n0169<4>1121)
+     LUT5:I3->O            2   0.203   0.617  flash_state_n0169<4>113 (flash_state_n0169<4>11)
+     LUT6:I5->O            1   0.205   0.000  flash_state_n0169<4> (n0169<4>)
+     FD:D                      0.102          FlashData_4
+    ----------------------------------------
+    Total                      4.365ns (1.365ns logic, 3.000ns route)
+                                       (31.3% logic, 68.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 995 / 161
+-------------------------------------------------------------------------
+Offset:              5.963ns (Levels of Logic = 5)
+  Source:            FlashRead (PAD)
+  Destination:       FlashData_4 (FF)
+  Destination Clock: clk rising
+
+  Data Path: FlashRead to FlashData_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.879  FlashRead_IBUF (FlashRead_IBUF)
+     LUT3:I0->O           37   0.205   1.707  rst_FlashWrite_OR_1_o1 (rst_FlashWrite_OR_1_o)
+     LUT5:I0->O            2   0.203   0.617  flash_state_n0169<4>1111 (flash_state_n0169<4>111)
+     LUT5:I4->O            2   0.205   0.617  flash_state_n0169<4>113 (flash_state_n0169<4>11)
+     LUT6:I5->O            1   0.205   0.000  flash_state_n0169<4> (n0169<4>)
+     FD:D                      0.102          FlashData_4
+    ----------------------------------------
+    Total                      5.963ns (2.142ns logic, 3.821ns route)
+                                       (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 89 / 73
+-------------------------------------------------------------------------
+Offset:              4.844ns (Levels of Logic = 2)
+  Source:            flash_state[4]_clk_DFF_90 (FF)
+  Destination:       FlashData<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: flash_state[4]_clk_DFF_90 to FlashData<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  flash_state[4]_clk_DFF_90 (flash_state[4]_clk_DFF_90)
+     INV:I->O             16   0.206   1.004  flash_state[4]_clk_DFF_82_inv1_INV_0 (flash_state[4]_clk_DFF_82_inv)
+     IOBUF:T->IO               2.571          FlashData_15_IOBUF (FlashData<15>)
+    ----------------------------------------
+    Total                      4.844ns (3.224ns logic, 1.620ns route)
+                                       (66.6% logic, 33.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.365|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.36 secs
+ 
+--> 
+
+Total memory usage is 273556 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

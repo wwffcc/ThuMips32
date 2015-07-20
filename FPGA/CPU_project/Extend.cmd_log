@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Extend.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Extend.syr" 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Extend.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Extend.syr" 

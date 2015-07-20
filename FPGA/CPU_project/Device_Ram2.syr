@@ -1,0 +1,169 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: Device_Ram2.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Device_Ram2.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Device_Ram2"
+Output Format                      : NGC
+Target Device                      : xc6slx100-3-fgg676
+
+---- Source Options
+Top Module Name                    : Device_Ram2
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram2.vhd" into library work
+Parsing entity <Device_Ram2>.
+Parsing architecture <Behavioral> of entity <device_ram2>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Device_Ram2> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram2.vhd" Line 90. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Device_Ram2>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram2.vhd".
+    Found 1-bit register for signal <Ram2_Ready>.
+    Found 1-bit register for signal <Ram2OE>.
+    Found 1-bit register for signal <Ram2WE>.
+    Found 3-bit register for signal <Ram2_State>.
+    Found 20-bit register for signal <Ram2Addr>.
+    Found 32-bit register for signal <Ram2_State[2]_dff_12_OUT>.
+    Found 32-bit register for signal <data_out>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_60>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_61>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_62>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_63>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_64>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_65>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_66>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_67>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_68>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_69>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_70>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_71>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_72>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_73>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_74>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_75>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_76>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_77>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_78>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_79>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_80>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_81>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_82>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_83>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_84>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_85>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_86>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_87>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_88>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_89>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_90>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_91>.
+    Found 1-bit register for signal <Ram2EN>.
+    Found finite state machine <FSM_0> for signal <Ram2_State>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 1                                              |

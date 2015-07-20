@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-07-18T20:01:00</DateModified>
+  <DateModified>2015-07-20T01:19:08</DateModified>
   <ModuleName>CPU</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-07-20T00:50:16</SummaryTimeStamp>
   <SavedFilePath>C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/iseconfig/CPU.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project</ImplementationReportsDirectory>
-  <DateInitialized>2015-07-18T20:00:59</DateInitialized>
+  <ImplementationReportsDirectory>C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project\</ImplementationReportsDirectory>
+  <DateInitialized>2015-07-19T14:19:13</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>
   <viewgroup label="Design Overview" >
-   <view inputState="Unknown" program="implementation" ShowPartitionData="false" type="FPGASummary" file="CPU_summary.html" label="Summary" >
+   <view inputState="Unknown" program="implementation" ShowPartitionData="false" type="FPGASummary" file="CPU_summary.html" label="Summary" ExpandClockNets="true" >
     <toc-item title="Design Overview" target="Design Overview" />
     <toc-item title="Design Utilization Summary" target="Design Utilization Summary" />
     <toc-item title="Performance Summary" target="Performance Summary" />

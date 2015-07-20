@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Device_Ram2.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Device_Ram2.syr" 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Device_Ram2.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Device_Ram2.syr" 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Device_Ram2.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Device_Ram2.syr" 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Device_Ram2.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/Device_Ram2.syr" 

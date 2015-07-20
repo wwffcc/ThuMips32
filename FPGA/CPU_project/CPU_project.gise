@@ -47,6 +47,7 @@
     <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="CPU.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="CPU.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="CPU.syr"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="CPU.tfi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="CPU.twr" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="CPU.twx" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="CPU.unroutes" xil_pn:subbranch="Par"/>
@@ -68,6 +69,17 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="CPU_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="CPU_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="CPU_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Clock.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Clock.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Clock.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Clock.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Clock.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Clock.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Clock.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Clock.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Clock_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Clock_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Clock_xst.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Controller.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Controller.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Controller.lso"/>
@@ -102,6 +114,61 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="Controller_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="Controller_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Controller_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Device_COM.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Device_COM.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Device_COM.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Device_COM.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Device_COM.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Device_COM.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Device_COM.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Device_COM.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Device_COM_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Device_COM_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Device_COM_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Device_Flash.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Device_Flash.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Device_Flash.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Device_Flash.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Device_Flash.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Device_Flash.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Device_Flash.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Device_Flash.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Device_Flash_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Device_Flash_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Device_Flash_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Device_Ram1.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Device_Ram1.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Device_Ram1.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Device_Ram1.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Device_Ram1.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Device_Ram1.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Device_Ram1.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Device_Ram1.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Device_Ram1_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Device_Ram1_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Device_Ram1_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Device_Ram2.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Device_Ram2.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Device_Ram2.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Device_Ram2.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Device_Ram2.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Device_Ram2.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Device_Ram2.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Device_Ram2.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Device_Ram2_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Device_Ram2_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Device_Ram2_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Extend.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Extend.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Extend.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Extend.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Extend.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Extend.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Extend.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Extend.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Extend_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Extend_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Extend_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="MUL.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="MUL.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="MUL.ngc"/>
@@ -112,6 +179,17 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="MUL.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="MUL_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MUL_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="RegistersFile.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="RegistersFile.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="RegistersFile.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="RegistersFile.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RegistersFile.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="RegistersFile.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="RegistersFile.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="RegistersFile.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="RegistersFile_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="RegistersFile_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RegistersFile_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="TLB.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="TLB.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="TLB.ngc"/>
@@ -157,36 +235,37 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1437050436" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="37015516696350515" xil_pn:start_ts="1437050436">
+    <transform xil_pn:end_ts="1437286875" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="37015516696350515" xil_pn:start_ts="1437286875">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1437050436" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="7445818408842029197" xil_pn:start_ts="1437050436">
+    <transform xil_pn:end_ts="1437286875" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="7445818408842029197" xil_pn:start_ts="1437286875">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1437050436" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1437050436">
+    <transform xil_pn:end_ts="1437286875" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1437286875">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1437050436" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-6227788399887580107" xil_pn:start_ts="1437050436">
+    <transform xil_pn:end_ts="1437286875" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-6227788399887580107" xil_pn:start_ts="1437286875">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1437050437" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="7424531393529281855" xil_pn:start_ts="1437050436">
+    <transform xil_pn:end_ts="1437286875" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="7424531393529281855" xil_pn:start_ts="1437286875">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1437050437" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3231354187503855063" xil_pn:start_ts="1437050437">
+    <transform xil_pn:end_ts="1437286875" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3231354187503855063" xil_pn:start_ts="1437286875">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1437058515" xil_pn:in_ck="7290604491927705520" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-3070963806414785156" xil_pn:start_ts="1437058479">
+    <transform xil_pn:end_ts="1437329897" xil_pn:in_ck="-6031131761538293192" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-3070963806414785156" xil_pn:start_ts="1437329786">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="ALU.ngr"/>
       <outfile xil_pn:name="CPU.lso"/>
       <outfile xil_pn:name="CPU.ngc"/>
       <outfile xil_pn:name="CPU.ngr"/>
@@ -195,6 +274,15 @@
       <outfile xil_pn:name="CPU.syr"/>
       <outfile xil_pn:name="CPU.xst"/>
       <outfile xil_pn:name="CPU_xst.xrpt"/>
+      <outfile xil_pn:name="Clock.ngr"/>
+      <outfile xil_pn:name="Controller.ngr"/>
+      <outfile xil_pn:name="Device_COM.ngr"/>
+      <outfile xil_pn:name="Device_Flash.ngr"/>
+      <outfile xil_pn:name="Device_Ram1.ngr"/>
+      <outfile xil_pn:name="Device_Ram2.ngr"/>
+      <outfile xil_pn:name="Extend.ngr"/>
+      <outfile xil_pn:name="MUL.ngr"/>
+      <outfile xil_pn:name="RegistersFile.ngr"/>
       <outfile xil_pn:name="TLB.ngr"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="mm_manager.ngr"/>
@@ -204,68 +292,9 @@
     <transform xil_pn:end_ts="1437054741" xil_pn:in_ck="89761772532" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="5212145339489411936" xil_pn:start_ts="1437054741">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1437058524" xil_pn:in_ck="-5703093703518102678" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8950909141284866258" xil_pn:start_ts="1437058515">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="CPU.bld"/>
-      <outfile xil_pn:name="CPU.ngd"/>
-      <outfile xil_pn:name="CPU_ngdbuild.xrpt"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-    </transform>
-    <transform xil_pn:end_ts="1437058553" xil_pn:in_ck="7417077194785487534" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-3007501460119878838" xil_pn:start_ts="1437058524">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="CPU.pcf"/>
-      <outfile xil_pn:name="CPU_map.map"/>
-      <outfile xil_pn:name="CPU_map.mrp"/>
-      <outfile xil_pn:name="CPU_map.ncd"/>
-      <outfile xil_pn:name="CPU_map.ngm"/>
-      <outfile xil_pn:name="CPU_map.xrpt"/>
-      <outfile xil_pn:name="CPU_summary.xml"/>
-      <outfile xil_pn:name="CPU_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-    </transform>
-    <transform xil_pn:end_ts="1437058589" xil_pn:in_ck="-6068740287875854848" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="8313326105510903995" xil_pn:start_ts="1437058553">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="CPU.ncd"/>
-      <outfile xil_pn:name="CPU.pad"/>
-      <outfile xil_pn:name="CPU.par"/>
-      <outfile xil_pn:name="CPU.ptwx"/>
-      <outfile xil_pn:name="CPU.unroutes"/>
-      <outfile xil_pn:name="CPU.xpi"/>
-      <outfile xil_pn:name="CPU_pad.csv"/>
-      <outfile xil_pn:name="CPU_pad.txt"/>
-      <outfile xil_pn:name="CPU_par.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-    </transform>
-    <transform xil_pn:end_ts="1437058619" xil_pn:in_ck="5294517558166312594" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5017394210571468131" xil_pn:start_ts="1437058589">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="CPU.ut"/>
-      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
-      <outfile xil_pn:name="cpu.bgn"/>
-      <outfile xil_pn:name="cpu.bit"/>
-      <outfile xil_pn:name="cpu.drc"/>
-      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
-      <outfile xil_pn:name="webtalk.log"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-    </transform>
-    <transform xil_pn:end_ts="1437058623" xil_pn:in_ck="132379009109" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1437058619">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1437058589" xil_pn:in_ck="-562972260776771802" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1437058578">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="CPU.twr"/>
-      <outfile xil_pn:name="CPU.twx"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
 

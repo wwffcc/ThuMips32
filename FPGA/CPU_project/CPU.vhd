@@ -33,39 +33,72 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 
 entity CPU is
     Port ( rst : in  STD_LOGIC;
-           clk : in  STD_LOGIC;
+           clk50 : in  STD_LOGIC;
+			  clk11:in STD_LOGIC;    
+			  clk_step:in STD_LOGIC;
 			  
-           --SW : in  STD_LOGIC_VECTOR (31 downto 0);
-           LED : out  STD_LOGIC_VECTOR (15 downto 0);
-			  DYP0: out STD_LOGIC_VECTOR (6 downto 0);
-			  DYP1: out STD_LOGIC_VECTOR (6 downto 0);
+			  SW: in STD_LOGIC_VECTOR(31 downto 0);
+			  LED:out STD_LOGIC_VECTOR(15 downto 0);
+			  DYP0:out STD_LOGIC_VECTOR(6 downto 0);
+			  DYP1:out STD_LOGIC_VECTOR(6 downto 0);
 			  
-           Ram1Addr : out  STD_LOGIC_VECTOR (31 downto 0);
+           Ram1Addr : out  STD_LOGIC_VECTOR (19 downto 0);
            Ram1Data : inout  STD_LOGIC_VECTOR (31 downto 0);
            Ram1EN : out  STD_LOGIC;
            Ram1OE : out  STD_LOGIC;
            Ram1WE : out  STD_LOGIC;
-           Ram2Addr : out  STD_LOGIC_VECTOR (31 downto 0);
+           Ram2Addr : out  STD_LOGIC_VECTOR (19 downto 0);
            Ram2Data : inout  STD_LOGIC_VECTOR (31 downto 0);
            Ram2EN : out  STD_LOGIC;
            Ram2OE : out  STD_LOGIC;
-           Ram2WE : out  STD_LOGIC);
+           Ram2WE : out  STD_LOGIC;
+			  
+			  	FlashAddr : out  STD_LOGIC_VECTOR (22 downto 0);
+           FlashData : inout  STD_LOGIC_VECTOR (15 downto 0);
+           FlashByte : out  STD_LOGIC;
+           FlashVpen : out  STD_LOGIC;
+           FlashCE : out  STD_LOGIC_VECTOR(2 downto 0);
+           FlashOE : out  STD_LOGIC;
+           FlashWE : out  STD_LOGIC;
+           FlashRP : out  STD_LOGIC;
+			  
+			  data_ready : in  STD_LOGIC;
+           rdn : out  STD_LOGIC;
+           tbre : in  STD_LOGIC;
+           tsre : in  STD_LOGIC;
+           wrn : out  STD_LOGIC
+			  );
 end CPU;
 
 architecture Behavioral of CPU is
 
+component Clock
+	Port ( clk50 : in  STD_LOGIC;
+				clk11:in STD_LOGIC;
+				clk_step:in STD_LOGIC;
+           clk_cpu : out  STD_LOGIC;
+           clk_mm : out  STD_LOGIC;
+			  clk_flag:in STD_LOGIC_VECTOR(2 downto 0));
+end component;
+signal clk_cpu:STD_LOGIC:='0';
+signal clk_mm:STD_LOGIC:='0';
+signal clk_com:STD_LOGIC:='0';
+signal clk_flag:STD_LOGIC_VECTOR(2 downto 0):="000";
+
 component mm_manager
 	Port ( rst : in  STD_LOGIC;
-           clk : in  STD_LOGIC;
+           clk_cpu : in  STD_LOGIC;
+			  clk_mm:in STD_LOGIC;
+			  clk11: in STD_LOGIC;			  
+			  
+			  Status: in STD_LOGIC_VECTOR(31 downto 0);
            MemRead : in  STD_LOGIC;
            MemWrite : in  STD_LOGIC;
            Data_out : out  STD_LOGIC_VECTOR (31 downto 0);			---
            Data_in : in  STD_LOGIC_VECTOR (31 downto 0);
            ready : out  STD_LOGIC;											---
-			  mem_error : out STD_LOGIC_VECTOR(1 downto 0);				---
-			  
-			  --DYP0: out STD_LOGIC_VECTOR (6 downto 0);
-			  DYP1: out STD_LOGIC_VECTOR (6 downto 0);
+			  mem_error : out STD_LOGIC_VECTOR(1 downto 0);				---	
+			  BadVAddr:out STD_LOGIC_VECTOR(31 downto 0);
 			  
 			  --TLB mmu
 			  Index : in  STD_LOGIC_VECTOR (31 downto 0);
@@ -76,57 +109,270 @@ component mm_manager
            TLBWrite : in  STD_LOGIC;			  
 			  
 			  --Ram1 Ram2
-			  Ram1Addr : out  STD_LOGIC_VECTOR (31 downto 0);
+			  Ram1Addr : out  STD_LOGIC_VECTOR (19 downto 0);
            Ram1Data : inout  STD_LOGIC_VECTOR (31 downto 0);
            Ram1EN : out  STD_LOGIC;
            Ram1OE : out  STD_LOGIC;
            Ram1WE : out  STD_LOGIC;
-           Ram2Addr : out  STD_LOGIC_VECTOR (31 downto 0);
+           Ram2Addr : out  STD_LOGIC_VECTOR (19 downto 0);
            Ram2Data : inout  STD_LOGIC_VECTOR (31 downto 0);
            Ram2EN : out  STD_LOGIC;
            Ram2OE : out  STD_LOGIC;
-           Ram2WE : out  STD_LOGIC						 
+           Ram2WE : out  STD_LOGIC;
+				
+				--Flash
+				FlashAddr : out  STD_LOGIC_VECTOR (22 downto 0);
+           FlashData : inout  STD_LOGIC_VECTOR (15 downto 0);
+           FlashByte : out  STD_LOGIC;
+           FlashVpen : out  STD_LOGIC;
+           FlashCE : out  STD_LOGIC_VECTOR(2 downto 0);
+           FlashOE : out  STD_LOGIC;
+           FlashWE : out  STD_LOGIC;
+           FlashRP : out  STD_LOGIC;
+			  
+			  --COM
+			  data_ready : in  STD_LOGIC;
+           rdn : out  STD_LOGIC;
+           tbre : in  STD_LOGIC;
+           tsre : in  STD_LOGIC;
+           wrn : out  STD_LOGIC;
+				com_Int:out STD_LOGIC;
+				
+				DYP1:out STD_LOGIC_VECTOR(6 downto 0)
 			  );
 end component;
+signal MemWrite:STD_LOGIC:='0';
+signal MemRead:STD_LOGIC:='0';
+signal Data_out:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal Data_in:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 
+component RegistersFile
+	Port ( rst : in  STD_LOGIC;
+           RegAddr1 : in  STD_LOGIC_VECTOR (4 downto 0);
+           RegAddr2 : in  STD_LOGIC_VECTOR (4 downto 0);
+           RegDataSrc : in  STD_LOGIC_VECTOR (31 downto 0);
+           --RegDataCtrl : in  STD_LOGIC_VECTOR (1 downto 0);
+           RegWrite : in  STD_LOGIC;
+           RegData1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           RegData2 : out  STD_LOGIC_VECTOR (31 downto 0);
+           RegDst : in  STD_LOGIC_VECTOR (4 downto 0));
+end component;
+signal RegAddr1:STD_LOGIC_VECTOR(4 downto 0):="00000";
+signal RegAddr2:STD_LOGIC_VECTOR(4 downto 0):="00000";
+signal RegDstx:STD_LOGIC_VECTOR(4 downto 0):="00000";
+signal RegDataSrcx:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal RegData1:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal RegData2:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal RegWrite:STD_LOGIC:='0';
+
+--CP0
+signal Status:STD_LOGIC_VECTOR(31 downto 0):=x"FFFFFFFF";
 signal Index:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal EntryLo0:STD_LOGIC_VECTOR (31 downto 0):=x"00000000";
 signal EntryLo1:STD_LOGIC_VECTOR (31 downto 0):=x"00000000";
-signal EntryHi:STD_LOGIC_VECTOR (31 downto 0):=x"00000000";          
+signal EntryHi:STD_LOGIC_VECTOR (31 downto 0):=x"00000000";     
+signal BadVAddr:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";     
+signal Count:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal Compare:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal Cause:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal EPC:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal EBase:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+
+--LO,HI
+signal LO:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal HI:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+
+component ALU
+	Port ( srcA : in  STD_LOGIC_VECTOR (31 downto 0);
+           srcB : in  STD_LOGIC_VECTOR (31 downto 0);
+			  ALUOp: in  STD_LOGIC_VECTOR (3 downto 0);
+           result : out  STD_LOGIC_VECTOR (31 downto 0));
+end component;
+signal ALUSrcAx:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal ALUSrcBx:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal ALUOp:STD_LOGIC_VECTOR(3 downto 0):="0000";
+signal ALUResult:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+
+component MUL
+	Port ( rst : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+           start : in  STD_LOGIC;
+           A : in  STD_LOGIC_VECTOR (31 downto 0);
+           B : in  STD_LOGIC_VECTOR (31 downto 0);
+           ready : out  STD_LOGIC;
+           R : out  STD_LOGIC_VECTOR (63 downto 0));
+end component;
+signal MUL_start:STD_LOGIC:='0';				--control mul
+signal MULResult:STD_LOGIC_VECTOR(63 downto 0):=(others=>'0');
+signal MUL_ready:STD_LOGIC:='0';
+
+component Controller
+	Port ( rst : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+           instructions : in  STD_LOGIC_VECTOR (31 downto 0);
+           PCWrite : out  STD_LOGIC;
+           IorD : out  STD_LOGIC;
+           TLBWrite : out  STD_LOGIC;
+           MemRead : out  STD_LOGIC;
+           MemWrite : out  STD_LOGIC;
+           MemDataSrc : out  STD_LOGIC;
+			  MemAddrSrc : out STD_LOGIC_VECTOR(1 downto 0);
+           IRWrite : out  STD_LOGIC;
+           RegDst : out  STD_LOGIC_VECTOR (1 downto 0);
+           RegDataSrc : out  STD_LOGIC_VECTOR (2 downto 0);
+   --        RegDataCtrl : out  STD_LOGIC_VECTOR (1 downto 0);
+           RegWrite : out  STD_LOGIC;
+           ALUSrcA : out  STD_LOGIC_VECTOR (1 downto 0);
+           ALUSrcB : out  STD_LOGIC_VECTOR (2 downto 0);
+           PCSrc : out  STD_LOGIC_VECTOR (2 downto 0);
+           PCWriteCond : out  STD_LOGIC_VECTOR (2 downto 0);
+           HISrc : out  STD_LOGIC;
+           LOSrc : out  STD_LOGIC;
+           HIWrite : out  STD_LOGIC;
+           LOWrite : out  STD_LOGIC;
+           ALUOp : out  STD_LOGIC_VECTOR (3 downto 0);
+           ExtendOp : out  STD_LOGIC_VECTOR (2 downto 0);
+           ALUOutWrite : out  STD_LOGIC;
+           RPCWrite : out  STD_LOGIC;
+           CP0Write : out  STD_LOGIC;
+			  exc_code: out STD_LOGIC_VECTOR(4 downto 0);
+			  EPCWrite: out STD_LOGIC;
+			  
+			  MUL_start: out STD_LOGIC;
+			  MUL_ready: in  STD_LOGIC;
+			  Mem_ready:in STD_LOGIC;
+			  mem_error:in STD_LOGIC_VECTOR(1 downto 0);
+			  timer_Int:in STD_LOGIC;
+			  com_Int:in STD_LOGIC;
+			  Status:in STD_LOGIC_VECTOR(31 downto 0);
+			  set_Cause:out STD_LOGIC;
+			  set_EXL:out STD_LOGIC;
+			  cause_IP:out STD_LOGIC_VECTOR(5 downto 0);
+			  
+			  DYP0:out STD_LOGIC_VECTOR(6 downto 0)
+			  );
+end component;
+signal instructions:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal PCWrite :STD_LOGIC:='0';
+signal IorD :STD_LOGIC:='0';
+signal TLBWrite :STD_LOGIC:='0';
+--signal MemRead :STD_LOGIC:='0';
+--signal MemWrite :STD_LOGIC:='0';
+signal MemDataSrc :STD_LOGIC:='0';
+signal MemAddrSrc :STD_LOGIC_VECTOR(1 downto 0):="00";
+signal IRWrite :STD_LOGIC:='0';
+signal RegDst :STD_LOGIC_VECTOR (1 downto 0):="00";
+signal RegDataSrc :STD_LOGIC_VECTOR (2 downto 0):="000";
+--signal RegDataCtrl :STD_LOGIC_VECTOR (1 downto 0):="00";
+--signal RegWrite :STD_LOGIC:='0';
+signal ALUSrcA :STD_LOGIC_VECTOR (1 downto 0):="00";
+signal ALUSrcB : STD_LOGIC_VECTOR (2 downto 0):="000";
+signal PCSrc :STD_LOGIC_VECTOR (2 downto 0):="000";
+signal PCWriteCond :STD_LOGIC_VECTOR (2 downto 0):="000";
+signal HISrc :STD_LOGIC:='0';
+signal LOSrc :STD_LOGIC:='0';
+signal HIWrite :STD_LOGIC:='0';
+signal LOWrite :STD_LOGIC:='0';
+--ALUOp : out  STD_LOGIC_VECTOR (3 downto 0);
+signal ExtendOp :STD_LOGIC_VECTOR (2 downto 0):="000";
+signal ALUOutWrite :STD_LOGIC:='0';
+signal RPCWrite :STD_LOGIC:='0';
+signal CP0Write :STD_LOGIC:='0';
+signal exc_code:STD_LOGIC_VECTOR(4 downto 0):="00000";
+signal EPCWrite:STD_LOGIC:='0';
+signal set_Cause: STD_LOGIC:='0';
+signal set_EXL: STD_LOGIC:='0';
+signal cause_IP: STD_LOGIC_VECTOR(5 downto 0):="000000";
+
+component Extend
+	Port ( instruction : in  STD_LOGIC_VECTOR (25 downto 0);
+				ExtendOp: in STD_LOGIC_VECTOR(2 downto 0);
+           immediate : out  STD_LOGIC_VECTOR (31 downto 0));
+end component;
+signal immediate:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+
+signal com_Int:STD_LOGIC:='0';			--com interrupt
+signal timer_Int:STD_LOGIC:='0';			--timer interrupt
+--signal timer_ready:STD_LOGIC:='0';		--mark the handle of timer
+
 signal Vaddr:STD_LOGIC_VECTOR (31 downto 0):=x"BFC00000";           
-signal TLBWrite:STD_LOGIC:='0';			  
-signal MemRead:STD_LOGIC:='0';
-signal MemWrite:STD_LOGIC:='0';
-signal Data_in:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
-signal Data_out:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+--signal TLBWrite:STD_LOGIC:='0';			  
+--signal MemRead:STD_LOGIC:='0';
+--signal MemWrite:STD_LOGIC:='0';
+--signal Data_in:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+--signal Data_out:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal ready:STD_LOGIC:='0';
 signal mem_error:STD_LOGIC_VECTOR(1 downto 0):="00";
 
-type cpu_state_type is (ST0,ST1,ST2);
-signal cpu_state:cpu_state_type:=ST0;
+--signal HISrc:STD_LOGIC:='0';
+--signal LOSrc:STD_LOGIC:='0';
+signal ALUOut:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 
-begin
+signal PC:STD_LOGIC_VECTOR(31 downto 0):=x"BFC00000";
+--signal RA:STD_LOGIC_VECTOR(31 downto 0):=x"BFC00000";
+signal RPC:STD_LOGIC_VECTOR(31 downto 0):=x"BFC00000";
+
+signal C:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";			--CP0 register
+
+type debug_state is(debug_init);
+signal d_state:debug_state:=debug_init;
+signal breakpoint:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+
+begin	
+	
+	process(rst,clk_step)
+	begin
+		if rst = '0' then
+			d_state<=debug_init;
+		elsif rising_edge(clk_step) then
+			case d_state is
+				when debug_init=>
+					breakpoint<=SW;
+				when 
+			end case;
+		end if;
+	end process;
+	
+	--clk_flag<="111";
+	process(PC,breakpoint)
+	begin
+		if PC = breakpoint then
+			clk_flag<="111";
+		end if;
+	end process;
+					
+	
+	--EBase<=x"80000000";	
+
+	u0:Clock PORT MAP(
+		clk50=>clk50,
+			clk11=>clk11,
+			clk_step=>clk_step,
+		  clk_cpu=>clk_cpu,
+		  clk_mm=>clk_mm,
+		  clk_flag=>clk_flag
+	);
+	
 	u1:mm_manager PORT MAP(
 		rst=>rst,
-		  clk=>clk,
+      clk_cpu=>clk_cpu,
+		clk_mm=>clk_mm,
+		clk11=>clk11,			  
+		Status=>Status,
 		  MemRead=>MemRead,
 		  MemWrite=>MemWrite,
 		  Data_out=>Data_out,
 		  Data_in=>Data_in,
 		  ready=>ready,
 		  mem_error=>mem_error,
-		  
-		  --DYP0=>DYP0,
-		  DYP1=>DYP1,
-		  
+		  BadVAddr=>BadVAddr,		  
 		  --TLB mmu
 		  Index=>Index,
 		  EntryLo0=>EntryLo0,
 		  EntryLo1=>EntryLo1,
 		  EntryHi=>EntryHi,
 		  Vaddr=>Vaddr,
-		  TLBWrite=>TLBWrite,
-		  
+		  TLBWrite=>TLBWrite,		  
 		  --Ram1 Ram2
 		  Ram1Addr=>Ram1Addr,
 		  Ram1Data=>Ram1Data,
@@ -137,56 +383,436 @@ begin
 		  Ram2Data=>Ram2Data,
 		  Ram2EN=>Ram2EN,
 		  Ram2OE=>Ram2OE,
-		  Ram2WE=>Ram2WE
+		  Ram2WE=>Ram2WE,			
+			--Flash
+			FlashAddr=>FlashAddr,
+		  FlashData=>FlashData,
+		  FlashByte=>FlashByte,
+		  FlashVpen=>FlashVpen,
+		  FlashCE=>FlashCE,
+		  FlashOE=>FlashOE,
+		  FlashWE=>FlashWE,
+		  FlashRP=>FlashRP,		  
+		  --COM
+		  data_ready=>data_ready,
+		  rdn=>rdn,
+		  tbre=>tbre,
+		  tsre=>tsre,
+		  wrn=>wrn,
+		  com_Int=>com_Int,
+		  
+		  DYP1=>DYP1
 	);
 	
-	process(rst,clk)
+	u2:RegistersFile PORT MAP(
+		rst=>rst,
+		  RegAddr1=>RegAddr1,
+		  RegAddr2=>RegAddr2,
+		  RegDataSrc=>RegDataSrcx,
+		  RegData1=>RegData1,
+		  RegData2=>RegData2,
+		  RegDst=>RegDstx,
+		  RegWrite=>RegWrite
+	);
+	
+	u3:ALU PORT MAP(
+		 srcA=>ALUSrcAx,
+       srcB=>ALUSrcBx,
+		 ALUOp=>ALUOp,
+       result=>ALUResult
+	);
+	
+	u4:MUL PORT MAP(
+		rst=>rst,
+      clk=>clk_cpu,
+      start=>MUL_start,
+      A=>RegData1,
+      B=>RegData2,
+      ready=>MUL_ready,
+      R=>MULResult
+	);
+	
+	u5:Controller PORT MAP(
+		rst=>rst,
+      clk=>clk_cpu,
+		  instructions=>instructions,
+		  PCWrite=>PCWrite,
+		  IorD=>IorD,
+		  TLBWrite=>TLBWrite,
+		  MemRead=>MemRead,
+		  MemWrite=>MemWrite,
+		  MemDataSrc=>MemDataSrc,
+		  MemAddrSrc=>MemAddrSrc,
+		  IRWrite=>IRWrite,
+		  RegDst=>RegDst,
+		  RegDataSrc=>RegDataSrc,
+		  
+		  RegWrite=>RegWrite,
+		  ALUSrcA=>ALUSrcA,
+		  ALUSrcB=>ALUSrcB,
+		  PCSrc=>PCSrc,
+		  PCWriteCond=>PCWriteCond,
+		  HISrc=>HISrc,
+		  LOSrc=>LOSrc,
+		  HIWrite=>HIWrite,
+		  LOWrite=>LOWrite,
+		  ALUOp=>ALUOp,
+		  ExtendOp=>ExtendOp,
+		  ALUOutWrite=>ALUOutWrite,
+		  RPCWrite=>RPCWrite,
+		  CP0Write=>CP0Write,
+		  exc_code=>exc_code,
+		  EPCWrite=>EPCWrite,
+		  
+		  MUL_start=>MUL_start,
+		  MUL_ready=>MUL_ready,
+		  Mem_ready=>ready,
+		  mem_error=>mem_error,
+		  timer_Int=>timer_Int,
+		  com_Int=>com_Int,
+		  Status=>Status,
+		  set_Cause=>set_Cause,
+			set_EXL=>set_EXL,
+			cause_IP=>cause_IP,
+			
+		 DYP0=>DYP0
+	);
+	
+	u6:Extend PORT MAP(
+		 instruction=>instructions(25 downto 0),
+		ExtendOp=>ExtendOp,
+        immediate=>immediate
+	);
+	
+	process(rst,clk_cpu)
 	begin
 		if rst = '0' then
-			MemRead<='0';
-			MemWrite<='0';
-			Data_in<=(others=>'0');
-			Index<=(others=>'0');
-			EntryLo0<=(others=>'0');
-         EntryLo1<=(others=>'0');
-         EntryHi<=(others=>'0');
-         Vaddr<=x"BFC00000";
-         TLBWrite<='0';
-		elsif clk'event and clk = '1' then
-			case cpu_state is
-				when ST0=>
-					MemRead<='1';
-					if ready='1' then
-						LED<=data_out(15 downto 0);
-						cpu_state<=ST1;
+			timer_Int<='0';
+			Count<=(others=>'0');
+			Compare<=x"02FAF080";						--Compare			
+		elsif rising_edge(clk_cpu) then
+			Count<=Count+1;
+			if Count = Compare then
+				timer_Int<='1';							
+				Count<=(others=>'0');
+			end if;
+			if Status(1)='1' then
+				timer_Int<='0';
+			end if;
+		end if;
+	end process;
+	
+	process(ALUOutWrite)
+	begin
+		if rising_edge(ALUOutWrite) then
+			ALUOut<=ALUResult;
+		end if;
+	end process;
+	
+----	process(EPCWrite)
+----	begin
+----		if rising_edge(EPCWrite) then
+----			EPC<=PC-4;													--EPC
+----		end if;
+----	end process;	
+--	
+	process(rst,PCWrite,PCWriteCond,PCSrc)						--update PC
+	begin
+		if rst = '0' then
+			PC<=x"BFC00000";
+		elsif rising_edge(PCWrite) then
+			case PCWriteCond is
+				when "000"=>
+					case PCSrc is
+						when "000"=>PC<=ALUResult;
+						when "001"=>PC<=ALUOut;
+						when "010"=>PC<=immediate;
+						when "011"=>PC<=RegData1;
+						when "100"=>PC<=EPC;
+						when others=>NULL;				
+					end case;
+				when "001"=>										--BEQ
+					if ALUResult = 0 then
+						PC<=ALUOut;
 					end if;
-				when ST1=>
-					MemRead<='0';
-					cpu_state<=ST0;
-					Vaddr<=Vaddr+x"00000004";
+				when "010"=>										--BGEZ
+					if ALUResult<=0 then
+						PC<=ALUOut;
+					end if;
+				when "011"=>										--BGTZ
+					if ALUResult<0 then
+						PC<=ALUOut;
+					end if;
+				when "100"=>										--BLEZ
+					if ALUResult>=0 then
+						PC<=ALUOut;
+					end if;
+				when "101"=>
+					if ALUResult>0 then							--BLTZ
+						PC<=ALUOut;
+					end if;
+				when "110"=>										--BNE
+					if ALUResult/=0 then
+						PC<=ALUOut;
+					end if;
+				when "111"=>										--interrupt
+					PC<=EBase+x"00000180";
 				when others=>NULL;
 			end case;
 		end if;
-		
-		case cpu_state is
-			when ST0=> DYP0<=not "1000000";
-			when ST1=> DYP0<=not "1111001";
---			when ST2=> DYP0<=not "0100100";
---			when ST3=> DYP0<=not "0110000";
---			when ST4=> DYP0<=not "0011001";
---			when RT2=> DYP0<=not "0010010";
---			when RT3=> DYP0<=not "0000010";
---			when RT4=> DYP0<=not "1111000";
-	--		when ST8=> DYP0<=not "0000000";
-	--		when ST9=> DYP0<=not "0010000";
-	--		when TT0=> DYP0<=not "1000000";
-	--		when TT1=> DYP0<=not "1111001";
-	--		when TT2=> DYP0<=not "0100100";
-	--		when TT3=> DYP0<=not "0110000";
-	--		when TT4=> DYP0<=not "0011001";
-	--		when TT5=> DYP0<=not "0010010";
-			when others=> DYP0<=not "1111111";
+	end process;
+	
+	process(MemAddrSrc,IorD,PC,ALUResult)
+	begin
+		case IorD is
+			when '0'=>
+				Vaddr<=PC;
+			when '1'=>
+				Vaddr<=ALUResult;
+				case MemAddrSrc is				
+					when "01"=>						
+						Vaddr(1)<='0';				
+					when "10"=>
+						Vaddr(1 downto 0)<="00";
+					when others=>null;
+				end case;
+			when others=>NULL;			
 		end case;
 	end process;
+	
+	process(MemDataSrc,ALUResult,RegData2,Data_out)
+	begin
+		case MemDataSrc is
+			when '0'=>
+				Data_in<=RegData2;				--[Rt]
+			when '1'=>								--SB
+				Data_in<=Data_out;
+				case ALUResult(1 downto 0) is
+					when "00"=>
+						Data_in(7 downto 0)<=RegData2(7 downto 0);
+					when "01"=>
+						Data_in(15 downto 8)<=RegData2(7 downto 0);
+					when "10"=>
+						Data_in(23 downto 16)<=RegData2(7 downto 0);
+					when "11"=>
+						Data_in(31 downto 24)<=RegData2(7 downto 0);
+					when others=>
+						NULL;
+				end case;				
+			when others=>NULL;
+		end case;
+	end process;
+	
+	process(IRWrite)
+	begin
+		if rising_edge(IRWrite) then
+			instructions<=Data_out;			
+		end if;
+	end process;
+	
+	RegAddr1<=instructions(25 downto 21);
+	RegAddr2<=instructions(20 downto 16);
+	
+	process(RegDst,instructions)
+	begin
+		RegDstx<="00000";
+		--RA<=RA;
+		case RegDst is
+			when "00"=>
+				RegDstx<=instructions(15 downto 11);
+			when "01"=>
+				RegDstx<=instructions(20 downto 16);
+			when "10"=>
+				RegDstx<="11111";
+			when others=>NULL;
+		end case;
+	end process;
+	
+	process(RPCWrite)
+	begin
+		if rising_edge(RPCWrite) then
+			RPC<=PC;
+		end if;
+	end process;
+	
+--	with RegDataSrc select
+--		RegDataSrcx<=
+--					ALUResult	when "000",
+--					LO				when "001",
+--					HI				when "010",
+--					Data_out		when "011",
+--					RPC			when "100",
+--					immediate(15 downto 0) & x"0000" when "101",
+--					C				when "110",
+--					x"FFFFFFFF"	when "111";
+	process(RegDataSrc,ALUResult,LO,HI,Data_out,RPC,immediate,RegData2,C,instructions)
+	begin
+		case RegDataSrc is
+			when "000"=>
+					RegDataSrcx<=ALUResult;
+			when "001"=>
+					RegDataSrcx<=LO;
+			when "010"=>
+					RegDataSrcx<=HI;
+			when "011"=>
+					--RegDataSrcx<=Data_out;
+					case ALUResult(1 downto 0) is
+						when "00"=>
+							RegDataSrcx(7 downto 0)<=Data_out(7 downto 0);
+							if instructions(28)='0' then
+								RegDataSrcx(31 downto 8)<=(others=>Data_out(7));
+							else
+								RegDataSrcx(31 downto 8)<=(others=>'0');
+							end if;
+						when "01"=>
+							RegDataSrcx(7 downto 0)<=Data_out(15 downto 8);							
+							if instructions(28)='0' then							--LB
+								RegDataSrcx(31 downto 8)<=(others=>Data_out(15));
+							else
+								RegDataSrcx(31 downto 8)<=(others=>'0');
+							end if;
+						when "10"=>
+							RegDataSrcx(7 downto 0)<=Data_out(23 downto 16);
+							if instructions(28)='0' then
+								RegDataSrcx(31 downto 8)<=(others=>Data_out(23));
+							else
+								RegDataSrcx(31 downto 8)<=(others=>'0');
+							end if;
+						when "11"=>
+							RegDataSrcx(7 downto 0)<=Data_out(31 downto 24);
+							if instructions(28)='0' then
+								RegDataSrcx(31 downto 8)<=(others=>Data_out(31));						
+							else
+								RegDataSrcx(31 downto 8)<=(others=>'0');
+							end if;
+						when others=>NULL;
+					end case;
+			when "100"=>
+					RegDataSrcx<=RPC;
+			when "101"=>
+					RegDataSrcx(31 downto 16)<=immediate(15 downto 0);
+					RegDataSrcx(15 downto 0)<=RegData2(15 downto 0);
+			when "110"=>
+					RegDataSrcx(31 downto 0)<=C;
+			when others=>
+					RegDataSrcx(31 downto 0)<=ALUResult;
+		end case;
+	end process;
+	
+	with ALUSrcA select
+		ALUSrcAx<=
+					PC				when "00",
+					RegData1		when "01",
+					RegData2		when "10",
+					EBase			when "11";
+	
+	with ALUSrcB select
+		ALUSrcBx<=
+					x"00000004"	when "000",
+					RegData2		when "001",
+					immediate	when "010",
+					x"00000000" when "011",
+					RegData1		when "100",
+					x"00000180"	when "101",
+					x"00000000" when others;
+	
+	process(HIWrite)
+	begin
+		if rising_edge(HIWrite) then
+			case HISrc is
+				when '0'=>
+					HI<=RegData1;
+				when '1'=>
+					HI<=MULResult(63 downto 32);
+				when others=>
+					null;
+			end case;
+		end if;
+	end process;
+	
+	process(LOWrite)
+	begin
+		if rising_edge(LOWrite) then
+			case LOSrc is
+				when '0'=>
+					LO<=RegData1;
+				when '1'=>
+					LO<=MULResult(31 downto 0);
+				when others=>NULL;
+			end case;
+		end if;
+	end process;
+	
+	process(rst,clk_cpu)--,CP0Write,set_Cause,set_EXL)
+	begin
+		if rst = '0' then
+			Index<=(others=>'0');
+			EntryLo0<=(others=>'0');
+			EntryLo1<=(others=>'0');
+			EntryHi<=(others=>'0');
+			Status<=(others=>'1');
+			EBase<=x"80000000";
+			Cause<=(others=>'0');
+			EPC<=(others=>'0');
+		elsif rising_edge(clk_cpu) then
+			if CP0Write='1' then
+				case instructions(15 downto 11) is
+					when "00000"=>								--Index		0
+						Index<=RegData2;
+					when "00010"=>								--EntryLo0  2
+						EntryLo0<=RegData2;
+					when "00011"=>								--EntryLo1	3
+						EntryLo1<=RegData2;
+					when "01001"=>								--BadVAddr	9
+						NULL;--BadVAddr<=RegData2;
+					when "01010"=>								--Count		10
+						NULL;
+					when "01011"=>								--EntryHi	11
+						EntryHi<=RegData2;
+					when "01100"=>								--compare	12
+						NULL;
+					when "01101"=>								--Status		13
+						Status<=RegData2;
+					when "01111"=>								--Cause 		15
+						Cause<=RegData2;					
+					when "10000"=>								--EPC			16
+						Cause<=RegData2;
+					when "10010"=>								--EBase		18
+						Cause<=EBase;
+					when others=>NULL;
+				end case;	
+			else
+				if set_Cause = '1' then
+					Cause(6 downto 2)<=exc_code;
+					Cause(15)<=Cause_IP(5);
+					Cause(10)<=Cause_IP(0);
+				end if;
+				if set_EXL = '1' then
+					Status(1)<='1';
+				else
+					Status(1)<='0';
+				end if;
+				if EPCWrite = '1' then
+					EPC<=PC-4;
+				end if;
+			end if;
+		end if;
+	end process;		
+	
+	with instructions(15 downto 11) select
+		C<=
+			Index							when "00000",
+			EntryLo0						when "00010",
+			EntryLo1						when "00011",
+			BadVAddr						when "01001",
+			Count							when "01010",
+			EntryHi						when "01011",
+			compare						when "01100",
+			Status						when "01101",
+			Cause							when "01111",
+			EPC							when "10000",
+			EBase							when "10010",
+			x"00000000"					when others;
+	
 end Behavioral;
 

@@ -1,0 +1,39 @@
+
+
+
+// Instantiate the module
+CPU instance_name (
+    .rst(rst), 
+    .clk50(clk50), 
+    .clk11(clk11), 
+    .clk_step(clk_step), 
+    .SW(SW), 
+    .LED(LED), 
+    .DYP0(DYP0), 
+    .DYP1(DYP1), 
+    .Ram1Addr(Ram1Addr), 
+    .Ram1Data(Ram1Data), 
+    .Ram1EN(Ram1EN), 
+    .Ram1OE(Ram1OE), 
+    .Ram1WE(Ram1WE), 
+    .Ram2Addr(Ram2Addr), 
+    .Ram2Data(Ram2Data), 
+    .Ram2EN(Ram2EN), 
+    .Ram2OE(Ram2OE), 
+    .Ram2WE(Ram2WE), 
+    .FlashAddr(FlashAddr), 
+    .FlashData(FlashData), 
+    .FlashByte(FlashByte), 
+    .FlashVpen(FlashVpen), 
+    .FlashCE(FlashCE), 
+    .FlashOE(FlashOE), 
+    .FlashWE(FlashWE), 
+    .FlashRP(FlashRP), 
+    .data_ready(data_ready), 
+    .rdn(rdn), 
+    .tbre(tbre), 
+    .tsre(tsre), 
+    .wrn(wrn)
+    );
+
+

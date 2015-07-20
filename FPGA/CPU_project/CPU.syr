@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.21 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: CPU.prj
 
@@ -112,9 +112,39 @@ Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Rom.vhd" into 
 Parsing entity <Rom>.
 Parsing architecture <Behavioral> of entity <rom>.
 WARNING:HDLCompiler:1369 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Rom.vhd" Line 123: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram2.vhd" into library work
+Parsing entity <Device_Ram2>.
+Parsing architecture <Behavioral> of entity <device_ram2>.
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram1.vhd" into library work
+Parsing entity <Device_Ram1>.
+Parsing architecture <Behavioral> of entity <device_ram1>.
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Flash.vhd" into library work
+Parsing entity <Device_Flash>.
+Parsing architecture <Behavioral> of entity <device_flash>.
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd" into library work
+Parsing entity <Device_COM>.
+Parsing architecture <Behavioral> of entity <device_com>.
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\RegistersFile.vhd" into library work
+Parsing entity <RegistersFile>.
+Parsing architecture <Behavioral> of entity <registersfile>.
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\MUL.vhd" into library work
+Parsing entity <MUL>.
+Parsing architecture <Behavioral> of entity <mul>.
 Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" into library work
 Parsing entity <mm_manager>.
 Parsing architecture <Behavioral> of entity <mm_manager>.
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Extend.vhd" into library work
+Parsing entity <Extend>.
+Parsing architecture <Behavioral> of entity <extend>.
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Controller.vhd" into library work
+Parsing entity <Controller>.
+Parsing architecture <Behavioral> of entity <controller>.
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Clock.vhd" into library work
+Parsing entity <Clock>.
+Parsing architecture <Behavioral> of entity <clock>.
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Behavioral> of entity <alu>.
 Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" into library work
 Parsing entity <CPU>.
 Parsing architecture <Behavioral> of entity <cpu>.
@@ -124,15 +154,53 @@ Parsing architecture <Behavioral> of entity <cpu>.
 =========================================================================
 
 Elaborating entity <CPU> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 319: Using initial value "00000000000000000000000000000000" for breakpoint since it is never assigned
+WARNING:HDLCompiler:1127 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 323: Assignment to d_state ignored, since the identifier is never used
+
+Elaborating entity <Clock> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Clock.vhd" Line 81. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:439 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 141: Formal port dyp1 of mode in cannot be associated with actual port dyp1 of mode out
+INFO:HDLCompiler:1408 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" Line 85. dyp1 is declared here
 
 Elaborating entity <mm_manager> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <TLB> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <Rom> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" Line 224: cur_state should be on the sensitivity list of the process
-INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" Line 241. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 171: cpu_state should be on the sensitivity list of the process
+
+Elaborating entity <Device_Ram1> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram1.vhd" Line 90. Case statement is complete. others clause is never selected
+
+Elaborating entity <Device_Ram2> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram2.vhd" Line 90. Case statement is complete. others clause is never selected
+
+Elaborating entity <Device_Flash> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Flash.vhd" Line 184. Case statement is complete. others clause is never selected
+
+Elaborating entity <Device_COM> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd" Line 104. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:1408 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" Line 85. dyp1 is declared here
+
+Elaborating entity <RegistersFile> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ALU> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <MUL> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\MUL.vhd" Line 95. Case statement is complete. others clause is never selected
+
+Elaborating entity <Controller> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Controller.vhd" Line 609. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Controller.vhd" Line 822. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Controller.vhd" Line 893. Case statement is complete. others clause is never selected
+
+Elaborating entity <Extend> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 556. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 575. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 595. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 598. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 684. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 723. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 737. Case statement is complete. others clause is never selected
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -140,72 +208,82 @@ WARNING:HDLCompiler:92 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd
 
 Synthesizing Unit <CPU>.
     Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd".
-INFO:Xst:3210 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" line 109: Output port <mem_error> of the instance <u1> is unconnected or connected to loadless signal.
-    Found 32-bit register for signal <Vaddr>.
-    Found 1-bit register for signal <MemRead>.
-    Found 16-bit register for signal <LED>.
-    Found 2-bit register for signal <cpu_state>.
-INFO:Xst:1799 - State st2 is never reached in FSM <cpu_state>.
-    Found finite state machine <FSM_0> for signal <cpu_state>.
-    -----------------------------------------------------------------------
-    | States             | 3                                              |
-    | Transitions        | 7                                              |
-    | Inputs             | 3                                              |
-    | Outputs            | 2                                              |
-    | Clock              | clk (rising_edge)                              |
-    | Power Up State     | st0                                            |
-    | Encoding           | auto                                           |
-    | Implementation     | LUT                                            |
-    -----------------------------------------------------------------------
-    Found 32-bit adder for signal <Vaddr[31]_GND_5_o_add_2_OUT> created at line 166.
-    Found 4x7-bit Read Only RAM for signal <DYP0>
+WARNING:Xst:647 - Input <SW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <DYP1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 32-bit register for signal <Status>.
+    Found 32-bit register for signal <Count>.
+    Found 32-bit register for signal <Index>.
+    Found 32-bit register for signal <EntryLo0>.
+    Found 32-bit register for signal <EntryLo1>.
+    Found 32-bit register for signal <EntryHi>.
+    Found 32-bit register for signal <Cause>.
+    Found 32-bit register for signal <EPC>.
+    Found 32-bit register for signal <PC>.
+    Found 1-bit register for signal <timer_Int>.
+    Found 32-bit register for signal <ALUOut>.
+    Found 32-bit register for signal <instructions>.
+    Found 32-bit register for signal <RPC>.
+    Found 32-bit register for signal <HI>.
+    Found 32-bit register for signal <LO>.
+    Found 32-bit adder for signal <Count[31]_GND_5_o_add_2_OUT> created at line 490.
+    Found 32-bit adder for signal <EBase[31]_GND_5_o_add_17_OUT> created at line 555.
+    Found 32-bit subtractor for signal <GND_5_o_GND_5_o_sub_53_OUT<31:0>> created at line 792.
+    Found 32-bit 4-to-1 multiplexer for signal <ALUResult[1]_RegData2[7]_wide_mux_25_OUT> created at line 586.
+    Found 5-bit 4-to-1 multiplexer for signal <RegDstx> created at line 616.
+    Found 32-bit 4-to-1 multiplexer for signal <ALUResult[1]_GND_5_o_wide_mux_34_OUT> created at line 655.
+    Found 32-bit 8-to-1 multiplexer for signal <RegDataSrcx> created at line 646.
+    Found 32-bit 4-to-1 multiplexer for signal <ALUSrcAx> created at line 698.
+WARNING:Xst:737 - Found 1-bit latch for signal <clk_flag<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Compare<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator equal for signal <Count[31]_Compare[31]_equal_4_o> created at line 491
+    Found 32-bit comparator greater for signal <n0048> created at line 535
     Summary:
-	inferred   1 RAM(s).
-	inferred   1 Adder/Subtractor(s).
-	inferred  49 D-type flip-flop(s).
-	inferred   1 Finite State Machine(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred 449 D-type flip-flop(s).
+	inferred   2 Latch(s).
+	inferred   2 Comparator(s).
+	inferred  56 Multiplexer(s).
 Unit <CPU> synthesized.
+
+Synthesizing Unit <Clock>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Clock.vhd".
+    Found 1-bit register for signal <counter>.
+    Found 1-bit 4-to-1 multiplexer for signal <clk_cpu> created at line 56.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <Clock> synthesized.
 
 Synthesizing Unit <mm_manager>.
     Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd".
-INFO:Xst:3210 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" line 106: Output port <flag_missing> of the instance <mmu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" line 106: Output port <flag_writable> of the instance <mmu> is unconnected or connected to loadless signal.
+WARNING:Xst:647 - Input <Status<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Status<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Status<31:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DYP1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <ready>.
-    Found 1-bit register for signal <Ram2EN>.
-    Found 1-bit register for signal <Ram1OE>.
-    Found 1-bit register for signal <Ram1WE>.
-    Found 32-bit register for signal <Ram1Addr>.
-    Found 32-bit register for signal <Ram1Data>.
-    Found 4-bit register for signal <cur_state>.
-    Found 1-bit register for signal <Ram2OE>.
-    Found 1-bit register for signal <Ram2WE>.
-    Found 32-bit register for signal <Ram2Addr>.
-    Found 32-bit register for signal <Ram2Data>.
+    Found 2-bit register for signal <mem_error>.
+    Found 32-bit register for signal <BadVAddr>.
+    Found 1-bit register for signal <ram1Write>.
+    Found 1-bit register for signal <ram1Read>.
+    Found 1-bit register for signal <ram2Write>.
+    Found 1-bit register for signal <ram2Read>.
+    Found 1-bit register for signal <flashWrite>.
+    Found 1-bit register for signal <flashRead>.
+    Found 1-bit register for signal <comWrite>.
+    Found 1-bit register for signal <comRead>.
     Found 32-bit register for signal <Data_out>.
-    Found 1-bit register for signal <Ram1EN>.
-    Found finite state machine <FSM_1> for signal <cur_state>.
-    -----------------------------------------------------------------------
-    | States             | 9                                              |
-    | Transitions        | 56                                             |
-    | Inputs             | 5                                              |
-    | Outputs            | 19                                             |
-    | Clock              | clk (rising_edge)                              |
-    | Power Up State     | init_state                                     |
-    | Encoding           | auto                                           |
-    | Implementation     | LUT                                            |
-    -----------------------------------------------------------------------
-    Found 32-bit comparator lessequal for signal <n0000> created at line 98
-    Found 32-bit comparator lessequal for signal <n0002> created at line 98
-    Found 32-bit comparator lessequal for signal <n0005> created at line 99
-    Found 32-bit comparator lessequal for signal <n0007> created at line 100
-    Found 32-bit comparator lessequal for signal <n0009> created at line 100
-    Found 32-bit comparator lessequal for signal <n0012> created at line 101
-    Found 32-bit comparator lessequal for signal <n0014> created at line 101
+    Found 1-bit 7-to-1 multiplexer for signal <flag[2]_GND_10_o_Mux_24_o> created at line 322.
+    Found 32-bit comparator lessequal for signal <n0000> created at line 291
+    Found 32-bit comparator lessequal for signal <n0002> created at line 291
+    Found 32-bit comparator lessequal for signal <n0005> created at line 292
+    Found 32-bit comparator lessequal for signal <n0007> created at line 293
+    Found 32-bit comparator lessequal for signal <n0009> created at line 293
+    Found 32-bit comparator lessequal for signal <n0012> created at line 294
+    Found 32-bit comparator lessequal for signal <n0014> created at line 294
     Summary:
-	inferred 167 D-type flip-flop(s).
+	inferred  75 D-type flip-flop(s).
 	inferred   7 Comparator(s).
-	inferred  17 Multiplexer(s).
-	inferred   1 Finite State Machine(s).
+	inferred  29 Multiplexer(s).
 Unit <mm_manager> synthesized.
 
 Synthesizing Unit <TLB>.
@@ -235,7 +313,7 @@ WARNING:Xst:647 - Input <EntryHi<12:0>> is never used. This port will be preserv
     Found 63-bit register for signal <tlb<0>>.
     Found 63-bit register for signal <tlb<15>>.
     Found 32-bit comparator lessequal for signal <n0000> created at line 56
-    Found 32-bit comparator greater for signal <Vaddr[31]_PWR_7_o_LessThan_2_o> created at line 56
+    Found 32-bit comparator greater for signal <Vaddr[31]_PWR_8_o_LessThan_2_o> created at line 56
     Found 19-bit comparator equal for signal <tlb[0][62]_Vaddr[31]_equal_3_o> created at line 65
     Found 19-bit comparator equal for signal <tlb[1][62]_Vaddr[31]_equal_4_o> created at line 65
     Found 19-bit comparator equal for signal <tlb[2][62]_Vaddr[31]_equal_5_o> created at line 65
@@ -266,280 +344,620 @@ WARNING:Xst:647 - Input <Paddr<1:0>> is never used. This port will be preserved 
 	inferred   1 RAM(s).
 Unit <Rom> synthesized.
 
+Synthesizing Unit <Device_Ram1>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram1.vhd".
+    Found 1-bit register for signal <Ram1_Ready>.
+    Found 1-bit register for signal <Ram1OE>.
+    Found 1-bit register for signal <Ram1WE>.
+    Found 3-bit register for signal <Ram1_State>.
+    Found 20-bit register for signal <Ram1Addr>.
+    Found 32-bit register for signal <Ram1_State[2]_dff_12_OUT>.
+    Found 32-bit register for signal <data_out>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_124>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_125>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_126>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_127>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_128>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_129>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_130>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_131>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_132>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_133>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_134>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_135>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_136>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_137>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_138>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_139>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_140>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_141>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_142>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_143>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_144>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_145>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_146>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_147>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_148>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_149>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_150>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_151>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_152>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_153>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_154>.
+    Found 1-bit register for signal <Ram1_State[2]_clk_DFF_155>.
+    Found 1-bit register for signal <Ram1EN>.
+    Found finite state machine <FSM_0> for signal <Ram1_State>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_Ram1Write_OR_65_o (positive)               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | ram1_init                                      |
+    | Power Up State     | ram1_init                                      |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 52
+    Summary:
+	inferred 120 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred  32 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <Device_Ram1> synthesized.
+
+Synthesizing Unit <Device_Ram2>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram2.vhd".
+    Found 1-bit register for signal <Ram2_Ready>.
+    Found 1-bit register for signal <Ram2OE>.
+    Found 1-bit register for signal <Ram2WE>.
+    Found 3-bit register for signal <Ram2_State>.
+    Found 20-bit register for signal <Ram2Addr>.
+    Found 32-bit register for signal <Ram2_State[2]_dff_12_OUT>.
+    Found 32-bit register for signal <data_out>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_160>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_161>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_162>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_163>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_164>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_165>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_166>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_167>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_168>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_169>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_170>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_171>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_172>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_173>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_174>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_175>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_176>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_177>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_178>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_179>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_180>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_181>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_182>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_183>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_184>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_185>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_186>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_187>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_188>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_189>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_190>.
+    Found 1-bit register for signal <Ram2_State[2]_clk_DFF_191>.
+    Found 1-bit register for signal <Ram2EN>.
+    Found finite state machine <FSM_1> for signal <Ram2_State>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_Ram2Write_OR_66_o (positive)               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | ram2_init                                      |
+    | Power Up State     | ram2_init                                      |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit tristate buffer for signal <Ram2Data<31>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<30>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<29>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<28>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<27>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<26>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<25>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<24>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<23>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<22>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<21>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<20>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<19>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<18>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<17>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<16>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<15>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<14>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<13>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<12>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<11>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<10>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<9>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<8>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<7>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<6>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<5>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<4>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<3>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<2>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<1>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<0>> created at line 52
+    Summary:
+	inferred 120 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred  32 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <Device_Ram2> synthesized.
+
+Synthesizing Unit <Device_Flash>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Flash.vhd".
+WARNING:Xst:647 - Input <Paddr<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <FlashOE>.
+    Found 2-bit register for signal <cond_flash>.
+    Found 5-bit register for signal <flash_state>.
+    Found 16-bit register for signal <flash_state[4]_dff_21_OUT>.
+    Found 23-bit register for signal <FlashAddr>.
+    Found 32-bit register for signal <Data_out>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_241>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_242>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_243>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_244>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_245>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_246>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_247>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_248>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_249>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_250>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_251>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_252>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_253>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_254>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_255>.
+    Found 1-bit register for signal <flash_state[4]_clk_DFF_256>.
+    Found 1-bit register for signal <Flash_Ready>.
+    Found 1-bit register for signal <FlashWE>.
+    Found finite state machine <FSM_2> for signal <flash_state>.
+    -----------------------------------------------------------------------
+    | States             | 22                                             |
+    | Transitions        | 26                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 9                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_FlashWrite_OR_67_o (positive)              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | flash_init                                     |
+    | Power Up State     | flash_init                                     |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 22-bit adder for signal <Paddr[22]_GND_145_o_add_7_OUT> created at line 148.
+    Found 2-bit adder for signal <cond_flash[1]_GND_145_o_add_10_OUT> created at line 156.
+    Found 4x1-bit Read Only RAM for signal <cond_flash[1]_GND_146_o_Mux_29_o>
+    Found 1-bit tristate buffer for signal <FlashData<15>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<14>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<13>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<12>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<11>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<10>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<9>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<8>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<7>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<6>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<5>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<4>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<3>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<2>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<1>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<0>> created at line 67
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  92 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+	inferred  16 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <Device_Flash> synthesized.
+
+Synthesizing Unit <Device_COM>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd".
+    Found 1-bit register for signal <Status_out<0>>.
+    Found 1-bit register for signal <COM_INT>.
+    Found 1-bit register for signal <wrn>.
+    Found 32-bit register for signal <fr_state[2]_dff_11_OUT>.
+    Found 1-bit register for signal <COM_Ready>.
+    Found 32-bit register for signal <Data_out>.
+    Found 3-bit register for signal <fr_state>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_260>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_261>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_262>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_263>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_264>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_265>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_266>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_267>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_268>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_269>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_270>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_271>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_272>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_273>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_274>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_275>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_276>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_277>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_278>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_279>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_280>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_281>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_282>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_283>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_284>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_285>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_286>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_287>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_288>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_289>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_290>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_291>.
+    Found 1-bit register for signal <rdn>.
+    Found finite state machine <FSM_3> for signal <fr_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_COM_Write_OR_85_o (positive)               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | com_init                                       |
+    | Power Up State     | com_init                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 54
+    Summary:
+	inferred 101 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+	inferred  32 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <Device_COM> synthesized.
+
+Synthesizing Unit <RegistersFile>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\RegistersFile.vhd".
+    Found 32-bit register for signal <reg<30>>.
+    Found 32-bit register for signal <reg<29>>.
+    Found 32-bit register for signal <reg<28>>.
+    Found 32-bit register for signal <reg<27>>.
+    Found 32-bit register for signal <reg<26>>.
+    Found 32-bit register for signal <reg<25>>.
+    Found 32-bit register for signal <reg<24>>.
+    Found 32-bit register for signal <reg<23>>.
+    Found 32-bit register for signal <reg<22>>.
+    Found 32-bit register for signal <reg<21>>.
+    Found 32-bit register for signal <reg<20>>.
+    Found 32-bit register for signal <reg<19>>.
+    Found 32-bit register for signal <reg<18>>.
+    Found 32-bit register for signal <reg<17>>.
+    Found 32-bit register for signal <reg<16>>.
+    Found 32-bit register for signal <reg<15>>.
+    Found 32-bit register for signal <reg<14>>.
+    Found 32-bit register for signal <reg<13>>.
+    Found 32-bit register for signal <reg<12>>.
+    Found 32-bit register for signal <reg<11>>.
+    Found 32-bit register for signal <reg<10>>.
+    Found 32-bit register for signal <reg<9>>.
+    Found 32-bit register for signal <reg<8>>.
+    Found 32-bit register for signal <reg<7>>.
+    Found 32-bit register for signal <reg<6>>.
+    Found 32-bit register for signal <reg<5>>.
+    Found 32-bit register for signal <reg<4>>.
+    Found 32-bit register for signal <reg<3>>.
+    Found 32-bit register for signal <reg<2>>.
+    Found 32-bit register for signal <reg<1>>.
+    Found 32-bit register for signal <reg<31>>.
+    Found 32-bit 32-to-1 multiplexer for signal <RegData1> created at line 53.
+    Found 32-bit 32-to-1 multiplexer for signal <RegData2> created at line 54.
+    WARNING:Xst:2404 -  FFs/Latches <reg<0><1:32>> (without init value) have a constant value of 0 in block <RegistersFile>.
+    Summary:
+	inferred 992 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <RegistersFile> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\ALU.vhd".
+    Found 32-bit adder for signal <srcA[31]_srcB[31]_add_0_OUT> created at line 49.
+    Found 32-bit subtractor for signal <GND_310_o_GND_310_o_sub_2_OUT<31:0>> created at line 51.
+    Found 32-bit shifter logical left for signal <srcA[31]_srcB[31]_shift_left_6_OUT> created at line 61
+    Found 32-bit shifter arithmetic right for signal <srcA[31]_srcB[31]_shift_right_7_OUT> created at line 63
+    Found 32-bit shifter logical right for signal <srcA[31]_srcB[31]_shift_right_8_OUT> created at line 65
+    Found 32-bit 13-to-1 multiplexer for signal <result> created at line 47.
+    Found 32-bit comparator greater for signal <srcB[31]_srcA[31]_LessThan_11_o> created at line 69
+    Found 32-bit comparator equal for signal <srcA[31]_srcB[31]_equal_14_o> created at line 75
+    Found 32-bit comparator greater for signal <srcA[31]_srcB[31]_LessThan_15_o> created at line 77
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred  16 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <MUL>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\MUL.vhd".
+    Found 64-bit register for signal <R>.
+    Found 64-bit register for signal <ans>.
+    Found 1-bit register for signal <c>.
+    Found 2-bit register for signal <state>.
+    Found 1-bit register for signal <ready>.
+    Found 5-bit register for signal <cond>.
+    Found finite state machine <FSM_4> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | start_rst_OR_249_o (positive)                  |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st0                                            |
+    | Power Up State     | st0                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <ans[63]_A[31]_add_0_OUT> created at line 76.
+    Found 5-bit adder for signal <cond[4]_GND_313_o_add_2_OUT> created at line 82.
+    Found 32-bit subtractor for signal <GND_313_o_GND_313_o_sub_2_OUT<31:0>> created at line 78.
+    Found 64-bit 3-to-1 multiplexer for signal <state[1]_X_307_o_wide_mux_6_OUT> created at line 67.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 135 D-type flip-flop(s).
+	inferred 129 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <MUL> synthesized.
+
+Synthesizing Unit <Controller>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Controller.vhd".
+WARNING:Xst:647 - Input <Status<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Status<9:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Status<14:11>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Status<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <g_state>.
+    Found 1-bit register for signal <PCWrite>.
+    Found 1-bit register for signal <IorD>.
+    Found 1-bit register for signal <TLBWrite>.
+    Found 1-bit register for signal <MemRead>.
+    Found 1-bit register for signal <MemWrite>.
+    Found 1-bit register for signal <MemDataSrc>.
+    Found 2-bit register for signal <MemAddrSrc>.
+    Found 1-bit register for signal <IRWrite>.
+    Found 2-bit register for signal <RegDst>.
+    Found 3-bit register for signal <RegDataSrc>.
+    Found 1-bit register for signal <RegWrite>.
+    Found 2-bit register for signal <ALUSrcA>.
+    Found 3-bit register for signal <ALUSrcB>.
+    Found 4-bit register for signal <ALUOp>.
+    Found 3-bit register for signal <ExtendOp>.
+    Found 3-bit register for signal <PCSrc>.
+    Found 3-bit register for signal <PCWriteCond>.
+    Found 1-bit register for signal <HISrc>.
+    Found 1-bit register for signal <LOSrc>.
+    Found 1-bit register for signal <HIWrite>.
+    Found 1-bit register for signal <LOWrite>.
+    Found 1-bit register for signal <ALUOutWrite>.
+    Found 1-bit register for signal <RPCWrite>.
+    Found 1-bit register for signal <CP0Write>.
+    Found 5-bit register for signal <exc_code>.
+    Found 1-bit register for signal <EPCWrite>.
+    Found 1-bit register for signal <MUL_start>.
+    Found 1-bit register for signal <set_Cause>.
+    Found 1-bit register for signal <set_EXL>.
+    Found 6-bit register for signal <cause_IP>.
+    Found finite state machine <FSM_5> for signal <g_state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 118                                            |
+    | Inputs             | 42                                             |
+    | Outputs            | 17                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | initialize                                     |
+    | Power Up State     | initialize                                     |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  55 D-type flip-flop(s).
+	inferred 106 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Controller> synthesized.
+
+Synthesizing Unit <Extend>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Extend.vhd".
+    Found 32-bit 7-to-1 multiplexer for signal <immediate> created at line 43.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Extend> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 2
  1024x32-bit single-port Read Only RAM                 : 1
- 4x7-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 1
- 32-bit adder                                          : 1
-# Registers                                            : 31
- 1-bit register                                        : 8
+ 4x1-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 9
+ 2-bit adder                                           : 1
+ 22-bit adder                                          : 1
+ 32-bit adder                                          : 3
+ 32-bit addsub                                         : 1
+ 32-bit subtractor                                     : 2
+ 5-bit adder                                           : 1
+# Registers                                            : 250
+ 1-bit register                                        : 160
  16-bit register                                       : 1
- 32-bit register                                       : 6
+ 2-bit register                                        : 5
+ 20-bit register                                       : 2
+ 23-bit register                                       : 1
+ 3-bit register                                        : 5
+ 32-bit register                                       : 54
+ 4-bit register                                        : 1
+ 5-bit register                                        : 2
+ 6-bit register                                        : 1
  63-bit register                                       : 16
-# Comparators                                          : 25
+ 64-bit register                                       : 2
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 30
  19-bit comparator equal                               : 16
- 32-bit comparator greater                             : 1
+ 32-bit comparator equal                               : 2
+ 32-bit comparator greater                             : 4
  32-bit comparator lessequal                           : 8
-# Multiplexers                                         : 743
- 1-bit 2-to-1 multiplexer                              : 740
- 32-bit 2-to-1 multiplexer                             : 3
-# FSMs                                                 : 2
+# Multiplexers                                         : 1093
+ 1-bit 2-to-1 multiplexer                              : 910
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 7-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 7
+ 2-bit 2-to-1 multiplexer                              : 19
+ 23-bit 2-to-1 multiplexer                             : 4
+ 3-bit 2-to-1 multiplexer                              : 32
+ 32-bit 2-to-1 multiplexer                             : 61
+ 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 4-to-1 multiplexer                             : 3
+ 32-bit 7-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 16
+ 5-bit 2-to-1 multiplexer                              : 31
+ 5-bit 4-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 2
+ 64-bit 3-to-1 multiplexer                             : 1
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Tristates                                            : 112
+ 1-bit tristate buffer                                 : 112
+# FSMs                                                 : 6
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
 
 =========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <tlb_14_2> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_2> <tlb_13_2> <tlb_12_2> <tlb_8_2> <tlb_10_2> <tlb_9_2> <tlb_5_2> <tlb_7_2> <tlb_6_2> <tlb_2_2> <tlb_4_2> <tlb_3_2> <tlb_15_2> <tlb_1_2> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_3> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_3> <tlb_13_3> <tlb_12_3> <tlb_8_3> <tlb_10_3> <tlb_9_3> <tlb_5_3> <tlb_7_3> <tlb_6_3> <tlb_2_3> <tlb_4_3> <tlb_3_3> <tlb_15_3> <tlb_1_3> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_4> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_4> <tlb_13_4> <tlb_12_4> <tlb_8_4> <tlb_10_4> <tlb_9_4> <tlb_5_4> <tlb_7_4> <tlb_6_4> <tlb_2_4> <tlb_4_4> <tlb_3_4> <tlb_15_4> <tlb_1_4> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_5> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_5> <tlb_13_5> <tlb_12_5> <tlb_8_5> <tlb_10_5> <tlb_9_5> <tlb_5_5> <tlb_7_5> <tlb_6_5> <tlb_2_5> <tlb_4_5> <tlb_3_5> <tlb_15_5> <tlb_1_5> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_23> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_23> <tlb_13_23> <tlb_12_23> <tlb_8_23> <tlb_10_23> <tlb_9_23> <tlb_5_23> <tlb_7_23> <tlb_6_23> <tlb_2_23> <tlb_4_23> <tlb_3_23> <tlb_15_23> <tlb_1_23> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_28> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_28> <tlb_13_28> <tlb_12_28> <tlb_8_28> <tlb_10_28> <tlb_9_28> <tlb_5_28> <tlb_7_28> <tlb_6_28> <tlb_2_28> <tlb_4_28> <tlb_3_28> <tlb_15_28> <tlb_1_28> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_24> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_24> <tlb_13_24> <tlb_12_24> <tlb_8_24> <tlb_10_24> <tlb_9_24> <tlb_5_24> <tlb_7_24> <tlb_6_24> <tlb_2_24> <tlb_4_24> <tlb_3_24> <tlb_15_24> <tlb_1_24> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_29> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_29> <tlb_13_29> <tlb_12_29> <tlb_8_29> <tlb_10_29> <tlb_9_29> <tlb_5_29> <tlb_7_29> <tlb_6_29> <tlb_2_29> <tlb_4_29> <tlb_3_29> <tlb_15_29> <tlb_1_29> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_25> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_25> <tlb_13_25> <tlb_12_25> <tlb_8_25> <tlb_10_25> <tlb_9_25> <tlb_5_25> <tlb_7_25> <tlb_6_25> <tlb_2_25> <tlb_4_25> <tlb_3_25> <tlb_15_25> <tlb_1_25> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_30> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_30> <tlb_13_30> <tlb_12_30> <tlb_8_30> <tlb_10_30> <tlb_9_30> <tlb_5_30> <tlb_7_30> <tlb_6_30> <tlb_2_30> <tlb_4_30> <tlb_3_30> <tlb_15_30> <tlb_1_30> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_26> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_26> <tlb_13_26> <tlb_12_26> <tlb_8_26> <tlb_10_26> <tlb_9_26> <tlb_5_26> <tlb_7_26> <tlb_6_26> <tlb_2_26> <tlb_4_26> <tlb_3_26> <tlb_15_26> <tlb_1_26> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_31> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_31> <tlb_13_31> <tlb_12_31> <tlb_8_31> <tlb_10_31> <tlb_9_31> <tlb_5_31> <tlb_7_31> <tlb_6_31> <tlb_2_31> <tlb_4_31> <tlb_3_31> <tlb_15_31> <tlb_1_31> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_44> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_44> <tlb_13_44> <tlb_12_44> <tlb_8_44> <tlb_10_44> <tlb_9_44> <tlb_5_44> <tlb_7_44> <tlb_6_44> <tlb_2_44> <tlb_4_44> <tlb_3_44> <tlb_15_44> <tlb_1_44> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_27> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_27> <tlb_13_27> <tlb_12_27> <tlb_8_27> <tlb_10_27> <tlb_9_27> <tlb_5_27> <tlb_7_27> <tlb_6_27> <tlb_2_27> <tlb_4_27> <tlb_3_27> <tlb_15_27> <tlb_1_27> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_32> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_32> <tlb_13_32> <tlb_12_32> <tlb_8_32> <tlb_10_32> <tlb_9_32> <tlb_5_32> <tlb_7_32> <tlb_6_32> <tlb_2_32> <tlb_4_32> <tlb_3_32> <tlb_15_32> <tlb_1_32> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_45> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_45> <tlb_13_45> <tlb_12_45> <tlb_8_45> <tlb_10_45> <tlb_9_45> <tlb_5_45> <tlb_7_45> <tlb_6_45> <tlb_2_45> <tlb_4_45> <tlb_3_45> <tlb_15_45> <tlb_1_45> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_33> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_33> <tlb_13_33> <tlb_12_33> <tlb_8_33> <tlb_10_33> <tlb_9_33> <tlb_5_33> <tlb_7_33> <tlb_6_33> <tlb_2_33> <tlb_4_33> <tlb_3_33> <tlb_15_33> <tlb_1_33> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_38> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_38> <tlb_13_38> <tlb_12_38> <tlb_8_38> <tlb_10_38> <tlb_9_38> <tlb_5_38> <tlb_7_38> <tlb_6_38> <tlb_2_38> <tlb_4_38> <tlb_3_38> <tlb_15_38> <tlb_1_38> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_46> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_46> <tlb_13_46> <tlb_12_46> <tlb_8_46> <tlb_10_46> <tlb_9_46> <tlb_5_46> <tlb_7_46> <tlb_6_46> <tlb_2_46> <tlb_4_46> <tlb_3_46> <tlb_15_46> <tlb_1_46> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_51> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_51> <tlb_13_51> <tlb_12_51> <tlb_8_51> <tlb_10_51> <tlb_9_51> <tlb_5_51> <tlb_7_51> <tlb_6_51> <tlb_2_51> <tlb_4_51> <tlb_3_51> <tlb_15_51> <tlb_1_51> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_34> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_34> <tlb_13_34> <tlb_12_34> <tlb_8_34> <tlb_10_34> <tlb_9_34> <tlb_5_34> <tlb_7_34> <tlb_6_34> <tlb_2_34> <tlb_4_34> <tlb_3_34> <tlb_15_34> <tlb_1_34> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_39> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_39> <tlb_13_39> <tlb_12_39> <tlb_8_39> <tlb_10_39> <tlb_9_39> <tlb_5_39> <tlb_7_39> <tlb_6_39> <tlb_2_39> <tlb_4_39> <tlb_3_39> <tlb_15_39> <tlb_1_39> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_47> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_47> <tlb_13_47> <tlb_12_47> <tlb_8_47> <tlb_10_47> <tlb_9_47> <tlb_5_47> <tlb_7_47> <tlb_6_47> <tlb_2_47> <tlb_4_47> <tlb_3_47> <tlb_15_47> <tlb_1_47> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_52> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_52> <tlb_13_52> <tlb_12_52> <tlb_8_52> <tlb_10_52> <tlb_9_52> <tlb_5_52> <tlb_7_52> <tlb_6_52> <tlb_2_52> <tlb_4_52> <tlb_3_52> <tlb_15_52> <tlb_1_52> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_35> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_35> <tlb_13_35> <tlb_12_35> <tlb_8_35> <tlb_10_35> <tlb_9_35> <tlb_5_35> <tlb_7_35> <tlb_6_35> <tlb_2_35> <tlb_4_35> <tlb_3_35> <tlb_15_35> <tlb_1_35> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_40> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_40> <tlb_13_40> <tlb_12_40> <tlb_8_40> <tlb_10_40> <tlb_9_40> <tlb_5_40> <tlb_7_40> <tlb_6_40> <tlb_2_40> <tlb_4_40> <tlb_3_40> <tlb_15_40> <tlb_1_40> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_48> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_48> <tlb_13_48> <tlb_12_48> <tlb_8_48> <tlb_10_48> <tlb_9_48> <tlb_5_48> <tlb_7_48> <tlb_6_48> <tlb_2_48> <tlb_4_48> <tlb_3_48> <tlb_15_48> <tlb_1_48> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_53> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_53> <tlb_13_53> <tlb_12_53> <tlb_8_53> <tlb_10_53> <tlb_9_53> <tlb_5_53> <tlb_7_53> <tlb_6_53> <tlb_2_53> <tlb_4_53> <tlb_3_53> <tlb_15_53> <tlb_1_53> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_36> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_36> <tlb_13_36> <tlb_12_36> <tlb_8_36> <tlb_10_36> <tlb_9_36> <tlb_5_36> <tlb_7_36> <tlb_6_36> <tlb_2_36> <tlb_4_36> <tlb_3_36> <tlb_15_36> <tlb_1_36> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_41> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_41> <tlb_13_41> <tlb_12_41> <tlb_8_41> <tlb_10_41> <tlb_9_41> <tlb_5_41> <tlb_7_41> <tlb_6_41> <tlb_2_41> <tlb_4_41> <tlb_3_41> <tlb_15_41> <tlb_1_41> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_49> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_49> <tlb_13_49> <tlb_12_49> <tlb_8_49> <tlb_10_49> <tlb_9_49> <tlb_5_49> <tlb_7_49> <tlb_6_49> <tlb_2_49> <tlb_4_49> <tlb_3_49> <tlb_15_49> <tlb_1_49> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_54> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_54> <tlb_13_54> <tlb_12_54> <tlb_8_54> <tlb_10_54> <tlb_9_54> <tlb_5_54> <tlb_7_54> <tlb_6_54> <tlb_2_54> <tlb_4_54> <tlb_3_54> <tlb_15_54> <tlb_1_54> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_37> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_37> <tlb_13_37> <tlb_12_37> <tlb_8_37> <tlb_10_37> <tlb_9_37> <tlb_5_37> <tlb_7_37> <tlb_6_37> <tlb_2_37> <tlb_4_37> <tlb_3_37> <tlb_15_37> <tlb_1_37> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_42> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_42> <tlb_13_42> <tlb_12_42> <tlb_8_42> <tlb_10_42> <tlb_9_42> <tlb_5_42> <tlb_7_42> <tlb_6_42> <tlb_2_42> <tlb_4_42> <tlb_3_42> <tlb_15_42> <tlb_1_42> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_6> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_6> <tlb_13_6> <tlb_12_6> <tlb_8_6> <tlb_10_6> <tlb_9_6> <tlb_5_6> <tlb_7_6> <tlb_6_6> <tlb_2_6> <tlb_4_6> <tlb_3_6> <tlb_15_6> <tlb_1_6> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_55> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_55> <tlb_13_55> <tlb_12_55> <tlb_8_55> <tlb_10_55> <tlb_9_55> <tlb_5_55> <tlb_7_55> <tlb_6_55> <tlb_2_55> <tlb_4_55> <tlb_3_55> <tlb_15_55> <tlb_1_55> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_50> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_50> <tlb_13_50> <tlb_12_50> <tlb_8_50> <tlb_10_50> <tlb_9_50> <tlb_5_50> <tlb_7_50> <tlb_6_50> <tlb_2_50> <tlb_4_50> <tlb_3_50> <tlb_15_50> <tlb_1_50> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_43> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_43> <tlb_13_43> <tlb_12_43> <tlb_8_43> <tlb_10_43> <tlb_9_43> <tlb_5_43> <tlb_7_43> <tlb_6_43> <tlb_2_43> <tlb_4_43> <tlb_3_43> <tlb_15_43> <tlb_1_43> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_7> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_7> <tlb_13_7> <tlb_12_7> <tlb_8_7> <tlb_10_7> <tlb_9_7> <tlb_5_7> <tlb_7_7> <tlb_6_7> <tlb_2_7> <tlb_4_7> <tlb_3_7> <tlb_15_7> <tlb_1_7> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_61> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_61> <tlb_13_61> <tlb_12_61> <tlb_8_61> <tlb_10_61> <tlb_9_61> <tlb_5_61> <tlb_7_61> <tlb_6_61> <tlb_2_61> <tlb_4_61> <tlb_3_61> <tlb_15_61> <tlb_1_61> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_56> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_56> <tlb_13_56> <tlb_12_56> <tlb_8_56> <tlb_10_56> <tlb_9_56> <tlb_5_56> <tlb_7_56> <tlb_6_56> <tlb_2_56> <tlb_4_56> <tlb_3_56> <tlb_15_56> <tlb_1_56> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_8> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_8> <tlb_13_8> <tlb_12_8> <tlb_8_8> <tlb_10_8> <tlb_9_8> <tlb_5_8> <tlb_7_8> <tlb_6_8> <tlb_2_8> <tlb_4_8> <tlb_3_8> <tlb_15_8> <tlb_1_8> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_62> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_62> <tlb_13_62> <tlb_12_62> <tlb_8_62> <tlb_10_62> <tlb_9_62> <tlb_5_62> <tlb_7_62> <tlb_6_62> <tlb_2_62> <tlb_4_62> <tlb_3_62> <tlb_15_62> <tlb_1_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_57> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_57> <tlb_13_57> <tlb_12_57> <tlb_8_57> <tlb_10_57> <tlb_9_57> <tlb_5_57> <tlb_7_57> <tlb_6_57> <tlb_2_57> <tlb_4_57> <tlb_3_57> <tlb_15_57> <tlb_1_57> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_9> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_9> <tlb_13_9> <tlb_12_9> <tlb_8_9> <tlb_10_9> <tlb_9_9> <tlb_5_9> <tlb_7_9> <tlb_6_9> <tlb_2_9> <tlb_4_9> <tlb_3_9> <tlb_15_9> <tlb_1_9> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_58> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_58> <tlb_13_58> <tlb_12_58> <tlb_8_58> <tlb_10_58> <tlb_9_58> <tlb_5_58> <tlb_7_58> <tlb_6_58> <tlb_2_58> <tlb_4_58> <tlb_3_58> <tlb_15_58> <tlb_1_58> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_10> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_10> <tlb_13_10> <tlb_12_10> <tlb_8_10> <tlb_10_10> <tlb_9_10> <tlb_5_10> <tlb_7_10> <tlb_6_10> <tlb_2_10> <tlb_4_10> <tlb_3_10> <tlb_15_10> <tlb_1_10> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_59> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_59> <tlb_13_59> <tlb_12_59> <tlb_8_59> <tlb_10_59> <tlb_9_59> <tlb_5_59> <tlb_7_59> <tlb_6_59> <tlb_2_59> <tlb_4_59> <tlb_3_59> <tlb_15_59> <tlb_1_59> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_11> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_11> <tlb_13_11> <tlb_12_11> <tlb_8_11> <tlb_10_11> <tlb_9_11> <tlb_5_11> <tlb_7_11> <tlb_6_11> <tlb_2_11> <tlb_4_11> <tlb_3_11> <tlb_15_11> <tlb_1_11> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_60> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_60> <tlb_13_60> <tlb_12_60> <tlb_8_60> <tlb_10_60> <tlb_9_60> <tlb_5_60> <tlb_7_60> <tlb_6_60> <tlb_2_60> <tlb_4_60> <tlb_3_60> <tlb_15_60> <tlb_1_60> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_16> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_16> <tlb_13_16> <tlb_12_16> <tlb_8_16> <tlb_10_16> <tlb_9_16> <tlb_5_16> <tlb_7_16> <tlb_6_16> <tlb_2_16> <tlb_4_16> <tlb_3_16> <tlb_15_16> <tlb_1_16> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_12> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_12> <tlb_13_12> <tlb_12_12> <tlb_8_12> <tlb_10_12> <tlb_9_12> <tlb_5_12> <tlb_7_12> <tlb_6_12> <tlb_2_12> <tlb_4_12> <tlb_3_12> <tlb_15_12> <tlb_1_12> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_17> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_17> <tlb_13_17> <tlb_12_17> <tlb_8_17> <tlb_10_17> <tlb_9_17> <tlb_5_17> <tlb_7_17> <tlb_6_17> <tlb_2_17> <tlb_4_17> <tlb_3_17> <tlb_15_17> <tlb_1_17> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_13> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_13> <tlb_13_13> <tlb_12_13> <tlb_8_13> <tlb_10_13> <tlb_9_13> <tlb_5_13> <tlb_7_13> <tlb_6_13> <tlb_2_13> <tlb_4_13> <tlb_3_13> <tlb_15_13> <tlb_1_13> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_18> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_18> <tlb_13_18> <tlb_12_18> <tlb_8_18> <tlb_10_18> <tlb_9_18> <tlb_5_18> <tlb_7_18> <tlb_6_18> <tlb_2_18> <tlb_4_18> <tlb_3_18> <tlb_15_18> <tlb_1_18> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_14> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_14> <tlb_13_14> <tlb_12_14> <tlb_8_14> <tlb_10_14> <tlb_9_14> <tlb_5_14> <tlb_7_14> <tlb_6_14> <tlb_2_14> <tlb_4_14> <tlb_3_14> <tlb_15_14> <tlb_1_14> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_19> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_19> <tlb_13_19> <tlb_12_19> <tlb_8_19> <tlb_10_19> <tlb_9_19> <tlb_5_19> <tlb_7_19> <tlb_6_19> <tlb_2_19> <tlb_4_19> <tlb_3_19> <tlb_15_19> <tlb_1_19> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_15> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_15> <tlb_13_15> <tlb_12_15> <tlb_8_15> <tlb_10_15> <tlb_9_15> <tlb_5_15> <tlb_7_15> <tlb_6_15> <tlb_2_15> <tlb_4_15> <tlb_3_15> <tlb_15_15> <tlb_1_15> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_20> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_20> <tlb_13_20> <tlb_12_20> <tlb_8_20> <tlb_10_20> <tlb_9_20> <tlb_5_20> <tlb_7_20> <tlb_6_20> <tlb_2_20> <tlb_4_20> <tlb_3_20> <tlb_15_20> <tlb_1_20> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_21> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_21> <tlb_13_21> <tlb_12_21> <tlb_8_21> <tlb_10_21> <tlb_9_21> <tlb_5_21> <tlb_7_21> <tlb_6_21> <tlb_2_21> <tlb_4_21> <tlb_3_21> <tlb_15_21> <tlb_1_21> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_1> in Unit <mmu> is equivalent to the following 14 FFs/Latches, which will be removed : <tlb_11_1> <tlb_13_1> <tlb_12_1> <tlb_8_1> <tlb_10_1> <tlb_9_1> <tlb_5_1> <tlb_7_1> <tlb_6_1> <tlb_2_1> <tlb_4_1> <tlb_3_1> <tlb_15_1> <tlb_1_1> 
-WARNING:Xst:1293 - FF/Latch <tlb_0_31> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_30> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_29> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_28> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_27> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_26> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_25> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_24> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_23> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_21> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_20> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_19> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_18> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_17> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_16> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_15> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_14> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_13> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_12> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_11> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_10> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_9> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_8> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_7> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_6> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_5> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_4> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_3> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_2> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_1> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_62> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_61> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_60> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_59> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_58> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_57> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_56> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_55> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_54> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_53> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_52> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_51> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_50> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_49> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_48> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_47> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_46> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_45> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_44> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_43> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_42> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_41> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_40> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_39> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_38> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_37> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_36> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_35> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_34> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_33> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_32> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_31> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_30> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_29> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_28> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_27> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_26> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_25> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_24> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_23> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_21> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_20> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_19> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_18> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_17> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_16> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_15> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_14> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_13> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_12> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_11> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_10> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_9> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_8> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_7> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_6> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_5> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_4> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_3> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_2> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_1> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_62> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_61> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_60> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_59> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_58> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_57> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_56> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_55> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_54> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_53> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_52> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_51> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_50> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_49> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_48> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_47> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_46> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_45> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_44> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_43> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_42> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_41> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_40> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_39> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_38> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_37> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_36> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_35> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_34> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_33> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_14_32> has a constant value of 0 in block <mmu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <tlb_14_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_14_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_11_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_11_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_13_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_13_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_12_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_12_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_8_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_8_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_10_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_10_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_9_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_9_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_5_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_5_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_7_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_7_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_6_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_6_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_2_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_2_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_4_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_4_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_3_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_3_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_15_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_15_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_1_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_1_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_0_0> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <tlb_0_22> of sequential type is unconnected in block <mmu>.
-WARNING:Xst:2677 - Node <Data_out_16> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_17> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_18> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_19> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_20> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_21> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_22> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_23> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_24> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_25> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_26> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_27> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_28> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_29> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_30> of sequential type is unconnected in block <u1>.
-WARNING:Xst:2677 - Node <Data_out_31> of sequential type is unconnected in block <u1>.
+INFO:Xst:2261 - The FF/Latch <Ram1_State[2]_clk_DFF_124> in Unit <u3> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram1_State[2]_clk_DFF_125> <Ram1_State[2]_clk_DFF_128> <Ram1_State[2]_clk_DFF_126> <Ram1_State[2]_clk_DFF_127> <Ram1_State[2]_clk_DFF_129> <Ram1_State[2]_clk_DFF_130> <Ram1_State[2]_clk_DFF_131> <Ram1_State[2]_clk_DFF_132> <Ram1_State[2]_clk_DFF_133> <Ram1_State[2]_clk_DFF_134> <Ram1_State[2]_clk_DFF_137> <Ram1_State[2]_clk_DFF_135> <Ram1_State[2]_clk_DFF_136> <Ram1_State[2]_clk_DFF_138> <Ram1_State[2]_clk_DFF_139> <Ram1_State[2]_clk_DFF_140> <Ram1_State[2]_clk_DFF_141> <Ram1_State[2]_clk_DFF_142> <Ram1_State[2]_clk_DFF_143> <Ram1_State[2]_clk_DFF_146> <Ram1_State[2]_clk_DFF_144> <Ram1_State[2]_clk_DFF_145> <Ram1_State[2]_clk_DFF_147> <Ram1_State[2]_clk_DFF_148> <Ram1_State[2]_clk_DFF_149> <Ram1_State[2]_clk_DFF_150> <Ram1_State[2]_clk_DFF_151> <Ram1_State[2]_clk_DFF_152> <Ram1_State[2]_clk_DFF_155> <Ram1_State[2]_clk_DFF_153> <Ram1_State[2]_clk_DFF_154> 
+INFO:Xst:2261 - The FF/Latch <Ram2_State[2]_clk_DFF_160> in Unit <u4> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram2_State[2]_clk_DFF_161> <Ram2_State[2]_clk_DFF_164> <Ram2_State[2]_clk_DFF_162> <Ram2_State[2]_clk_DFF_163> <Ram2_State[2]_clk_DFF_165> <Ram2_State[2]_clk_DFF_166> <Ram2_State[2]_clk_DFF_167> <Ram2_State[2]_clk_DFF_168> <Ram2_State[2]_clk_DFF_169> <Ram2_State[2]_clk_DFF_170> <Ram2_State[2]_clk_DFF_173> <Ram2_State[2]_clk_DFF_171> <Ram2_State[2]_clk_DFF_172> <Ram2_State[2]_clk_DFF_174> <Ram2_State[2]_clk_DFF_175> <Ram2_State[2]_clk_DFF_176> <Ram2_State[2]_clk_DFF_177> <Ram2_State[2]_clk_DFF_178> <Ram2_State[2]_clk_DFF_179> <Ram2_State[2]_clk_DFF_182> <Ram2_State[2]_clk_DFF_180> <Ram2_State[2]_clk_DFF_181> <Ram2_State[2]_clk_DFF_183> <Ram2_State[2]_clk_DFF_184> <Ram2_State[2]_clk_DFF_185> <Ram2_State[2]_clk_DFF_186> <Ram2_State[2]_clk_DFF_187> <Ram2_State[2]_clk_DFF_188> <Ram2_State[2]_clk_DFF_191> <Ram2_State[2]_clk_DFF_189> <Ram2_State[2]_clk_DFF_190> 
+INFO:Xst:2261 - The FF/Latch <flash_state[4]_clk_DFF_249> in Unit <u5> is equivalent to the following 15 FFs/Latches, which will be removed : <flash_state[4]_clk_DFF_241> <flash_state[4]_clk_DFF_242> <flash_state[4]_clk_DFF_243> <flash_state[4]_clk_DFF_244> <flash_state[4]_clk_DFF_245> <flash_state[4]_clk_DFF_246> <flash_state[4]_clk_DFF_247> <flash_state[4]_clk_DFF_248> <flash_state[4]_clk_DFF_250> <flash_state[4]_clk_DFF_251> <flash_state[4]_clk_DFF_252> <flash_state[4]_clk_DFF_253> <flash_state[4]_clk_DFF_256> <flash_state[4]_clk_DFF_254> <flash_state[4]_clk_DFF_255> 
+INFO:Xst:2261 - The FF/Latch <fr_state[2]_clk_DFF_260> in Unit <u6> is equivalent to the following 31 FFs/Latches, which will be removed : <fr_state[2]_clk_DFF_261> <fr_state[2]_clk_DFF_264> <fr_state[2]_clk_DFF_262> <fr_state[2]_clk_DFF_263> <fr_state[2]_clk_DFF_265> <fr_state[2]_clk_DFF_266> <fr_state[2]_clk_DFF_267> <fr_state[2]_clk_DFF_268> <fr_state[2]_clk_DFF_269> <fr_state[2]_clk_DFF_270> <fr_state[2]_clk_DFF_273> <fr_state[2]_clk_DFF_271> <fr_state[2]_clk_DFF_272> <fr_state[2]_clk_DFF_274> <fr_state[2]_clk_DFF_275> <fr_state[2]_clk_DFF_278> <fr_state[2]_clk_DFF_276> <fr_state[2]_clk_DFF_277> <fr_state[2]_clk_DFF_279> <fr_state[2]_clk_DFF_280> <fr_state[2]_clk_DFF_283> <fr_state[2]_clk_DFF_281> <fr_state[2]_clk_DFF_282> <fr_state[2]_clk_DFF_284> <fr_state[2]_clk_DFF_285> <fr_state[2]_clk_DFF_286> <fr_state[2]_clk_DFF_287> <fr_state[2]_clk_DFF_288> <fr_state[2]_clk_DFF_289> <fr_state[2]_clk_DFF_290> <fr_state[2]_clk_DFF_291> 
+INFO:Xst:2261 - The FF/Latch <Data_out_8> in Unit <u6> is equivalent to the following 23 FFs/Latches, which will be removed : <Data_out_9> <Data_out_10> <Data_out_11> <Data_out_12> <Data_out_13> <Data_out_14> <Data_out_15> <Data_out_16> <Data_out_17> <Data_out_18> <Data_out_19> <Data_out_20> <Data_out_21> <Data_out_22> <Data_out_23> <Data_out_24> <Data_out_25> <Data_out_26> <Data_out_27> <Data_out_28> <Data_out_29> <Data_out_30> <Data_out_31> 
+INFO:Xst:2261 - The FF/Latch <R_62> in Unit <u4> is equivalent to the following FF/Latch, which will be removed : <R_63> 
+WARNING:Xst:1710 - FF/Latch <Data_out_8> (without init value) has a constant value of 0 in block <u6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <cause_IP_1> of sequential type is unconnected in block <u5>.
+WARNING:Xst:2677 - Node <cause_IP_2> of sequential type is unconnected in block <u5>.
+WARNING:Xst:2677 - Node <cause_IP_3> of sequential type is unconnected in block <u5>.
+WARNING:Xst:2677 - Node <cause_IP_4> of sequential type is unconnected in block <u5>.
+WARNING:Xst:2404 -  FFs/Latches <Data_out<31:8>> (without init value) have a constant value of 0 in block <Device_COM>.
 
 Synthesizing (advanced) Unit <CPU>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_DYP0> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+The following registers are absorbed into counter <Count>: 1 register on signal <Count>.
+Unit <CPU> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Device_Flash>.
+The following registers are absorbed into counter <cond_flash>: 1 register on signal <cond_flash>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cond_flash[1]_GND_146_o_Mux_29_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 4-word x 7-bit                      |          |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <("0",cpu_state)> |          |
+    |     addrA          | connected to signal <cond_flash>    |          |
     |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <DYP0>          |          |
+    |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-Unit <CPU> synthesized (advanced).
+Unit <Device_Flash> synthesized (advanced).
+
+Synthesizing (advanced) Unit <MUL>.
+The following registers are absorbed into counter <cond>: 1 register on signal <cond>.
+Unit <MUL> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Rom>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_data> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -561,202 +979,208 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 2
  1024x32-bit single-port distributed Read Only RAM     : 1
- 4x7-bit single-port distributed Read Only RAM         : 1
-# Adders/Subtractors                                   : 1
- 32-bit adder                                          : 1
-# Registers                                            : 1224
- Flip-Flops                                            : 1224
-# Comparators                                          : 25
+ 4x1-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 6
+ 22-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 1
+ 32-bit subtractor                                     : 2
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 3085
+ Flip-Flops                                            : 3085
+# Comparators                                          : 30
  19-bit comparator equal                               : 16
- 32-bit comparator greater                             : 1
+ 32-bit comparator equal                               : 2
+ 32-bit comparator greater                             : 4
  32-bit comparator lessequal                           : 8
-# Multiplexers                                         : 805
- 1-bit 2-to-1 multiplexer                              : 804
- 32-bit 2-to-1 multiplexer                             : 1
-# FSMs                                                 : 2
+# Multiplexers                                         : 1276
+ 1-bit 2-to-1 multiplexer                              : 1037
+ 1-bit 32-to-1 multiplexer                             : 64
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 7-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 7
+ 2-bit 2-to-1 multiplexer                              : 18
+ 23-bit 2-to-1 multiplexer                             : 4
+ 3-bit 2-to-1 multiplexer                              : 32
+ 32-bit 2-to-1 multiplexer                             : 56
+ 32-bit 4-to-1 multiplexer                             : 3
+ 32-bit 7-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 16
+ 5-bit 2-to-1 multiplexer                              : 31
+ 5-bit 4-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 2
+ 64-bit 3-to-1 multiplexer                             : 1
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# FSMs                                                 : 6
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <tlb_7_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_7_1> <tlb_7_2> <tlb_7_3> <tlb_7_4> <tlb_7_5> <tlb_7_6> <tlb_7_7> <tlb_7_8> <tlb_7_9> <tlb_7_10> <tlb_7_11> <tlb_7_12> <tlb_7_13> <tlb_7_14> <tlb_7_15> <tlb_7_16> <tlb_7_17> <tlb_7_18> <tlb_7_19> <tlb_7_20> <tlb_7_21> <tlb_7_22> <tlb_7_23> <tlb_7_24> <tlb_7_25> <tlb_7_26> <tlb_7_27> <tlb_7_28> <tlb_7_29> <tlb_7_30> <tlb_7_31> <tlb_7_32> <tlb_7_33> <tlb_7_34> <tlb_7_35> <tlb_7_36> <tlb_7_37> <tlb_7_38> <tlb_7_39> <tlb_7_40> <tlb_7_41> <tlb_7_42> <tlb_7_43> <tlb_7_44> <tlb_7_45> <tlb_7_46> <tlb_7_47> <tlb_7_48> <tlb_7_49> <tlb_7_50> <tlb_7_51> <tlb_7_52> <tlb_7_53> <tlb_7_54> <tlb_7_55> <tlb_7_56> <tlb_7_57> <tlb_7_58> <tlb_7_59> <tlb_7_60> <tlb_7_61> <tlb_7_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_15_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_15_1> <tlb_15_2> <tlb_15_3> <tlb_15_4> <tlb_15_5> <tlb_15_6> <tlb_15_7> <tlb_15_8> <tlb_15_9> <tlb_15_10> <tlb_15_11> <tlb_15_12> <tlb_15_13> <tlb_15_14> <tlb_15_15> <tlb_15_16> <tlb_15_17> <tlb_15_18> <tlb_15_19> <tlb_15_20> <tlb_15_21> <tlb_15_22> <tlb_15_23> <tlb_15_24> <tlb_15_25> <tlb_15_26> <tlb_15_27> <tlb_15_28> <tlb_15_29> <tlb_15_30> <tlb_15_31> <tlb_15_32> <tlb_15_33> <tlb_15_34> <tlb_15_35> <tlb_15_36> <tlb_15_37> <tlb_15_38> <tlb_15_39> <tlb_15_40> <tlb_15_41> <tlb_15_42> <tlb_15_43> <tlb_15_44> <tlb_15_45> <tlb_15_46> <tlb_15_47> <tlb_15_48> <tlb_15_49> <tlb_15_50> <tlb_15_51> <tlb_15_52> <tlb_15_53> <tlb_15_54> <tlb_15_55> <tlb_15_56> <tlb_15_57> <tlb_15_58> <tlb_15_59> <tlb_15_60> <tlb_15_61> <tlb_15_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_5_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_5_1> <tlb_5_2> <tlb_5_3> <tlb_5_4> <tlb_5_5> <tlb_5_6> <tlb_5_7> <tlb_5_8> <tlb_5_9> <tlb_5_10> <tlb_5_11> <tlb_5_12> <tlb_5_13> <tlb_5_14> <tlb_5_15> <tlb_5_16> <tlb_5_17> <tlb_5_18> <tlb_5_19> <tlb_5_20> <tlb_5_21> <tlb_5_22> <tlb_5_23> <tlb_5_24> <tlb_5_25> <tlb_5_26> <tlb_5_27> <tlb_5_28> <tlb_5_29> <tlb_5_30> <tlb_5_31> <tlb_5_32> <tlb_5_33> <tlb_5_34> <tlb_5_35> <tlb_5_36> <tlb_5_37> <tlb_5_38> <tlb_5_39> <tlb_5_40> <tlb_5_41> <tlb_5_42> <tlb_5_43> <tlb_5_44> <tlb_5_45> <tlb_5_46> <tlb_5_47> <tlb_5_48> <tlb_5_49> <tlb_5_50> <tlb_5_51> <tlb_5_52> <tlb_5_53> <tlb_5_54> <tlb_5_55> <tlb_5_56> <tlb_5_57> <tlb_5_58> <tlb_5_59> <tlb_5_60> <tlb_5_61> <tlb_5_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_13_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_13_1> <tlb_13_2> <tlb_13_3> <tlb_13_4> <tlb_13_5> <tlb_13_6> <tlb_13_7> <tlb_13_8> <tlb_13_9> <tlb_13_10> <tlb_13_11> <tlb_13_12> <tlb_13_13> <tlb_13_14> <tlb_13_15> <tlb_13_16> <tlb_13_17> <tlb_13_18> <tlb_13_19> <tlb_13_20> <tlb_13_21> <tlb_13_22> <tlb_13_23> <tlb_13_24> <tlb_13_25> <tlb_13_26> <tlb_13_27> <tlb_13_28> <tlb_13_29> <tlb_13_30> <tlb_13_31> <tlb_13_32> <tlb_13_33> <tlb_13_34> <tlb_13_35> <tlb_13_36> <tlb_13_37> <tlb_13_38> <tlb_13_39> <tlb_13_40> <tlb_13_41> <tlb_13_42> <tlb_13_43> <tlb_13_44> <tlb_13_45> <tlb_13_46> <tlb_13_47> <tlb_13_48> <tlb_13_49> <tlb_13_50> <tlb_13_51> <tlb_13_52> <tlb_13_53> <tlb_13_54> <tlb_13_55> <tlb_13_56> <tlb_13_57> <tlb_13_58> <tlb_13_59> <tlb_13_60> <tlb_13_61> <tlb_13_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_3_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_3_1> <tlb_3_2> <tlb_3_3> <tlb_3_4> <tlb_3_5> <tlb_3_6> <tlb_3_7> <tlb_3_8> <tlb_3_9> <tlb_3_10> <tlb_3_11> <tlb_3_12> <tlb_3_13> <tlb_3_14> <tlb_3_15> <tlb_3_16> <tlb_3_17> <tlb_3_18> <tlb_3_19> <tlb_3_20> <tlb_3_21> <tlb_3_22> <tlb_3_23> <tlb_3_24> <tlb_3_25> <tlb_3_26> <tlb_3_27> <tlb_3_28> <tlb_3_29> <tlb_3_30> <tlb_3_31> <tlb_3_32> <tlb_3_33> <tlb_3_34> <tlb_3_35> <tlb_3_36> <tlb_3_37> <tlb_3_38> <tlb_3_39> <tlb_3_40> <tlb_3_41> <tlb_3_42> <tlb_3_43> <tlb_3_44> <tlb_3_45> <tlb_3_46> <tlb_3_47> <tlb_3_48> <tlb_3_49> <tlb_3_50> <tlb_3_51> <tlb_3_52> <tlb_3_53> <tlb_3_54> <tlb_3_55> <tlb_3_56> <tlb_3_57> <tlb_3_58> <tlb_3_59> <tlb_3_60> <tlb_3_61> <tlb_3_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_11_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_11_1> <tlb_11_2> <tlb_11_3> <tlb_11_4> <tlb_11_5> <tlb_11_6> <tlb_11_7> <tlb_11_8> <tlb_11_9> <tlb_11_10> <tlb_11_11> <tlb_11_12> <tlb_11_13> <tlb_11_14> <tlb_11_15> <tlb_11_16> <tlb_11_17> <tlb_11_18> <tlb_11_19> <tlb_11_20> <tlb_11_21> <tlb_11_22> <tlb_11_23> <tlb_11_24> <tlb_11_25> <tlb_11_26> <tlb_11_27> <tlb_11_28> <tlb_11_29> <tlb_11_30> <tlb_11_31> <tlb_11_32> <tlb_11_33> <tlb_11_34> <tlb_11_35> <tlb_11_36> <tlb_11_37> <tlb_11_38> <tlb_11_39> <tlb_11_40> <tlb_11_41> <tlb_11_42> <tlb_11_43> <tlb_11_44> <tlb_11_45> <tlb_11_46> <tlb_11_47> <tlb_11_48> <tlb_11_49> <tlb_11_50> <tlb_11_51> <tlb_11_52> <tlb_11_53> <tlb_11_54> <tlb_11_55> <tlb_11_56> <tlb_11_57> <tlb_11_58> <tlb_11_59> <tlb_11_60> <tlb_11_61> <tlb_11_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_1_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_1_1> <tlb_1_2> <tlb_1_3> <tlb_1_4> <tlb_1_5> <tlb_1_6> <tlb_1_7> <tlb_1_8> <tlb_1_9> <tlb_1_10> <tlb_1_11> <tlb_1_12> <tlb_1_13> <tlb_1_14> <tlb_1_15> <tlb_1_16> <tlb_1_17> <tlb_1_18> <tlb_1_19> <tlb_1_20> <tlb_1_21> <tlb_1_22> <tlb_1_23> <tlb_1_24> <tlb_1_25> <tlb_1_26> <tlb_1_27> <tlb_1_28> <tlb_1_29> <tlb_1_30> <tlb_1_31> <tlb_1_32> <tlb_1_33> <tlb_1_34> <tlb_1_35> <tlb_1_36> <tlb_1_37> <tlb_1_38> <tlb_1_39> <tlb_1_40> <tlb_1_41> <tlb_1_42> <tlb_1_43> <tlb_1_44> <tlb_1_45> <tlb_1_46> <tlb_1_47> <tlb_1_48> <tlb_1_49> <tlb_1_50> <tlb_1_51> <tlb_1_52> <tlb_1_53> <tlb_1_54> <tlb_1_55> <tlb_1_56> <tlb_1_57> <tlb_1_58> <tlb_1_59> <tlb_1_60> <tlb_1_61> <tlb_1_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_14_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_14_1> <tlb_14_2> <tlb_14_3> <tlb_14_4> <tlb_14_5> <tlb_14_6> <tlb_14_7> <tlb_14_8> <tlb_14_9> <tlb_14_10> <tlb_14_11> <tlb_14_12> <tlb_14_13> <tlb_14_14> <tlb_14_15> <tlb_14_16> <tlb_14_17> <tlb_14_18> <tlb_14_19> <tlb_14_20> <tlb_14_21> <tlb_14_22> <tlb_14_23> <tlb_14_24> <tlb_14_25> <tlb_14_26> <tlb_14_27> <tlb_14_28> <tlb_14_29> <tlb_14_30> <tlb_14_31> <tlb_14_32> <tlb_14_33> <tlb_14_34> <tlb_14_35> <tlb_14_36> <tlb_14_37> <tlb_14_38> <tlb_14_39> <tlb_14_40> <tlb_14_41> <tlb_14_42> <tlb_14_43> <tlb_14_44> <tlb_14_45> <tlb_14_46> <tlb_14_47> <tlb_14_48> <tlb_14_49> <tlb_14_50> <tlb_14_51> <tlb_14_52> <tlb_14_53> <tlb_14_54> <tlb_14_55> <tlb_14_56> <tlb_14_57> <tlb_14_58> <tlb_14_59> <tlb_14_60> <tlb_14_61> <tlb_14_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_4_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_4_1> <tlb_4_2> <tlb_4_3> <tlb_4_4> <tlb_4_5> <tlb_4_6> <tlb_4_7> <tlb_4_8> <tlb_4_9> <tlb_4_10> <tlb_4_11> <tlb_4_12> <tlb_4_13> <tlb_4_14> <tlb_4_15> <tlb_4_16> <tlb_4_17> <tlb_4_18> <tlb_4_19> <tlb_4_20> <tlb_4_21> <tlb_4_22> <tlb_4_23> <tlb_4_24> <tlb_4_25> <tlb_4_26> <tlb_4_27> <tlb_4_28> <tlb_4_29> <tlb_4_30> <tlb_4_31> <tlb_4_32> <tlb_4_33> <tlb_4_34> <tlb_4_35> <tlb_4_36> <tlb_4_37> <tlb_4_38> <tlb_4_39> <tlb_4_40> <tlb_4_41> <tlb_4_42> <tlb_4_43> <tlb_4_44> <tlb_4_45> <tlb_4_46> <tlb_4_47> <tlb_4_48> <tlb_4_49> <tlb_4_50> <tlb_4_51> <tlb_4_52> <tlb_4_53> <tlb_4_54> <tlb_4_55> <tlb_4_56> <tlb_4_57> <tlb_4_58> <tlb_4_59> <tlb_4_60> <tlb_4_61> <tlb_4_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_12_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_12_1> <tlb_12_2> <tlb_12_3> <tlb_12_4> <tlb_12_5> <tlb_12_6> <tlb_12_7> <tlb_12_8> <tlb_12_9> <tlb_12_10> <tlb_12_11> <tlb_12_12> <tlb_12_13> <tlb_12_14> <tlb_12_15> <tlb_12_16> <tlb_12_17> <tlb_12_18> <tlb_12_19> <tlb_12_20> <tlb_12_21> <tlb_12_22> <tlb_12_23> <tlb_12_24> <tlb_12_25> <tlb_12_26> <tlb_12_27> <tlb_12_28> <tlb_12_29> <tlb_12_30> <tlb_12_31> <tlb_12_32> <tlb_12_33> <tlb_12_34> <tlb_12_35> <tlb_12_36> <tlb_12_37> <tlb_12_38> <tlb_12_39> <tlb_12_40> <tlb_12_41> <tlb_12_42> <tlb_12_43> <tlb_12_44> <tlb_12_45> <tlb_12_46> <tlb_12_47> <tlb_12_48> <tlb_12_49> <tlb_12_50> <tlb_12_51> <tlb_12_52> <tlb_12_53> <tlb_12_54> <tlb_12_55> <tlb_12_56> <tlb_12_57> <tlb_12_58> <tlb_12_59> <tlb_12_60> <tlb_12_61> <tlb_12_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_2_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_2_1> <tlb_2_2> <tlb_2_3> <tlb_2_4> <tlb_2_5> <tlb_2_6> <tlb_2_7> <tlb_2_8> <tlb_2_9> <tlb_2_10> <tlb_2_11> <tlb_2_12> <tlb_2_13> <tlb_2_14> <tlb_2_15> <tlb_2_16> <tlb_2_17> <tlb_2_18> <tlb_2_19> <tlb_2_20> <tlb_2_21> <tlb_2_22> <tlb_2_23> <tlb_2_24> <tlb_2_25> <tlb_2_26> <tlb_2_27> <tlb_2_28> <tlb_2_29> <tlb_2_30> <tlb_2_31> <tlb_2_32> <tlb_2_33> <tlb_2_34> <tlb_2_35> <tlb_2_36> <tlb_2_37> <tlb_2_38> <tlb_2_39> <tlb_2_40> <tlb_2_41> <tlb_2_42> <tlb_2_43> <tlb_2_44> <tlb_2_45> <tlb_2_46> <tlb_2_47> <tlb_2_48> <tlb_2_49> <tlb_2_50> <tlb_2_51> <tlb_2_52> <tlb_2_53> <tlb_2_54> <tlb_2_55> <tlb_2_56> <tlb_2_57> <tlb_2_58> <tlb_2_59> <tlb_2_60> <tlb_2_61> <tlb_2_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_10_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_10_1> <tlb_10_2> <tlb_10_3> <tlb_10_4> <tlb_10_5> <tlb_10_6> <tlb_10_7> <tlb_10_8> <tlb_10_9> <tlb_10_10> <tlb_10_11> <tlb_10_12> <tlb_10_13> <tlb_10_14> <tlb_10_15> <tlb_10_16> <tlb_10_17> <tlb_10_18> <tlb_10_19> <tlb_10_20> <tlb_10_21> <tlb_10_22> <tlb_10_23> <tlb_10_24> <tlb_10_25> <tlb_10_26> <tlb_10_27> <tlb_10_28> <tlb_10_29> <tlb_10_30> <tlb_10_31> <tlb_10_32> <tlb_10_33> <tlb_10_34> <tlb_10_35> <tlb_10_36> <tlb_10_37> <tlb_10_38> <tlb_10_39> <tlb_10_40> <tlb_10_41> <tlb_10_42> <tlb_10_43> <tlb_10_44> <tlb_10_45> <tlb_10_46> <tlb_10_47> <tlb_10_48> <tlb_10_49> <tlb_10_50> <tlb_10_51> <tlb_10_52> <tlb_10_53> <tlb_10_54> <tlb_10_55> <tlb_10_56> <tlb_10_57> <tlb_10_58> <tlb_10_59> <tlb_10_60> <tlb_10_61> <tlb_10_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_0_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_0_1> <tlb_0_2> <tlb_0_3> <tlb_0_4> <tlb_0_5> <tlb_0_6> <tlb_0_7> <tlb_0_8> <tlb_0_9> <tlb_0_10> <tlb_0_11> <tlb_0_12> <tlb_0_13> <tlb_0_14> <tlb_0_15> <tlb_0_16> <tlb_0_17> <tlb_0_18> <tlb_0_19> <tlb_0_20> <tlb_0_21> <tlb_0_22> <tlb_0_23> <tlb_0_24> <tlb_0_25> <tlb_0_26> <tlb_0_27> <tlb_0_28> <tlb_0_29> <tlb_0_30> <tlb_0_31> <tlb_0_32> <tlb_0_33> <tlb_0_34> <tlb_0_35> <tlb_0_36> <tlb_0_37> <tlb_0_38> <tlb_0_39> <tlb_0_40> <tlb_0_41> <tlb_0_42> <tlb_0_43> <tlb_0_44> <tlb_0_45> <tlb_0_46> <tlb_0_47> <tlb_0_48> <tlb_0_49> <tlb_0_50> <tlb_0_51> <tlb_0_52> <tlb_0_53> <tlb_0_54> <tlb_0_55> <tlb_0_56> <tlb_0_57> <tlb_0_58> <tlb_0_59> <tlb_0_60> <tlb_0_61> <tlb_0_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_8_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_8_1> <tlb_8_2> <tlb_8_3> <tlb_8_4> <tlb_8_5> <tlb_8_6> <tlb_8_7> <tlb_8_8> <tlb_8_9> <tlb_8_10> <tlb_8_11> <tlb_8_12> <tlb_8_13> <tlb_8_14> <tlb_8_15> <tlb_8_16> <tlb_8_17> <tlb_8_18> <tlb_8_19> <tlb_8_20> <tlb_8_21> <tlb_8_22> <tlb_8_23> <tlb_8_24> <tlb_8_25> <tlb_8_26> <tlb_8_27> <tlb_8_28> <tlb_8_29> <tlb_8_30> <tlb_8_31> <tlb_8_32> <tlb_8_33> <tlb_8_34> <tlb_8_35> <tlb_8_36> <tlb_8_37> <tlb_8_38> <tlb_8_39> <tlb_8_40> <tlb_8_41> <tlb_8_42> <tlb_8_43> <tlb_8_44> <tlb_8_45> <tlb_8_46> <tlb_8_47> <tlb_8_48> <tlb_8_49> <tlb_8_50> <tlb_8_51> <tlb_8_52> <tlb_8_53> <tlb_8_54> <tlb_8_55> <tlb_8_56> <tlb_8_57> <tlb_8_58> <tlb_8_59> <tlb_8_60> <tlb_8_61> <tlb_8_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_6_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_6_1> <tlb_6_2> <tlb_6_3> <tlb_6_4> <tlb_6_5> <tlb_6_6> <tlb_6_7> <tlb_6_8> <tlb_6_9> <tlb_6_10> <tlb_6_11> <tlb_6_12> <tlb_6_13> <tlb_6_14> <tlb_6_15> <tlb_6_16> <tlb_6_17> <tlb_6_18> <tlb_6_19> <tlb_6_20> <tlb_6_21> <tlb_6_22> <tlb_6_23> <tlb_6_24> <tlb_6_25> <tlb_6_26> <tlb_6_27> <tlb_6_28> <tlb_6_29> <tlb_6_30> <tlb_6_31> <tlb_6_32> <tlb_6_33> <tlb_6_34> <tlb_6_35> <tlb_6_36> <tlb_6_37> <tlb_6_38> <tlb_6_39> <tlb_6_40> <tlb_6_41> <tlb_6_42> <tlb_6_43> <tlb_6_44> <tlb_6_45> <tlb_6_46> <tlb_6_47> <tlb_6_48> <tlb_6_49> <tlb_6_50> <tlb_6_51> <tlb_6_52> <tlb_6_53> <tlb_6_54> <tlb_6_55> <tlb_6_56> <tlb_6_57> <tlb_6_58> <tlb_6_59> <tlb_6_60> <tlb_6_61> <tlb_6_62> 
-INFO:Xst:2261 - The FF/Latch <tlb_9_0> in Unit <TLB> is equivalent to the following 62 FFs/Latches, which will be removed : <tlb_9_1> <tlb_9_2> <tlb_9_3> <tlb_9_4> <tlb_9_5> <tlb_9_6> <tlb_9_7> <tlb_9_8> <tlb_9_9> <tlb_9_10> <tlb_9_11> <tlb_9_12> <tlb_9_13> <tlb_9_14> <tlb_9_15> <tlb_9_16> <tlb_9_17> <tlb_9_18> <tlb_9_19> <tlb_9_20> <tlb_9_21> <tlb_9_22> <tlb_9_23> <tlb_9_24> <tlb_9_25> <tlb_9_26> <tlb_9_27> <tlb_9_28> <tlb_9_29> <tlb_9_30> <tlb_9_31> <tlb_9_32> <tlb_9_33> <tlb_9_34> <tlb_9_35> <tlb_9_36> <tlb_9_37> <tlb_9_38> <tlb_9_39> <tlb_9_40> <tlb_9_41> <tlb_9_42> <tlb_9_43> <tlb_9_44> <tlb_9_45> <tlb_9_46> <tlb_9_47> <tlb_9_48> <tlb_9_49> <tlb_9_50> <tlb_9_51> <tlb_9_52> <tlb_9_53> <tlb_9_54> <tlb_9_55> <tlb_9_56> <tlb_9_57> <tlb_9_58> <tlb_9_59> <tlb_9_60> <tlb_9_61> <tlb_9_62> 
-WARNING:Xst:1293 - FF/Latch <tlb_14_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_11_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_13_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_12_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_8_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_10_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_9_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_5_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_7_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_6_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_2_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_4_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_3_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_15_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_1_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tlb_0_0> has a constant value of 0 in block <TLB>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <Ram1_State[2]_clk_DFF_124> in Unit <Device_Ram1> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram1_State[2]_clk_DFF_125> <Ram1_State[2]_clk_DFF_128> <Ram1_State[2]_clk_DFF_126> <Ram1_State[2]_clk_DFF_127> <Ram1_State[2]_clk_DFF_129> <Ram1_State[2]_clk_DFF_130> <Ram1_State[2]_clk_DFF_131> <Ram1_State[2]_clk_DFF_132> <Ram1_State[2]_clk_DFF_133> <Ram1_State[2]_clk_DFF_134> <Ram1_State[2]_clk_DFF_137> <Ram1_State[2]_clk_DFF_135> <Ram1_State[2]_clk_DFF_136> <Ram1_State[2]_clk_DFF_138> <Ram1_State[2]_clk_DFF_139> <Ram1_State[2]_clk_DFF_140> <Ram1_State[2]_clk_DFF_141> <Ram1_State[2]_clk_DFF_142> <Ram1_State[2]_clk_DFF_143> <Ram1_State[2]_clk_DFF_146> <Ram1_State[2]_clk_DFF_144> <Ram1_State[2]_clk_DFF_145> <Ram1_State[2]_clk_DFF_147> <Ram1_State[2]_clk_DFF_148> <Ram1_State[2]_clk_DFF_149> <Ram1_State[2]_clk_DFF_150> <Ram1_State[2]_clk_DFF_151> <Ram1_State[2]_clk_DFF_152> <Ram1_State[2]_clk_DFF_155> <Ram1_State[2]_clk_DFF_153> <Ram1_State[2]_clk_DFF_154> 
+INFO:Xst:2261 - The FF/Latch <Ram2_State[2]_clk_DFF_160> in Unit <Device_Ram2> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram2_State[2]_clk_DFF_161> <Ram2_State[2]_clk_DFF_164> <Ram2_State[2]_clk_DFF_162> <Ram2_State[2]_clk_DFF_163> <Ram2_State[2]_clk_DFF_165> <Ram2_State[2]_clk_DFF_166> <Ram2_State[2]_clk_DFF_167> <Ram2_State[2]_clk_DFF_168> <Ram2_State[2]_clk_DFF_169> <Ram2_State[2]_clk_DFF_170> <Ram2_State[2]_clk_DFF_173> <Ram2_State[2]_clk_DFF_171> <Ram2_State[2]_clk_DFF_172> <Ram2_State[2]_clk_DFF_174> <Ram2_State[2]_clk_DFF_175> <Ram2_State[2]_clk_DFF_176> <Ram2_State[2]_clk_DFF_177> <Ram2_State[2]_clk_DFF_178> <Ram2_State[2]_clk_DFF_179> <Ram2_State[2]_clk_DFF_182> <Ram2_State[2]_clk_DFF_180> <Ram2_State[2]_clk_DFF_181> <Ram2_State[2]_clk_DFF_183> <Ram2_State[2]_clk_DFF_184> <Ram2_State[2]_clk_DFF_185> <Ram2_State[2]_clk_DFF_186> <Ram2_State[2]_clk_DFF_187> <Ram2_State[2]_clk_DFF_188> <Ram2_State[2]_clk_DFF_191> <Ram2_State[2]_clk_DFF_189> <Ram2_State[2]_clk_DFF_190> 
+INFO:Xst:2261 - The FF/Latch <flash_state[4]_clk_DFF_249> in Unit <Device_Flash> is equivalent to the following 15 FFs/Latches, which will be removed : <flash_state[4]_clk_DFF_242> <flash_state[4]_clk_DFF_241> <flash_state[4]_clk_DFF_243> <flash_state[4]_clk_DFF_244> <flash_state[4]_clk_DFF_245> <flash_state[4]_clk_DFF_246> <flash_state[4]_clk_DFF_247> <flash_state[4]_clk_DFF_248> <flash_state[4]_clk_DFF_250> <flash_state[4]_clk_DFF_251> <flash_state[4]_clk_DFF_252> <flash_state[4]_clk_DFF_253> <flash_state[4]_clk_DFF_256> <flash_state[4]_clk_DFF_254> <flash_state[4]_clk_DFF_255> 
+INFO:Xst:2261 - The FF/Latch <fr_state[2]_clk_DFF_260> in Unit <Device_COM> is equivalent to the following 31 FFs/Latches, which will be removed : <fr_state[2]_clk_DFF_261> <fr_state[2]_clk_DFF_262> <fr_state[2]_clk_DFF_265> <fr_state[2]_clk_DFF_263> <fr_state[2]_clk_DFF_264> <fr_state[2]_clk_DFF_266> <fr_state[2]_clk_DFF_267> <fr_state[2]_clk_DFF_268> <fr_state[2]_clk_DFF_269> <fr_state[2]_clk_DFF_270> <fr_state[2]_clk_DFF_271> <fr_state[2]_clk_DFF_274> <fr_state[2]_clk_DFF_272> <fr_state[2]_clk_DFF_273> <fr_state[2]_clk_DFF_275> <fr_state[2]_clk_DFF_276> <fr_state[2]_clk_DFF_279> <fr_state[2]_clk_DFF_277> <fr_state[2]_clk_DFF_278> <fr_state[2]_clk_DFF_280> <fr_state[2]_clk_DFF_281> <fr_state[2]_clk_DFF_284> <fr_state[2]_clk_DFF_282> <fr_state[2]_clk_DFF_283> <fr_state[2]_clk_DFF_285> <fr_state[2]_clk_DFF_286> <fr_state[2]_clk_DFF_287> <fr_state[2]_clk_DFF_288> <fr_state[2]_clk_DFF_289> <fr_state[2]_clk_DFF_290> <fr_state[2]_clk_DFF_291> 
+INFO:Xst:2261 - The FF/Latch <R_62> in Unit <MUL> is equivalent to the following FF/Latch, which will be removed : <R_63> 
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <cpu_state[1:1]> with sequential encoding.
+Optimizing FSM <u1/u3/FSM_0> on signal <Ram1_State[1:3]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ ram1_init   | 000
+ ram1_read0  | 001
+ ram1_read1  | 010
+ ram1_read2  | 011
+ ram1_write0 | 100
+ ram1_write1 | 101
+-------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u1/u4/FSM_1> on signal <Ram2_State[1:3]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ ram2_init   | 000
+ ram2_read0  | 001
+ ram2_read1  | 010
+ ram2_read2  | 011
+ ram2_write0 | 100
+ ram2_write1 | 101
+-------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u1/u5/FSM_2> on signal <flash_state[1:22]> with one-hot encoding.
+----------------------------------------
+ State        | Encoding
+----------------------------------------
+ flash_init   | 0000000000000000000001
+ flash_cash0  | 0000000000000000001000
+ flash_cash1  | 0000000000000000010000
+ flash_cash2  | 0000000000000000100000
+ flash_cash3  | 0000000000000001000000
+ flash_cash4  | 0000000000000010000000
+ flash_write0 | 0000000000000000000100
+ flash_write1 | 0000000000001000000000
+ flash_write2 | 0000000000010000000000
+ flash_write3 | 0000000000100000000000
+ flash_write4 | 0000000001000000000000
+ flash_ready0 | 0000000000000100000000
+ flash_ready1 | 0000000010000000000000
+ flash_ready2 | 0000000100000000000000
+ flash_ready3 | 0000001000000000000000
+ flash_ready4 | 0000010000000000000000
+ flash_check0 | 0000000000000000000010
+ flash_check1 | 0000100000000000000000
+ flash_check2 | 0001000000000000000000
+ flash_check3 | 0010000000000000000000
+ flash_check4 | 0100000000000000000000
+ flash_check5 | 1000000000000000000000
+----------------------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u1/u6/FSM_3> on signal <fr_state[1:3]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ com_init | 000
+ recv0    | 001
+ recv1    | 010
+ send0    | 011
+ send1    | 100
+ send2    | 101
+ send3    | 110
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u4/FSM_4> on signal <state[1:2]> with user encoding.
 -------------------
  State | Encoding
 -------------------
- st0   | 0
- st1   | 1
- st2   | unreached
+ st0   | 00
+ st1   | 01
+ st2   | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <u1/FSM_1> on signal <cur_state[1:4]> with user encoding.
-------------------------
- State      | Encoding
-------------------------
- init_state | 0000
- ram1read0  | 0001
- ram1read1  | 0010
- ram1write0 | 0011
- ram1write1 | 0100
- ram2read0  | 0101
- ram2read1  | 0110
- ram2write0 | 0111
- ram2write1 | 1000
-------------------------
-WARNING:Xst:1710 - FF/Latch <Ram2Data_1> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_2> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_3> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_4> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_5> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_6> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_7> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_8> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_9> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_10> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_11> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_12> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_13> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_14> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_15> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_16> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_17> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_18> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_19> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_20> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_21> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_22> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_23> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_24> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_25> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_26> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_27> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_28> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_29> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_30> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_31> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_30> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_0> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_1> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_2> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_3> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_4> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_5> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_6> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_7> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_8> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_9> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_10> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_11> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_12> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_13> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_14> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_15> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Data_0> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_31> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_30> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_29> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_28> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_27> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_26> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_25> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_24> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_23> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_22> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_21> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_20> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_19> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_18> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_17> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Data_16> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <Vaddr_0> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Vaddr_1> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Ram2Addr_29> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Addr_30> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2Addr_31> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_29> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_30> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram1Addr_31> (without init value) has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
+Optimizing FSM <u5/FSM_5> on signal <g_state[1:4]> with user encoding.
+-------------------------------
+ State             | Encoding
+-------------------------------
+ initialize        | 0000
+ instruction_fetch | 0001
+ decode            | 0010
+ execute           | 0011
+ mem_access        | 0100
+ write_back        | 0101
+ interrupt         | 0110
+ interrupt2        | 0111
+ interrupt3        | 1000
+ interruptx        | 1001
+-------------------------------
+WARNING:Xst:1710 - FF/Latch <FlashAddr_0> (without init value) has a constant value of 0 in block <Device_Flash>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cause_IP_1> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cause_IP_2> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cause_IP_3> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cause_IP_4> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    clk_flag_1 in unit <CPU>
+    Compare_25 in unit <CPU>
+
+WARNING:Xst:2040 - Unit CPU: 32 multi-source signals are replaced by logic (pull-up yes): Ram1Data<0>_MLTSRCEDGE, Ram1Data<10>_MLTSRCEDGE, Ram1Data<11>_MLTSRCEDGE, Ram1Data<12>_MLTSRCEDGE, Ram1Data<13>_MLTSRCEDGE, Ram1Data<14>_MLTSRCEDGE, Ram1Data<15>_MLTSRCEDGE, Ram1Data<16>_MLTSRCEDGE, Ram1Data<17>_MLTSRCEDGE, Ram1Data<18>_MLTSRCEDGE, Ram1Data<19>_MLTSRCEDGE, Ram1Data<1>_MLTSRCEDGE, Ram1Data<20>_MLTSRCEDGE, Ram1Data<21>_MLTSRCEDGE, Ram1Data<22>_MLTSRCEDGE, Ram1Data<23>_MLTSRCEDGE, Ram1Data<24>_MLTSRCEDGE, Ram1Data<25>_MLTSRCEDGE, Ram1Data<26>_MLTSRCEDGE, Ram1Data<27>_MLTSRCEDGE, Ram1Data<28>_MLTSRCEDGE, Ram1Data<29>_MLTSRCEDGE, Ram1Data<2>_MLTSRCEDGE, Ram1Data<30>_MLTSRCEDGE, Ram1Data<31>_MLTSRCEDGE, Ram1Data<3>_MLTSRCEDGE, Ram1Data<4>_MLTSRCEDGE, Ram1Data<5>_MLTSRCEDGE, Ram1Data<6>_MLTSRCEDGE, Ram1Data<7>_MLTSRCEDGE, Ram1Data<8>_MLTSRCEDGE, Ram1Data<9>_MLTSRCEDGE.
 
 Optimizing unit <CPU> ...
 
-Optimizing unit <mm_manager> ...
-WARNING:Xst:1710 - FF/Latch <Ram1WE> (without init value) has a constant value of 1 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2WE> (without init value) has a constant value of 1 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <cur_state_FSM_FFd1> has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Ram1WE> (without init value) has a constant value of 1 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Ram2WE> (without init value) has a constant value of 1 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cur_state_FSM_FFd1> has a constant value of 0 in block <mm_manager>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <u1/Ram1Addr_1> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram1Addr_0> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram2Addr_1> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram2Addr_0> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <u1/Data_out_31> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_29> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_28> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_27> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_26> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_25> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_24> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_23> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_22> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_21> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_20> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_19> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_18> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_17> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <u1/Data_out_16> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:1710 - FF/Latch <u1/Ram1Addr_28> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram1Addr_27> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram1Addr_26> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram1Addr_25> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram1Addr_24> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram1Addr_23> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram1Addr_22> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram2Addr_28> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram2Addr_27> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram2Addr_26> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram2Addr_25> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram2Addr_24> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u1/Ram2Addr_23> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+Optimizing unit <TLB> ...
+
+Optimizing unit <RegistersFile> ...
+
+Optimizing unit <MUL> ...
+
+Optimizing unit <Controller> ...
+WARNING:Xst:1710 - FF/Latch <exc_code_4> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <exc_code_4> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <ALU> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 0.
-FlipFlop Vaddr_30 has been replicated 1 time(s)
-FlipFlop Vaddr_31 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 9.
+FlipFlop u5/ALUOp_0 has been replicated 2 time(s)
+FlipFlop u5/ALUSrcA_0 has been replicated 2 time(s)
+FlipFlop u5/ALUSrcA_1 has been replicated 2 time(s)
+FlipFlop u5/ALUSrcB_0 has been replicated 3 time(s)
+FlipFlop u5/ALUSrcB_1 has been replicated 5 time(s)
+FlipFlop u5/ALUSrcB_2 has been replicated 5 time(s)
+FlipFlop u5/ExtendOp_0 has been replicated 3 time(s)
+FlipFlop u5/ExtendOp_1 has been replicated 2 time(s)
+FlipFlop u5/ExtendOp_2 has been replicated 3 time(s)
 
 Final Macro Processing ...
 
@@ -764,8 +1188,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 115
- Flip-Flops                                            : 115
+# Registers                                            : 3073
+ Flip-Flops                                            : 3073
 
 =========================================================================
 
@@ -788,32 +1212,34 @@ Top Level Output File Name         : CPU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 270
+# BELS                             : 5184
 #      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 29
-#      LUT2                        : 6
-#      LUT3                        : 40
-#      LUT4                        : 7
-#      LUT5                        : 63
-#      LUT6                        : 60
-#      MUXCY                       : 29
-#      MUXF7                       : 1
+#      INV                         : 36
+#      LUT1                        : 5
+#      LUT2                        : 128
+#      LUT3                        : 493
+#      LUT4                        : 300
+#      LUT5                        : 719
+#      LUT6                        : 2773
+#      MUXCY                       : 375
+#      MUXF7                       : 173
 #      VCC                         : 1
-#      XORCY                       : 30
-# FlipFlops/Latches                : 115
-#      FD                          : 4
-#      FDC                         : 2
-#      FDCE                        : 38
-#      FDE                         : 57
-#      FDP                         : 2
-#      FDPE                        : 10
-#      FDS                         : 2
-# Clock Buffers                    : 1
+#      XORCY                       : 180
+# FlipFlops/Latches                : 3075
+#      FD                          : 301
+#      FDC                         : 177
+#      FDCE                        : 2324
+#      FDE                         : 218
+#      FDP                         : 12
+#      FDPE                        : 41
+#      LD                          : 2
+# Clock Buffers                    : 8
+#      BUFG                        : 7
 #      BUFGP                       : 1
-# IO Buffers                       : 165
-#      IBUF                        : 1
-#      OBUF                        : 164
+# IO Buffers                       : 172
+#      IBUF                        : 6
+#      IOBUF                       : 80
+#      OBUF                        : 86
 
 Device utilization summary:
 ---------------------------
@@ -822,23 +1248,23 @@ Selected Device : 6slx100fgg676-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             115  out of  126576     0%  
- Number of Slice LUTs:                  208  out of  63288     0%  
-    Number used as Logic:               208  out of  63288     0%  
+ Number of Slice Registers:            3075  out of  126576     2%  
+ Number of Slice LUTs:                 4454  out of  63288     7%  
+    Number used as Logic:              4454  out of  63288     7%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    228
-   Number with an unused Flip Flop:     113  out of    228    49%  
-   Number with an unused LUT:            20  out of    228     8%  
-   Number of fully used LUT-FF pairs:    95  out of    228    41%  
-   Number of unique control sets:         9
+ Number of LUT Flip Flop pairs used:   6535
+   Number with an unused Flip Flop:    3460  out of   6535    52%  
+   Number with an unused LUT:          2081  out of   6535    31%  
+   Number of fully used LUT-FF pairs:   994  out of   6535    15%  
+   Number of unique control sets:        94
 
 IO Utilization: 
- Number of IOs:                         166
- Number of bonded IOBs:                 166  out of    480    34%  
+ Number of IOs:                         228
+ Number of bonded IOBs:                 173  out of    480    36%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of BUFG/BUFGCTRLs:                8  out of     16    50%  
 
 ---------------------------
 Partition Resource Summary:
@@ -858,11 +1284,28 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 115   |
------------------------------------+------------------------+-------+
+---------------------------------------------+-----------------------------------+-------+
+Clock Signal                                 | Clock buffer(FF name)             | Load  |
+---------------------------------------------+-----------------------------------+-------+
+u5/IRWrite                                   | BUFG                              | 32    |
+u5/ALUOutWrite                               | BUFG                              | 32    |
+u5/HIWrite                                   | BUFG                              | 32    |
+u5/LOWrite                                   | NONE(LO_0)                        | 32    |
+clk_cpu(u0/Mmux_clk_cpu11:O)                 | BUFG(*)(Index_0)                  | 549   |
+u5/PCWrite                                   | NONE(PC_0)                        | 32    |
+u5/RPCWrite                                  | NONE(RPC_0)                       | 32    |
+clk_mm(u0/Mmux_clk_mm11:O)                   | BUFG(*)(u1/u3/Ram1_State_FSM_FFd1)| 282   |
+clk11                                        | BUFGP                             | 49    |
+clk50                                        | IBUF                              | 1     |
+u5/TLBWrite                                  | BUFG                              | 1008  |
+u5/RegWrite                                  | BUFG                              | 992   |
+rst                                          | IBUF                              | 1     |
+clk_flag_1_G(PC[31]_GND_5_o_equal_1_o<31>7:O)| NONE(*)(clk_flag_1)               | 1     |
+---------------------------------------------+-----------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -872,9 +1315,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.142ns (Maximum Frequency: 162.821MHz)
-   Minimum input arrival time before clock: 4.693ns
-   Maximum output required time after clock: 5.272ns
+   Minimum period: 22.921ns (Maximum Frequency: 43.628MHz)
+   Minimum input arrival time before clock: 8.831ns
+   Maximum output required time after clock: 5.923ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -882,97 +1325,547 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.142ns (frequency: 162.821MHz)
-  Total number of paths / destination ports: 12699 / 239
+Timing constraint: Default period analysis for Clock 'clk_cpu'
+  Clock period: 22.921ns (frequency: 43.628MHz)
+  Total number of paths / destination ports: 483036943277 / 910
 -------------------------------------------------------------------------
-Delay:               6.142ns (Levels of Logic = 5)
-  Source:            Vaddr_26 (FF)
-  Destination:       u1/Data_out_15 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
+Delay:               22.921ns (Levels of Logic = 29)
+  Source:            u5/ExtendOp_1_1 (FF)
+  Destination:       u1/Data_out_24 (FF)
+  Source Clock:      clk_cpu rising
+  Destination Clock: clk_cpu rising
 
-  Data Path: Vaddr_26 to u1/Data_out_15
+  Data Path: u5/ExtendOp_1_1 to u1/Data_out_24
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q             3   0.447   1.015  Vaddr_26 (Vaddr_26)
-     LUT6:I0->O           12   0.203   0.909  u1/GND_6_o_Paddr[31]_AND_2_o11 (u1/GND_6_o_Paddr[31]_AND_2_o1)
-     LUT4:I3->O           10   0.205   0.961  u1/Paddr[31]_GND_6_o_LessThan_3_o11 (u1/Paddr[31]_GND_6_o_LessThan_3_o)
-     LUT6:I4->O            1   0.203   0.684  u1/Mmux_flag<1>16_1 (u1/Mmux_flag<1>16)
-     LUT6:I4->O           16   0.203   1.005  u1/_n0489_inv_rstpot (u1/_n0489_inv_rstpot)
-     LUT5:I4->O            1   0.205   0.000  u1/Data_out_0_dpot (u1/Data_out_0_dpot)
-     FDCE:D                    0.102          u1/Data_out_0
+     FDE:C->Q             11   0.447   0.883  u5/ExtendOp_1_1 (u5/ExtendOp_1_1)
+     LUT5:I4->O            7   0.205   0.774  u6/Mmux_immediate11 (immediate<0>)
+     LUT6:I5->O           12   0.205   1.013  ALUSrcBx<32>1_2 (ALUSrcBx<32>11)
+     LUT6:I4->O            5   0.203   0.943  u3/Sh1051 (u3/Sh105)
+     LUT6:I3->O            4   0.205   0.684  u3/Sh1412 (u3/Sh141)
+     LUT6:I5->O            2   0.205   0.617  u3/Mmux_result12156_SW2 (N993)
+     LUT6:I5->O           11   0.205   0.883  u3/Mmux_result12157_SW0_1 (u3/Mmux_result12157_SW0)
+     LUT6:I5->O            1   0.205   0.000  Mmux_Vaddr71_SW2_G (N3148)
+     MUXF7:I1->O           1   0.140   0.684  Mmux_Vaddr71_SW2 (N2968)
+     LUT6:I4->O            1   0.203   0.580  Mmux_Vaddr51_SW8 (N2673)
+     LUT6:I5->O            1   0.205   0.000  u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_lut<0> (u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<0> (u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<1> (u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<2> (u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<3> (u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<4> (u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<5> (u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<5>)
+     MUXCY:CI->O          75   0.019   1.713  u1/u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<6> (u1/u1/tlb[0][62]_Vaddr[31]_equal_3_o)
+     LUT6:I5->O           18   0.205   1.278  u1/u1/Mmux_Paddr<12>81361321 (u1/u1/Mmux_Paddr<12>614113)
+     LUT6:I3->O            1   0.205   0.580  u1/u1/Mmux_Paddr<12>88015 (u1/u1/Mmux_Paddr<12>88014)
+     LUT6:I5->O            1   0.205   0.684  u1/u1/Mmux_Paddr<12>88018_SW0 (N2400)
+     LUT6:I4->O            3   0.203   0.651  u1/u1/Mmux_Paddr<12>88018 (u1/u1/Mmux_Paddr<12>88017)
+     LUT6:I5->O            1   0.205   0.580  u1/u1/Mmux_Paddr<12>88023_SW0_SW1_F (N3017)
+     LUT3:I2->O            3   0.205   0.651  u1/u1/Mmux_Paddr<12>88023_SW0_SW11 (N2423)
+     LUT6:I5->O            6   0.205   0.992  u1/u1/Mmux_Paddr<12>88023_1 (u1/u1/Mmux_Paddr<12>880231)
+     LUT5:I1->O            1   0.203   0.580  u1/Paddr[31]_GND_10_o_LessThan_3_o1_SW0_SW1 (N2944)
+     LUT6:I5->O           13   0.205   1.037  u1/GND_10_o_Paddr[31]_AND_156_o (u1/GND_10_o_Paddr[31]_AND_156_o)
+     LUT6:I4->O            5   0.203   0.819  u1/Mmux_flag<1>11 (u1/flag<1>)
+     LUT6:I4->O           17   0.203   1.028  u1/_n0368_inv5_SW0 (N509)
+     LUT6:I5->O            1   0.205   0.000  u1/Data_out_8_dpot (u1/Data_out_8_dpot)
+     FDCE:D                    0.102          u1/Data_out_8
     ----------------------------------------
-    Total                      6.142ns (1.568ns logic, 4.574ns route)
-                                       (25.5% logic, 74.5% route)
+    Total                     22.921ns (5.268ns logic, 17.653ns route)
+                                       (23.0% logic, 77.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 115 / 115
+Timing constraint: Default period analysis for Clock 'u5/PCWrite'
+  Clock period: 15.738ns (frequency: 63.542MHz)
+  Total number of paths / destination ports: 485225 / 64
 -------------------------------------------------------------------------
-Offset:              4.693ns (Levels of Logic = 4)
+Delay:               15.738ns (Levels of Logic = 21)
+  Source:            PC_12 (FF)
+  Destination:       PC_0 (FF)
+  Source Clock:      u5/PCWrite rising
+  Destination Clock: u5/PCWrite rising
+
+  Data Path: PC_12 to PC_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q           192   0.447   2.275  PC_12 (PC_12)
+     LUT5:I2->O           18   0.205   1.278  Mmux_ALUSrcAx41 (ALUSrcAx<12>)
+     LUT4:I1->O            1   0.205   0.000  u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_lut<6> (u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<6> (u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<7> (u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<8> (u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<9> (u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<10> (u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<11> (u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<12> (u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<13> (u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<14> (u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<14>)
+     MUXCY:CI->O           5   0.213   0.819  u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<15> (u3/Mcompar_srcA[31]_srcB[31]_LessThan_15_o_cy<15>)
+     LUT4:I2->O            1   0.203   0.000  u3/Mmux_result122421_lut (u3/Mmux_result122421_lut)
+     MUXCY:S->O            1   0.172   0.000  u3/Mmux_result122421_cy (N769_l1)
+     MUXCY:CI->O          60   0.019   1.718  u3/Mmux_result122421_cy1 (u3/Mmux_result12242)
+     LUT5:I3->O           48   0.203   1.748  u3/Mmux_result12368 (ALUResult<1>)
+     LUT4:I1->O            1   0.205   0.944  _n0299<31>1 (_n0299<31>)
+     LUT6:I0->O            1   0.203   0.944  _n0299<31>2 (_n0299<31>1)
+     LUT6:I0->O            1   0.203   0.580  _n0299<31>3 (_n0299<31>2)
+     LUT5:I4->O            1   0.205   0.808  _n0299<31>7 (_n0299)
+     LUT6:I3->O           32   0.205   1.291  _n0414_inv (_n0414_inv)
+     FDCE:CE                   0.322          PC_0
+    ----------------------------------------
+    Total                     15.738ns (3.334ns logic, 12.404ns route)
+                                       (21.2% logic, 78.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_mm'
+  Clock period: 5.845ns (frequency: 171.083MHz)
+  Total number of paths / destination ports: 2513 / 340
+-------------------------------------------------------------------------
+Delay:               5.845ns (Levels of Logic = 4)
+  Source:            u1/u5/flash_state_FSM_FFd9 (FF)
+  Destination:       u1/u5/FlashAddr_22 (FF)
+  Source Clock:      clk_mm rising
+  Destination Clock: clk_mm rising
+
+  Data Path: u1/u5/flash_state_FSM_FFd9 to u1/u5/FlashAddr_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.447   1.118  u1/u5/flash_state_FSM_FFd9 (u1/u5/flash_state_FSM_FFd9)
+     LUT6:I1->O            4   0.203   0.912  u1/u5/flash_state_n0169<4>11121 (u1/u5/flash_state_n0169<4>1112)
+     LUT4:I1->O            3   0.205   0.995  u1/u5/Mcount_cond_flash_xor<0>11 (u1/u5/Mcount_cond_flash)
+     LUT5:I0->O           21   0.203   1.458  u1/u5/flash_state_flash_state[4]_X_143_o_wide_mux_17_OUT<10>21 (u1/u5/flash_state_flash_state[4]_X_143_o_wide_mux_17_OUT<10>2)
+     LUT5:I0->O            1   0.203   0.000  u1/u5/flash_state_flash_state[4]_X_143_o_wide_mux_17_OUT<10>1 (u1/u5/flash_state[4]_X_143_o_wide_mux_17_OUT<10>)
+     FDE:D                     0.102          u1/u5/FlashAddr_10
+    ----------------------------------------
+    Total                      5.845ns (1.363ns logic, 4.482ns route)
+                                       (23.3% logic, 76.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk11'
+  Clock period: 3.409ns (frequency: 293.304MHz)
+  Total number of paths / destination ports: 145 / 47
+-------------------------------------------------------------------------
+Delay:               3.409ns (Levels of Logic = 1)
+  Source:            u1/u6/fr_state_FSM_FFd1 (FF)
+  Destination:       u1/u6/Data_out_7 (FF)
+  Source Clock:      clk11 rising
+  Destination Clock: clk11 rising
+
+  Data Path: u1/u6/fr_state_FSM_FFd1 to u1/u6/Data_out_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             40   0.447   1.634  u1/u6/fr_state_FSM_FFd1 (u1/u6/fr_state_FSM_FFd1)
+     LUT3:I0->O            8   0.205   0.802  u1/u6/_n0406_inv1 (u1/u6/_n0406_inv)
+     FDCE:CE                   0.322          u1/u6/Data_out_0
+    ----------------------------------------
+    Total                      3.409ns (0.974ns logic, 2.435ns route)
+                                       (28.6% logic, 71.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50'
+  Clock period: 1.950ns (frequency: 512.794MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.950ns (Levels of Logic = 1)
+  Source:            u0/counter (FF)
+  Destination:       u0/counter (FF)
+  Source Clock:      clk50 rising
+  Destination Clock: clk50 rising
+
+  Data Path: u0/counter to u0/counter
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  u0/counter (u0/counter)
+     INV:I->O              1   0.206   0.579  u0/counter_INV_5_o1_INV_0 (u0/counter_INV_5_o)
+     FD:D                      0.102          u0/counter
+    ----------------------------------------
+    Total                      1.950ns (0.755ns logic, 1.195ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u5/RegWrite'
+  Clock period: 16.107ns (frequency: 62.084MHz)
+  Total number of paths / destination ports: 87933422 / 992
+-------------------------------------------------------------------------
+Delay:               16.107ns (Levels of Logic = 14)
+  Source:            u2/reg_26_23 (FF)
+  Destination:       u2/reg_31_25 (FF)
+  Source Clock:      u5/RegWrite rising
+  Destination Clock: u5/RegWrite rising
+
+  Data Path: u2/reg_26_23 to u2/reg_31_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.447   0.864  u2/reg_26_23 (u2/reg_26_23)
+     LUT6:I2->O            1   0.203   0.827  u2/mux47_81 (u2/mux47_81)
+     LUT6:I2->O            1   0.203   0.000  u2/mux47_3 (u2/mux47_3)
+     MUXF7:I1->O          11   0.140   1.227  u2/mux47_2_f7 (RegData2<23>)
+     LUT6:I1->O            9   0.203   1.194  ALUSrcBx<9>1 (ALUSrcBx<23>)
+     LUT6:I0->O            8   0.203   1.050  u3/out4 (u3/out3)
+     LUT6:I2->O           51   0.203   1.783  u3/out7 (u3/_n0043)
+     LUT6:I3->O            1   0.205   0.000  u3/Mmux_result12365_G (N3226)
+     MUXF7:I1->O           1   0.140   0.580  u3/Mmux_result12365 (u3/Mmux_result12364)
+     LUT6:I5->O            1   0.205   0.580  u3/Mmux_result12367 (u3/Mmux_result12366)
+     LUT5:I4->O           48   0.205   1.864  u3/Mmux_result12368 (ALUResult<1>)
+     LUT6:I1->O            9   0.203   1.077  Mmux_ALUResult[1]_GND_5_o_wide_mux_34_OUT301 (ALUResult[1]_GND_5_o_wide_mux_34_OUT<7>)
+     LUT5:I1->O            8   0.203   0.803  Mmux_RegDataSrcx1011 (Mmux_RegDataSrcx101)
+     LUT6:I5->O           11   0.205   0.987  Mmux_RegDataSrcx111 (Mmux_RegDataSrcx111)
+     LUT2:I0->O           31   0.203   0.000  Mmux_RegDataSrcx118 (RegDataSrcx<19>)
+     FDCE:D                    0.102          u2/reg_28_19
+    ----------------------------------------
+    Total                     16.107ns (3.273ns logic, 12.834ns route)
+                                       (20.3% logic, 79.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_cpu'
+  Total number of paths / destination ports: 632 / 549
+-------------------------------------------------------------------------
+Offset:              8.831ns (Levels of Logic = 7)
   Source:            rst (PAD)
-  Destination:       u1/Ram1Addr_12 (FF)
-  Destination Clock: clk rising
+  Destination:       u1/comRead (FF)
+  Destination Clock: clk_cpu rising
 
-  Data Path: rst to u1/Ram1Addr_12
+  Data Path: rst to u1/comRead
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            10   1.222   0.961  rst_IBUF (rst_IBUF)
-     LUT2:I0->O            4   0.203   0.912  u1/cur_state_FSM_FFd3-In31_SW2 (N100)
-     LUT6:I3->O           11   0.205   0.883  u1/_n0458_inv1_rstpot (u1/_n0458_inv1_rstpot)
-     LUT3:I2->O            1   0.205   0.000  u1/Ram2Addr_2_dpot (u1/Ram2Addr_2_dpot)
-     FDE:D                     0.102          u1/Ram2Addr_2
+     IBUF:I->O            32   1.222   1.292  rst_IBUF (rst_IBUF)
+     LUT3:I2->O           69   0.205   2.017  u1/rst_MemRead_OR_86_o1 (u1/rst_MemRead_OR_86_o)
+     LUT5:I0->O            1   0.203   0.580  u1/u1/Mmux_Paddr<12>816022_SW1 (N1736)
+     LUT6:I5->O           11   0.205   0.883  u1/_n0254<2>11 (u1/_n0254<2>1)
+     LUT4:I3->O            1   0.205   0.827  u1/comRead_rstpot_SW0_SW0 (N2629)
+     LUT6:I2->O            1   0.203   0.684  u1/comRead_rstpot_SW0 (N2612)
+     LUT6:I4->O            1   0.203   0.000  u1/comRead_rstpot (u1/comRead_rstpot)
+     FD:D                      0.102          u1/comRead
     ----------------------------------------
-    Total                      4.693ns (1.937ns logic, 2.756ns route)
-                                       (41.3% logic, 58.7% route)
+    Total                      8.831ns (2.548ns logic, 6.283ns route)
+                                       (28.9% logic, 71.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 86 / 72
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u5/PCWrite'
+  Total number of paths / destination ports: 32 / 32
 -------------------------------------------------------------------------
-Offset:              5.272ns (Levels of Logic = 2)
-  Source:            cpu_state_FSM_FFd1 (FF)
-  Destination:       DYP0<5> (PAD)
-  Source Clock:      clk rising
+Offset:              5.682ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       PC_0 (FF)
+  Destination Clock: u5/PCWrite rising
 
-  Data Path: cpu_state_FSM_FFd1 to DYP0<5>
+  Data Path: rst to PC_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              35   0.447   1.334  cpu_state_FSM_FFd1 (cpu_state_FSM_FFd1)
-     INV:I->O              5   0.206   0.714  DYP0<3>1_INV_0 (DYP0_3_OBUF)
-     OBUF:I->O                 2.571          DYP0_5_OBUF (DYP0<5>)
+     IBUF:I->O            32   1.222   1.291  rst_IBUF (rst_IBUF)
+     INV:I->O           2360   0.206   2.533  rst_inv1_INV_0 (Compare_25_G)
+     FDCE:CLR                  0.430          PC_0
     ----------------------------------------
-    Total                      5.272ns (3.224ns logic, 2.048ns route)
-                                       (61.2% logic, 38.8% route)
+    Total                      5.682ns (1.858ns logic, 3.824ns route)
+                                       (32.7% logic, 67.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_mm'
+  Total number of paths / destination ports: 484 / 383
+-------------------------------------------------------------------------
+Offset:              7.468ns (Levels of Logic = 5)
+  Source:            rst (PAD)
+  Destination:       u1/u5/FlashData_3 (FF)
+  Destination Clock: clk_mm rising
+
+  Data Path: rst to u1/u5/FlashData_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   1.222   1.292  rst_IBUF (rst_IBUF)
+     LUT3:I2->O           35   0.205   1.699  u1/u5/rst_FlashWrite_OR_67_o1 (u1/u5/rst_FlashWrite_OR_67_o)
+     LUT6:I0->O           15   0.203   1.086  u1/u5/flash_state_rst_flash_state[4]_AND_136_o (u1/u5/rst_flash_state[4]_AND_136_o)
+     LUT4:I2->O           12   0.203   1.253  u1/u5/Mmux_n01691712 (u1/u5/Mmux_n0169171)
+     LUT5:I0->O            1   0.203   0.000  u1/u5/Mmux_n0169161 (u1/u5/n0169<0>)
+     FD:D                      0.102          u1/u5/FlashData_0
+    ----------------------------------------
+    Total                      7.468ns (2.138ns logic, 5.330ns route)
+                                       (28.6% logic, 71.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk11'
+  Total number of paths / destination ports: 97 / 63
+-------------------------------------------------------------------------
+Offset:              5.682ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       u1/u6/Status_out_0 (FF)
+  Destination Clock: clk11 rising
+
+  Data Path: rst to u1/u6/Status_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   1.222   1.291  rst_IBUF (rst_IBUF)
+     INV:I->O           2360   0.206   2.533  rst_inv1_INV_0 (Compare_25_G)
+     FDC:CLR                   0.430          u1/u6/COM_INT
+    ----------------------------------------
+    Total                      5.682ns (1.858ns logic, 3.824ns route)
+                                       (32.7% logic, 67.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u5/TLBWrite'
+  Total number of paths / destination ports: 1008 / 1008
+-------------------------------------------------------------------------
+Offset:              5.682ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       u1/u1/tlb_0_62 (FF)
+  Destination Clock: u5/TLBWrite rising
+
+  Data Path: rst to u1/u1/tlb_0_62
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   1.222   1.291  rst_IBUF (rst_IBUF)
+     INV:I->O           2360   0.206   2.533  rst_inv1_INV_0 (Compare_25_G)
+     FDCE:CLR                  0.430          u1/u1/tlb_14_0
+    ----------------------------------------
+    Total                      5.682ns (1.858ns logic, 3.824ns route)
+                                       (32.7% logic, 67.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u5/RegWrite'
+  Total number of paths / destination ports: 992 / 992
+-------------------------------------------------------------------------
+Offset:              5.682ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       u2/reg_31_31 (FF)
+  Destination Clock: u5/RegWrite rising
+
+  Data Path: rst to u2/reg_31_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   1.222   1.291  rst_IBUF (rst_IBUF)
+     INV:I->O           2360   0.206   2.533  rst_inv1_INV_0 (Compare_25_G)
+     FDCE:CLR                  0.430          u2/reg_28_0
+    ----------------------------------------
+    Total                      5.682ns (1.858ns logic, 3.824ns route)
+                                       (32.7% logic, 67.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rst'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.289ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       Compare_25 (LATCH)
+  Destination Clock: rst rising
+
+  Data Path: rst to Compare_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   1.222   1.291  rst_IBUF (rst_IBUF)
+     INV:I->O           2360   0.206   2.533  rst_inv1_INV_0 (Compare_25_G)
+     LD:D                      0.037          Compare_25
+    ----------------------------------------
+    Total                      5.289ns (1.465ns logic, 3.824ns route)
+                                       (27.7% logic, 72.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_mm'
+  Total number of paths / destination ports: 262 / 150
+-------------------------------------------------------------------------
+Offset:              5.923ns (Levels of Logic = 2)
+  Source:            u1/u3/Ram1_State[2]_clk_DFF_124 (FF)
+  Destination:       Ram1Data<31> (PAD)
+  Source Clock:      clk_mm rising
+
+  Data Path: u1/u3/Ram1_State[2]_clk_DFF_124 to Ram1Data<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             33   0.447   1.410  u1/u3/Ram1_State[2]_clk_DFF_124 (u1/u3/Ram1_State[2]_clk_DFF_124)
+     LUT2:I0->O           32   0.203   1.291  N351 (N35)
+     IOBUF:T->IO               2.571          Ram1Data_31_IOBUF (Ram1Data<31>)
+    ----------------------------------------
+    Total                      5.923ns (3.221ns logic, 2.702ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk11'
+  Total number of paths / destination ports: 98 / 34
+-------------------------------------------------------------------------
+Offset:              5.835ns (Levels of Logic = 2)
+  Source:            u1/u6/fr_state[2]_clk_DFF_260 (FF)
+  Destination:       Ram1Data<31> (PAD)
+  Source Clock:      clk11 rising
+
+  Data Path: u1/u6/fr_state[2]_clk_DFF_260 to Ram1Data<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             34   0.447   1.321  u1/u6/fr_state[2]_clk_DFF_260 (u1/u6/fr_state[2]_clk_DFF_260)
+     LUT2:I1->O           32   0.205   1.291  N351 (N35)
+     IOBUF:T->IO               2.571          Ram1Data_31_IOBUF (Ram1Data<31>)
+    ----------------------------------------
+    Total                      5.835ns (3.223ns logic, 2.612ns route)
+                                       (55.2% logic, 44.8% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock clk
+Clock to Setup on destination clock clk11
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    6.142|         |         |         |
+clk11          |    3.409|         |         |         |
+clk_cpu        |   11.818|         |         |         |
+rst            |   10.254|         |         |         |
+u5/IRWrite     |   14.989|         |         |         |
+u5/PCWrite     |   11.162|         |         |         |
+u5/RegWrite    |   13.421|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk50
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk50          |    1.950|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_cpu
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk11          |    5.635|         |         |         |
+clk_cpu        |   22.921|         |         |         |
+clk_mm         |    4.769|         |         |         |
+rst            |   22.442|         |         |         |
+u5/IRWrite     |   26.386|         |         |         |
+u5/PCWrite     |   23.571|         |         |         |
+u5/RegWrite    |   24.819|         |         |         |
+u5/TLBWrite    |   16.983|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_flag_1_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+u5/PCWrite     |         |         |    8.336|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_mm
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_cpu        |   20.753|         |         |         |
+clk_mm         |    5.845|         |         |         |
+rst            |   20.273|         |         |         |
+u5/IRWrite     |   24.217|         |         |         |
+u5/PCWrite     |   21.403|         |         |         |
+u5/RegWrite    |   22.650|         |         |         |
+u5/TLBWrite    |   14.815|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u5/ALUOutWrite
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_cpu        |    9.613|         |         |         |
+rst            |    7.589|         |         |         |
+u5/IRWrite     |   12.784|         |         |         |
+u5/PCWrite     |    8.872|         |         |         |
+u5/RegWrite    |   11.216|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u5/HIWrite
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_cpu        |    2.288|         |         |         |
+u5/IRWrite     |    5.569|         |         |         |
+u5/RegWrite    |    4.002|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u5/IRWrite
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_cpu        |    1.232|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u5/LOWrite
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_cpu        |    2.288|         |         |         |
+u5/IRWrite     |    5.569|         |         |         |
+u5/RegWrite    |    4.002|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u5/PCWrite
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_cpu        |   16.515|         |         |         |
+rst            |   14.951|         |         |         |
+u5/ALUOutWrite |    2.583|         |         |         |
+u5/IRWrite     |   19.686|         |         |         |
+u5/PCWrite     |   15.738|         |         |         |
+u5/RegWrite    |   18.118|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u5/RPCWrite
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+u5/PCWrite     |    2.595|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u5/RegWrite
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_cpu        |   14.504|         |         |         |
+rst            |   12.940|         |         |         |
+u5/HIWrite     |    3.608|         |         |         |
+u5/IRWrite     |   17.675|         |         |         |
+u5/LOWrite     |    3.494|         |         |         |
+u5/PCWrite     |   13.868|         |         |         |
+u5/RPCWrite    |    3.266|         |         |         |
+u5/RegWrite    |   16.107|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u5/TLBWrite
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_cpu        |    3.880|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 31.00 secs
-Total CPU time to Xst completion: 30.42 secs
+Total REAL time to Xst completion: 107.00 secs
+Total CPU time to Xst completion: 107.56 secs
  
 --> 
 
-Total memory usage is 294292 kilobytes
+Total memory usage is 345044 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  309 (   0 filtered)
-Number of infos    :   83 (   0 filtered)
+Number of warnings :   42 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
 

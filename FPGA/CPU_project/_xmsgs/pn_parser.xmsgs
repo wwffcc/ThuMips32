@@ -8,7 +8,52 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/mm_manager.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">332</arg>. <arg fmt="%s" index="3">Syntax error near &quot;end&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">356</arg>. <arg fmt="%s" index="3">Syntax error near &quot;PORT&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">405</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">407</arg>. <arg fmt="%s" index="3">Syntax error near &quot;PORT&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">416</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">418</arg>. <arg fmt="%s" index="3">Syntax error near &quot;PORT&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">423</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">425</arg>. <arg fmt="%s" index="3">Syntax error near &quot;PORT&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">433</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">435</arg>. <arg fmt="%s" index="3">Syntax error near &quot;PORT&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">479</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">481</arg>. <arg fmt="%s" index="3">Syntax error near &quot;PORT&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">485</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">488</arg>. <arg fmt="%s" index="3">Syntax error near &quot;begin&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">503</arg>. <arg fmt="%s" index="3">Syntax error near &quot;process&quot;.</arg>
 </msg>
 
 </messages>

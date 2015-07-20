@@ -1,0 +1,509 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: Device_COM.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Device_COM.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Device_COM"
+Output Format                      : NGC
+Target Device                      : xc6slx100-3-fgg676
+
+---- Source Options
+Top Module Name                    : Device_COM
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd" into library work
+Parsing entity <Device_COM>.
+Parsing architecture <Behavioral> of entity <device_com>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Device_COM> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd" Line 104. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Device_COM>.
+    Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd".
+    Found 1-bit register for signal <Status_out<0>>.
+    Found 1-bit register for signal <COM_INT>.
+    Found 1-bit register for signal <wrn>.
+    Found 32-bit register for signal <fr_state[2]_dff_11_OUT>.
+    Found 1-bit register for signal <COM_Ready>.
+    Found 32-bit register for signal <Data_out>.
+    Found 3-bit register for signal <fr_state>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_39>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_40>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_41>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_42>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_43>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_44>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_45>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_46>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_47>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_48>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_49>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_50>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_51>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_52>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_53>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_54>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_55>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_56>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_57>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_58>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_59>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_60>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_61>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_62>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_63>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_64>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_65>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_66>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_67>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_68>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_69>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_70>.
+    Found 1-bit register for signal <rdn>.
+    Found finite state machine <FSM_0> for signal <fr_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_COM_Write_OR_1_o (positive)                |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | com_init                                       |
+    | Power Up State     | com_init                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 54
+    Summary:
+	inferred 101 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+	inferred  32 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <Device_COM> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 39
+ 1-bit register                                        : 37
+ 32-bit register                                       : 2
+# Multiplexers                                         : 4
+ 1-bit 2-to-1 multiplexer                              : 3
+ 32-bit 2-to-1 multiplexer                             : 1
+# Tristates                                            : 32
+ 1-bit tristate buffer                                 : 32
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <Data_out_31> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_30> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_29> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_28> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_27> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_26> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_25> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_24> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_23> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_22> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_21> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_20> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_19> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_18> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_17> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_16> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_15> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_14> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_13> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_12> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_11> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_10> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_9> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_8> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <Data_out<31:8>> (without init value) have a constant value of 0 in block <Device_COM>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 77
+ Flip-Flops                                            : 77
+# Multiplexers                                         : 4
+ 1-bit 2-to-1 multiplexer                              : 3
+ 32-bit 2-to-1 multiplexer                             : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <fr_state[2]_clk_DFF_39> in Unit <Device_COM> is equivalent to the following 31 FFs/Latches, which will be removed : <fr_state[2]_clk_DFF_40> <fr_state[2]_clk_DFF_41> <fr_state[2]_clk_DFF_44> <fr_state[2]_clk_DFF_42> <fr_state[2]_clk_DFF_43> <fr_state[2]_clk_DFF_45> <fr_state[2]_clk_DFF_46> <fr_state[2]_clk_DFF_47> <fr_state[2]_clk_DFF_48> <fr_state[2]_clk_DFF_49> <fr_state[2]_clk_DFF_50> <fr_state[2]_clk_DFF_53> <fr_state[2]_clk_DFF_51> <fr_state[2]_clk_DFF_52> <fr_state[2]_clk_DFF_54> <fr_state[2]_clk_DFF_55> <fr_state[2]_clk_DFF_58> <fr_state[2]_clk_DFF_56> <fr_state[2]_clk_DFF_57> <fr_state[2]_clk_DFF_59> <fr_state[2]_clk_DFF_60> <fr_state[2]_clk_DFF_63> <fr_state[2]_clk_DFF_61> <fr_state[2]_clk_DFF_62> <fr_state[2]_clk_DFF_64> <fr_state[2]_clk_DFF_65> <fr_state[2]_clk_DFF_66> <fr_state[2]_clk_DFF_67> <fr_state[2]_clk_DFF_68> <fr_state[2]_clk_DFF_69> <fr_state[2]_clk_DFF_70> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <fr_state[1:3]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ com_init | 000
+ recv0    | 001
+ recv1    | 010
+ send0    | 011
+ send1    | 100
+ send2    | 101
+ send3    | 110
+----------------------
+
+Optimizing unit <Device_COM> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Device_COM, actual ratio is 0.
+FlipFlop fr_state_FSM_FFd1 has been replicated 2 time(s)
+FlipFlop fr_state_FSM_FFd2 has been replicated 2 time(s)
+FlipFlop fr_state_FSM_FFd3 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 55
+ Flip-Flops                                            : 55
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Device_COM.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 54
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 1
+#      LUT3                        : 1
+#      LUT4                        : 4
+#      LUT5                        : 10
+#      LUT6                        : 33
+#      VCC                         : 1
+# FlipFlops/Latches                : 55
+#      FD                          : 32
+#      FDC                         : 20
+#      FDP                         : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 138
+#      IBUF                        : 38
+#      IOBUF                       : 32
+#      OBUF                        : 68
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx100fgg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              53  out of  126576     0%  
+ Number of Slice LUTs:                   52  out of  63288     0%  
+    Number used as Logic:                52  out of  63288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     56
+   Number with an unused Flip Flop:       3  out of     56     5%  
+   Number with an unused LUT:             4  out of     56     7%  
+   Number of fully used LUT-FF pairs:    49  out of     56    87%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                         139
+ Number of bonded IOBs:                 139  out of    480    28%  
+    IOB Flip Flops/Latches:               2
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 55    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.987ns (Maximum Frequency: 503.309MHz)
+   Minimum input arrival time before clock: 3.777ns
+   Maximum output required time after clock: 5.131ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.987ns (frequency: 503.309MHz)
+  Total number of paths / destination ports: 171 / 53
+-------------------------------------------------------------------------
+Delay:               1.987ns (Levels of Logic = 1)
+  Source:            fr_state_FSM_FFd2 (FF)
+  Destination:       Ram1Data_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: fr_state_FSM_FFd2 to Ram1Data_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             16   0.447   1.233  fr_state_FSM_FFd2 (fr_state_FSM_FFd2)
+     LUT5:I2->O            3   0.205   0.000  fr_state_FSM_FFd2-In1 (fr_state_FSM_FFd2-In)
+     FDC:D                     0.102          fr_state_FSM_FFd2
+    ----------------------------------------
+    Total                      1.987ns (0.754ns logic, 1.233ns route)
+                                       (37.9% logic, 62.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 193 / 75
+-------------------------------------------------------------------------
+Offset:              3.777ns (Levels of Logic = 2)
+  Source:            COM_Read (PAD)
+  Destination:       fr_state_FSM_FFd1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: COM_Read to fr_state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.808  COM_Read_IBUF (COM_Read_IBUF)
+     LUT3:I0->O           21   0.205   1.113  rst_COM_Write_OR_1_o1 (rst_COM_Write_OR_1_o)
+     FDC:CLR                   0.430          fr_state_FSM_FFd1
+    ----------------------------------------
+    Total                      3.777ns (1.857ns logic, 1.921ns route)
+                                       (49.2% logic, 50.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 77 / 45
+-------------------------------------------------------------------------
+Offset:              5.131ns (Levels of Logic = 2)
+  Source:            fr_state[2]_clk_DFF_39 (FF)
+  Destination:       Ram1Data<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: fr_state[2]_clk_DFF_39 to Ram1Data<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  fr_state[2]_clk_DFF_39 (fr_state[2]_clk_DFF_39)
+     INV:I->O             32   0.206   1.291  fr_state[2]_clk_DFF_39_inv1_INV_0 (fr_state[2]_clk_DFF_39_inv)
+     IOBUF:T->IO               2.571          Ram1Data_31_IOBUF (Ram1Data<31>)
+    ----------------------------------------
+    Total                      5.131ns (3.224ns logic, 1.907ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.987|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.94 secs
+ 
+--> 
+
+Total memory usage is 270676 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   25 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
