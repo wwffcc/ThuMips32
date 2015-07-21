@@ -47,7 +47,9 @@ entity Device_Flash is
            Flash_Ready : out  STD_LOGIC;
 			  Paddr: in STD_LOGIC_VECTOR(22 downto 0);
            Data_in : in  STD_LOGIC_VECTOR (31 downto 0);
-           Data_out : out  STD_LOGIC_VECTOR (31 downto 0));
+           Data_out : out  STD_LOGIC_VECTOR (31 downto 0);
+			  bitmap:out STD_LOGIC_VECTOR(3 downto 0)
+			  );
 end Device_Flash;
 
 architecture Behavioral of Device_Flash is
@@ -185,6 +187,35 @@ begin
 					NULL;
 			end case;
 		end if;
+	end process;
+	
+	process(flash_state)
+	begin
+		case flash_state is
+			when flash_init=>bitmap<="0000";
+			when flash_cash0=>bitmap<="1011";
+			when flash_cash1=>bitmap<="1100";
+			when flash_cash2=>bitmap<="1101";
+			when flash_cash3=>bitmap<="1110";
+			when flash_cash4=>bitmap<="1111";
+			when flash_ready0=>bitmap<="1111";
+			when flash_ready1=>bitmap<="1110";
+			when flash_ready2=>bitmap<="1101";
+			when flash_ready3=>bitmap<="1100";
+			when flash_ready4=>bitmap<="1011";
+			when flash_write0=>bitmap<="0001";
+			when flash_write1=>bitmap<="0010";
+			when flash_write2=>bitmap<="0011";
+			when flash_write3=>bitmap<="0100";
+			when flash_write4=>bitmap<="0101";
+			when flash_check0=>bitmap<="0110";
+			when flash_check1=>bitmap<="0111";
+			when flash_check2=>bitmap<="1000";
+			when flash_check3=>bitmap<="1001";
+			when flash_check4=>bitmap<="1010";
+			when flash_check5=>bitmap<="1011";
+			when others=>bitmap<="ZZZZ";
+		end case;
 	end process;
 end Behavioral;
 

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: Device_COM.prj
 
@@ -114,7 +114,6 @@ Parsing architecture <Behavioral> of entity <device_com>.
 =========================================================================
 
 Elaborating entity <Device_COM> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd" Line 104. Case statement is complete. others clause is never selected
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -122,32 +121,1038 @@ INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_CO
 
 Synthesizing Unit <Device_COM>.
     Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd".
-    Found 1-bit register for signal <Status_out<0>>.
-    Found 1-bit register for signal <COM_INT>.
-    Found 1-bit register for signal <wrn>.
-    Found 32-bit register for signal <fr_state[2]_dff_11_OUT>.
+    Found 1-bit register for signal <rdn>.
+    Found 2-bit register for signal <com_statusx>.
+    Found 10-bit register for signal <header>.
+    Found 8-bit register for signal <comBuffer<1023>>.
+    Found 8-bit register for signal <comBuffer<1022>>.
+    Found 8-bit register for signal <comBuffer<1021>>.
+    Found 8-bit register for signal <comBuffer<1020>>.
+    Found 8-bit register for signal <comBuffer<1019>>.
+    Found 8-bit register for signal <comBuffer<1018>>.
+    Found 8-bit register for signal <comBuffer<1017>>.
+    Found 8-bit register for signal <comBuffer<1016>>.
+    Found 8-bit register for signal <comBuffer<1015>>.
+    Found 8-bit register for signal <comBuffer<1014>>.
+    Found 8-bit register for signal <comBuffer<1013>>.
+    Found 8-bit register for signal <comBuffer<1012>>.
+    Found 8-bit register for signal <comBuffer<1011>>.
+    Found 8-bit register for signal <comBuffer<1010>>.
+    Found 8-bit register for signal <comBuffer<1009>>.
+    Found 8-bit register for signal <comBuffer<1008>>.
+    Found 8-bit register for signal <comBuffer<1007>>.
+    Found 8-bit register for signal <comBuffer<1006>>.
+    Found 8-bit register for signal <comBuffer<1005>>.
+    Found 8-bit register for signal <comBuffer<1004>>.
+    Found 8-bit register for signal <comBuffer<1003>>.
+    Found 8-bit register for signal <comBuffer<1002>>.
+    Found 8-bit register for signal <comBuffer<1001>>.
+    Found 8-bit register for signal <comBuffer<1000>>.
+    Found 8-bit register for signal <comBuffer<999>>.
+    Found 8-bit register for signal <comBuffer<998>>.
+    Found 8-bit register for signal <comBuffer<997>>.
+    Found 8-bit register for signal <comBuffer<996>>.
+    Found 8-bit register for signal <comBuffer<995>>.
+    Found 8-bit register for signal <comBuffer<994>>.
+    Found 8-bit register for signal <comBuffer<993>>.
+    Found 8-bit register for signal <comBuffer<992>>.
+    Found 8-bit register for signal <comBuffer<991>>.
+    Found 8-bit register for signal <comBuffer<990>>.
+    Found 8-bit register for signal <comBuffer<989>>.
+    Found 8-bit register for signal <comBuffer<988>>.
+    Found 8-bit register for signal <comBuffer<987>>.
+    Found 8-bit register for signal <comBuffer<986>>.
+    Found 8-bit register for signal <comBuffer<985>>.
+    Found 8-bit register for signal <comBuffer<984>>.
+    Found 8-bit register for signal <comBuffer<983>>.
+    Found 8-bit register for signal <comBuffer<982>>.
+    Found 8-bit register for signal <comBuffer<981>>.
+    Found 8-bit register for signal <comBuffer<980>>.
+    Found 8-bit register for signal <comBuffer<979>>.
+    Found 8-bit register for signal <comBuffer<978>>.
+    Found 8-bit register for signal <comBuffer<977>>.
+    Found 8-bit register for signal <comBuffer<976>>.
+    Found 8-bit register for signal <comBuffer<975>>.
+    Found 8-bit register for signal <comBuffer<974>>.
+    Found 8-bit register for signal <comBuffer<973>>.
+    Found 8-bit register for signal <comBuffer<972>>.
+    Found 8-bit register for signal <comBuffer<971>>.
+    Found 8-bit register for signal <comBuffer<970>>.
+    Found 8-bit register for signal <comBuffer<969>>.
+    Found 8-bit register for signal <comBuffer<968>>.
+    Found 8-bit register for signal <comBuffer<967>>.
+    Found 8-bit register for signal <comBuffer<966>>.
+    Found 8-bit register for signal <comBuffer<965>>.
+    Found 8-bit register for signal <comBuffer<964>>.
+    Found 8-bit register for signal <comBuffer<963>>.
+    Found 8-bit register for signal <comBuffer<962>>.
+    Found 8-bit register for signal <comBuffer<961>>.
+    Found 8-bit register for signal <comBuffer<960>>.
+    Found 8-bit register for signal <comBuffer<959>>.
+    Found 8-bit register for signal <comBuffer<958>>.
+    Found 8-bit register for signal <comBuffer<957>>.
+    Found 8-bit register for signal <comBuffer<956>>.
+    Found 8-bit register for signal <comBuffer<955>>.
+    Found 8-bit register for signal <comBuffer<954>>.
+    Found 8-bit register for signal <comBuffer<953>>.
+    Found 8-bit register for signal <comBuffer<952>>.
+    Found 8-bit register for signal <comBuffer<951>>.
+    Found 8-bit register for signal <comBuffer<950>>.
+    Found 8-bit register for signal <comBuffer<949>>.
+    Found 8-bit register for signal <comBuffer<948>>.
+    Found 8-bit register for signal <comBuffer<947>>.
+    Found 8-bit register for signal <comBuffer<946>>.
+    Found 8-bit register for signal <comBuffer<945>>.
+    Found 8-bit register for signal <comBuffer<944>>.
+    Found 8-bit register for signal <comBuffer<943>>.
+    Found 8-bit register for signal <comBuffer<942>>.
+    Found 8-bit register for signal <comBuffer<941>>.
+    Found 8-bit register for signal <comBuffer<940>>.
+    Found 8-bit register for signal <comBuffer<939>>.
+    Found 8-bit register for signal <comBuffer<938>>.
+    Found 8-bit register for signal <comBuffer<937>>.
+    Found 8-bit register for signal <comBuffer<936>>.
+    Found 8-bit register for signal <comBuffer<935>>.
+    Found 8-bit register for signal <comBuffer<934>>.
+    Found 8-bit register for signal <comBuffer<933>>.
+    Found 8-bit register for signal <comBuffer<932>>.
+    Found 8-bit register for signal <comBuffer<931>>.
+    Found 8-bit register for signal <comBuffer<930>>.
+    Found 8-bit register for signal <comBuffer<929>>.
+    Found 8-bit register for signal <comBuffer<928>>.
+    Found 8-bit register for signal <comBuffer<927>>.
+    Found 8-bit register for signal <comBuffer<926>>.
+    Found 8-bit register for signal <comBuffer<925>>.
+    Found 8-bit register for signal <comBuffer<924>>.
+    Found 8-bit register for signal <comBuffer<923>>.
+    Found 8-bit register for signal <comBuffer<922>>.
+    Found 8-bit register for signal <comBuffer<921>>.
+    Found 8-bit register for signal <comBuffer<920>>.
+    Found 8-bit register for signal <comBuffer<919>>.
+    Found 8-bit register for signal <comBuffer<918>>.
+    Found 8-bit register for signal <comBuffer<917>>.
+    Found 8-bit register for signal <comBuffer<916>>.
+    Found 8-bit register for signal <comBuffer<915>>.
+    Found 8-bit register for signal <comBuffer<914>>.
+    Found 8-bit register for signal <comBuffer<913>>.
+    Found 8-bit register for signal <comBuffer<912>>.
+    Found 8-bit register for signal <comBuffer<911>>.
+    Found 8-bit register for signal <comBuffer<910>>.
+    Found 8-bit register for signal <comBuffer<909>>.
+    Found 8-bit register for signal <comBuffer<908>>.
+    Found 8-bit register for signal <comBuffer<907>>.
+    Found 8-bit register for signal <comBuffer<906>>.
+    Found 8-bit register for signal <comBuffer<905>>.
+    Found 8-bit register for signal <comBuffer<904>>.
+    Found 8-bit register for signal <comBuffer<903>>.
+    Found 8-bit register for signal <comBuffer<902>>.
+    Found 8-bit register for signal <comBuffer<901>>.
+    Found 8-bit register for signal <comBuffer<900>>.
+    Found 8-bit register for signal <comBuffer<899>>.
+    Found 8-bit register for signal <comBuffer<898>>.
+    Found 8-bit register for signal <comBuffer<897>>.
+    Found 8-bit register for signal <comBuffer<896>>.
+    Found 8-bit register for signal <comBuffer<895>>.
+    Found 8-bit register for signal <comBuffer<894>>.
+    Found 8-bit register for signal <comBuffer<893>>.
+    Found 8-bit register for signal <comBuffer<892>>.
+    Found 8-bit register for signal <comBuffer<891>>.
+    Found 8-bit register for signal <comBuffer<890>>.
+    Found 8-bit register for signal <comBuffer<889>>.
+    Found 8-bit register for signal <comBuffer<888>>.
+    Found 8-bit register for signal <comBuffer<887>>.
+    Found 8-bit register for signal <comBuffer<886>>.
+    Found 8-bit register for signal <comBuffer<885>>.
+    Found 8-bit register for signal <comBuffer<884>>.
+    Found 8-bit register for signal <comBuffer<883>>.
+    Found 8-bit register for signal <comBuffer<882>>.
+    Found 8-bit register for signal <comBuffer<881>>.
+    Found 8-bit register for signal <comBuffer<880>>.
+    Found 8-bit register for signal <comBuffer<879>>.
+    Found 8-bit register for signal <comBuffer<878>>.
+    Found 8-bit register for signal <comBuffer<877>>.
+    Found 8-bit register for signal <comBuffer<876>>.
+    Found 8-bit register for signal <comBuffer<875>>.
+    Found 8-bit register for signal <comBuffer<874>>.
+    Found 8-bit register for signal <comBuffer<873>>.
+    Found 8-bit register for signal <comBuffer<872>>.
+    Found 8-bit register for signal <comBuffer<871>>.
+    Found 8-bit register for signal <comBuffer<870>>.
+    Found 8-bit register for signal <comBuffer<869>>.
+    Found 8-bit register for signal <comBuffer<868>>.
+    Found 8-bit register for signal <comBuffer<867>>.
+    Found 8-bit register for signal <comBuffer<866>>.
+    Found 8-bit register for signal <comBuffer<865>>.
+    Found 8-bit register for signal <comBuffer<864>>.
+    Found 8-bit register for signal <comBuffer<863>>.
+    Found 8-bit register for signal <comBuffer<862>>.
+    Found 8-bit register for signal <comBuffer<861>>.
+    Found 8-bit register for signal <comBuffer<860>>.
+    Found 8-bit register for signal <comBuffer<859>>.
+    Found 8-bit register for signal <comBuffer<858>>.
+    Found 8-bit register for signal <comBuffer<857>>.
+    Found 8-bit register for signal <comBuffer<856>>.
+    Found 8-bit register for signal <comBuffer<855>>.
+    Found 8-bit register for signal <comBuffer<854>>.
+    Found 8-bit register for signal <comBuffer<853>>.
+    Found 8-bit register for signal <comBuffer<852>>.
+    Found 8-bit register for signal <comBuffer<851>>.
+    Found 8-bit register for signal <comBuffer<850>>.
+    Found 8-bit register for signal <comBuffer<849>>.
+    Found 8-bit register for signal <comBuffer<848>>.
+    Found 8-bit register for signal <comBuffer<847>>.
+    Found 8-bit register for signal <comBuffer<846>>.
+    Found 8-bit register for signal <comBuffer<845>>.
+    Found 8-bit register for signal <comBuffer<844>>.
+    Found 8-bit register for signal <comBuffer<843>>.
+    Found 8-bit register for signal <comBuffer<842>>.
+    Found 8-bit register for signal <comBuffer<841>>.
+    Found 8-bit register for signal <comBuffer<840>>.
+    Found 8-bit register for signal <comBuffer<839>>.
+    Found 8-bit register for signal <comBuffer<838>>.
+    Found 8-bit register for signal <comBuffer<837>>.
+    Found 8-bit register for signal <comBuffer<836>>.
+    Found 8-bit register for signal <comBuffer<835>>.
+    Found 8-bit register for signal <comBuffer<834>>.
+    Found 8-bit register for signal <comBuffer<833>>.
+    Found 8-bit register for signal <comBuffer<832>>.
+    Found 8-bit register for signal <comBuffer<831>>.
+    Found 8-bit register for signal <comBuffer<830>>.
+    Found 8-bit register for signal <comBuffer<829>>.
+    Found 8-bit register for signal <comBuffer<828>>.
+    Found 8-bit register for signal <comBuffer<827>>.
+    Found 8-bit register for signal <comBuffer<826>>.
+    Found 8-bit register for signal <comBuffer<825>>.
+    Found 8-bit register for signal <comBuffer<824>>.
+    Found 8-bit register for signal <comBuffer<823>>.
+    Found 8-bit register for signal <comBuffer<822>>.
+    Found 8-bit register for signal <comBuffer<821>>.
+    Found 8-bit register for signal <comBuffer<820>>.
+    Found 8-bit register for signal <comBuffer<819>>.
+    Found 8-bit register for signal <comBuffer<818>>.
+    Found 8-bit register for signal <comBuffer<817>>.
+    Found 8-bit register for signal <comBuffer<816>>.
+    Found 8-bit register for signal <comBuffer<815>>.
+    Found 8-bit register for signal <comBuffer<814>>.
+    Found 8-bit register for signal <comBuffer<813>>.
+    Found 8-bit register for signal <comBuffer<812>>.
+    Found 8-bit register for signal <comBuffer<811>>.
+    Found 8-bit register for signal <comBuffer<810>>.
+    Found 8-bit register for signal <comBuffer<809>>.
+    Found 8-bit register for signal <comBuffer<808>>.
+    Found 8-bit register for signal <comBuffer<807>>.
+    Found 8-bit register for signal <comBuffer<806>>.
+    Found 8-bit register for signal <comBuffer<805>>.
+    Found 8-bit register for signal <comBuffer<804>>.
+    Found 8-bit register for signal <comBuffer<803>>.
+    Found 8-bit register for signal <comBuffer<802>>.
+    Found 8-bit register for signal <comBuffer<801>>.
+    Found 8-bit register for signal <comBuffer<800>>.
+    Found 8-bit register for signal <comBuffer<799>>.
+    Found 8-bit register for signal <comBuffer<798>>.
+    Found 8-bit register for signal <comBuffer<797>>.
+    Found 8-bit register for signal <comBuffer<796>>.
+    Found 8-bit register for signal <comBuffer<795>>.
+    Found 8-bit register for signal <comBuffer<794>>.
+    Found 8-bit register for signal <comBuffer<793>>.
+    Found 8-bit register for signal <comBuffer<792>>.
+    Found 8-bit register for signal <comBuffer<791>>.
+    Found 8-bit register for signal <comBuffer<790>>.
+    Found 8-bit register for signal <comBuffer<789>>.
+    Found 8-bit register for signal <comBuffer<788>>.
+    Found 8-bit register for signal <comBuffer<787>>.
+    Found 8-bit register for signal <comBuffer<786>>.
+    Found 8-bit register for signal <comBuffer<785>>.
+    Found 8-bit register for signal <comBuffer<784>>.
+    Found 8-bit register for signal <comBuffer<783>>.
+    Found 8-bit register for signal <comBuffer<782>>.
+    Found 8-bit register for signal <comBuffer<781>>.
+    Found 8-bit register for signal <comBuffer<780>>.
+    Found 8-bit register for signal <comBuffer<779>>.
+    Found 8-bit register for signal <comBuffer<778>>.
+    Found 8-bit register for signal <comBuffer<777>>.
+    Found 8-bit register for signal <comBuffer<776>>.
+    Found 8-bit register for signal <comBuffer<775>>.
+    Found 8-bit register for signal <comBuffer<774>>.
+    Found 8-bit register for signal <comBuffer<773>>.
+    Found 8-bit register for signal <comBuffer<772>>.
+    Found 8-bit register for signal <comBuffer<771>>.
+    Found 8-bit register for signal <comBuffer<770>>.
+    Found 8-bit register for signal <comBuffer<769>>.
+    Found 8-bit register for signal <comBuffer<768>>.
+    Found 8-bit register for signal <comBuffer<767>>.
+    Found 8-bit register for signal <comBuffer<766>>.
+    Found 8-bit register for signal <comBuffer<765>>.
+    Found 8-bit register for signal <comBuffer<764>>.
+    Found 8-bit register for signal <comBuffer<763>>.
+    Found 8-bit register for signal <comBuffer<762>>.
+    Found 8-bit register for signal <comBuffer<761>>.
+    Found 8-bit register for signal <comBuffer<760>>.
+    Found 8-bit register for signal <comBuffer<759>>.
+    Found 8-bit register for signal <comBuffer<758>>.
+    Found 8-bit register for signal <comBuffer<757>>.
+    Found 8-bit register for signal <comBuffer<756>>.
+    Found 8-bit register for signal <comBuffer<755>>.
+    Found 8-bit register for signal <comBuffer<754>>.
+    Found 8-bit register for signal <comBuffer<753>>.
+    Found 8-bit register for signal <comBuffer<752>>.
+    Found 8-bit register for signal <comBuffer<751>>.
+    Found 8-bit register for signal <comBuffer<750>>.
+    Found 8-bit register for signal <comBuffer<749>>.
+    Found 8-bit register for signal <comBuffer<748>>.
+    Found 8-bit register for signal <comBuffer<747>>.
+    Found 8-bit register for signal <comBuffer<746>>.
+    Found 8-bit register for signal <comBuffer<745>>.
+    Found 8-bit register for signal <comBuffer<744>>.
+    Found 8-bit register for signal <comBuffer<743>>.
+    Found 8-bit register for signal <comBuffer<742>>.
+    Found 8-bit register for signal <comBuffer<741>>.
+    Found 8-bit register for signal <comBuffer<740>>.
+    Found 8-bit register for signal <comBuffer<739>>.
+    Found 8-bit register for signal <comBuffer<738>>.
+    Found 8-bit register for signal <comBuffer<737>>.
+    Found 8-bit register for signal <comBuffer<736>>.
+    Found 8-bit register for signal <comBuffer<735>>.
+    Found 8-bit register for signal <comBuffer<734>>.
+    Found 8-bit register for signal <comBuffer<733>>.
+    Found 8-bit register for signal <comBuffer<732>>.
+    Found 8-bit register for signal <comBuffer<731>>.
+    Found 8-bit register for signal <comBuffer<730>>.
+    Found 8-bit register for signal <comBuffer<729>>.
+    Found 8-bit register for signal <comBuffer<728>>.
+    Found 8-bit register for signal <comBuffer<727>>.
+    Found 8-bit register for signal <comBuffer<726>>.
+    Found 8-bit register for signal <comBuffer<725>>.
+    Found 8-bit register for signal <comBuffer<724>>.
+    Found 8-bit register for signal <comBuffer<723>>.
+    Found 8-bit register for signal <comBuffer<722>>.
+    Found 8-bit register for signal <comBuffer<721>>.
+    Found 8-bit register for signal <comBuffer<720>>.
+    Found 8-bit register for signal <comBuffer<719>>.
+    Found 8-bit register for signal <comBuffer<718>>.
+    Found 8-bit register for signal <comBuffer<717>>.
+    Found 8-bit register for signal <comBuffer<716>>.
+    Found 8-bit register for signal <comBuffer<715>>.
+    Found 8-bit register for signal <comBuffer<714>>.
+    Found 8-bit register for signal <comBuffer<713>>.
+    Found 8-bit register for signal <comBuffer<712>>.
+    Found 8-bit register for signal <comBuffer<711>>.
+    Found 8-bit register for signal <comBuffer<710>>.
+    Found 8-bit register for signal <comBuffer<709>>.
+    Found 8-bit register for signal <comBuffer<708>>.
+    Found 8-bit register for signal <comBuffer<707>>.
+    Found 8-bit register for signal <comBuffer<706>>.
+    Found 8-bit register for signal <comBuffer<705>>.
+    Found 8-bit register for signal <comBuffer<704>>.
+    Found 8-bit register for signal <comBuffer<703>>.
+    Found 8-bit register for signal <comBuffer<702>>.
+    Found 8-bit register for signal <comBuffer<701>>.
+    Found 8-bit register for signal <comBuffer<700>>.
+    Found 8-bit register for signal <comBuffer<699>>.
+    Found 8-bit register for signal <comBuffer<698>>.
+    Found 8-bit register for signal <comBuffer<697>>.
+    Found 8-bit register for signal <comBuffer<696>>.
+    Found 8-bit register for signal <comBuffer<695>>.
+    Found 8-bit register for signal <comBuffer<694>>.
+    Found 8-bit register for signal <comBuffer<693>>.
+    Found 8-bit register for signal <comBuffer<692>>.
+    Found 8-bit register for signal <comBuffer<691>>.
+    Found 8-bit register for signal <comBuffer<690>>.
+    Found 8-bit register for signal <comBuffer<689>>.
+    Found 8-bit register for signal <comBuffer<688>>.
+    Found 8-bit register for signal <comBuffer<687>>.
+    Found 8-bit register for signal <comBuffer<686>>.
+    Found 8-bit register for signal <comBuffer<685>>.
+    Found 8-bit register for signal <comBuffer<684>>.
+    Found 8-bit register for signal <comBuffer<683>>.
+    Found 8-bit register for signal <comBuffer<682>>.
+    Found 8-bit register for signal <comBuffer<681>>.
+    Found 8-bit register for signal <comBuffer<680>>.
+    Found 8-bit register for signal <comBuffer<679>>.
+    Found 8-bit register for signal <comBuffer<678>>.
+    Found 8-bit register for signal <comBuffer<677>>.
+    Found 8-bit register for signal <comBuffer<676>>.
+    Found 8-bit register for signal <comBuffer<675>>.
+    Found 8-bit register for signal <comBuffer<674>>.
+    Found 8-bit register for signal <comBuffer<673>>.
+    Found 8-bit register for signal <comBuffer<672>>.
+    Found 8-bit register for signal <comBuffer<671>>.
+    Found 8-bit register for signal <comBuffer<670>>.
+    Found 8-bit register for signal <comBuffer<669>>.
+    Found 8-bit register for signal <comBuffer<668>>.
+    Found 8-bit register for signal <comBuffer<667>>.
+    Found 8-bit register for signal <comBuffer<666>>.
+    Found 8-bit register for signal <comBuffer<665>>.
+    Found 8-bit register for signal <comBuffer<664>>.
+    Found 8-bit register for signal <comBuffer<663>>.
+    Found 8-bit register for signal <comBuffer<662>>.
+    Found 8-bit register for signal <comBuffer<661>>.
+    Found 8-bit register for signal <comBuffer<660>>.
+    Found 8-bit register for signal <comBuffer<659>>.
+    Found 8-bit register for signal <comBuffer<658>>.
+    Found 8-bit register for signal <comBuffer<657>>.
+    Found 8-bit register for signal <comBuffer<656>>.
+    Found 8-bit register for signal <comBuffer<655>>.
+    Found 8-bit register for signal <comBuffer<654>>.
+    Found 8-bit register for signal <comBuffer<653>>.
+    Found 8-bit register for signal <comBuffer<652>>.
+    Found 8-bit register for signal <comBuffer<651>>.
+    Found 8-bit register for signal <comBuffer<650>>.
+    Found 8-bit register for signal <comBuffer<649>>.
+    Found 8-bit register for signal <comBuffer<648>>.
+    Found 8-bit register for signal <comBuffer<647>>.
+    Found 8-bit register for signal <comBuffer<646>>.
+    Found 8-bit register for signal <comBuffer<645>>.
+    Found 8-bit register for signal <comBuffer<644>>.
+    Found 8-bit register for signal <comBuffer<643>>.
+    Found 8-bit register for signal <comBuffer<642>>.
+    Found 8-bit register for signal <comBuffer<641>>.
+    Found 8-bit register for signal <comBuffer<640>>.
+    Found 8-bit register for signal <comBuffer<639>>.
+    Found 8-bit register for signal <comBuffer<638>>.
+    Found 8-bit register for signal <comBuffer<637>>.
+    Found 8-bit register for signal <comBuffer<636>>.
+    Found 8-bit register for signal <comBuffer<635>>.
+    Found 8-bit register for signal <comBuffer<634>>.
+    Found 8-bit register for signal <comBuffer<633>>.
+    Found 8-bit register for signal <comBuffer<632>>.
+    Found 8-bit register for signal <comBuffer<631>>.
+    Found 8-bit register for signal <comBuffer<630>>.
+    Found 8-bit register for signal <comBuffer<629>>.
+    Found 8-bit register for signal <comBuffer<628>>.
+    Found 8-bit register for signal <comBuffer<627>>.
+    Found 8-bit register for signal <comBuffer<626>>.
+    Found 8-bit register for signal <comBuffer<625>>.
+    Found 8-bit register for signal <comBuffer<624>>.
+    Found 8-bit register for signal <comBuffer<623>>.
+    Found 8-bit register for signal <comBuffer<622>>.
+    Found 8-bit register for signal <comBuffer<621>>.
+    Found 8-bit register for signal <comBuffer<620>>.
+    Found 8-bit register for signal <comBuffer<619>>.
+    Found 8-bit register for signal <comBuffer<618>>.
+    Found 8-bit register for signal <comBuffer<617>>.
+    Found 8-bit register for signal <comBuffer<616>>.
+    Found 8-bit register for signal <comBuffer<615>>.
+    Found 8-bit register for signal <comBuffer<614>>.
+    Found 8-bit register for signal <comBuffer<613>>.
+    Found 8-bit register for signal <comBuffer<612>>.
+    Found 8-bit register for signal <comBuffer<611>>.
+    Found 8-bit register for signal <comBuffer<610>>.
+    Found 8-bit register for signal <comBuffer<609>>.
+    Found 8-bit register for signal <comBuffer<608>>.
+    Found 8-bit register for signal <comBuffer<607>>.
+    Found 8-bit register for signal <comBuffer<606>>.
+    Found 8-bit register for signal <comBuffer<605>>.
+    Found 8-bit register for signal <comBuffer<604>>.
+    Found 8-bit register for signal <comBuffer<603>>.
+    Found 8-bit register for signal <comBuffer<602>>.
+    Found 8-bit register for signal <comBuffer<601>>.
+    Found 8-bit register for signal <comBuffer<600>>.
+    Found 8-bit register for signal <comBuffer<599>>.
+    Found 8-bit register for signal <comBuffer<598>>.
+    Found 8-bit register for signal <comBuffer<597>>.
+    Found 8-bit register for signal <comBuffer<596>>.
+    Found 8-bit register for signal <comBuffer<595>>.
+    Found 8-bit register for signal <comBuffer<594>>.
+    Found 8-bit register for signal <comBuffer<593>>.
+    Found 8-bit register for signal <comBuffer<592>>.
+    Found 8-bit register for signal <comBuffer<591>>.
+    Found 8-bit register for signal <comBuffer<590>>.
+    Found 8-bit register for signal <comBuffer<589>>.
+    Found 8-bit register for signal <comBuffer<588>>.
+    Found 8-bit register for signal <comBuffer<587>>.
+    Found 8-bit register for signal <comBuffer<586>>.
+    Found 8-bit register for signal <comBuffer<585>>.
+    Found 8-bit register for signal <comBuffer<584>>.
+    Found 8-bit register for signal <comBuffer<583>>.
+    Found 8-bit register for signal <comBuffer<582>>.
+    Found 8-bit register for signal <comBuffer<581>>.
+    Found 8-bit register for signal <comBuffer<580>>.
+    Found 8-bit register for signal <comBuffer<579>>.
+    Found 8-bit register for signal <comBuffer<578>>.
+    Found 8-bit register for signal <comBuffer<577>>.
+    Found 8-bit register for signal <comBuffer<576>>.
+    Found 8-bit register for signal <comBuffer<575>>.
+    Found 8-bit register for signal <comBuffer<574>>.
+    Found 8-bit register for signal <comBuffer<573>>.
+    Found 8-bit register for signal <comBuffer<572>>.
+    Found 8-bit register for signal <comBuffer<571>>.
+    Found 8-bit register for signal <comBuffer<570>>.
+    Found 8-bit register for signal <comBuffer<569>>.
+    Found 8-bit register for signal <comBuffer<568>>.
+    Found 8-bit register for signal <comBuffer<567>>.
+    Found 8-bit register for signal <comBuffer<566>>.
+    Found 8-bit register for signal <comBuffer<565>>.
+    Found 8-bit register for signal <comBuffer<564>>.
+    Found 8-bit register for signal <comBuffer<563>>.
+    Found 8-bit register for signal <comBuffer<562>>.
+    Found 8-bit register for signal <comBuffer<561>>.
+    Found 8-bit register for signal <comBuffer<560>>.
+    Found 8-bit register for signal <comBuffer<559>>.
+    Found 8-bit register for signal <comBuffer<558>>.
+    Found 8-bit register for signal <comBuffer<557>>.
+    Found 8-bit register for signal <comBuffer<556>>.
+    Found 8-bit register for signal <comBuffer<555>>.
+    Found 8-bit register for signal <comBuffer<554>>.
+    Found 8-bit register for signal <comBuffer<553>>.
+    Found 8-bit register for signal <comBuffer<552>>.
+    Found 8-bit register for signal <comBuffer<551>>.
+    Found 8-bit register for signal <comBuffer<550>>.
+    Found 8-bit register for signal <comBuffer<549>>.
+    Found 8-bit register for signal <comBuffer<548>>.
+    Found 8-bit register for signal <comBuffer<547>>.
+    Found 8-bit register for signal <comBuffer<546>>.
+    Found 8-bit register for signal <comBuffer<545>>.
+    Found 8-bit register for signal <comBuffer<544>>.
+    Found 8-bit register for signal <comBuffer<543>>.
+    Found 8-bit register for signal <comBuffer<542>>.
+    Found 8-bit register for signal <comBuffer<541>>.
+    Found 8-bit register for signal <comBuffer<540>>.
+    Found 8-bit register for signal <comBuffer<539>>.
+    Found 8-bit register for signal <comBuffer<538>>.
+    Found 8-bit register for signal <comBuffer<537>>.
+    Found 8-bit register for signal <comBuffer<536>>.
+    Found 8-bit register for signal <comBuffer<535>>.
+    Found 8-bit register for signal <comBuffer<534>>.
+    Found 8-bit register for signal <comBuffer<533>>.
+    Found 8-bit register for signal <comBuffer<532>>.
+    Found 8-bit register for signal <comBuffer<531>>.
+    Found 8-bit register for signal <comBuffer<530>>.
+    Found 8-bit register for signal <comBuffer<529>>.
+    Found 8-bit register for signal <comBuffer<528>>.
+    Found 8-bit register for signal <comBuffer<527>>.
+    Found 8-bit register for signal <comBuffer<526>>.
+    Found 8-bit register for signal <comBuffer<525>>.
+    Found 8-bit register for signal <comBuffer<524>>.
+    Found 8-bit register for signal <comBuffer<523>>.
+    Found 8-bit register for signal <comBuffer<522>>.
+    Found 8-bit register for signal <comBuffer<521>>.
+    Found 8-bit register for signal <comBuffer<520>>.
+    Found 8-bit register for signal <comBuffer<519>>.
+    Found 8-bit register for signal <comBuffer<518>>.
+    Found 8-bit register for signal <comBuffer<517>>.
+    Found 8-bit register for signal <comBuffer<516>>.
+    Found 8-bit register for signal <comBuffer<515>>.
+    Found 8-bit register for signal <comBuffer<514>>.
+    Found 8-bit register for signal <comBuffer<513>>.
+    Found 8-bit register for signal <comBuffer<512>>.
+    Found 8-bit register for signal <comBuffer<511>>.
+    Found 8-bit register for signal <comBuffer<510>>.
+    Found 8-bit register for signal <comBuffer<509>>.
+    Found 8-bit register for signal <comBuffer<508>>.
+    Found 8-bit register for signal <comBuffer<507>>.
+    Found 8-bit register for signal <comBuffer<506>>.
+    Found 8-bit register for signal <comBuffer<505>>.
+    Found 8-bit register for signal <comBuffer<504>>.
+    Found 8-bit register for signal <comBuffer<503>>.
+    Found 8-bit register for signal <comBuffer<502>>.
+    Found 8-bit register for signal <comBuffer<501>>.
+    Found 8-bit register for signal <comBuffer<500>>.
+    Found 8-bit register for signal <comBuffer<499>>.
+    Found 8-bit register for signal <comBuffer<498>>.
+    Found 8-bit register for signal <comBuffer<497>>.
+    Found 8-bit register for signal <comBuffer<496>>.
+    Found 8-bit register for signal <comBuffer<495>>.
+    Found 8-bit register for signal <comBuffer<494>>.
+    Found 8-bit register for signal <comBuffer<493>>.
+    Found 8-bit register for signal <comBuffer<492>>.
+    Found 8-bit register for signal <comBuffer<491>>.
+    Found 8-bit register for signal <comBuffer<490>>.
+    Found 8-bit register for signal <comBuffer<489>>.
+    Found 8-bit register for signal <comBuffer<488>>.
+    Found 8-bit register for signal <comBuffer<487>>.
+    Found 8-bit register for signal <comBuffer<486>>.
+    Found 8-bit register for signal <comBuffer<485>>.
+    Found 8-bit register for signal <comBuffer<484>>.
+    Found 8-bit register for signal <comBuffer<483>>.
+    Found 8-bit register for signal <comBuffer<482>>.
+    Found 8-bit register for signal <comBuffer<481>>.
+    Found 8-bit register for signal <comBuffer<480>>.
+    Found 8-bit register for signal <comBuffer<479>>.
+    Found 8-bit register for signal <comBuffer<478>>.
+    Found 8-bit register for signal <comBuffer<477>>.
+    Found 8-bit register for signal <comBuffer<476>>.
+    Found 8-bit register for signal <comBuffer<475>>.
+    Found 8-bit register for signal <comBuffer<474>>.
+    Found 8-bit register for signal <comBuffer<473>>.
+    Found 8-bit register for signal <comBuffer<472>>.
+    Found 8-bit register for signal <comBuffer<471>>.
+    Found 8-bit register for signal <comBuffer<470>>.
+    Found 8-bit register for signal <comBuffer<469>>.
+    Found 8-bit register for signal <comBuffer<468>>.
+    Found 8-bit register for signal <comBuffer<467>>.
+    Found 8-bit register for signal <comBuffer<466>>.
+    Found 8-bit register for signal <comBuffer<465>>.
+    Found 8-bit register for signal <comBuffer<464>>.
+    Found 8-bit register for signal <comBuffer<463>>.
+    Found 8-bit register for signal <comBuffer<462>>.
+    Found 8-bit register for signal <comBuffer<461>>.
+    Found 8-bit register for signal <comBuffer<460>>.
+    Found 8-bit register for signal <comBuffer<459>>.
+    Found 8-bit register for signal <comBuffer<458>>.
+    Found 8-bit register for signal <comBuffer<457>>.
+    Found 8-bit register for signal <comBuffer<456>>.
+    Found 8-bit register for signal <comBuffer<455>>.
+    Found 8-bit register for signal <comBuffer<454>>.
+    Found 8-bit register for signal <comBuffer<453>>.
+    Found 8-bit register for signal <comBuffer<452>>.
+    Found 8-bit register for signal <comBuffer<451>>.
+    Found 8-bit register for signal <comBuffer<450>>.
+    Found 8-bit register for signal <comBuffer<449>>.
+    Found 8-bit register for signal <comBuffer<448>>.
+    Found 8-bit register for signal <comBuffer<447>>.
+    Found 8-bit register for signal <comBuffer<446>>.
+    Found 8-bit register for signal <comBuffer<445>>.
+    Found 8-bit register for signal <comBuffer<444>>.
+    Found 8-bit register for signal <comBuffer<443>>.
+    Found 8-bit register for signal <comBuffer<442>>.
+    Found 8-bit register for signal <comBuffer<441>>.
+    Found 8-bit register for signal <comBuffer<440>>.
+    Found 8-bit register for signal <comBuffer<439>>.
+    Found 8-bit register for signal <comBuffer<438>>.
+    Found 8-bit register for signal <comBuffer<437>>.
+    Found 8-bit register for signal <comBuffer<436>>.
+    Found 8-bit register for signal <comBuffer<435>>.
+    Found 8-bit register for signal <comBuffer<434>>.
+    Found 8-bit register for signal <comBuffer<433>>.
+    Found 8-bit register for signal <comBuffer<432>>.
+    Found 8-bit register for signal <comBuffer<431>>.
+    Found 8-bit register for signal <comBuffer<430>>.
+    Found 8-bit register for signal <comBuffer<429>>.
+    Found 8-bit register for signal <comBuffer<428>>.
+    Found 8-bit register for signal <comBuffer<427>>.
+    Found 8-bit register for signal <comBuffer<426>>.
+    Found 8-bit register for signal <comBuffer<425>>.
+    Found 8-bit register for signal <comBuffer<424>>.
+    Found 8-bit register for signal <comBuffer<423>>.
+    Found 8-bit register for signal <comBuffer<422>>.
+    Found 8-bit register for signal <comBuffer<421>>.
+    Found 8-bit register for signal <comBuffer<420>>.
+    Found 8-bit register for signal <comBuffer<419>>.
+    Found 8-bit register for signal <comBuffer<418>>.
+    Found 8-bit register for signal <comBuffer<417>>.
+    Found 8-bit register for signal <comBuffer<416>>.
+    Found 8-bit register for signal <comBuffer<415>>.
+    Found 8-bit register for signal <comBuffer<414>>.
+    Found 8-bit register for signal <comBuffer<413>>.
+    Found 8-bit register for signal <comBuffer<412>>.
+    Found 8-bit register for signal <comBuffer<411>>.
+    Found 8-bit register for signal <comBuffer<410>>.
+    Found 8-bit register for signal <comBuffer<409>>.
+    Found 8-bit register for signal <comBuffer<408>>.
+    Found 8-bit register for signal <comBuffer<407>>.
+    Found 8-bit register for signal <comBuffer<406>>.
+    Found 8-bit register for signal <comBuffer<405>>.
+    Found 8-bit register for signal <comBuffer<404>>.
+    Found 8-bit register for signal <comBuffer<403>>.
+    Found 8-bit register for signal <comBuffer<402>>.
+    Found 8-bit register for signal <comBuffer<401>>.
+    Found 8-bit register for signal <comBuffer<400>>.
+    Found 8-bit register for signal <comBuffer<399>>.
+    Found 8-bit register for signal <comBuffer<398>>.
+    Found 8-bit register for signal <comBuffer<397>>.
+    Found 8-bit register for signal <comBuffer<396>>.
+    Found 8-bit register for signal <comBuffer<395>>.
+    Found 8-bit register for signal <comBuffer<394>>.
+    Found 8-bit register for signal <comBuffer<393>>.
+    Found 8-bit register for signal <comBuffer<392>>.
+    Found 8-bit register for signal <comBuffer<391>>.
+    Found 8-bit register for signal <comBuffer<390>>.
+    Found 8-bit register for signal <comBuffer<389>>.
+    Found 8-bit register for signal <comBuffer<388>>.
+    Found 8-bit register for signal <comBuffer<387>>.
+    Found 8-bit register for signal <comBuffer<386>>.
+    Found 8-bit register for signal <comBuffer<385>>.
+    Found 8-bit register for signal <comBuffer<384>>.
+    Found 8-bit register for signal <comBuffer<383>>.
+    Found 8-bit register for signal <comBuffer<382>>.
+    Found 8-bit register for signal <comBuffer<381>>.
+    Found 8-bit register for signal <comBuffer<380>>.
+    Found 8-bit register for signal <comBuffer<379>>.
+    Found 8-bit register for signal <comBuffer<378>>.
+    Found 8-bit register for signal <comBuffer<377>>.
+    Found 8-bit register for signal <comBuffer<376>>.
+    Found 8-bit register for signal <comBuffer<375>>.
+    Found 8-bit register for signal <comBuffer<374>>.
+    Found 8-bit register for signal <comBuffer<373>>.
+    Found 8-bit register for signal <comBuffer<372>>.
+    Found 8-bit register for signal <comBuffer<371>>.
+    Found 8-bit register for signal <comBuffer<370>>.
+    Found 8-bit register for signal <comBuffer<369>>.
+    Found 8-bit register for signal <comBuffer<368>>.
+    Found 8-bit register for signal <comBuffer<367>>.
+    Found 8-bit register for signal <comBuffer<366>>.
+    Found 8-bit register for signal <comBuffer<365>>.
+    Found 8-bit register for signal <comBuffer<364>>.
+    Found 8-bit register for signal <comBuffer<363>>.
+    Found 8-bit register for signal <comBuffer<362>>.
+    Found 8-bit register for signal <comBuffer<361>>.
+    Found 8-bit register for signal <comBuffer<360>>.
+    Found 8-bit register for signal <comBuffer<359>>.
+    Found 8-bit register for signal <comBuffer<358>>.
+    Found 8-bit register for signal <comBuffer<357>>.
+    Found 8-bit register for signal <comBuffer<356>>.
+    Found 8-bit register for signal <comBuffer<355>>.
+    Found 8-bit register for signal <comBuffer<354>>.
+    Found 8-bit register for signal <comBuffer<353>>.
+    Found 8-bit register for signal <comBuffer<352>>.
+    Found 8-bit register for signal <comBuffer<351>>.
+    Found 8-bit register for signal <comBuffer<350>>.
+    Found 8-bit register for signal <comBuffer<349>>.
+    Found 8-bit register for signal <comBuffer<348>>.
+    Found 8-bit register for signal <comBuffer<347>>.
+    Found 8-bit register for signal <comBuffer<346>>.
+    Found 8-bit register for signal <comBuffer<345>>.
+    Found 8-bit register for signal <comBuffer<344>>.
+    Found 8-bit register for signal <comBuffer<343>>.
+    Found 8-bit register for signal <comBuffer<342>>.
+    Found 8-bit register for signal <comBuffer<341>>.
+    Found 8-bit register for signal <comBuffer<340>>.
+    Found 8-bit register for signal <comBuffer<339>>.
+    Found 8-bit register for signal <comBuffer<338>>.
+    Found 8-bit register for signal <comBuffer<337>>.
+    Found 8-bit register for signal <comBuffer<336>>.
+    Found 8-bit register for signal <comBuffer<335>>.
+    Found 8-bit register for signal <comBuffer<334>>.
+    Found 8-bit register for signal <comBuffer<333>>.
+    Found 8-bit register for signal <comBuffer<332>>.
+    Found 8-bit register for signal <comBuffer<331>>.
+    Found 8-bit register for signal <comBuffer<330>>.
+    Found 8-bit register for signal <comBuffer<329>>.
+    Found 8-bit register for signal <comBuffer<328>>.
+    Found 8-bit register for signal <comBuffer<327>>.
+    Found 8-bit register for signal <comBuffer<326>>.
+    Found 8-bit register for signal <comBuffer<325>>.
+    Found 8-bit register for signal <comBuffer<324>>.
+    Found 8-bit register for signal <comBuffer<323>>.
+    Found 8-bit register for signal <comBuffer<322>>.
+    Found 8-bit register for signal <comBuffer<321>>.
+    Found 8-bit register for signal <comBuffer<320>>.
+    Found 8-bit register for signal <comBuffer<319>>.
+    Found 8-bit register for signal <comBuffer<318>>.
+    Found 8-bit register for signal <comBuffer<317>>.
+    Found 8-bit register for signal <comBuffer<316>>.
+    Found 8-bit register for signal <comBuffer<315>>.
+    Found 8-bit register for signal <comBuffer<314>>.
+    Found 8-bit register for signal <comBuffer<313>>.
+    Found 8-bit register for signal <comBuffer<312>>.
+    Found 8-bit register for signal <comBuffer<311>>.
+    Found 8-bit register for signal <comBuffer<310>>.
+    Found 8-bit register for signal <comBuffer<309>>.
+    Found 8-bit register for signal <comBuffer<308>>.
+    Found 8-bit register for signal <comBuffer<307>>.
+    Found 8-bit register for signal <comBuffer<306>>.
+    Found 8-bit register for signal <comBuffer<305>>.
+    Found 8-bit register for signal <comBuffer<304>>.
+    Found 8-bit register for signal <comBuffer<303>>.
+    Found 8-bit register for signal <comBuffer<302>>.
+    Found 8-bit register for signal <comBuffer<301>>.
+    Found 8-bit register for signal <comBuffer<300>>.
+    Found 8-bit register for signal <comBuffer<299>>.
+    Found 8-bit register for signal <comBuffer<298>>.
+    Found 8-bit register for signal <comBuffer<297>>.
+    Found 8-bit register for signal <comBuffer<296>>.
+    Found 8-bit register for signal <comBuffer<295>>.
+    Found 8-bit register for signal <comBuffer<294>>.
+    Found 8-bit register for signal <comBuffer<293>>.
+    Found 8-bit register for signal <comBuffer<292>>.
+    Found 8-bit register for signal <comBuffer<291>>.
+    Found 8-bit register for signal <comBuffer<290>>.
+    Found 8-bit register for signal <comBuffer<289>>.
+    Found 8-bit register for signal <comBuffer<288>>.
+    Found 8-bit register for signal <comBuffer<287>>.
+    Found 8-bit register for signal <comBuffer<286>>.
+    Found 8-bit register for signal <comBuffer<285>>.
+    Found 8-bit register for signal <comBuffer<284>>.
+    Found 8-bit register for signal <comBuffer<283>>.
+    Found 8-bit register for signal <comBuffer<282>>.
+    Found 8-bit register for signal <comBuffer<281>>.
+    Found 8-bit register for signal <comBuffer<280>>.
+    Found 8-bit register for signal <comBuffer<279>>.
+    Found 8-bit register for signal <comBuffer<278>>.
+    Found 8-bit register for signal <comBuffer<277>>.
+    Found 8-bit register for signal <comBuffer<276>>.
+    Found 8-bit register for signal <comBuffer<275>>.
+    Found 8-bit register for signal <comBuffer<274>>.
+    Found 8-bit register for signal <comBuffer<273>>.
+    Found 8-bit register for signal <comBuffer<272>>.
+    Found 8-bit register for signal <comBuffer<271>>.
+    Found 8-bit register for signal <comBuffer<270>>.
+    Found 8-bit register for signal <comBuffer<269>>.
+    Found 8-bit register for signal <comBuffer<268>>.
+    Found 8-bit register for signal <comBuffer<267>>.
+    Found 8-bit register for signal <comBuffer<266>>.
+    Found 8-bit register for signal <comBuffer<265>>.
+    Found 8-bit register for signal <comBuffer<264>>.
+    Found 8-bit register for signal <comBuffer<263>>.
+    Found 8-bit register for signal <comBuffer<262>>.
+    Found 8-bit register for signal <comBuffer<261>>.
+    Found 8-bit register for signal <comBuffer<260>>.
+    Found 8-bit register for signal <comBuffer<259>>.
+    Found 8-bit register for signal <comBuffer<258>>.
+    Found 8-bit register for signal <comBuffer<257>>.
+    Found 8-bit register for signal <comBuffer<256>>.
+    Found 8-bit register for signal <comBuffer<255>>.
+    Found 8-bit register for signal <comBuffer<254>>.
+    Found 8-bit register for signal <comBuffer<253>>.
+    Found 8-bit register for signal <comBuffer<252>>.
+    Found 8-bit register for signal <comBuffer<251>>.
+    Found 8-bit register for signal <comBuffer<250>>.
+    Found 8-bit register for signal <comBuffer<249>>.
+    Found 8-bit register for signal <comBuffer<248>>.
+    Found 8-bit register for signal <comBuffer<247>>.
+    Found 8-bit register for signal <comBuffer<246>>.
+    Found 8-bit register for signal <comBuffer<245>>.
+    Found 8-bit register for signal <comBuffer<244>>.
+    Found 8-bit register for signal <comBuffer<243>>.
+    Found 8-bit register for signal <comBuffer<242>>.
+    Found 8-bit register for signal <comBuffer<241>>.
+    Found 8-bit register for signal <comBuffer<240>>.
+    Found 8-bit register for signal <comBuffer<239>>.
+    Found 8-bit register for signal <comBuffer<238>>.
+    Found 8-bit register for signal <comBuffer<237>>.
+    Found 8-bit register for signal <comBuffer<236>>.
+    Found 8-bit register for signal <comBuffer<235>>.
+    Found 8-bit register for signal <comBuffer<234>>.
+    Found 8-bit register for signal <comBuffer<233>>.
+    Found 8-bit register for signal <comBuffer<232>>.
+    Found 8-bit register for signal <comBuffer<231>>.
+    Found 8-bit register for signal <comBuffer<230>>.
+    Found 8-bit register for signal <comBuffer<229>>.
+    Found 8-bit register for signal <comBuffer<228>>.
+    Found 8-bit register for signal <comBuffer<227>>.
+    Found 8-bit register for signal <comBuffer<226>>.
+    Found 8-bit register for signal <comBuffer<225>>.
+    Found 8-bit register for signal <comBuffer<224>>.
+    Found 8-bit register for signal <comBuffer<223>>.
+    Found 8-bit register for signal <comBuffer<222>>.
+    Found 8-bit register for signal <comBuffer<221>>.
+    Found 8-bit register for signal <comBuffer<220>>.
+    Found 8-bit register for signal <comBuffer<219>>.
+    Found 8-bit register for signal <comBuffer<218>>.
+    Found 8-bit register for signal <comBuffer<217>>.
+    Found 8-bit register for signal <comBuffer<216>>.
+    Found 8-bit register for signal <comBuffer<215>>.
+    Found 8-bit register for signal <comBuffer<214>>.
+    Found 8-bit register for signal <comBuffer<213>>.
+    Found 8-bit register for signal <comBuffer<212>>.
+    Found 8-bit register for signal <comBuffer<211>>.
+    Found 8-bit register for signal <comBuffer<210>>.
+    Found 8-bit register for signal <comBuffer<209>>.
+    Found 8-bit register for signal <comBuffer<208>>.
+    Found 8-bit register for signal <comBuffer<207>>.
+    Found 8-bit register for signal <comBuffer<206>>.
+    Found 8-bit register for signal <comBuffer<205>>.
+    Found 8-bit register for signal <comBuffer<204>>.
+    Found 8-bit register for signal <comBuffer<203>>.
+    Found 8-bit register for signal <comBuffer<202>>.
+    Found 8-bit register for signal <comBuffer<201>>.
+    Found 8-bit register for signal <comBuffer<200>>.
+    Found 8-bit register for signal <comBuffer<199>>.
+    Found 8-bit register for signal <comBuffer<198>>.
+    Found 8-bit register for signal <comBuffer<197>>.
+    Found 8-bit register for signal <comBuffer<196>>.
+    Found 8-bit register for signal <comBuffer<195>>.
+    Found 8-bit register for signal <comBuffer<194>>.
+    Found 8-bit register for signal <comBuffer<193>>.
+    Found 8-bit register for signal <comBuffer<192>>.
+    Found 8-bit register for signal <comBuffer<191>>.
+    Found 8-bit register for signal <comBuffer<190>>.
+    Found 8-bit register for signal <comBuffer<189>>.
+    Found 8-bit register for signal <comBuffer<188>>.
+    Found 8-bit register for signal <comBuffer<187>>.
+    Found 8-bit register for signal <comBuffer<186>>.
+    Found 8-bit register for signal <comBuffer<185>>.
+    Found 8-bit register for signal <comBuffer<184>>.
+    Found 8-bit register for signal <comBuffer<183>>.
+    Found 8-bit register for signal <comBuffer<182>>.
+    Found 8-bit register for signal <comBuffer<181>>.
+    Found 8-bit register for signal <comBuffer<180>>.
+    Found 8-bit register for signal <comBuffer<179>>.
+    Found 8-bit register for signal <comBuffer<178>>.
+    Found 8-bit register for signal <comBuffer<177>>.
+    Found 8-bit register for signal <comBuffer<176>>.
+    Found 8-bit register for signal <comBuffer<175>>.
+    Found 8-bit register for signal <comBuffer<174>>.
+    Found 8-bit register for signal <comBuffer<173>>.
+    Found 8-bit register for signal <comBuffer<172>>.
+    Found 8-bit register for signal <comBuffer<171>>.
+    Found 8-bit register for signal <comBuffer<170>>.
+    Found 8-bit register for signal <comBuffer<169>>.
+    Found 8-bit register for signal <comBuffer<168>>.
+    Found 8-bit register for signal <comBuffer<167>>.
+    Found 8-bit register for signal <comBuffer<166>>.
+    Found 8-bit register for signal <comBuffer<165>>.
+    Found 8-bit register for signal <comBuffer<164>>.
+    Found 8-bit register for signal <comBuffer<163>>.
+    Found 8-bit register for signal <comBuffer<162>>.
+    Found 8-bit register for signal <comBuffer<161>>.
+    Found 8-bit register for signal <comBuffer<160>>.
+    Found 8-bit register for signal <comBuffer<159>>.
+    Found 8-bit register for signal <comBuffer<158>>.
+    Found 8-bit register for signal <comBuffer<157>>.
+    Found 8-bit register for signal <comBuffer<156>>.
+    Found 8-bit register for signal <comBuffer<155>>.
+    Found 8-bit register for signal <comBuffer<154>>.
+    Found 8-bit register for signal <comBuffer<153>>.
+    Found 8-bit register for signal <comBuffer<152>>.
+    Found 8-bit register for signal <comBuffer<151>>.
+    Found 8-bit register for signal <comBuffer<150>>.
+    Found 8-bit register for signal <comBuffer<149>>.
+    Found 8-bit register for signal <comBuffer<148>>.
+    Found 8-bit register for signal <comBuffer<147>>.
+    Found 8-bit register for signal <comBuffer<146>>.
+    Found 8-bit register for signal <comBuffer<145>>.
+    Found 8-bit register for signal <comBuffer<144>>.
+    Found 8-bit register for signal <comBuffer<143>>.
+    Found 8-bit register for signal <comBuffer<142>>.
+    Found 8-bit register for signal <comBuffer<141>>.
+    Found 8-bit register for signal <comBuffer<140>>.
+    Found 8-bit register for signal <comBuffer<139>>.
+    Found 8-bit register for signal <comBuffer<138>>.
+    Found 8-bit register for signal <comBuffer<137>>.
+    Found 8-bit register for signal <comBuffer<136>>.
+    Found 8-bit register for signal <comBuffer<135>>.
+    Found 8-bit register for signal <comBuffer<134>>.
+    Found 8-bit register for signal <comBuffer<133>>.
+    Found 8-bit register for signal <comBuffer<132>>.
+    Found 8-bit register for signal <comBuffer<131>>.
+    Found 8-bit register for signal <comBuffer<130>>.
+    Found 8-bit register for signal <comBuffer<129>>.
+    Found 8-bit register for signal <comBuffer<128>>.
+    Found 8-bit register for signal <comBuffer<127>>.
+    Found 8-bit register for signal <comBuffer<126>>.
+    Found 8-bit register for signal <comBuffer<125>>.
+    Found 8-bit register for signal <comBuffer<124>>.
+    Found 8-bit register for signal <comBuffer<123>>.
+    Found 8-bit register for signal <comBuffer<122>>.
+    Found 8-bit register for signal <comBuffer<121>>.
+    Found 8-bit register for signal <comBuffer<120>>.
+    Found 8-bit register for signal <comBuffer<119>>.
+    Found 8-bit register for signal <comBuffer<118>>.
+    Found 8-bit register for signal <comBuffer<117>>.
+    Found 8-bit register for signal <comBuffer<116>>.
+    Found 8-bit register for signal <comBuffer<115>>.
+    Found 8-bit register for signal <comBuffer<114>>.
+    Found 8-bit register for signal <comBuffer<113>>.
+    Found 8-bit register for signal <comBuffer<112>>.
+    Found 8-bit register for signal <comBuffer<111>>.
+    Found 8-bit register for signal <comBuffer<110>>.
+    Found 8-bit register for signal <comBuffer<109>>.
+    Found 8-bit register for signal <comBuffer<108>>.
+    Found 8-bit register for signal <comBuffer<107>>.
+    Found 8-bit register for signal <comBuffer<106>>.
+    Found 8-bit register for signal <comBuffer<105>>.
+    Found 8-bit register for signal <comBuffer<104>>.
+    Found 8-bit register for signal <comBuffer<103>>.
+    Found 8-bit register for signal <comBuffer<102>>.
+    Found 8-bit register for signal <comBuffer<101>>.
+    Found 8-bit register for signal <comBuffer<100>>.
+    Found 8-bit register for signal <comBuffer<99>>.
+    Found 8-bit register for signal <comBuffer<98>>.
+    Found 8-bit register for signal <comBuffer<97>>.
+    Found 8-bit register for signal <comBuffer<96>>.
+    Found 8-bit register for signal <comBuffer<95>>.
+    Found 8-bit register for signal <comBuffer<94>>.
+    Found 8-bit register for signal <comBuffer<93>>.
+    Found 8-bit register for signal <comBuffer<92>>.
+    Found 8-bit register for signal <comBuffer<91>>.
+    Found 8-bit register for signal <comBuffer<90>>.
+    Found 8-bit register for signal <comBuffer<89>>.
+    Found 8-bit register for signal <comBuffer<88>>.
+    Found 8-bit register for signal <comBuffer<87>>.
+    Found 8-bit register for signal <comBuffer<86>>.
+    Found 8-bit register for signal <comBuffer<85>>.
+    Found 8-bit register for signal <comBuffer<84>>.
+    Found 8-bit register for signal <comBuffer<83>>.
+    Found 8-bit register for signal <comBuffer<82>>.
+    Found 8-bit register for signal <comBuffer<81>>.
+    Found 8-bit register for signal <comBuffer<80>>.
+    Found 8-bit register for signal <comBuffer<79>>.
+    Found 8-bit register for signal <comBuffer<78>>.
+    Found 8-bit register for signal <comBuffer<77>>.
+    Found 8-bit register for signal <comBuffer<76>>.
+    Found 8-bit register for signal <comBuffer<75>>.
+    Found 8-bit register for signal <comBuffer<74>>.
+    Found 8-bit register for signal <comBuffer<73>>.
+    Found 8-bit register for signal <comBuffer<72>>.
+    Found 8-bit register for signal <comBuffer<71>>.
+    Found 8-bit register for signal <comBuffer<70>>.
+    Found 8-bit register for signal <comBuffer<69>>.
+    Found 8-bit register for signal <comBuffer<68>>.
+    Found 8-bit register for signal <comBuffer<67>>.
+    Found 8-bit register for signal <comBuffer<66>>.
+    Found 8-bit register for signal <comBuffer<65>>.
+    Found 8-bit register for signal <comBuffer<64>>.
+    Found 8-bit register for signal <comBuffer<63>>.
+    Found 8-bit register for signal <comBuffer<62>>.
+    Found 8-bit register for signal <comBuffer<61>>.
+    Found 8-bit register for signal <comBuffer<60>>.
+    Found 8-bit register for signal <comBuffer<59>>.
+    Found 8-bit register for signal <comBuffer<58>>.
+    Found 8-bit register for signal <comBuffer<57>>.
+    Found 8-bit register for signal <comBuffer<56>>.
+    Found 8-bit register for signal <comBuffer<55>>.
+    Found 8-bit register for signal <comBuffer<54>>.
+    Found 8-bit register for signal <comBuffer<53>>.
+    Found 8-bit register for signal <comBuffer<52>>.
+    Found 8-bit register for signal <comBuffer<51>>.
+    Found 8-bit register for signal <comBuffer<50>>.
+    Found 8-bit register for signal <comBuffer<49>>.
+    Found 8-bit register for signal <comBuffer<48>>.
+    Found 8-bit register for signal <comBuffer<47>>.
+    Found 8-bit register for signal <comBuffer<46>>.
+    Found 8-bit register for signal <comBuffer<45>>.
+    Found 8-bit register for signal <comBuffer<44>>.
+    Found 8-bit register for signal <comBuffer<43>>.
+    Found 8-bit register for signal <comBuffer<42>>.
+    Found 8-bit register for signal <comBuffer<41>>.
+    Found 8-bit register for signal <comBuffer<40>>.
+    Found 8-bit register for signal <comBuffer<39>>.
+    Found 8-bit register for signal <comBuffer<38>>.
+    Found 8-bit register for signal <comBuffer<37>>.
+    Found 8-bit register for signal <comBuffer<36>>.
+    Found 8-bit register for signal <comBuffer<35>>.
+    Found 8-bit register for signal <comBuffer<34>>.
+    Found 8-bit register for signal <comBuffer<33>>.
+    Found 8-bit register for signal <comBuffer<32>>.
+    Found 8-bit register for signal <comBuffer<31>>.
+    Found 8-bit register for signal <comBuffer<30>>.
+    Found 8-bit register for signal <comBuffer<29>>.
+    Found 8-bit register for signal <comBuffer<28>>.
+    Found 8-bit register for signal <comBuffer<27>>.
+    Found 8-bit register for signal <comBuffer<26>>.
+    Found 8-bit register for signal <comBuffer<25>>.
+    Found 8-bit register for signal <comBuffer<24>>.
+    Found 8-bit register for signal <comBuffer<23>>.
+    Found 8-bit register for signal <comBuffer<22>>.
+    Found 8-bit register for signal <comBuffer<21>>.
+    Found 8-bit register for signal <comBuffer<20>>.
+    Found 8-bit register for signal <comBuffer<19>>.
+    Found 8-bit register for signal <comBuffer<18>>.
+    Found 8-bit register for signal <comBuffer<17>>.
+    Found 8-bit register for signal <comBuffer<16>>.
+    Found 8-bit register for signal <comBuffer<15>>.
+    Found 8-bit register for signal <comBuffer<14>>.
+    Found 8-bit register for signal <comBuffer<13>>.
+    Found 8-bit register for signal <comBuffer<12>>.
+    Found 8-bit register for signal <comBuffer<11>>.
+    Found 8-bit register for signal <comBuffer<10>>.
+    Found 8-bit register for signal <comBuffer<9>>.
+    Found 8-bit register for signal <comBuffer<8>>.
+    Found 8-bit register for signal <comBuffer<7>>.
+    Found 8-bit register for signal <comBuffer<6>>.
+    Found 8-bit register for signal <comBuffer<5>>.
+    Found 8-bit register for signal <comBuffer<4>>.
+    Found 8-bit register for signal <comBuffer<3>>.
+    Found 8-bit register for signal <comBuffer<2>>.
+    Found 8-bit register for signal <comBuffer<1>>.
+    Found 8-bit register for signal <comBuffer<0>>.
+    Found 3-bit register for signal <au_state>.
+    Found 32-bit register for signal <fr_state[2]_dff_23_OUT>.
     Found 1-bit register for signal <COM_Ready>.
-    Found 32-bit register for signal <Data_out>.
+    Found 10-bit register for signal <tailer>.
     Found 3-bit register for signal <fr_state>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_39>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_40>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_41>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_42>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_43>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_44>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_45>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_46>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_47>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_48>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_49>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_50>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_51>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_52>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_53>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_54>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_55>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_56>.
-    Found 1-bit register for signal <fr_state[2]_clk_DFF_57>.
     Found 1-bit register for signal <fr_state[2]_clk_DFF_58>.
     Found 1-bit register for signal <fr_state[2]_clk_DFF_59>.
     Found 1-bit register for signal <fr_state[2]_clk_DFF_60>.
@@ -161,73 +1166,231 @@ Synthesizing Unit <Device_COM>.
     Found 1-bit register for signal <fr_state[2]_clk_DFF_68>.
     Found 1-bit register for signal <fr_state[2]_clk_DFF_69>.
     Found 1-bit register for signal <fr_state[2]_clk_DFF_70>.
-    Found 1-bit register for signal <rdn>.
-    Found finite state machine <FSM_0> for signal <fr_state>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_71>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_72>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_73>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_74>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_75>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_76>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_77>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_78>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_79>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_80>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_81>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_82>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_83>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_84>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_85>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_86>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_87>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_88>.
+    Found 1-bit register for signal <fr_state[2]_clk_DFF_89>.
+    Found 32-bit register for signal <au_state[2]_dff_3244_OUT>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_99>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_100>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_101>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_102>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_103>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_104>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_105>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_106>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_107>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_108>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_109>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_110>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_111>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_112>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_113>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_114>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_115>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_116>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_117>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_118>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_119>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_120>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_121>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_122>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_123>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_124>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_125>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_126>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_127>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_128>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_129>.
+    Found 1-bit register for signal <au_state[2]_clk_DFF_130>.
+    Found 1-bit register for signal <wrn>.
+    Found 1-bit register for signal <Data_out_7>.
+    Found 1-bit register for signal <Data_out_6>.
+    Found 1-bit register for signal <Data_out_5>.
+    Found 1-bit register for signal <Data_out_4>.
+    Found 1-bit register for signal <Data_out_3>.
+    Found 1-bit register for signal <Data_out_2>.
+    Found 1-bit register for signal <Data_out_1>.
+    Found 1-bit register for signal <Data_out_0>.
+    Found finite state machine <FSM_0> for signal <com_statusx>.
     -----------------------------------------------------------------------
-    | States             | 7                                              |
-    | Transitions        | 11                                             |
-    | Inputs             | 4                                              |
-    | Outputs            | 8                                              |
+    | States             | 4                                              |
+    | Transitions        | 30                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
-    | Reset              | rst_COM_Write_OR_1_o (positive)                |
+    | Reset              | rst (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+INFO:Xst:1799 - State send0 is never reached in FSM <au_state>.
+INFO:Xst:1799 - State send1 is never reached in FSM <au_state>.
+INFO:Xst:1799 - State send2 is never reached in FSM <au_state>.
+INFO:Xst:1799 - State send3 is never reached in FSM <au_state>.
+    Found finite state machine <FSM_1> for signal <au_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (negative)                                 |
     | Reset type         | asynchronous                                   |
     | Reset State        | com_init                                       |
     | Power Up State     | com_init                                       |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 54
+INFO:Xst:1799 - State recv2 is never reached in FSM <fr_state>.
+    Found finite state machine <FSM_2> for signal <fr_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 12                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | COM_Write_rst_OR_10_o (positive)               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | com_init                                       |
+    | Power Up State     | com_init                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 10-bit adder for signal <tailer[9]_GND_5_o_add_8_OUT> created at line 142.
+    Found 10-bit adder for signal <header[9]_GND_5_o_add_1188_OUT> created at line 184.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_1187_OUT<9:0>> created at line 183.
+    Found 8x1-bit Read Only RAM for signal <au_state[2]_PWR_73_o_Mux_3250_o>
+    Found 8-bit 16-to-1 multiplexer for signal <buffer_bitmap<7:0>> created at line 229.
+    Found 1-bit 1024-to-1 multiplexer for signal <tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<7>> created at line 134.
+    Found 1-bit 1024-to-1 multiplexer for signal <tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<6>> created at line 134.
+    Found 1-bit 1024-to-1 multiplexer for signal <tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<5>> created at line 134.
+    Found 1-bit 1024-to-1 multiplexer for signal <tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<4>> created at line 134.
+    Found 1-bit 1024-to-1 multiplexer for signal <tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<3>> created at line 134.
+    Found 1-bit 1024-to-1 multiplexer for signal <tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<2>> created at line 134.
+    Found 1-bit 1024-to-1 multiplexer for signal <tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<1>> created at line 134.
+    Found 1-bit 1024-to-1 multiplexer for signal <tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<0>> created at line 134.
+    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 74
+    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 157
+    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 157
+    Found 1-bit tristate buffer for signal <bitmap<3>> created at line 192
+    Found 1-bit tristate buffer for signal <bitmap<2>> created at line 192
+    Found 1-bit tristate buffer for signal <bitmap<1>> created at line 192
+    Found 1-bit tristate buffer for signal <bitmap<0>> created at line 192
+    Found 10-bit comparator equal for signal <n0007> created at line 134
+    Found 10-bit comparator equal for signal <n1245> created at line 183
     Summary:
-	inferred 101 D-type flip-flop(s).
-	inferred   4 Multiplexer(s).
-	inferred  32 Tristate(s).
-	inferred   1 Finite State Machine(s).
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred 8351 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  18 Multiplexer(s).
+	inferred  68 Tristate(s).
+	inferred   3 Finite State Machine(s).
 Unit <Device_COM> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 39
- 1-bit register                                        : 37
+# RAMs                                                 : 1
+ 8x1-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 1
+# Registers                                            : 1103
+ 1-bit register                                        : 75
+ 10-bit register                                       : 2
  32-bit register                                       : 2
-# Multiplexers                                         : 4
- 1-bit 2-to-1 multiplexer                              : 3
+ 8-bit register                                        : 1024
+# Comparators                                          : 2
+ 10-bit comparator equal                               : 2
+# Multiplexers                                         : 18
+ 1-bit 1024-to-1 multiplexer                           : 8
+ 1-bit 2-to-1 multiplexer                              : 8
  32-bit 2-to-1 multiplexer                             : 1
-# Tristates                                            : 32
- 1-bit tristate buffer                                 : 32
-# FSMs                                                 : 1
+ 8-bit 16-to-1 multiplexer                             : 1
+# Tristates                                            : 68
+ 1-bit tristate buffer                                 : 68
+# FSMs                                                 : 3
 
 =========================================================================
 
@@ -235,71 +1398,145 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <Data_out_31> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_30> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_29> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_28> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_27> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_26> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_25> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_24> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_23> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_22> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_21> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_20> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_19> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_18> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_17> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_16> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_15> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_14> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_13> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_12> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_11> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_10> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_9> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_out_8> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2404 -  FFs/Latches <Data_out<31:8>> (without init value) have a constant value of 0 in block <Device_COM>.
+
+Synthesizing (advanced) Unit <Device_COM>.
+The following registers are absorbed into counter <header>: 1 register on signal <header>.
+The following registers are absorbed into counter <tailer>: 1 register on signal <tailer>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_au_state[2]_PWR_73_o_Mux_3250_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <("0",au_state)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Device_COM> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 77
- Flip-Flops                                            : 77
-# Multiplexers                                         : 4
- 1-bit 2-to-1 multiplexer                              : 3
+# RAMs                                                 : 1
+ 8x1-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 1
+ 10-bit subtractor                                     : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 8331
+ Flip-Flops                                            : 8331
+# Comparators                                          : 2
+ 10-bit comparator equal                               : 2
+# Multiplexers                                         : 25
+ 1-bit 1024-to-1 multiplexer                           : 8
+ 1-bit 16-to-1 multiplexer                             : 8
+ 1-bit 2-to-1 multiplexer                              : 8
  32-bit 2-to-1 multiplexer                             : 1
-# FSMs                                                 : 1
+# FSMs                                                 : 3
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <fr_state[2]_clk_DFF_39> in Unit <Device_COM> is equivalent to the following 31 FFs/Latches, which will be removed : <fr_state[2]_clk_DFF_40> <fr_state[2]_clk_DFF_41> <fr_state[2]_clk_DFF_44> <fr_state[2]_clk_DFF_42> <fr_state[2]_clk_DFF_43> <fr_state[2]_clk_DFF_45> <fr_state[2]_clk_DFF_46> <fr_state[2]_clk_DFF_47> <fr_state[2]_clk_DFF_48> <fr_state[2]_clk_DFF_49> <fr_state[2]_clk_DFF_50> <fr_state[2]_clk_DFF_53> <fr_state[2]_clk_DFF_51> <fr_state[2]_clk_DFF_52> <fr_state[2]_clk_DFF_54> <fr_state[2]_clk_DFF_55> <fr_state[2]_clk_DFF_58> <fr_state[2]_clk_DFF_56> <fr_state[2]_clk_DFF_57> <fr_state[2]_clk_DFF_59> <fr_state[2]_clk_DFF_60> <fr_state[2]_clk_DFF_63> <fr_state[2]_clk_DFF_61> <fr_state[2]_clk_DFF_62> <fr_state[2]_clk_DFF_64> <fr_state[2]_clk_DFF_65> <fr_state[2]_clk_DFF_66> <fr_state[2]_clk_DFF_67> <fr_state[2]_clk_DFF_68> <fr_state[2]_clk_DFF_69> <fr_state[2]_clk_DFF_70> 
+INFO:Xst:2261 - The FF/Latch <fr_state[2]_clk_DFF_58> in Unit <Device_COM> is equivalent to the following 31 FFs/Latches, which will be removed : <fr_state[2]_clk_DFF_59> <fr_state[2]_clk_DFF_60> <fr_state[2]_clk_DFF_61> <fr_state[2]_clk_DFF_62> <fr_state[2]_clk_DFF_63> <fr_state[2]_clk_DFF_64> <fr_state[2]_clk_DFF_67> <fr_state[2]_clk_DFF_65> <fr_state[2]_clk_DFF_66> <fr_state[2]_clk_DFF_68> <fr_state[2]_clk_DFF_69> <fr_state[2]_clk_DFF_70> <fr_state[2]_clk_DFF_71> <fr_state[2]_clk_DFF_72> <fr_state[2]_clk_DFF_73> <fr_state[2]_clk_DFF_76> <fr_state[2]_clk_DFF_74> <fr_state[2]_clk_DFF_75> <fr_state[2]_clk_DFF_77> <fr_state[2]_clk_DFF_78> <fr_state[2]_clk_DFF_81> <fr_state[2]_clk_DFF_79> <fr_state[2]_clk_DFF_80> <fr_state[2]_clk_DFF_82> <fr_state[2]_clk_DFF_83> <fr_state[2]_clk_DFF_86> <fr_state[2]_clk_DFF_84> <fr_state[2]_clk_DFF_85> <fr_state[2]_clk_DFF_87> <fr_state[2]_clk_DFF_88> <fr_state[2]_clk_DFF_89> 
+INFO:Xst:2261 - The FF/Latch <au_state[2]_clk_DFF_99> in Unit <Device_COM> is equivalent to the following 31 FFs/Latches, which will be removed : <au_state[2]_clk_DFF_100> <au_state[2]_clk_DFF_101> <au_state[2]_clk_DFF_104> <au_state[2]_clk_DFF_102> <au_state[2]_clk_DFF_103> <au_state[2]_clk_DFF_105> <au_state[2]_clk_DFF_106> <au_state[2]_clk_DFF_109> <au_state[2]_clk_DFF_107> <au_state[2]_clk_DFF_108> <au_state[2]_clk_DFF_110> <au_state[2]_clk_DFF_111> <au_state[2]_clk_DFF_114> <au_state[2]_clk_DFF_112> <au_state[2]_clk_DFF_113> <au_state[2]_clk_DFF_115> <au_state[2]_clk_DFF_116> <au_state[2]_clk_DFF_117> <au_state[2]_clk_DFF_118> <au_state[2]_clk_DFF_119> <au_state[2]_clk_DFF_120> <au_state[2]_clk_DFF_123> <au_state[2]_clk_DFF_121> <au_state[2]_clk_DFF_122> <au_state[2]_clk_DFF_124> <au_state[2]_clk_DFF_125> <au_state[2]_clk_DFF_128> <au_state[2]_clk_DFF_126> <au_state[2]_clk_DFF_127> <au_state[2]_clk_DFF_129> <au_state[2]_clk_DFF_130> 
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <fr_state[1:3]> with user encoding.
+Optimizing FSM <FSM_1> on signal <au_state[1:2]> with sequential encoding.
+----------------------
+ State    | Encoding
+----------------------
+ com_init | 00
+ recv0    | 01
+ recv1    | 10
+ recv2    | 11
+ send0    | unreached
+ send1    | unreached
+ send2    | unreached
+ send3    | unreached
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_2> on signal <fr_state[1:3]> with user encoding.
 ----------------------
  State    | Encoding
 ----------------------
  com_init | 000
  recv0    | 001
  recv1    | 010
- send0    | 011
- send1    | 100
- send2    | 101
- send3    | 110
+ recv2    | unreached
+ send0    | 100
+ send1    | 101
+ send2    | 110
+ send3    | 111
 ----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <com_statusx[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 10    | 10
+ 11    | 11
+ 01    | 01
+-------------------
+WARNING:Xst:2040 - Unit Device_COM: 32 multi-source signals are replaced by logic (pull-up yes): Ram1Data<0>_MLTSRCEDGE, Ram1Data<10>_MLTSRCEDGE, Ram1Data<11>_MLTSRCEDGE, Ram1Data<12>_MLTSRCEDGE, Ram1Data<13>_MLTSRCEDGE, Ram1Data<14>_MLTSRCEDGE, Ram1Data<15>_MLTSRCEDGE, Ram1Data<16>_MLTSRCEDGE, Ram1Data<17>_MLTSRCEDGE, Ram1Data<18>_MLTSRCEDGE, Ram1Data<19>_MLTSRCEDGE, Ram1Data<1>_MLTSRCEDGE, Ram1Data<20>_MLTSRCEDGE, Ram1Data<21>_MLTSRCEDGE, Ram1Data<22>_MLTSRCEDGE, Ram1Data<23>_MLTSRCEDGE, Ram1Data<24>_MLTSRCEDGE, Ram1Data<25>_MLTSRCEDGE, Ram1Data<26>_MLTSRCEDGE, Ram1Data<27>_MLTSRCEDGE, Ram1Data<28>_MLTSRCEDGE, Ram1Data<29>_MLTSRCEDGE, Ram1Data<2>_MLTSRCEDGE, Ram1Data<30>_MLTSRCEDGE, Ram1Data<31>_MLTSRCEDGE, Ram1Data<3>_MLTSRCEDGE, Ram1Data<4>_MLTSRCEDGE, Ram1Data<5>_MLTSRCEDGE, Ram1Data<6>_MLTSRCEDGE, Ram1Data<7>_MLTSRCEDGE, Ram1Data<8>_MLTSRCEDGE, Ram1Data<9>_MLTSRCEDGE.
 
 Optimizing unit <Device_COM> ...
+WARNING:Xst:1710 - FF/Latch <au_state[2]_clk_DFF_99> (without init value) has a constant value of 0 in block <Device_COM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Ram1Data_0> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_1> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_2> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_3> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_4> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_5> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_6> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_7> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_8> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_9> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_10> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_11> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_12> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_13> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_14> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_15> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_16> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_17> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_18> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_19> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_20> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_21> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_22> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_23> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_24> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_25> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_26> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_27> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_28> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_29> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_30> of sequential type is unconnected in block <Device_COM>.
+WARNING:Xst:2677 - Node <Ram1Data_31> of sequential type is unconnected in block <Device_COM>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Device_COM, actual ratio is 0.
-FlipFlop fr_state_FSM_FFd1 has been replicated 2 time(s)
-FlipFlop fr_state_FSM_FFd2 has been replicated 2 time(s)
-FlipFlop fr_state_FSM_FFd3 has been replicated 2 time(s)
+Found area constraint ratio of 100 (+ 5) on block Device_COM, actual ratio is 20.
+FlipFlop header_0 has been replicated 2 time(s)
+FlipFlop header_1 has been replicated 3 time(s)
+FlipFlop header_2 has been replicated 2 time(s)
+FlipFlop header_4 has been replicated 2 time(s)
+FlipFlop header_6 has been replicated 2 time(s)
+FlipFlop header_7 has been replicated 1 time(s)
+FlipFlop header_8 has been replicated 1 time(s)
+FlipFlop header_9 has been replicated 1 time(s)
+FlipFlop tailer_0 has been replicated 200 time(s)
+FlipFlop tailer_1 has been replicated 197 time(s)
+FlipFlop tailer_2 has been replicated 27 time(s)
+FlipFlop tailer_3 has been replicated 25 time(s)
+FlipFlop tailer_4 has been replicated 2 time(s)
+FlipFlop tailer_5 has been replicated 1 time(s)
+FlipFlop tailer_6 has been replicated 1 time(s)
+FlipFlop tailer_7 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -307,8 +1544,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 55
- Flip-Flops                                            : 55
+# Registers                                            : 8731
+ Flip-Flops                                            : 8731
 
 =========================================================================
 
@@ -331,25 +1568,31 @@ Top Level Output File Name         : Device_COM.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 54
+# BELS                             : 6946
 #      GND                         : 1
-#      INV                         : 3
-#      LUT2                        : 1
-#      LUT3                        : 1
-#      LUT4                        : 4
-#      LUT5                        : 10
-#      LUT6                        : 33
+#      INV                         : 4
+#      LUT1                        : 18
+#      LUT2                        : 39
+#      LUT3                        : 2708
+#      LUT4                        : 298
+#      LUT5                        : 353
+#      LUT6                        : 3462
+#      MUXCY                       : 18
+#      MUXF7                       : 16
+#      MUXF8                       : 8
 #      VCC                         : 1
-# FlipFlops/Latches                : 55
+#      XORCY                       : 20
+# FlipFlops/Latches                : 8731
 #      FD                          : 32
-#      FDC                         : 20
-#      FDP                         : 3
+#      FDC                         : 9
+#      FDCE                        : 8688
+#      FDP                         : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 138
-#      IBUF                        : 38
+# IO Buffers                       : 152
+#      IBUF                        : 42
 #      IOBUF                       : 32
-#      OBUF                        : 68
+#      OBUF                        : 78
 
 Device utilization summary:
 ---------------------------
@@ -358,21 +1601,20 @@ Selected Device : 6slx100fgg676-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              53  out of  126576     0%  
- Number of Slice LUTs:                   52  out of  63288     0%  
-    Number used as Logic:                52  out of  63288     0%  
+ Number of Slice Registers:            8731  out of  126576     6%  
+ Number of Slice LUTs:                 6882  out of  63288    10%  
+    Number used as Logic:              6882  out of  63288    10%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     56
-   Number with an unused Flip Flop:       3  out of     56     5%  
-   Number with an unused LUT:             4  out of     56     7%  
-   Number of fully used LUT-FF pairs:    49  out of     56    87%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:  12575
+   Number with an unused Flip Flop:    3844  out of  12575    30%  
+   Number with an unused LUT:          5693  out of  12575    45%  
+   Number of fully used LUT-FF pairs:  3038  out of  12575    24%  
+   Number of unique control sets:       671
 
 IO Utilization: 
- Number of IOs:                         139
- Number of bonded IOBs:                 139  out of    480    28%  
-    IOB Flip Flops/Latches:               2
+ Number of IOs:                         153
+ Number of bonded IOBs:                 153  out of    480    31%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -398,7 +1640,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 55    |
+clk                                | BUFGP                  | 8731  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -409,10 +1651,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 1.987ns (Maximum Frequency: 503.309MHz)
-   Minimum input arrival time before clock: 3.777ns
-   Maximum output required time after clock: 5.131ns
-   Maximum combinational path delay: No path found
+   Minimum period: 5.815ns (Maximum Frequency: 171.962MHz)
+   Minimum input arrival time before clock: 6.413ns
+   Maximum output required time after clock: 6.682ns
+   Maximum combinational path delay: 6.523ns
 
 Timing Details:
 ---------------
@@ -420,65 +1662,92 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 1.987ns (frequency: 503.309MHz)
-  Total number of paths / destination ports: 171 / 53
+  Clock period: 5.815ns (frequency: 171.962MHz)
+  Total number of paths / destination ports: 119314 / 12155
 -------------------------------------------------------------------------
-Delay:               1.987ns (Levels of Logic = 1)
-  Source:            fr_state_FSM_FFd2 (FF)
-  Destination:       Ram1Data_2 (FF)
+Delay:               5.815ns (Levels of Logic = 5)
+  Source:            comBuffer_420_6 (FF)
+  Destination:       Data_out_6 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: fr_state_FSM_FFd2 to Ram1Data_2
+  Data Path: comBuffer_420_6 to Data_out_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             16   0.447   1.233  fr_state_FSM_FFd2 (fr_state_FSM_FFd2)
-     LUT5:I2->O            3   0.205   0.000  fr_state_FSM_FFd2-In1 (fr_state_FSM_FFd2-In)
-     FDC:D                     0.102          fr_state_FSM_FFd2
+     FDCE:C->Q             1   0.447   0.944  comBuffer_420_6 (comBuffer_420_6)
+     LUT6:I0->O            1   0.203   0.827  Mmux_tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<6>_2228 (Mmux_tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<6>_2228)
+     LUT6:I2->O            1   0.203   0.827  Mmux_tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<6>_178 (Mmux_tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<6>_178)
+     LUT6:I2->O            1   0.203   0.827  Mmux_tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<6>_122 (Mmux_tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<6>_122)
+     LUT6:I2->O            1   0.203   0.827  Mmux_tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<6>_7 (Mmux_tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<6>_7)
+     LUT6:I2->O            1   0.203   0.000  com_status<11>21 (tailer[9]_comBuffer[1023][7]_wide_mux_6_OUT<6>)
+     FDCE:D                    0.102          Data_out_6
     ----------------------------------------
-    Total                      1.987ns (0.754ns logic, 1.233ns route)
-                                       (37.9% logic, 62.1% route)
+    Total                      5.815ns (1.564ns logic, 4.251ns route)
+                                       (26.9% logic, 73.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 193 / 75
+  Total number of paths / destination ports: 17956 / 16932
 -------------------------------------------------------------------------
-Offset:              3.777ns (Levels of Logic = 2)
-  Source:            COM_Read (PAD)
-  Destination:       fr_state_FSM_FFd1 (FF)
+Offset:              6.413ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       comBuffer_1023_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: COM_Read to fr_state_FSM_FFd1
+  Data Path: rst to comBuffer_1023_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.808  COM_Read_IBUF (COM_Read_IBUF)
-     LUT3:I0->O           21   0.205   1.113  rst_COM_Write_OR_1_o1 (rst_COM_Write_OR_1_o)
-     FDC:CLR                   0.430          fr_state_FSM_FFd1
+     IBUF:I->O             2   1.222   0.616  rst_IBUF (rst_IBUF)
+     INV:I->O           8221   0.206   3.939  rst_inv10301_INV_0 (rst_inv)
+     FDCE:CLR                  0.430          comBuffer_26_0
     ----------------------------------------
-    Total                      3.777ns (1.857ns logic, 1.921ns route)
-                                       (49.2% logic, 50.8% route)
+    Total                      6.413ns (1.858ns logic, 4.555ns route)
+                                       (29.0% logic, 71.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 77 / 45
+  Total number of paths / destination ports: 292 / 78
 -------------------------------------------------------------------------
-Offset:              5.131ns (Levels of Logic = 2)
-  Source:            fr_state[2]_clk_DFF_39 (FF)
-  Destination:       Ram1Data<31> (PAD)
+Offset:              6.682ns (Levels of Logic = 4)
+  Source:            tailer_1_102 (FF)
+  Destination:       COM_INT (PAD)
   Source Clock:      clk rising
 
-  Data Path: fr_state[2]_clk_DFF_39 to Ram1Data<31>
+  Data Path: tailer_1_102 to COM_INT
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.447   0.616  fr_state[2]_clk_DFF_39 (fr_state[2]_clk_DFF_39)
-     INV:I->O             32   0.206   1.291  fr_state[2]_clk_DFF_39_inv1_INV_0 (fr_state[2]_clk_DFF_39_inv)
-     IOBUF:T->IO               2.571          Ram1Data_31_IOBUF (Ram1Data<31>)
+     FDCE:C->Q            17   0.447   1.028  tailer_1_102 (tailer_1_102)
+     LUT2:I1->O            1   0.205   0.827  _n11486<2>211 (_n11486<2>21)
+     LUT6:I2->O            2   0.203   0.617  n000710_SW0 (N4)
+     LUT6:I5->O            1   0.205   0.579  COM_INT1 (COM_INT_OBUF)
+     OBUF:I->O                 2.571          COM_INT_OBUF (COM_INT)
     ----------------------------------------
-    Total                      5.131ns (3.224ns logic, 1.907ns route)
-                                       (62.8% logic, 37.2% route)
+    Total                      6.682ns (3.631ns logic, 3.051ns route)
+                                       (54.3% logic, 45.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 88 / 8
+-------------------------------------------------------------------------
+Delay:               6.523ns (Levels of Logic = 5)
+  Source:            SW<1> (PAD)
+  Destination:       buffer_bitmap<7> (PAD)
+
+  Data Path: SW<1> to buffer_bitmap<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   1.222   1.656  SW_1_IBUF (SW_1_IBUF)
+     LUT6:I0->O            1   0.203   0.000  mux_4 (mux_4)
+     MUXF7:I1->O           1   0.140   0.000  mux_3_f7 (mux_3_f7)
+     MUXF8:I1->O           1   0.152   0.579  mux_2_f8 (buffer_bitmap_0_OBUF)
+     OBUF:I->O                 2.571          buffer_bitmap_0_OBUF (buffer_bitmap<0>)
+    ----------------------------------------
+    Total                      6.523ns (4.288ns logic, 2.235ns route)
+                                       (65.7% logic, 34.3% route)
 
 =========================================================================
 
@@ -490,20 +1759,20 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    1.987|         |         |         |
+clk            |    5.815|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.94 secs
+Total REAL time to Xst completion: 128.00 secs
+Total CPU time to Xst completion: 128.02 secs
  
 --> 
 
-Total memory usage is 270676 kilobytes
+Total memory usage is 365716 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   25 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 

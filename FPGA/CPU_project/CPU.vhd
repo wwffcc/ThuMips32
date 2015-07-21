@@ -83,13 +83,13 @@ end component;
 signal clk_cpu:STD_LOGIC:='0';
 signal clk_mm:STD_LOGIC:='0';
 signal clk_com:STD_LOGIC:='0';
-signal clk_flag:STD_LOGIC_VECTOR(2 downto 0):="000";
+signal clk_flag:STD_LOGIC_VECTOR(2 downto 0):="111";
 
 component mm_manager
 	Port ( rst : in  STD_LOGIC;
            clk_cpu : in  STD_LOGIC;
 			  clk_mm:in STD_LOGIC;
-			  clk11: in STD_LOGIC;			  
+			  clk_com: in STD_LOGIC;			  
 			  
 			  Status: in STD_LOGIC_VECTOR(31 downto 0);
            MemRead : in  STD_LOGIC;
@@ -138,13 +138,16 @@ component mm_manager
            wrn : out  STD_LOGIC;
 				com_Int:out STD_LOGIC;
 				
-				DYP1:out STD_LOGIC_VECTOR(6 downto 0)
+				DYP1:out STD_LOGIC_VECTOR(6 downto 0);
+				bitmap:STD_LOGIC_VECTOR(15 downto 0);
+				SW:in STD_LOGIC_VECTOR(6 downto 0)
 			  );
 end component;
 signal MemWrite:STD_LOGIC:='0';
 signal MemRead:STD_LOGIC:='0';
 signal Data_out:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal Data_in:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal mm_bitmap:STD_LOGIC_VECTOR(15 downto 0):=(others=>'Z');
 
 component RegistersFile
 	Port ( rst : in  STD_LOGIC;
@@ -155,7 +158,10 @@ component RegistersFile
            RegWrite : in  STD_LOGIC;
            RegData1 : out  STD_LOGIC_VECTOR (31 downto 0);
            RegData2 : out  STD_LOGIC_VECTOR (31 downto 0);
-           RegDst : in  STD_LOGIC_VECTOR (4 downto 0));
+           RegDst : in  STD_LOGIC_VECTOR (4 downto 0);
+			  SW:in STD_LOGIC_VECTOR(5 downto 0);
+			  bitmap:out STD_LOGIC_VECTOR(15 downto 0)
+			  );
 end component;
 signal RegAddr1:STD_LOGIC_VECTOR(4 downto 0):="00000";
 signal RegAddr2:STD_LOGIC_VECTOR(4 downto 0):="00000";
@@ -164,6 +170,7 @@ signal RegDataSrcx:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal RegData1:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal RegData2:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal RegWrite:STD_LOGIC:='0';
+signal reg_bitmap:STD_LOGIC_VECTOR(15 downto 0);
 
 --CP0
 signal Status:STD_LOGIC_VECTOR(31 downto 0):=x"FFFFFFFF";
@@ -249,7 +256,7 @@ component Controller
 			  set_EXL:out STD_LOGIC;
 			  cause_IP:out STD_LOGIC_VECTOR(5 downto 0);
 			  
-			  DYP0:out STD_LOGIC_VECTOR(6 downto 0)
+			  DYP0:out STD_LOGIC_VECTOR(6 downto 0)			  
 			  );
 end component;
 signal instructions:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
@@ -314,33 +321,72 @@ signal RPC:STD_LOGIC_VECTOR(31 downto 0):=x"BFC00000";
 
 signal C:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";			--CP0 register
 
-type debug_state is(debug_init);
+type debug_state is(debug_init,debug1);
 signal d_state:debug_state:=debug_init;
 signal breakpoint:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal enable_debug:STD_LOGIC:='0';
 
+signal CP0_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
+signal ctrl_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
+signal host_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
+--mm_bitmap
+--reg_bitmap
 begin	
 	
-	process(rst,clk_step)
+	process(rst,SW(23),clk_step)
 	begin
 		if rst = '0' then
+			enable_debug<='0';
+			breakpoint<=x"00000000";
 			d_state<=debug_init;
 		elsif rising_edge(clk_step) then
 			case d_state is
 				when debug_init=>
 					breakpoint<=SW;
-				when 
+					enable_debug<='1';
+					d_state<=debug1;					
+				when debug1=>					
+					if SW(23) ='1' then
+						enable_debug<='0';
+						breakpoint<=x"00000000";
+						d_state<=debug_init;						
+					end if;
 			end case;
 		end if;
 	end process;
 	
 	--clk_flag<="111";
-	process(PC,breakpoint)
+	process(PC,breakpoint,enable_debug)
 	begin
-		if PC = breakpoint then
+		clk_flag<="111";
+		if PC = breakpoint and enable_debug='1' then
 			clk_flag<="111";
+		--else
+		--	clk_flag
 		end if;
 	end process;
-					
+	
+	process(enable_debug,SW)
+	begin
+		if enable_debug = '0' then
+			LED<=x"0000";
+		else
+			case SW(10 downto 8) is
+				when "000"=>
+					LED<=ctrl_bitmap;
+				when "001"=>
+					LED<=mm_bitmap;
+				when "010"=>
+					LED<=reg_bitmap;
+				when "011"=>
+					LED<=host_bitmap;
+				when "100"=>
+					LED<=CP0_bitmap;
+				when others=>
+					LED<=(others=>'0');
+			end case;
+		end if;
+	end process;
 	
 	--EBase<=x"80000000";	
 
@@ -357,7 +403,7 @@ begin
 		rst=>rst,
       clk_cpu=>clk_cpu,
 		clk_mm=>clk_mm,
-		clk11=>clk11,			  
+		clk_com=>clk_com,			  
 		Status=>Status,
 		  MemRead=>MemRead,
 		  MemWrite=>MemWrite,
@@ -401,7 +447,9 @@ begin
 		  wrn=>wrn,
 		  com_Int=>com_Int,
 		  
-		  DYP1=>DYP1
+		  DYP1=>DYP1,
+			bitmap=>mm_bitmap,
+			SW=>SW(6 downto 0)
 	);
 	
 	u2:RegistersFile PORT MAP(
@@ -412,7 +460,9 @@ begin
 		  RegData1=>RegData1,
 		  RegData2=>RegData2,
 		  RegDst=>RegDstx,
-		  RegWrite=>RegWrite
+		  RegWrite=>RegWrite,
+		  SW=>SW(5 downto 0),
+		  bitmap=>reg_bitmap
 	);
 	
 	u3:ALU PORT MAP(
@@ -813,6 +863,260 @@ begin
 			EPC							when "10000",
 			EBase							when "10010",
 			x"00000000"					when others;
+			
+	process(SW(4 downto 0))
+	begin
+		if SW(4) = '0' then
+			case SW(3 downto 0) is
+				when "0000"=>
+					CP0_bitmap<=Index(15 downto 0);
+				when "0001"=>
+					CP0_bitmap<=EntryLo0(15 downto 0);
+				when "0010"=>
+					CP0_bitmap<=EntryLo1(15 downto 0);
+				when "0011"=>
+					CP0_bitmap<=BadVAddr(15 downto 0);
+				when "0100"=>
+					CP0_bitmap<=Count(15 downto 0);
+				when "0101"=>
+					CP0_bitmap<=EntryHi(15 downto 0);
+				when "0110"=>
+					CP0_bitmap<=compare(15 downto 0);
+				when "0111"=>
+					CP0_bitmap<=Status(15 downto 0);
+				when "1000"=>
+					CP0_bitmap<=Cause(15 downto 0);
+				when "1001"=>
+					CP0_bitmap<=EPC(15 downto 0);
+				when "1010"=>
+					CP0_bitmap<=EBase(15 downto 0);
+				when "1011"=>
+					CP0_bitmap<=LO(15 downto 0);
+				when "1100"=>
+					CP0_bitmap<=HI(15 downto 0);
+				when "1101"=>
+					CP0_bitmap<=PC(15 downto 0);
+				when "1110"=>
+					CP0_bitmap<=RPC(15 downto 0);
+				when "1111"=>
+					CP0_bitmap<=ALUOut(15 downto 0);
+				when others=>
+					CP0_bitmap<=(others=>'0');
+			end case;
+		else
+			case SW(3 downto 0) is
+				when "0000"=>
+					CP0_bitmap<=Index(31 downto 16);
+				when "0001"=>
+					CP0_bitmap<=EntryLo0(31 downto 16);
+				when "0010"=>
+					CP0_bitmap<=EntryLo1(31 downto 16);
+				when "0011"=>
+					CP0_bitmap<=BadVAddr(31 downto 16);
+				when "0100"=>
+					CP0_bitmap<=Count(31 downto 16);
+				when "0101"=>
+					CP0_bitmap<=EntryHi(31 downto 16);
+				when "0110"=>
+					CP0_bitmap<=compare(31 downto 16);
+				when "0111"=>
+					CP0_bitmap<=Status(31 downto 16);
+				when "1000"=>
+					CP0_bitmap<=Cause(31 downto 16);
+				when "1001"=>
+					CP0_bitmap<=EPC(31 downto 16);
+				when "1010"=>
+					CP0_bitmap<=EBase(31 downto 16);
+				when "1011"=>
+					CP0_bitmap<=LO(31 downto 16);
+				when "1100"=>
+					CP0_bitmap<=HI(31 downto 16);
+				when "1101"=>
+					CP0_bitmap<=PC(31 downto 16);
+				when "1110"=>
+					CP0_bitmap<=RPC(31 downto 16);
+				when "1111"=>
+					CP0_bitmap<=ALUOut(31 downto 16);
+				when others=>
+					CP0_bitmap<=(others=>'0');
+			end case;
+		end if;
+	end process;
+	
+	process(SW(4 downto 0))
+	begin
+		ctrl_bitmap<=(others=>'0');
+		case SW(4 downto 0) is
+			when "00000"=>
+				ctrl_bitmap(0)<=PCWrite;
+			when "00001"=>
+				ctrl_bitmap(0)<=IorD;
+			when "00010"=>
+				ctrl_bitmap(0)<=TLBWrite;
+			when "00011"=>
+				ctrl_bitmap(0)<=MemRead;
+			when "00100"=>
+				ctrl_bitmap(0)<=MemWrite;
+			when "00101"=>
+				ctrl_bitmap(0)<=MemDataSrc;
+			when "00110"=>
+				ctrl_bitmap(1 downto 0)<=MemAddrSrc;
+			when "00111"=>
+				ctrl_bitmap(0)<=IRWrite;
+			when "01000"=>
+				ctrl_bitmap(1 downto 0)<=RegDst;
+			when "01001"=>
+				ctrl_bitmap(2 downto 0)<=RegDataSrc;
+			when "01010"=>
+				ctrl_bitmap(0)<=RegWrite;	
+			when "01011"=>
+				ctrl_bitmap(1 downto 0)<=ALUSrcA;
+			when "01100"=>
+				ctrl_bitmap(2 downto 0)<=ALUSrcB;
+			when "01101"=>
+				ctrl_bitmap(2 downto 0)<=PCSrc;
+			when "01110"=>
+				ctrl_bitmap(2 downto 0)<=PCWriteCond;
+			when "01111"=>
+				ctrl_bitmap(0)<=HISrc;
+			when "10000"=>
+				ctrl_bitmap(0)<=LOSrc;
+			when "10001"=>
+				ctrl_bitmap(0)<=HIWrite;
+			when "10010"=>
+				ctrl_bitmap(0)<=LOWrite;
+			when "10011"=>
+				ctrl_bitmap(3 downto 0)<=ALUOp;
+			when "10100"=>
+				ctrl_bitmap(2 downto 0)<=ExtendOp;
+			when "10101"=>
+				ctrl_bitmap(0)<=ALUOutWrite;
+			when "10110"=>
+				ctrl_bitmap(0)<=RPCWrite;
+			when "10111"=>
+				ctrl_bitmap(0)<=CP0Write;
+			when "11000"=>
+				ctrl_bitmap(4 downto 0)<=exc_code;
+			when "11001"=>
+				ctrl_bitmap(0)<=EPCWrite;
+			when "11010"=>
+				ctrl_bitmap(0)<=set_Cause;
+			when "11011"=>
+				ctrl_bitmap(0)<=set_EXL;
+			when "11100"=>
+				ctrl_bitmap(5 downto 0)<=cause_IP;	
+			when "11101"=>
+				ctrl_bitmap(0)<=timer_Int;	
+				ctrl_bitmap(1)<=com_Int;
+			when "11110"=>
+				ctrl_bitmap(1 downto 0)<=mem_error;
+			when others=>
+				ctrl_bitmap<=(others=>'0');
+		end case;
+	end process;
+	
+	process(SW(5 downto 0))
+	begin
+		case SW(5 downto 3) is
+			when "000"=>
+				if SW(0) = '0' then
+					host_bitmap<=instructions(15 downto 0);
+				else
+					host_bitmap<=instructions(31 downto 16);
+				end if;
+			when "001"=>
+				case SW(2) is
+					when '0'=>
+						if SW(0) = '0' then
+							host_bitmap<=Data_in(15 downto 0);
+						else
+							host_bitmap<=Data_in(31 downto 16);
+						end if;
+					when '1'=>
+						if SW(0) = '0' then
+							host_bitmap<=Data_out(15 downto 0);
+						else
+							host_bitmap<=Data_out(31 downto 16);
+						end if;
+					when others=>host_bitmap<=(others=>'0');
+				end case;
+			when "010"=>
+				case SW(2 downto 0) is
+					when "000"=>
+						host_bitmap(4 downto 0)<=RegDstx;
+						host_bitmap(15 downto 5)<=(others=>'0');
+					when "010"=>
+						host_bitmap<=RegDataSrcx(15 downto 0);
+					when "011"=>
+						host_bitmap<=RegDataSrcx(31 downto 16);
+					when "100"=>
+						host_bitmap<=RegData1(15 downto 0);
+					when "101"=>
+						host_bitmap<=RegData1(31 downto 16);
+					when "110"=>
+						host_bitmap<=RegData2(15 downto 0);
+					when "111"=>
+						host_bitmap<=RegData2(31 downto 16);
+					when others=>
+						host_bitmap<=(others=>'0');
+				end case;
+			when "011"=>
+				if SW(2) = '0' then
+					if SW(1)='0' then
+						if SW(0)='0' then
+							host_bitmap<=ALUSrcAx(15 downto 0);
+						else
+							host_bitmap<=ALUSrcAx(31 downto 16);
+						end if;
+					else
+						if SW(0)='0' then
+							host_bitmap<=ALUSrcBx(15 downto 0);
+						else
+							host_bitmap<=ALUSrcBx(31 downto 16);
+						end if;
+					end if;	
+				else
+					if SW(0)='0' then
+						host_bitmap<=ALUResult(15 downto 0);
+					else
+						host_bitmap<=ALUResult(31 downto 16);
+					end if;
+				end if;
+			when "100"=>
+				if SW(2)='0' then
+					host_bitmap(0)<=MUL_start;
+					host_bitmap(1)<=MUL_ready;
+					host_bitmap(15 downto 2)<=(others=>'0');
+				else
+					case SW(1 downto 0) is
+						when "00"=>
+							host_bitmap<=MULResult(15 downto 0);
+						when "01"=>
+							host_bitmap<=MULResult(31 downto 16);
+						when "10"=>
+							host_bitmap<=MULResult(47 downto 32);
+						when "11"=>
+							host_bitmap<=MULResult(63 downto 48);
+						when others=>
+							host_bitmap<=(others=>'0');
+					end case;
+				end if;
+			when "101"=>				
+				case SW(1 downto 0) is
+					when "00"=>
+						host_bitmap<=immediate(15 downto 0);
+					when "01"=>
+						host_bitmap<=immediate(31 downto 16);
+					when "10"=>
+						host_bitmap<=C(15 downto 0);
+					when "11"=>
+						host_bitmap<=C(31 downto 16);
+					when others=>
+						host_bitmap<=(others=>'0');
+				end case;													
+			when others=>host_bitmap<=(others=>'0');
+		end case;
+	end process;
 	
 end Behavioral;
 

@@ -40,7 +40,10 @@ entity RegistersFile is
            RegWrite : in  STD_LOGIC;
            RegData1 : out  STD_LOGIC_VECTOR (31 downto 0);
            RegData2 : out  STD_LOGIC_VECTOR (31 downto 0);
-           RegDst : in  STD_LOGIC_VECTOR (4 downto 0));
+           RegDst : in  STD_LOGIC_VECTOR (4 downto 0);
+			  SW:in STD_LOGIC_VECTOR(5 downto 0);
+			  bitmap:out STD_LOGIC_VECTOR(15 downto 0)
+			  );
 end RegistersFile;
 
 architecture Behavioral of RegistersFile is
@@ -60,6 +63,15 @@ begin
 		elsif rising_edge(RegWrite) then
 			reg(CONV_INTEGER(RegDst))<=RegDataSrc;
 			reg(0)<=(others=>'0');									--R0
+		end if;
+	end process;
+	
+	process(SW,reg)
+	begin
+		if SW(5) = '0' then
+			bitmap<=reg(CONV_INTEGER(SW(4 downto 0)))(15 downto 0);
+		else
+			bitmap<=reg(CONV_INTEGER(SW(4 downto 0)))(31 downto 16);
 		end if;
 	end process;
 

@@ -1,22 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-07-20T01:19:08</DateModified>
+  <DateModified>2015-07-21T14:36:15</DateModified>
   <ModuleName>CPU</ModuleName>
-  <SummaryTimeStamp>2015-07-20T00:50:16</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-07-21T11:40:30</SummaryTimeStamp>
   <SavedFilePath>C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/iseconfig/CPU.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project\</ImplementationReportsDirectory>
-  <DateInitialized>2015-07-19T14:19:13</DateInitialized>
+  <DateInitialized>2015-07-21T11:42:15</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>
   <viewgroup label="Design Overview" >
-   <view inputState="Unknown" program="implementation" ShowPartitionData="false" type="FPGASummary" file="CPU_summary.html" label="Summary" ExpandClockNets="true" >
+   <view inputState="Unknown" program="implementation" ExpandErrors="true" ShowPartitionData="false" type="FPGASummary" file="CPU_summary.html" label="Summary" ExpandClockNets="true" ExpandWarnings="true" >
     <toc-item title="Design Overview" target="Design Overview" />
     <toc-item title="Design Utilization Summary" target="Design Utilization Summary" />
     <toc-item title="Performance Summary" target="Performance Summary" />
     <toc-item title="Failing Constraints" target="Failing Constraints" />
     <toc-item title="Detailed Reports" target="Detailed Reports" />
+    <table-item tableState="CollapsedTable" tableKey="CurrentWarnings" />
+    <table-item tableState="CollapsedTable" tableKey="DetailedReports" />
    </view>
    <view inputState="Unknown" program="implementation" contextTags="FPGA_ONLY" hidden="true" type="HTML" file="CPU_envsettings.html" label="System Settings" />
    <view inputState="Translated" program="map" locator="MAP_IOB_TABLE" contextTags="FPGA_ONLY" type="IOBProperties" file="CPU_map.xrpt" label="IOB Properties" />

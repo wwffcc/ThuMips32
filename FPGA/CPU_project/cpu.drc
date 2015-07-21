@@ -1,7 +1,7 @@
 Release 14.6 Drc P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Jul 16 22:56:36 2015
+Tue Jul 21 14:45:04 2015
 
 drc -z CPU.ncd CPU.pcf
 

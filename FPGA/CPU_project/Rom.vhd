@@ -120,7 +120,7 @@ rom(75) <= x"00000000";
 
 data<=rom(CONV_INTEGER(Paddr(11 downto 2)));
 
-process
+process(Paddr)
 begin
 for i in 76 to 1023 LOOP
 		rom(i)<=(others=>'0');

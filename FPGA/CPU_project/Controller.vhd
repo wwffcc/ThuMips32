@@ -892,7 +892,30 @@ begin
 					g_state<=instruction_fetch;
 				when others=>null;
 			end case;
-		end if;
+		end if;		
+	end process;
+	
+	process(g_state)
+	begin
+		case g_state is
+			when initialize=> DYP0<=not "1000000";
+			when instruction_fetch=> DYP0<=not "1111001";
+			when decode=> DYP0<=not "0100100";
+			when execute=> DYP0<=not "0110000";
+			when mem_access=> DYP0<=not "0011001";
+			when write_back=> DYP0<=not "0010010";
+			when interrupt=> DYP0<=not "0000010";
+			when interrupt2=> DYP0<=not "1111000";
+			when interrupt3=> DYP0<=not "0000000";
+			when interruptx=> DYP0<=not "0010000";
+	--		when TTA=> DYP0<=not "0001000";
+	--		when TTb=> DYP0<=not "0000011";
+	--		when TTC=> DYP0<=not "1000110";
+	--		when TTd=> DYP0<=not "0100001";
+	--		when TTE=> DYP0<=not "0000110";
+	--		when TTF=> DYP0<=not "0001110";
+			when others=> DYP0<=not "1111111";
+		end case;
 	end process;
 
 end Behavioral;

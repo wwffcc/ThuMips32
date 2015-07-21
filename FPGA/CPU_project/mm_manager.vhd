@@ -33,7 +33,7 @@ entity mm_manager is
     Port ( rst : in  STD_LOGIC;
            clk_cpu : in  STD_LOGIC;
 			  clk_mm:in STD_LOGIC;
-			  clk11: in STD_LOGIC;			  
+			  clk_com: in STD_LOGIC;			  
 			  
 			  Status: in STD_LOGIC_VECTOR(31 downto 0);
            MemRead : in  STD_LOGIC;
@@ -82,7 +82,9 @@ entity mm_manager is
            wrn : out  STD_LOGIC;
 				com_Int:out STD_LOGIC;
 				
-				DYP1:STD_LOGIC_VECTOR(6 downto 0)
+				DYP1:out STD_LOGIC_VECTOR(6 downto 0);
+				bitmap:out STD_LOGIC_VECTOR(15 downto 0);
+				SW:in STD_LOGIC_VECTOR(6 downto 0)
 			  );
 end mm_manager;
 
@@ -98,11 +100,15 @@ component TLB
            Paddr : out  STD_LOGIC_VECTOR (31 downto 0);
            TLBWrite : in  STD_LOGIC;
            flag_missing : out  STD_LOGIC;
-           flag_writable : out  STD_LOGIC);
+           flag_writable : out  STD_LOGIC;
+			  SW:in STD_LOGIC_VECTOR(5 downto 0);
+			  bitmap:out STD_LOGIC_VECTOR(15 downto 0)			  
+			  );
 end component;
 signal flag_missing:STD_LOGIC:='0';
 signal flag_writable:STD_LOGIC:='0';
 signal Paddr:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal tlb_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
 
 component Rom
 	Port ( Paddr : in  STD_LOGIC_VECTOR (11 downto 0);
@@ -123,12 +129,15 @@ component Device_Ram1
 			  data_in:in STD_LOGIC_VECTOR(31 downto 0);
 			  data_out:out STD_LOGIC_VECTOR(31 downto 0);
            Ram1Write : in  STD_LOGIC;
-           Ram1Read : in  STD_LOGIC);
+           Ram1Read : in  STD_LOGIC;
+			  bitmap:out STD_LOGIC_VECTOR(3 downto 0)
+			  );
 end component;
 signal ram1_ready:STD_LOGIC:='0';
 signal ram1Write:STD_LOGIC:='0';
 signal ram1Read:STD_LOGIC:='0';
 signal ram1_data:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal ram1_bitmap:STD_LOGIC_VECTOR(3 downto 0):="0000";
 
 component Device_Ram2
 	Port ( rst : in  STD_LOGIC;
@@ -143,12 +152,15 @@ component Device_Ram2
 			  data_in:in STD_LOGIC_VECTOR(31 downto 0);
 			  data_out:out STD_LOGIC_VECTOR(31 downto 0);
            Ram2Write : in  STD_LOGIC;
-           Ram2Read : in  STD_LOGIC);
+           Ram2Read : in  STD_LOGIC;
+			  bitmap:out STD_LOGIC_VECTOR(3 downto 0)
+			  );
 end component;
 signal ram2_ready:STD_LOGIC:='0';
 signal ram2Write:STD_LOGIC:='0';
 signal ram2Read:STD_LOGIC:='0';
 signal ram2_data:STD_LOGIC_VECTOR(31 downto 0);
+signal ram2_bitmap:STD_LOGIC_VECTOR(3 downto 0);
 
 component Device_Flash
 	Port ( rst : in  STD_LOGIC;
@@ -166,12 +178,15 @@ component Device_Flash
            Flash_Ready : out  STD_LOGIC;
 			  Paddr: in STD_LOGIC_VECTOR(22 downto 0);
            Data_in : in  STD_LOGIC_VECTOR (31 downto 0);
-           Data_out : out  STD_LOGIC_VECTOR (31 downto 0));
+           Data_out : out  STD_LOGIC_VECTOR (31 downto 0);
+			  bitmap:out STD_LOGIC_VECTOR(3 downto 0)
+			  );
 end component;
 signal flash_ready:STD_LOGIC:='0';
 signal flashWrite:STD_LOGIC:='0';
 signal flashRead:STD_LOGIC:='0';
 signal flash_data:STD_LOGIC_VECTOR(31 downto 0);
+signal flash_bitmap:STD_LOGIC_VECTOR(3 downto 0);
 
 component Device_COM
 	Port ( rst : in  STD_LOGIC;
@@ -181,24 +196,30 @@ component Device_COM
            tbre : in  STD_LOGIC;
            tsre : in  STD_LOGIC;
            wrn : out  STD_LOGIC;
+		
 			  Ram1Data:inout STD_LOGIC_VECTOR(31 downto 0);
            COM_Ready : out  STD_LOGIC;
            COM_Write : in  STD_LOGIC;
            COM_Read : in  STD_LOGIC;
+	
 			  COM_INT: out STD_LOGIC;
            Data_in : in  STD_LOGIC_VECTOR (31 downto 0);
            Data_out : out  STD_LOGIC_VECTOR (31 downto 0);
-			  Status_out:out STD_LOGIC_VECTOR(31 downto 0));
+			  			 
+			  com_status:out STD_LOGIC_VECTOR(1 downto 0);
+			  bitmap:out STD_LOGIC_VECTOR(3 downto 0)
+			  );			  
 end component;
 signal com_ready:STD_LOGIC:='0';
 signal comWrite:STD_LOGIC:='0';
 signal comRead:STD_LOGIC:='0';
 --signal com_Int:STD_LOGIC:='0';
-signal com_status:STD_LOGIC_VECTOR(31 downto 0);
-signal com_data:STD_LOGIC_VECTOR(31 downto 0);
+signal com_status:STD_LOGIC_VECTOR(1 downto 0):="11";
+signal com_data:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal com_bitmap:STD_LOGIC_VECTOR(3 downto 0):="0000";
 
 signal flag:STD_LOGIC_VECTOR(2 downto 0):="111";
-
+signal bitmapx:STD_LOGIC_VECTOR(3 downto 0):="ZZZZ";
 begin	
 
 	u1:TLB PORT MAP(
@@ -211,7 +232,9 @@ begin
 	  Paddr=>Paddr,
 	  TLBWrite=>TLBWrite,
 	  flag_missing=>flag_missing,
-	  flag_writable=>flag_writable
+	  flag_writable=>flag_writable,
+	  SW=>SW(5 downto 0),
+	  bitmap=>tlb_bitmap
 	);
 	
 	u2:Rom PORT MAP(
@@ -232,7 +255,8 @@ begin
 		  data_in=>Data_in,
 		  data_out=>ram1_data,
 		  Ram1Write=>ram1Write,
-		  Ram1Read=>ram1Read
+		  Ram1Read=>ram1Read,
+		  bitmap=>ram1_bitmap
 	);
 	
 	u4:Device_Ram2 PORT MAP(
@@ -248,7 +272,8 @@ begin
 		  data_in=>Data_in,
 		  data_out=>ram2_data,
 		  Ram2Write=>ram2Write,
-		  Ram2Read=>ram2Read
+		  Ram2Read=>ram2Read,
+		  bitmap=>ram2_bitmap
 	);
 	
 	u5:Device_Flash PORT MAP(
@@ -267,12 +292,13 @@ begin
 		  Flash_Ready=>flash_ready,
 		  Paddr=>Paddr(22 downto 0),
 		  Data_in=>Data_in,
-		  Data_out=>flash_data
+		  Data_out=>flash_data,
+		  bitmap=>flash_bitmap
 	);
 	
 	u6:Device_COM PORT MAP(
 		rst=>rst,
-		  clk=>clk11,
+		  clk=>clk_com,
 		  data_ready=>data_ready,
 		  rdn=>rdn,
 		  tbre=>tbre,
@@ -281,11 +307,12 @@ begin
 		  Ram1Data=>Ram1Data,
 		  COM_Ready=>com_ready,
 		  COM_Write=>comWrite,
-		  COM_Read=>comRead,
+		  COM_Read=>comRead,		 
 		  COM_INT=>com_Int,
 		  Data_in=>Data_in,
 		  Data_out=>com_data,
-		  Status_out=>com_status
+		  com_status=>com_status,
+		  bitmap=>com_bitmap		
 	);
 	
 	flag<="000" when Paddr>=x"1FC00000" and Paddr<=x"1FC00FFF" else
@@ -303,6 +330,7 @@ begin
 			ready<='0';
 			mem_error<="00";
 			BadVAddr<=x"00000000";
+			bitmapx<="ZZZZ";
 		elsif rising_edge(clk_cpu) then
 			if (Vaddr(31)='1' and Status(4)='1' and Status(1)='0' and Status(2)='0')	--user mode but access kseg
 				or Vaddr(1 downto 0) /="00" then
@@ -323,7 +351,8 @@ begin
 					when "000"=>								--Rom
 						Data_out<=romData;
 						ready<='1';
-					when "001"=>								--Ram1
+						bitmapx<="0000";
+					when "001"=>								--Ram1						
 						if MemWrite = '1' then
 							ram1Write<='1';
 							ram1Read<='0';						
@@ -337,6 +366,7 @@ begin
 							ram1Read<='0';
 							Data_out<=ram1_data;
 						end if;
+						bitmapx<=ram1_bitmap;						
 					when "010"=>								--Ram2
 						if MemWrite = '1' then
 							ram2Write<='1';
@@ -351,6 +381,7 @@ begin
 							ram2Read<='0';
 							Data_out<=ram2_data;
 						end if;
+						bitmapx<=ram2_bitmap;						
 					when "011"=>								--Flash
 						if MemWrite = '1' then
 							flashWrite<='1';
@@ -365,6 +396,7 @@ begin
 							flashRead<='0';	
 							Data_out<=flash_data;
 						end if;
+						bitmapx<=flash_bitmap;
 					when "100"=>
 						if MemWrite = '1' then
 							comWrite<='1';
@@ -379,20 +411,85 @@ begin
 							comWrite<='0';
 							Data_out<=com_data;
 						end if;
+						bitmapx<=com_bitmap;						
 					when "101"=>
 						if MemWrite = '1' then
 							BadVAddr<=Vaddr;
 							ready<='1';
 							mem_error<="10";
-						else
-							Data_out<=com_status;
-							ready<='1';
+						else							
+							comWrite<='0';
+							Data_out(1 downto 0)<=com_status;
+							Data_out(31 downto 2)<=(others=>'0');
+							ready<='1';						
 						end if;
+						bitmapx<=com_bitmap;						
 					when others=>
 						ready<='0';
+						bitmapx<="ZZZZ";
 				end case;
 			end if;
 		end if;				
+	end process;
+	
+	process(bitmapx)
+	begin
+		case bitmapx is
+			when "0000"=> DYP1<=not "1000000";
+			when "0001"=> DYP1<=not "1111001";
+			when "0010"=> DYP1<=not "0100100";
+			when "0011"=> DYP1<=not "0110000";
+			when "0100"=> DYP1<=not "0011001";
+			when "0101"=> DYP1<=not "0010010";
+			when "0110"=> DYP1<=not "0000010";
+			when "0111"=> DYP1<=not "1111000";
+			when "1000"=> DYP1<=not "0000000";
+			when "1001"=> DYP1<=not "0010000";
+			when "1010"=> DYP1<=not "0001000";
+			when "1011"=> DYP1<=not "0000011";
+			when "1100"=> DYP1<=not "1000110";
+			when "1101"=> DYP1<=not "0100001";
+			when "1110"=> DYP1<=not "0000110";
+			when "1111"=> DYP1<=not "0001110";
+			when others=> DYP1<=not "1111111";
+		end case;
+	end process;
+	
+	process(SW,Paddr,Vaddr,flag,flag_missing,flag_writable,ram1Write,ram1Read,ram2Write,ram2Read,flashWrite,
+				flashRead,comWrite,comRead,com_status,tlb_bitmap)
+	begin
+		if SW(6)='0' then
+			case SW(5 downto 4) is
+				when "00"=>
+					if SW(0) = '0' then
+						bitmap<=Paddr(15 downto 0);
+					else
+						bitmap<=Paddr(31 downto 16);
+					end if;
+				when "01"=>
+					if SW(0) = '0' then
+						bitmap<=Vaddr(15 downto 0);
+					else
+						bitmap<=Vaddr(31 downto 16);
+					end if;
+				when "10"=>					
+						bitmap(2 downto 0)<=flag;
+						bitmap(3)<=flag_missing;
+						bitmap(4)<=flag_writable;
+						bitmap(5)<=ram1Write;
+						bitmap(6)<=ram1Read;
+						bitmap(7)<=ram2Write;
+						bitmap(8)<=ram2Read;
+						bitmap(9)<=flashWrite;
+						bitmap(10)<=flashRead;
+						bitmap(11)<=comWrite;
+						bitmap(12)<=comRead;
+						bitmap(14 downto 13)<=com_status;											
+				when others=>bitmap<=(others=>'0');
+			end case;			
+		else
+			bitmap<=tlb_bitmap;
+		end if;
 	end process;
 	
 end Behavioral;

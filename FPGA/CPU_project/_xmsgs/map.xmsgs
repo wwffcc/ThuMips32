@@ -5,6 +5,18 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">SW&lt;31&gt;</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">26</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">SW&lt;30&gt;,
+SW&lt;29&gt;,
+SW&lt;28&gt;,
+SW&lt;27&gt;,
+SW&lt;26&gt;</arg>
+To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
+</msg>
+
 <msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
 </msg>
 
@@ -18,43 +30,6 @@
 </msg>
 
 <msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
-</msg>
-
-<msg type="warning" file="Place" num="837" delta="old" >Partially locked IO Bus is found. 
-<arg fmt="%s" index="1"> Following components of the bus are not locked: 
-	 Comp: Ram1Addr&lt;31&gt;
-	 Comp: Ram1Addr&lt;30&gt;
-	 Comp: Ram1Addr&lt;29&gt;
-	 Comp: Ram1Addr&lt;28&gt;
-	 Comp: Ram1Addr&lt;27&gt;
-	 Comp: Ram1Addr&lt;26&gt;
-	 Comp: Ram1Addr&lt;25&gt;
-	 Comp: Ram1Addr&lt;24&gt;
-	 Comp: Ram1Addr&lt;23&gt;
-	 Comp: Ram1Addr&lt;22&gt;
-	 Comp: Ram1Addr&lt;21&gt;
-	 Comp: Ram1Addr&lt;20&gt;
-</arg>
-</msg>
-
-<msg type="warning" file="Place" num="837" delta="old" >Partially locked IO Bus is found. 
-<arg fmt="%s" index="1"> Following components of the bus are not locked: 
-	 Comp: Ram2Addr&lt;31&gt;
-	 Comp: Ram2Addr&lt;30&gt;
-	 Comp: Ram2Addr&lt;29&gt;
-	 Comp: Ram2Addr&lt;28&gt;
-	 Comp: Ram2Addr&lt;27&gt;
-	 Comp: Ram2Addr&lt;26&gt;
-	 Comp: Ram2Addr&lt;25&gt;
-	 Comp: Ram2Addr&lt;24&gt;
-	 Comp: Ram2Addr&lt;23&gt;
-	 Comp: Ram2Addr&lt;22&gt;
-	 Comp: Ram2Addr&lt;21&gt;
-	 Comp: Ram2Addr&lt;20&gt;
-</arg>
-</msg>
-
-<msg type="info" file="Place" num="834" delta="old" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">166</arg> IOs, <arg fmt="%d" index="2">142</arg> are locked and <arg fmt="%d" index="3">24</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
 </msg>
 
 <msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.

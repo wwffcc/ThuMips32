@@ -111,7 +111,6 @@ Parsing architecture <Behavioral> of entity <tlb>.
 Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Rom.vhd" into library work
 Parsing entity <Rom>.
 Parsing architecture <Behavioral> of entity <rom>.
-WARNING:HDLCompiler:1369 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Rom.vhd" Line 123: Possible infinite loop; process does not have a wait statement
 Parsing VHDL file "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram2.vhd" into library work
 Parsing entity <Device_Ram2>.
 Parsing architecture <Behavioral> of entity <device_ram2>.
@@ -135,20 +134,24 @@ Parsing architecture <Behavioral> of entity <mm_manager>.
 Elaborating entity <mm_manager> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <TLB> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\TLB.vhd" Line 112. Case statement is complete. others clause is never selected
 
 Elaborating entity <Rom> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <Device_Ram1> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram1.vhd" Line 90. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram1.vhd" Line 92. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram1.vhd" Line 107. Case statement is complete. others clause is never selected
 
 Elaborating entity <Device_Ram2> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram2.vhd" Line 90. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram2.vhd" Line 92. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Ram2.vhd" Line 107. Case statement is complete. others clause is never selected
 
 Elaborating entity <Device_Flash> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Flash.vhd" Line 184. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Flash.vhd" Line 186. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_Flash.vhd" Line 217. Case statement is complete. others clause is never selected
 
 Elaborating entity <Device_COM> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd" Line 104. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" Line 454. Case statement is complete. others clause is never selected
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -159,7 +162,6 @@ Synthesizing Unit <mm_manager>.
 WARNING:Xst:647 - Input <Status<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Status<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Status<31:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" line 269: Output port <COM_INT> of the instance <u6> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <ready>.
     Found 2-bit register for signal <mem_error>.
     Found 32-bit register for signal <BadVAddr>.
@@ -171,19 +173,37 @@ INFO:Xst:3210 - "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" 
     Found 1-bit register for signal <flashRead>.
     Found 1-bit register for signal <comWrite>.
     Found 1-bit register for signal <comRead>.
+    Found 1-bit register for signal <flag[2]_clk_cpu_DFF_304>.
+    Found 1-bit register for signal <flag[2]_clk_cpu_DFF_305>.
+    Found 1-bit register for signal <flag[2]_clk_cpu_DFF_306>.
+    Found 1-bit register for signal <flag[2]_clk_cpu_DFF_307>.
     Found 32-bit register for signal <Data_out>.
-    Found 1-bit 7-to-1 multiplexer for signal <flag[2]_GND_3_o_Mux_24_o> created at line 318.
-    Found 32-bit comparator lessequal for signal <n0000> created at line 287
-    Found 32-bit comparator lessequal for signal <n0002> created at line 287
-    Found 32-bit comparator lessequal for signal <n0005> created at line 288
-    Found 32-bit comparator lessequal for signal <n0007> created at line 289
-    Found 32-bit comparator lessequal for signal <n0009> created at line 289
-    Found 32-bit comparator lessequal for signal <n0012> created at line 290
-    Found 32-bit comparator lessequal for signal <n0014> created at line 290
+    Found 4-bit register for signal <bitmapx>.
+    Found 8x1-bit Read Only RAM for signal <flag[2]_GND_277_o_Mux_53_o>
+    Found 16x7-bit Read Only RAM for signal <DYP1>
+    Found 1-bit 7-to-1 multiplexer for signal <flag[2]_GND_3_o_Mux_24_o> created at line 350.
+    Found 16-bit 4-to-1 multiplexer for signal <SW[5]_GND_3_o_wide_mux_63_OUT> created at line 462.
+    Found 1-bit 3-to-1 multiplexer for signal <SW[5]_GND_3_o_Mux_65_o> created at line 462.
+    Found 4-bit 5-to-1 multiplexer for signal <_n0255> created at line 350.
+    Found 1-bit tristate buffer for signal <bitmapx<3>> created at line 326
+    Found 1-bit tristate buffer for signal <bitmapx<2>> created at line 326
+    Found 1-bit tristate buffer for signal <bitmapx<1>> created at line 326
+WARNING:Xst:737 - Found 1-bit latch for signal <bitmap<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <bitmapx<0>> created at line 326
+    Found 32-bit comparator lessequal for signal <n0000> created at line 318
+    Found 32-bit comparator lessequal for signal <n0002> created at line 318
+    Found 32-bit comparator lessequal for signal <n0005> created at line 319
+    Found 32-bit comparator lessequal for signal <n0007> created at line 320
+    Found 32-bit comparator lessequal for signal <n0009> created at line 320
+    Found 32-bit comparator lessequal for signal <n0012> created at line 321
+    Found 32-bit comparator lessequal for signal <n0014> created at line 321
     Summary:
-	inferred  75 D-type flip-flop(s).
+	inferred   2 RAM(s).
+	inferred  83 D-type flip-flop(s).
+	inferred   1 Latch(s).
 	inferred   7 Comparator(s).
-	inferred  29 Multiplexer(s).
+	inferred  32 Multiplexer(s).
+	inferred   4 Tristate(s).
 Unit <mm_manager> synthesized.
 
 Synthesizing Unit <TLB>.
@@ -212,28 +232,31 @@ WARNING:Xst:647 - Input <EntryHi<12:0>> is never used. This port will be preserv
     Found 63-bit register for signal <tlb<1>>.
     Found 63-bit register for signal <tlb<0>>.
     Found 63-bit register for signal <tlb<15>>.
-    Found 32-bit comparator lessequal for signal <n0000> created at line 56
-    Found 32-bit comparator greater for signal <Vaddr[31]_PWR_6_o_LessThan_2_o> created at line 56
-    Found 19-bit comparator equal for signal <tlb[0][62]_Vaddr[31]_equal_3_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[1][62]_Vaddr[31]_equal_4_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[2][62]_Vaddr[31]_equal_5_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[3][62]_Vaddr[31]_equal_6_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[4][62]_Vaddr[31]_equal_7_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[5][62]_Vaddr[31]_equal_8_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[6][62]_Vaddr[31]_equal_9_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[7][62]_Vaddr[31]_equal_10_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[8][62]_Vaddr[31]_equal_11_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[9][62]_Vaddr[31]_equal_12_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[10][62]_Vaddr[31]_equal_13_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[11][62]_Vaddr[31]_equal_14_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[12][62]_Vaddr[31]_equal_15_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[13][62]_Vaddr[31]_equal_16_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[14][62]_Vaddr[31]_equal_17_o> created at line 65
-    Found 19-bit comparator equal for signal <tlb[15][62]_Vaddr[31]_equal_18_o> created at line 65
+INFO:Xst:3019 - HDL ADVISOR - 1008 flip-flops were inferred for signal <tlb>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 63-bit 16-to-1 multiplexer for signal <n1859> created at line 110.
+    Found 16-bit 4-to-1 multiplexer for signal <bitmap> created at line 102.
+    Found 32-bit comparator lessequal for signal <n0000> created at line 59
+    Found 32-bit comparator greater for signal <Vaddr[31]_PWR_6_o_LessThan_2_o> created at line 59
+    Found 19-bit comparator equal for signal <tlb[0][62]_Vaddr[31]_equal_3_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[1][62]_Vaddr[31]_equal_4_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[2][62]_Vaddr[31]_equal_5_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[3][62]_Vaddr[31]_equal_6_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[4][62]_Vaddr[31]_equal_7_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[5][62]_Vaddr[31]_equal_8_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[6][62]_Vaddr[31]_equal_9_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[7][62]_Vaddr[31]_equal_10_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[8][62]_Vaddr[31]_equal_11_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[9][62]_Vaddr[31]_equal_12_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[10][62]_Vaddr[31]_equal_13_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[11][62]_Vaddr[31]_equal_14_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[12][62]_Vaddr[31]_equal_15_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[13][62]_Vaddr[31]_equal_16_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[14][62]_Vaddr[31]_equal_17_o> created at line 68
+    Found 19-bit comparator equal for signal <tlb[15][62]_Vaddr[31]_equal_18_o> created at line 68
     Summary:
 	inferred 1008 D-type flip-flop(s).
 	inferred  18 Comparator(s).
-	inferred 726 Multiplexer(s).
+	inferred 728 Multiplexer(s).
 Unit <TLB> synthesized.
 
 Synthesizing Unit <Rom>.
@@ -291,7 +314,7 @@ Synthesizing Unit <Device_Ram1>.
     | States             | 6                                              |
     | Transitions        | 7                                              |
     | Inputs             | 1                                              |
-    | Outputs            | 7                                              |
+    | Outputs            | 10                                             |
     | Clock              | clk (rising_edge)                              |
     | Reset              | rst_Ram1Write_OR_34_o (positive)               |
     | Reset type         | asynchronous                                   |
@@ -300,38 +323,38 @@ Synthesizing Unit <Device_Ram1>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 54
     Summary:
 	inferred 120 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
@@ -386,7 +409,7 @@ Synthesizing Unit <Device_Ram2>.
     | States             | 6                                              |
     | Transitions        | 7                                              |
     | Inputs             | 1                                              |
-    | Outputs            | 7                                              |
+    | Outputs            | 10                                             |
     | Clock              | clk (rising_edge)                              |
     | Reset              | rst_Ram2Write_OR_35_o (positive)               |
     | Reset type         | asynchronous                                   |
@@ -395,38 +418,38 @@ Synthesizing Unit <Device_Ram2>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit tristate buffer for signal <Ram2Data<31>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<30>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<29>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<28>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<27>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<26>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<25>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<24>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<23>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<22>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<21>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<20>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<19>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<18>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<17>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<16>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<15>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<14>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<13>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<12>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<11>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<10>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<9>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<8>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<7>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<6>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<5>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<4>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<3>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<2>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<1>> created at line 52
-    Found 1-bit tristate buffer for signal <Ram2Data<0>> created at line 52
+    Found 1-bit tristate buffer for signal <Ram2Data<31>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<30>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<29>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<28>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<27>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<26>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<25>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<24>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<23>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<22>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<21>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<20>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<19>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<18>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<17>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<16>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<15>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<14>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<13>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<12>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<11>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<10>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<9>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<8>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<7>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<6>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<5>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<4>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<3>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<2>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<1>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram2Data<0>> created at line 54
     Summary:
 	inferred 120 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
@@ -466,7 +489,7 @@ WARNING:Xst:647 - Input <Paddr<0:0>> is never used. This port will be preserved 
     | States             | 22                                             |
     | Transitions        | 26                                             |
     | Inputs             | 4                                              |
-    | Outputs            | 9                                              |
+    | Outputs            | 13                                             |
     | Clock              | clk (rising_edge)                              |
     | Reset              | rst_FlashWrite_OR_36_o (positive)              |
     | Reset type         | asynchronous                                   |
@@ -475,25 +498,25 @@ WARNING:Xst:647 - Input <Paddr<0:0>> is never used. This port will be preserved 
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 22-bit adder for signal <Paddr[22]_GND_140_o_add_7_OUT> created at line 148.
-    Found 2-bit adder for signal <cond_flash[1]_GND_140_o_add_10_OUT> created at line 156.
+    Found 22-bit adder for signal <Paddr[22]_GND_140_o_add_7_OUT> created at line 150.
+    Found 2-bit adder for signal <cond_flash[1]_GND_140_o_add_10_OUT> created at line 158.
     Found 4x1-bit Read Only RAM for signal <cond_flash[1]_GND_141_o_Mux_29_o>
-    Found 1-bit tristate buffer for signal <FlashData<15>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<14>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<13>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<12>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<11>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<10>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<9>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<8>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<7>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<6>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<5>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<4>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<3>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<2>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<1>> created at line 67
-    Found 1-bit tristate buffer for signal <FlashData<0>> created at line 67
+    Found 1-bit tristate buffer for signal <FlashData<15>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<14>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<13>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<12>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<11>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<10>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<9>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<8>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<7>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<6>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<5>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<4>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<3>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<2>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<1>> created at line 69
+    Found 1-bit tristate buffer for signal <FlashData<0>> created at line 69
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -505,10 +528,9 @@ Unit <Device_Flash> synthesized.
 
 Synthesizing Unit <Device_COM>.
     Related source file is "C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd".
-    Found 1-bit register for signal <Status_out<0>>.
-    Found 1-bit register for signal <COM_INT>.
+    Found 2-bit register for signal <com_status>.
     Found 1-bit register for signal <wrn>.
-    Found 32-bit register for signal <fr_state[2]_dff_11_OUT>.
+    Found 32-bit register for signal <fr_state[2]_dff_14_OUT>.
     Found 1-bit register for signal <COM_Ready>.
     Found 32-bit register for signal <Data_out>.
     Found 3-bit register for signal <fr_state>.
@@ -545,56 +567,61 @@ Synthesizing Unit <Device_COM>.
     Found 1-bit register for signal <fr_state[2]_clk_DFF_289>.
     Found 1-bit register for signal <fr_state[2]_clk_DFF_290>.
     Found 1-bit register for signal <rdn>.
+INFO:Xst:1799 - State recv2 is never reached in FSM <fr_state>.
     Found finite state machine <FSM_3> for signal <fr_state>.
     -----------------------------------------------------------------------
-    | States             | 7                                              |
+    | States             | 8                                              |
     | Transitions        | 11                                             |
     | Inputs             | 4                                              |
-    | Outputs            | 8                                              |
+    | Outputs            | 13                                             |
     | Clock              | clk (rising_edge)                              |
-    | Reset              | rst_COM_Write_OR_54_o (positive)               |
+    | Reset              | COM_Write_rst_OR_54_o (positive)               |
     | Reset type         | asynchronous                                   |
     | Reset State        | com_init                                       |
     | Power Up State     | com_init                                       |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 54
-    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 54
+    Found 1-bit tristate buffer for signal <Ram1Data<31>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<30>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<29>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<28>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<27>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<26>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<25>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<24>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<23>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<22>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<21>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<20>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<19>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<18>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<17>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<16>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<15>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<14>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<13>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<12>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<11>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<10>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<9>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<8>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<7>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<6>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<5>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<4>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<3>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<2>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<1>> created at line 64
+    Found 1-bit tristate buffer for signal <Ram1Data<0>> created at line 64
+    Found 1-bit tristate buffer for signal <bitmap<3>> created at line 140
+    Found 1-bit tristate buffer for signal <bitmap<2>> created at line 140
+    Found 1-bit tristate buffer for signal <bitmap<1>> created at line 140
+    Found 1-bit tristate buffer for signal <bitmap<0>> created at line 140
     Summary:
 	inferred 101 D-type flip-flop(s).
-	inferred   4 Multiplexer(s).
-	inferred  32 Tristate(s).
+	inferred   9 Multiplexer(s).
+	inferred  36 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <Device_COM> synthesized.
 
@@ -602,33 +629,44 @@ Unit <Device_COM> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 2
+# RAMs                                                 : 4
  1024x32-bit single-port Read Only RAM                 : 1
+ 16x7-bit single-port Read Only RAM                    : 1
  4x1-bit single-port Read Only RAM                     : 1
+ 8x1-bit single-port Read Only RAM                     : 1
 # Adders/Subtractors                                   : 2
  2-bit adder                                           : 1
  22-bit adder                                          : 1
-# Registers                                            : 168
- 1-bit register                                        : 137
+# Registers                                            : 172
+ 1-bit register                                        : 139
  16-bit register                                       : 1
- 2-bit register                                        : 2
+ 2-bit register                                        : 3
  20-bit register                                       : 2
  23-bit register                                       : 1
  32-bit register                                       : 9
+ 4-bit register                                        : 1
  63-bit register                                       : 16
+# Latches                                              : 1
+ 1-bit latch                                           : 1
 # Comparators                                          : 25
  19-bit comparator equal                               : 16
  32-bit comparator greater                             : 1
  32-bit comparator lessequal                           : 8
-# Multiplexers                                         : 775
- 1-bit 2-to-1 multiplexer                              : 749
+# Multiplexers                                         : 785
+ 1-bit 2-to-1 multiplexer                              : 741
+ 1-bit 3-to-1 multiplexer                              : 1
  1-bit 7-to-1 multiplexer                              : 1
- 16-bit 2-to-1 multiplexer                             : 7
- 2-bit 2-to-1 multiplexer                              : 5
+ 16-bit 2-to-1 multiplexer                             : 10
+ 16-bit 4-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 8
  23-bit 2-to-1 multiplexer                             : 4
- 32-bit 2-to-1 multiplexer                             : 9
-# Tristates                                            : 112
- 1-bit tristate buffer                                 : 112
+ 3-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 10
+ 4-bit 2-to-1 multiplexer                              : 1
+ 4-bit 5-to-1 multiplexer                              : 1
+ 63-bit 16-to-1 multiplexer                            : 1
+# Tristates                                            : 120
+ 1-bit tristate buffer                                 : 120
 # FSMs                                                 : 4
 
 =========================================================================
@@ -637,10 +675,10 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <Ram1_State[2]_clk_DFF_123> in Unit <u3> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram1_State[2]_clk_DFF_124> <Ram1_State[2]_clk_DFF_127> <Ram1_State[2]_clk_DFF_125> <Ram1_State[2]_clk_DFF_126> <Ram1_State[2]_clk_DFF_128> <Ram1_State[2]_clk_DFF_129> <Ram1_State[2]_clk_DFF_130> <Ram1_State[2]_clk_DFF_131> <Ram1_State[2]_clk_DFF_132> <Ram1_State[2]_clk_DFF_133> <Ram1_State[2]_clk_DFF_136> <Ram1_State[2]_clk_DFF_134> <Ram1_State[2]_clk_DFF_135> <Ram1_State[2]_clk_DFF_137> <Ram1_State[2]_clk_DFF_138> <Ram1_State[2]_clk_DFF_139> <Ram1_State[2]_clk_DFF_140> <Ram1_State[2]_clk_DFF_141> <Ram1_State[2]_clk_DFF_142> <Ram1_State[2]_clk_DFF_145> <Ram1_State[2]_clk_DFF_143> <Ram1_State[2]_clk_DFF_144> <Ram1_State[2]_clk_DFF_146> <Ram1_State[2]_clk_DFF_147> <Ram1_State[2]_clk_DFF_148> <Ram1_State[2]_clk_DFF_149> <Ram1_State[2]_clk_DFF_150> <Ram1_State[2]_clk_DFF_151> <Ram1_State[2]_clk_DFF_154> <Ram1_State[2]_clk_DFF_152> <Ram1_State[2]_clk_DFF_153> 
-INFO:Xst:2261 - The FF/Latch <Ram2_State[2]_clk_DFF_159> in Unit <u4> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram2_State[2]_clk_DFF_160> <Ram2_State[2]_clk_DFF_163> <Ram2_State[2]_clk_DFF_161> <Ram2_State[2]_clk_DFF_162> <Ram2_State[2]_clk_DFF_164> <Ram2_State[2]_clk_DFF_165> <Ram2_State[2]_clk_DFF_166> <Ram2_State[2]_clk_DFF_167> <Ram2_State[2]_clk_DFF_168> <Ram2_State[2]_clk_DFF_169> <Ram2_State[2]_clk_DFF_172> <Ram2_State[2]_clk_DFF_170> <Ram2_State[2]_clk_DFF_171> <Ram2_State[2]_clk_DFF_173> <Ram2_State[2]_clk_DFF_174> <Ram2_State[2]_clk_DFF_175> <Ram2_State[2]_clk_DFF_176> <Ram2_State[2]_clk_DFF_177> <Ram2_State[2]_clk_DFF_178> <Ram2_State[2]_clk_DFF_181> <Ram2_State[2]_clk_DFF_179> <Ram2_State[2]_clk_DFF_180> <Ram2_State[2]_clk_DFF_182> <Ram2_State[2]_clk_DFF_183> <Ram2_State[2]_clk_DFF_184> <Ram2_State[2]_clk_DFF_185> <Ram2_State[2]_clk_DFF_186> <Ram2_State[2]_clk_DFF_187> <Ram2_State[2]_clk_DFF_190> <Ram2_State[2]_clk_DFF_188> <Ram2_State[2]_clk_DFF_189> 
+INFO:Xst:2261 - The FF/Latch <Ram1_State[2]_clk_DFF_123> in Unit <u3> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram1_State[2]_clk_DFF_124> <Ram1_State[2]_clk_DFF_125> <Ram1_State[2]_clk_DFF_128> <Ram1_State[2]_clk_DFF_126> <Ram1_State[2]_clk_DFF_127> <Ram1_State[2]_clk_DFF_129> <Ram1_State[2]_clk_DFF_130> <Ram1_State[2]_clk_DFF_131> <Ram1_State[2]_clk_DFF_132> <Ram1_State[2]_clk_DFF_133> <Ram1_State[2]_clk_DFF_134> <Ram1_State[2]_clk_DFF_137> <Ram1_State[2]_clk_DFF_135> <Ram1_State[2]_clk_DFF_136> <Ram1_State[2]_clk_DFF_138> <Ram1_State[2]_clk_DFF_139> <Ram1_State[2]_clk_DFF_140> <Ram1_State[2]_clk_DFF_141> <Ram1_State[2]_clk_DFF_142> <Ram1_State[2]_clk_DFF_143> <Ram1_State[2]_clk_DFF_146> <Ram1_State[2]_clk_DFF_144> <Ram1_State[2]_clk_DFF_145> <Ram1_State[2]_clk_DFF_147> <Ram1_State[2]_clk_DFF_148> <Ram1_State[2]_clk_DFF_149> <Ram1_State[2]_clk_DFF_150> <Ram1_State[2]_clk_DFF_151> <Ram1_State[2]_clk_DFF_152> <Ram1_State[2]_clk_DFF_153> <Ram1_State[2]_clk_DFF_154> 
+INFO:Xst:2261 - The FF/Latch <Ram2_State[2]_clk_DFF_159> in Unit <u4> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram2_State[2]_clk_DFF_160> <Ram2_State[2]_clk_DFF_161> <Ram2_State[2]_clk_DFF_164> <Ram2_State[2]_clk_DFF_162> <Ram2_State[2]_clk_DFF_163> <Ram2_State[2]_clk_DFF_165> <Ram2_State[2]_clk_DFF_166> <Ram2_State[2]_clk_DFF_167> <Ram2_State[2]_clk_DFF_168> <Ram2_State[2]_clk_DFF_169> <Ram2_State[2]_clk_DFF_170> <Ram2_State[2]_clk_DFF_173> <Ram2_State[2]_clk_DFF_171> <Ram2_State[2]_clk_DFF_172> <Ram2_State[2]_clk_DFF_174> <Ram2_State[2]_clk_DFF_175> <Ram2_State[2]_clk_DFF_176> <Ram2_State[2]_clk_DFF_177> <Ram2_State[2]_clk_DFF_178> <Ram2_State[2]_clk_DFF_179> <Ram2_State[2]_clk_DFF_182> <Ram2_State[2]_clk_DFF_180> <Ram2_State[2]_clk_DFF_181> <Ram2_State[2]_clk_DFF_183> <Ram2_State[2]_clk_DFF_184> <Ram2_State[2]_clk_DFF_185> <Ram2_State[2]_clk_DFF_186> <Ram2_State[2]_clk_DFF_187> <Ram2_State[2]_clk_DFF_188> <Ram2_State[2]_clk_DFF_189> <Ram2_State[2]_clk_DFF_190> 
 INFO:Xst:2261 - The FF/Latch <flash_state[4]_clk_DFF_248> in Unit <u5> is equivalent to the following 15 FFs/Latches, which will be removed : <flash_state[4]_clk_DFF_240> <flash_state[4]_clk_DFF_241> <flash_state[4]_clk_DFF_242> <flash_state[4]_clk_DFF_243> <flash_state[4]_clk_DFF_244> <flash_state[4]_clk_DFF_245> <flash_state[4]_clk_DFF_246> <flash_state[4]_clk_DFF_247> <flash_state[4]_clk_DFF_249> <flash_state[4]_clk_DFF_250> <flash_state[4]_clk_DFF_251> <flash_state[4]_clk_DFF_252> <flash_state[4]_clk_DFF_255> <flash_state[4]_clk_DFF_253> <flash_state[4]_clk_DFF_254> 
-INFO:Xst:2261 - The FF/Latch <fr_state[2]_clk_DFF_259> in Unit <u6> is equivalent to the following 31 FFs/Latches, which will be removed : <fr_state[2]_clk_DFF_260> <fr_state[2]_clk_DFF_261> <fr_state[2]_clk_DFF_264> <fr_state[2]_clk_DFF_262> <fr_state[2]_clk_DFF_263> <fr_state[2]_clk_DFF_265> <fr_state[2]_clk_DFF_266> <fr_state[2]_clk_DFF_267> <fr_state[2]_clk_DFF_268> <fr_state[2]_clk_DFF_269> <fr_state[2]_clk_DFF_270> <fr_state[2]_clk_DFF_273> <fr_state[2]_clk_DFF_271> <fr_state[2]_clk_DFF_272> <fr_state[2]_clk_DFF_274> <fr_state[2]_clk_DFF_275> <fr_state[2]_clk_DFF_278> <fr_state[2]_clk_DFF_276> <fr_state[2]_clk_DFF_277> <fr_state[2]_clk_DFF_279> <fr_state[2]_clk_DFF_280> <fr_state[2]_clk_DFF_283> <fr_state[2]_clk_DFF_281> <fr_state[2]_clk_DFF_282> <fr_state[2]_clk_DFF_284> <fr_state[2]_clk_DFF_285> <fr_state[2]_clk_DFF_286> <fr_state[2]_clk_DFF_287> <fr_state[2]_clk_DFF_288> <fr_state[2]_clk_DFF_289> <fr_state[2]_clk_DFF_290> 
+INFO:Xst:2261 - The FF/Latch <fr_state[2]_clk_DFF_260> in Unit <u6> is equivalent to the following 31 FFs/Latches, which will be removed : <fr_state[2]_clk_DFF_259> <fr_state[2]_clk_DFF_261> <fr_state[2]_clk_DFF_262> <fr_state[2]_clk_DFF_265> <fr_state[2]_clk_DFF_263> <fr_state[2]_clk_DFF_264> <fr_state[2]_clk_DFF_266> <fr_state[2]_clk_DFF_267> <fr_state[2]_clk_DFF_270> <fr_state[2]_clk_DFF_268> <fr_state[2]_clk_DFF_269> <fr_state[2]_clk_DFF_271> <fr_state[2]_clk_DFF_272> <fr_state[2]_clk_DFF_275> <fr_state[2]_clk_DFF_273> <fr_state[2]_clk_DFF_274> <fr_state[2]_clk_DFF_278> <fr_state[2]_clk_DFF_276> <fr_state[2]_clk_DFF_277> <fr_state[2]_clk_DFF_281> <fr_state[2]_clk_DFF_279> <fr_state[2]_clk_DFF_280> <fr_state[2]_clk_DFF_282> <fr_state[2]_clk_DFF_283> <fr_state[2]_clk_DFF_286> <fr_state[2]_clk_DFF_284> <fr_state[2]_clk_DFF_285> <fr_state[2]_clk_DFF_287> <fr_state[2]_clk_DFF_288> <fr_state[2]_clk_DFF_289> <fr_state[2]_clk_DFF_290> 
 INFO:Xst:2261 - The FF/Latch <Data_out_8> in Unit <u6> is equivalent to the following 23 FFs/Latches, which will be removed : <Data_out_9> <Data_out_10> <Data_out_11> <Data_out_12> <Data_out_13> <Data_out_14> <Data_out_15> <Data_out_16> <Data_out_17> <Data_out_18> <Data_out_19> <Data_out_20> <Data_out_21> <Data_out_22> <Data_out_23> <Data_out_24> <Data_out_25> <Data_out_26> <Data_out_27> <Data_out_28> <Data_out_29> <Data_out_30> <Data_out_31> 
 WARNING:Xst:1710 - FF/Latch <Data_out_8> (without init value) has a constant value of 0 in block <u6>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2404 -  FFs/Latches <Data_out<31:8>> (without init value) have a constant value of 0 in block <Device_COM>.
@@ -674,30 +712,64 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_data> will be implemented on LUTs ei
     -----------------------------------------------------------------------
 Unit <Rom> synthesized (advanced).
 
+Synthesizing (advanced) Unit <mm_manager>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_DYP1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <bitmapx>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <DYP1>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_flag[2]_GND_277_o_Mux_53_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <flag>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <mm_manager> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 2
+# RAMs                                                 : 4
  1024x32-bit single-port distributed Read Only RAM     : 1
+ 16x7-bit single-port distributed Read Only RAM        : 1
  4x1-bit single-port distributed Read Only RAM         : 1
+ 8x1-bit single-port distributed Read Only RAM         : 1
 # Adders/Subtractors                                   : 1
  22-bit adder                                          : 1
 # Counters                                             : 1
  2-bit up counter                                      : 1
-# Registers                                            : 1490
- Flip-Flops                                            : 1490
+# Registers                                            : 1498
+ Flip-Flops                                            : 1498
 # Comparators                                          : 25
  19-bit comparator equal                               : 16
  32-bit comparator greater                             : 1
  32-bit comparator lessequal                           : 8
-# Multiplexers                                         : 773
- 1-bit 2-to-1 multiplexer                              : 748
+# Multiplexers                                         : 861
+ 1-bit 16-to-1 multiplexer                             : 63
+ 1-bit 2-to-1 multiplexer                              : 742
+ 1-bit 3-to-1 multiplexer                              : 1
+ 1-bit 4-to-1 multiplexer                              : 16
  1-bit 7-to-1 multiplexer                              : 1
- 16-bit 2-to-1 multiplexer                             : 7
- 2-bit 2-to-1 multiplexer                              : 4
+ 16-bit 2-to-1 multiplexer                             : 10
+ 16-bit 4-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 6
  23-bit 2-to-1 multiplexer                             : 4
- 32-bit 2-to-1 multiplexer                             : 9
+ 3-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 10
+ 4-bit 2-to-1 multiplexer                              : 1
+ 4-bit 5-to-1 multiplexer                              : 1
 # FSMs                                                 : 4
 
 =========================================================================
@@ -705,10 +777,11 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <Ram1_State[2]_clk_DFF_123> in Unit <Device_Ram1> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram1_State[2]_clk_DFF_124> <Ram1_State[2]_clk_DFF_127> <Ram1_State[2]_clk_DFF_125> <Ram1_State[2]_clk_DFF_126> <Ram1_State[2]_clk_DFF_128> <Ram1_State[2]_clk_DFF_129> <Ram1_State[2]_clk_DFF_130> <Ram1_State[2]_clk_DFF_131> <Ram1_State[2]_clk_DFF_132> <Ram1_State[2]_clk_DFF_133> <Ram1_State[2]_clk_DFF_136> <Ram1_State[2]_clk_DFF_134> <Ram1_State[2]_clk_DFF_135> <Ram1_State[2]_clk_DFF_137> <Ram1_State[2]_clk_DFF_138> <Ram1_State[2]_clk_DFF_139> <Ram1_State[2]_clk_DFF_140> <Ram1_State[2]_clk_DFF_141> <Ram1_State[2]_clk_DFF_142> <Ram1_State[2]_clk_DFF_145> <Ram1_State[2]_clk_DFF_143> <Ram1_State[2]_clk_DFF_144> <Ram1_State[2]_clk_DFF_146> <Ram1_State[2]_clk_DFF_147> <Ram1_State[2]_clk_DFF_148> <Ram1_State[2]_clk_DFF_149> <Ram1_State[2]_clk_DFF_150> <Ram1_State[2]_clk_DFF_151> <Ram1_State[2]_clk_DFF_154> <Ram1_State[2]_clk_DFF_152> <Ram1_State[2]_clk_DFF_153> 
-INFO:Xst:2261 - The FF/Latch <Ram2_State[2]_clk_DFF_159> in Unit <Device_Ram2> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram2_State[2]_clk_DFF_160> <Ram2_State[2]_clk_DFF_163> <Ram2_State[2]_clk_DFF_161> <Ram2_State[2]_clk_DFF_162> <Ram2_State[2]_clk_DFF_164> <Ram2_State[2]_clk_DFF_165> <Ram2_State[2]_clk_DFF_166> <Ram2_State[2]_clk_DFF_167> <Ram2_State[2]_clk_DFF_168> <Ram2_State[2]_clk_DFF_169> <Ram2_State[2]_clk_DFF_172> <Ram2_State[2]_clk_DFF_170> <Ram2_State[2]_clk_DFF_171> <Ram2_State[2]_clk_DFF_173> <Ram2_State[2]_clk_DFF_174> <Ram2_State[2]_clk_DFF_175> <Ram2_State[2]_clk_DFF_176> <Ram2_State[2]_clk_DFF_177> <Ram2_State[2]_clk_DFF_178> <Ram2_State[2]_clk_DFF_181> <Ram2_State[2]_clk_DFF_179> <Ram2_State[2]_clk_DFF_180> <Ram2_State[2]_clk_DFF_182> <Ram2_State[2]_clk_DFF_183> <Ram2_State[2]_clk_DFF_184> <Ram2_State[2]_clk_DFF_185> <Ram2_State[2]_clk_DFF_186> <Ram2_State[2]_clk_DFF_187> <Ram2_State[2]_clk_DFF_190> <Ram2_State[2]_clk_DFF_188> <Ram2_State[2]_clk_DFF_189> 
+INFO:Xst:2261 - The FF/Latch <Ram1_State[2]_clk_DFF_123> in Unit <Device_Ram1> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram1_State[2]_clk_DFF_124> <Ram1_State[2]_clk_DFF_125> <Ram1_State[2]_clk_DFF_128> <Ram1_State[2]_clk_DFF_126> <Ram1_State[2]_clk_DFF_127> <Ram1_State[2]_clk_DFF_129> <Ram1_State[2]_clk_DFF_130> <Ram1_State[2]_clk_DFF_131> <Ram1_State[2]_clk_DFF_132> <Ram1_State[2]_clk_DFF_133> <Ram1_State[2]_clk_DFF_134> <Ram1_State[2]_clk_DFF_137> <Ram1_State[2]_clk_DFF_135> <Ram1_State[2]_clk_DFF_136> <Ram1_State[2]_clk_DFF_138> <Ram1_State[2]_clk_DFF_139> <Ram1_State[2]_clk_DFF_140> <Ram1_State[2]_clk_DFF_141> <Ram1_State[2]_clk_DFF_142> <Ram1_State[2]_clk_DFF_143> <Ram1_State[2]_clk_DFF_146> <Ram1_State[2]_clk_DFF_144> <Ram1_State[2]_clk_DFF_145> <Ram1_State[2]_clk_DFF_147> <Ram1_State[2]_clk_DFF_148> <Ram1_State[2]_clk_DFF_149> <Ram1_State[2]_clk_DFF_150> <Ram1_State[2]_clk_DFF_151> <Ram1_State[2]_clk_DFF_152> <Ram1_State[2]_clk_DFF_153> <Ram1_State[2]_clk_DFF_154> 
+INFO:Xst:2261 - The FF/Latch <Ram2_State[2]_clk_DFF_159> in Unit <Device_Ram2> is equivalent to the following 31 FFs/Latches, which will be removed : <Ram2_State[2]_clk_DFF_160> <Ram2_State[2]_clk_DFF_161> <Ram2_State[2]_clk_DFF_164> <Ram2_State[2]_clk_DFF_162> <Ram2_State[2]_clk_DFF_163> <Ram2_State[2]_clk_DFF_165> <Ram2_State[2]_clk_DFF_166> <Ram2_State[2]_clk_DFF_167> <Ram2_State[2]_clk_DFF_168> <Ram2_State[2]_clk_DFF_169> <Ram2_State[2]_clk_DFF_170> <Ram2_State[2]_clk_DFF_173> <Ram2_State[2]_clk_DFF_171> <Ram2_State[2]_clk_DFF_172> <Ram2_State[2]_clk_DFF_174> <Ram2_State[2]_clk_DFF_175> <Ram2_State[2]_clk_DFF_176> <Ram2_State[2]_clk_DFF_177> <Ram2_State[2]_clk_DFF_178> <Ram2_State[2]_clk_DFF_179> <Ram2_State[2]_clk_DFF_182> <Ram2_State[2]_clk_DFF_180> <Ram2_State[2]_clk_DFF_181> <Ram2_State[2]_clk_DFF_183> <Ram2_State[2]_clk_DFF_184> <Ram2_State[2]_clk_DFF_185> <Ram2_State[2]_clk_DFF_186> <Ram2_State[2]_clk_DFF_187> <Ram2_State[2]_clk_DFF_188> <Ram2_State[2]_clk_DFF_189> <Ram2_State[2]_clk_DFF_190> 
 INFO:Xst:2261 - The FF/Latch <flash_state[4]_clk_DFF_248> in Unit <Device_Flash> is equivalent to the following 15 FFs/Latches, which will be removed : <flash_state[4]_clk_DFF_241> <flash_state[4]_clk_DFF_240> <flash_state[4]_clk_DFF_242> <flash_state[4]_clk_DFF_243> <flash_state[4]_clk_DFF_244> <flash_state[4]_clk_DFF_245> <flash_state[4]_clk_DFF_246> <flash_state[4]_clk_DFF_247> <flash_state[4]_clk_DFF_249> <flash_state[4]_clk_DFF_250> <flash_state[4]_clk_DFF_251> <flash_state[4]_clk_DFF_252> <flash_state[4]_clk_DFF_255> <flash_state[4]_clk_DFF_253> <flash_state[4]_clk_DFF_254> 
-INFO:Xst:2261 - The FF/Latch <fr_state[2]_clk_DFF_259> in Unit <Device_COM> is equivalent to the following 31 FFs/Latches, which will be removed : <fr_state[2]_clk_DFF_260> <fr_state[2]_clk_DFF_261> <fr_state[2]_clk_DFF_264> <fr_state[2]_clk_DFF_262> <fr_state[2]_clk_DFF_263> <fr_state[2]_clk_DFF_265> <fr_state[2]_clk_DFF_266> <fr_state[2]_clk_DFF_267> <fr_state[2]_clk_DFF_268> <fr_state[2]_clk_DFF_269> <fr_state[2]_clk_DFF_270> <fr_state[2]_clk_DFF_273> <fr_state[2]_clk_DFF_271> <fr_state[2]_clk_DFF_272> <fr_state[2]_clk_DFF_274> <fr_state[2]_clk_DFF_275> <fr_state[2]_clk_DFF_278> <fr_state[2]_clk_DFF_276> <fr_state[2]_clk_DFF_277> <fr_state[2]_clk_DFF_279> <fr_state[2]_clk_DFF_280> <fr_state[2]_clk_DFF_283> <fr_state[2]_clk_DFF_281> <fr_state[2]_clk_DFF_282> <fr_state[2]_clk_DFF_284> <fr_state[2]_clk_DFF_285> <fr_state[2]_clk_DFF_286> <fr_state[2]_clk_DFF_287> <fr_state[2]_clk_DFF_288> <fr_state[2]_clk_DFF_289> <fr_state[2]_clk_DFF_290> 
+INFO:Xst:2261 - The FF/Latch <fr_state[2]_clk_DFF_261> in Unit <Device_COM> is equivalent to the following 31 FFs/Latches, which will be removed : <fr_state[2]_clk_DFF_259> <fr_state[2]_clk_DFF_260> <fr_state[2]_clk_DFF_262> <fr_state[2]_clk_DFF_263> <fr_state[2]_clk_DFF_266> <fr_state[2]_clk_DFF_264> <fr_state[2]_clk_DFF_265> <fr_state[2]_clk_DFF_267> <fr_state[2]_clk_DFF_268> <fr_state[2]_clk_DFF_271> <fr_state[2]_clk_DFF_269> <fr_state[2]_clk_DFF_270> <fr_state[2]_clk_DFF_272> <fr_state[2]_clk_DFF_273> <fr_state[2]_clk_DFF_276> <fr_state[2]_clk_DFF_274> <fr_state[2]_clk_DFF_275> <fr_state[2]_clk_DFF_279> <fr_state[2]_clk_DFF_277> <fr_state[2]_clk_DFF_278> <fr_state[2]_clk_DFF_282> <fr_state[2]_clk_DFF_280> <fr_state[2]_clk_DFF_281> <fr_state[2]_clk_DFF_283> <fr_state[2]_clk_DFF_284> <fr_state[2]_clk_DFF_287> <fr_state[2]_clk_DFF_285> <fr_state[2]_clk_DFF_286> <fr_state[2]_clk_DFF_288> <fr_state[2]_clk_DFF_289> <fr_state[2]_clk_DFF_290> 
+INFO:Xst:2261 - The FF/Latch <flag[2]_clk_cpu_DFF_305> in Unit <mm_manager> is equivalent to the following 3 FFs/Latches, which will be removed : <flag[2]_clk_cpu_DFF_304> <flag[2]_clk_cpu_DFF_306> <flag[2]_clk_cpu_DFF_307> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <u3/FSM_0> on signal <Ram1_State[1:3]> with user encoding.
 -------------------------
@@ -734,33 +807,33 @@ Optimizing FSM <u4/FSM_1> on signal <Ram2_State[1:3]> with user encoding.
  ram2_write1 | 101
 -------------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <u5/FSM_2> on signal <flash_state[1:22]> with one-hot encoding.
-----------------------------------------
+Optimizing FSM <u5/FSM_2> on signal <flash_state[1:5]> with user encoding.
+--------------------------
  State        | Encoding
-----------------------------------------
- flash_init   | 0000000000000000000001
- flash_cash0  | 0000000000000000001000
- flash_cash1  | 0000000000000000010000
- flash_cash2  | 0000000000000000100000
- flash_cash3  | 0000000000000001000000
- flash_cash4  | 0000000000000010000000
- flash_write0 | 0000000000000000000100
- flash_write1 | 0000000000001000000000
- flash_write2 | 0000000000010000000000
- flash_write3 | 0000000000100000000000
- flash_write4 | 0000000001000000000000
- flash_ready0 | 0000000000000100000000
- flash_ready1 | 0000000010000000000000
- flash_ready2 | 0000000100000000000000
- flash_ready3 | 0000001000000000000000
- flash_ready4 | 0000010000000000000000
- flash_check0 | 0000000000000000000010
- flash_check1 | 0000100000000000000000
- flash_check2 | 0001000000000000000000
- flash_check3 | 0010000000000000000000
- flash_check4 | 0100000000000000000000
- flash_check5 | 1000000000000000000000
-----------------------------------------
+--------------------------
+ flash_init   | 00000
+ flash_cash0  | 00001
+ flash_cash1  | 00010
+ flash_cash2  | 00011
+ flash_cash3  | 00100
+ flash_cash4  | 00101
+ flash_write0 | 00110
+ flash_write1 | 00111
+ flash_write2 | 01000
+ flash_write3 | 01001
+ flash_write4 | 01010
+ flash_ready0 | 01011
+ flash_ready1 | 01100
+ flash_ready2 | 01101
+ flash_ready3 | 01110
+ flash_ready4 | 01111
+ flash_check0 | 10000
+ flash_check1 | 10001
+ flash_check2 | 10010
+ flash_check3 | 10011
+ flash_check4 | 10100
+ flash_check5 | 10101
+--------------------------
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <u6/FSM_3> on signal <fr_state[1:3]> with user encoding.
 ----------------------
@@ -769,13 +842,14 @@ Optimizing FSM <u6/FSM_3> on signal <fr_state[1:3]> with user encoding.
  com_init | 000
  recv0    | 001
  recv1    | 010
- send0    | 011
- send1    | 100
- send2    | 101
- send3    | 110
+ recv2    | unreached
+ send0    | 100
+ send1    | 101
+ send2    | 110
+ send3    | 111
 ----------------------
 WARNING:Xst:1710 - FF/Latch <FlashAddr_0> (without init value) has a constant value of 0 in block <Device_Flash>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <u6/COM_INT> of sequential type is unconnected in block <mm_manager>.
+WARNING:Xst:2042 - Unit mm_manager: 4 internal tristates are replaced by logic (pull-up yes): bitmapx<0>1, bitmapx<1>1, bitmapx<2>1, bitmapx<3>1.
 WARNING:Xst:2040 - Unit mm_manager: 32 multi-source signals are replaced by logic (pull-up yes): Ram1Data<0>_MLTSRCEDGE, Ram1Data<10>_MLTSRCEDGE, Ram1Data<11>_MLTSRCEDGE, Ram1Data<12>_MLTSRCEDGE, Ram1Data<13>_MLTSRCEDGE, Ram1Data<14>_MLTSRCEDGE, Ram1Data<15>_MLTSRCEDGE, Ram1Data<16>_MLTSRCEDGE, Ram1Data<17>_MLTSRCEDGE, Ram1Data<18>_MLTSRCEDGE, Ram1Data<19>_MLTSRCEDGE, Ram1Data<1>_MLTSRCEDGE, Ram1Data<20>_MLTSRCEDGE, Ram1Data<21>_MLTSRCEDGE, Ram1Data<22>_MLTSRCEDGE, Ram1Data<23>_MLTSRCEDGE, Ram1Data<24>_MLTSRCEDGE, Ram1Data<25>_MLTSRCEDGE, Ram1Data<26>_MLTSRCEDGE, Ram1Data<27>_MLTSRCEDGE, Ram1Data<28>_MLTSRCEDGE, Ram1Data<29>_MLTSRCEDGE, Ram1Data<2>_MLTSRCEDGE, Ram1Data<30>_MLTSRCEDGE, Ram1Data<31>_MLTSRCEDGE, Ram1Data<3>_MLTSRCEDGE, Ram1Data<4>_MLTSRCEDGE, Ram1Data<5>_MLTSRCEDGE, Ram1Data<6>_MLTSRCEDGE, Ram1Data<7>_MLTSRCEDGE, Ram1Data<8>_MLTSRCEDGE, Ram1Data<9>_MLTSRCEDGE.
 
 Optimizing unit <mm_manager> ...
@@ -784,11 +858,19 @@ Optimizing unit <TLB> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block mm_manager, actual ratio is 3.
-FlipFlop u5/flash_state_FSM_FFd11 has been replicated 1 time(s)
-FlipFlop u5/flash_state_FSM_FFd19 has been replicated 1 time(s)
-FlipFlop u5/flash_state_FSM_FFd20 has been replicated 1 time(s)
-FlipFlop u5/flash_state_FSM_FFd8 has been replicated 2 time(s)
+Found area constraint ratio of 100 (+ 5) on block mm_manager, actual ratio is 4.
+FlipFlop u3/Ram1_State_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop u3/Ram1_State_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop u3/Ram1_State_FSM_FFd3 has been replicated 2 time(s)
+FlipFlop u4/Ram2_State_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop u4/Ram2_State_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop u4/Ram2_State_FSM_FFd3 has been replicated 2 time(s)
+FlipFlop u5/cond_flash_0 has been replicated 2 time(s)
+FlipFlop u5/flash_state_FSM_FFd1 has been replicated 5 time(s)
+FlipFlop u5/flash_state_FSM_FFd2 has been replicated 4 time(s)
+FlipFlop u5/flash_state_FSM_FFd3 has been replicated 3 time(s)
+FlipFlop u5/flash_state_FSM_FFd4 has been replicated 2 time(s)
+FlipFlop u5/flash_state_FSM_FFd5 has been replicated 2 time(s)
 
 Final Macro Processing ...
 
@@ -796,8 +878,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1418
- Flip-Flops                                            : 1418
+# Registers                                            : 1428
+ Flip-Flops                                            : 1428
 
 =========================================================================
 
@@ -820,32 +902,35 @@ Top Level Output File Name         : mm_manager.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1372
+# BELS                             : 1935
 #      GND                         : 1
 #      INV                         : 6
 #      LUT1                        : 10
-#      LUT2                        : 44
-#      LUT3                        : 222
-#      LUT4                        : 142
-#      LUT5                        : 106
-#      LUT6                        : 682
+#      LUT2                        : 41
+#      LUT3                        : 185
+#      LUT4                        : 197
+#      LUT5                        : 153
+#      LUT6                        : 991
 #      MUXCY                       : 133
-#      MUXF7                       : 3
+#      MUXF7                       : 132
+#      MUXF8                       : 63
 #      VCC                         : 1
 #      XORCY                       : 22
-# FlipFlops/Latches                : 1418
-#      FD                          : 113
-#      FDC                         : 43
-#      FDCE                        : 1082
+# FlipFlops/Latches                : 1429
+#      FD                          : 119
+#      FDC                         : 47
+#      FDCE                        : 1084
 #      FDE                         : 160
-#      FDP                         : 12
-#      FDRE                        : 8
-# Clock Buffers                    : 3
-#      BUFGP                       : 3
-# IO Buffers                       : 366
-#      IBUF                        : 140
+#      FDP                         : 10
+#      FDPE                        : 2
+#      FDRE                        : 6
+#      LD                          : 1
+# Clock Buffers                    : 4
+#      BUFGP                       : 4
+# IO Buffers                       : 397
+#      IBUF                        : 147
 #      IOBUF                       : 80
-#      OBUF                        : 146
+#      OBUF                        : 170
 
 Device utilization summary:
 ---------------------------
@@ -854,24 +939,24 @@ Selected Device : 6slx100fgg676-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1352  out of  126576     1%  
- Number of Slice LUTs:                 1212  out of  63288     1%  
-    Number used as Logic:              1212  out of  63288     1%  
+ Number of Slice Registers:            1362  out of  126576     1%  
+ Number of Slice LUTs:                 1583  out of  63288     2%  
+    Number used as Logic:              1583  out of  63288     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1776
-   Number with an unused Flip Flop:     424  out of   1776    23%  
-   Number with an unused LUT:           564  out of   1776    31%  
-   Number of fully used LUT-FF pairs:   788  out of   1776    44%  
-   Number of unique control sets:        37
+ Number of LUT Flip Flop pairs used:   1867
+   Number with an unused Flip Flop:     505  out of   1867    27%  
+   Number with an unused LUT:           284  out of   1867    15%  
+   Number of fully used LUT-FF pairs:  1078  out of   1867    57%  
+   Number of unique control sets:        39
 
 IO Utilization: 
- Number of IOs:                         459
- Number of bonded IOBs:                 369  out of    480    76%  
-    IOB Flip Flops/Latches:              66
+ Number of IOs:                         491
+ Number of bonded IOBs:                 401  out of    480    83%  
+    IOB Flip Flops/Latches:              67
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
 
 ---------------------------
 Partition Resource Summary:
@@ -891,13 +976,19 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk50                              | BUFGP                  | 75    |
-clk11                              | BUFGP                  | 335   |
-TLBWrite                           | BUFGP                  | 1008  |
------------------------------------+------------------------+-------+
+---------------------------------------------+------------------------+-------+
+Clock Signal                                 | Clock buffer(FF name)  | Load  |
+---------------------------------------------+------------------------+-------+
+clk_cpu                                      | BUFGP                  | 80    |
+SW[6]_SW[5]_OR_158_o(SW[6]_SW[5]_OR_158_o1:O)| NONE(*)(bitmap_15)     | 1     |
+clk_mm                                       | BUFGP                  | 291   |
+clk_com                                      | BUFGP                  | 49    |
+TLBWrite                                     | BUFGP                  | 1008  |
+---------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -907,141 +998,216 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.365ns (Maximum Frequency: 229.085MHz)
-   Minimum input arrival time before clock: 30.710ns
-   Maximum output required time after clock: 5.923ns
-   Maximum combinational path delay: No path found
+   Minimum period: 3.563ns (Maximum Frequency: 280.702MHz)
+   Minimum input arrival time before clock: 29.475ns
+   Maximum output required time after clock: 29.070ns
+   Maximum combinational path delay: 30.365ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk50'
-  Clock period: 2.634ns (frequency: 379.636MHz)
-  Total number of paths / destination ports: 2 / 1
+Timing constraint: Default period analysis for Clock 'clk_cpu'
+  Clock period: 2.516ns (frequency: 397.442MHz)
+  Total number of paths / destination ports: 13 / 8
 -------------------------------------------------------------------------
-Delay:               2.634ns (Levels of Logic = 2)
-  Source:            ready (FF)
-  Destination:       ready (FF)
-  Source Clock:      clk50 rising
-  Destination Clock: clk50 rising
+Delay:               2.516ns (Levels of Logic = 1)
+  Source:            comWrite (FF)
+  Destination:       comWrite (FF)
+  Source Clock:      clk_cpu rising
+  Destination Clock: clk_cpu rising
 
-  Data Path: ready to ready
+  Data Path: comWrite to comWrite
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.447   0.995  ready (ready_OBUF)
-     LUT6:I1->O            1   0.203   0.684  Mmux_flag[2]_PWR_3_o_MUX_3317_o54_SW0 (N402)
-     LUT6:I4->O            1   0.203   0.000  Mmux_flag[2]_PWR_3_o_MUX_3317_o54 (flag[2]_PWR_3_o_MUX_3317_o)
-     FDC:D                     0.102          ready
+     FD:C->Q              41   0.447   1.764  comWrite (comWrite)
+     LUT6:I1->O            1   0.203   0.000  comWrite_rstpot (comWrite_rstpot)
+     FD:D                      0.102          comWrite
     ----------------------------------------
-    Total                      2.634ns (0.955ns logic, 1.679ns route)
-                                       (36.3% logic, 63.7% route)
+    Total                      2.516ns (0.752ns logic, 1.764ns route)
+                                       (29.9% logic, 70.1% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk11'
-  Clock period: 4.365ns (frequency: 229.085MHz)
-  Total number of paths / destination ports: 2540 / 392
+Timing constraint: Default period analysis for Clock 'clk_mm'
+  Clock period: 3.563ns (frequency: 280.702MHz)
+  Total number of paths / destination ports: 1539 / 415
 -------------------------------------------------------------------------
-Delay:               4.365ns (Levels of Logic = 4)
-  Source:            u5/flash_state_FSM_FFd18 (FF)
-  Destination:       u5/FlashData_6 (FF)
-  Source Clock:      clk11 rising
-  Destination Clock: clk11 rising
+Delay:               3.563ns (Levels of Logic = 3)
+  Source:            u5/flash_state_FSM_FFd3_3 (FF)
+  Destination:       u5/FlashData_4 (FF)
+  Source Clock:      clk_mm rising
+  Destination Clock: clk_mm rising
 
-  Data Path: u5/flash_state_FSM_FFd18 to u5/FlashData_6
+  Data Path: u5/flash_state_FSM_FFd3_3 to u5/FlashData_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              4   0.447   0.912  u5/flash_state_FSM_FFd18 (u5/flash_state_FSM_FFd18)
-     LUT4:I1->O            4   0.205   0.788  u5/flash_state_n0169<4>11231 (u5/flash_state_n0169<4>1123)
-     LUT6:I4->O            1   0.203   0.684  u5/flash_state_n0169<4>112_1 (u5/flash_state_n0169<4>1121)
-     LUT5:I3->O            2   0.203   0.617  u5/flash_state_n0169<4>113 (u5/flash_state_n0169<4>11)
-     LUT6:I5->O            1   0.205   0.000  u5/flash_state_n0169<4> (u5/n0169<4>)
+     FDC:C->Q             12   0.447   1.137  u5/flash_state_FSM_FFd3_3 (u5/flash_state_FSM_FFd3_3)
+     LUT5:I2->O            1   0.205   0.684  u5/Mmux_n017111_SW0 (N122)
+     LUT6:I4->O            1   0.203   0.580  u5/Mmux_n017111_G (N399)
+     LUT3:I2->O            1   0.205   0.000  u5/Mmux_n0171111 (u5/n0171<4>)
      FD:D                      0.102          u5/FlashData_4
     ----------------------------------------
-    Total                      4.365ns (1.365ns logic, 3.000ns route)
-                                       (31.3% logic, 68.7% route)
+    Total                      3.563ns (1.162ns logic, 2.401ns route)
+                                       (32.6% logic, 67.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50'
-  Total number of paths / destination ports: 201401380 / 222
+Timing constraint: Default period analysis for Clock 'clk_com'
+  Clock period: 3.197ns (frequency: 312.823MHz)
+  Total number of paths / destination ports: 158 / 51
 -------------------------------------------------------------------------
-Offset:              30.710ns (Levels of Logic = 20)
-  Source:            Vaddr<12> (PAD)
-  Destination:       Data_out_0 (FF)
-  Destination Clock: clk50 rising
+Delay:               3.197ns (Levels of Logic = 2)
+  Source:            u6/fr_state_FSM_FFd2 (FF)
+  Destination:       u6/Ram1Data_26 (FF)
+  Source Clock:      clk_com rising
+  Destination Clock: clk_com rising
 
-  Data Path: Vaddr<12> to Data_out_0
+  Data Path: u6/fr_state_FSM_FFd2 to u6/Ram1Data_26
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           190   1.222   2.273  Vaddr_12_IBUF (Vaddr_12_IBUF)
+     FDC:C->Q             15   0.447   1.210  u6/fr_state_FSM_FFd2 (u6/fr_state_FSM_FFd2)
+     LUT4:I1->O           17   0.205   1.028  u6/Mmux_fr_state[2]_PWR_269_o_Mux_20_o11 (u6/fr_state[2]_PWR_269_o_Mux_20_o)
+     LUT4:I3->O            1   0.205   0.000  u6/Mmux_n0219210 (u6/n0219<10>)
+     FD:D                      0.102          u6/Ram1Data_10
+    ----------------------------------------
+    Total                      3.197ns (0.959ns logic, 2.238ns route)
+                                       (30.0% logic, 70.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_cpu'
+  Total number of paths / destination ports: 168787156 / 224
+-------------------------------------------------------------------------
+Offset:              29.475ns (Levels of Logic = 20)
+  Source:            Vaddr<12> (PAD)
+  Destination:       bitmapx_2 (FF)
+  Destination Clock: clk_cpu rising
+
+  Data Path: Vaddr<12> to bitmapx_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           209   1.222   2.284  Vaddr_12_IBUF (Vaddr_12_IBUF)
      LUT3:I0->O            2   0.205   0.961  u1/Mmux_Paddr<12>813611_SW0 (u1/GND_6_o_GND_6_o_OR_20_o1)
      LUT6:I1->O           44   0.203   1.463  u1/GND_6_o_GND_6_o_OR_20_o3 (u1/GND_6_o_GND_6_o_OR_20_o)
-     LUT5:I4->O           29   0.205   1.478  u1/GND_6_o_GND_6_o_OR_21_o1 (u1/Mmux_Paddr<12>6146)
-     LUT5:I2->O           27   0.205   1.221  u1/GND_6_o_GND_6_o_OR_23_o (u1/GND_6_o_GND_6_o_OR_23_o)
+     LUT5:I4->O           29   0.205   1.594  u1/GND_6_o_GND_6_o_OR_21_o1 (u1/Mmux_Paddr<12>6146)
+     LUT5:I0->O           27   0.203   1.221  u1/GND_6_o_GND_6_o_OR_23_o (u1/GND_6_o_GND_6_o_OR_23_o)
      LUT5:I4->O           24   0.205   1.173  u1/GND_6_o_GND_6_o_OR_24_o1 (u1/GND_6_o_GND_6_o_OR_24_o)
-     LUT5:I4->O           22   0.205   1.238  u1/GND_6_o_GND_6_o_OR_25_o2 (u1/GND_6_o_GND_6_o_OR_25_o)
-     LUT6:I4->O           44   0.203   1.463  u1/GND_6_o_GND_6_o_OR_27_o2 (u1/GND_6_o_GND_6_o_OR_27_o)
-     LUT5:I4->O           29   0.205   1.478  u1/GND_6_o_GND_6_o_OR_28_o1 (u1/Mmux_Paddr<12>620)
-     LUT5:I2->O           25   0.205   1.193  u1/GND_6_o_GND_6_o_OR_30_o (u1/GND_6_o_GND_6_o_OR_30_o)
-     LUT5:I4->O           56   0.205   1.952  u1/GND_6_o_GND_6_o_OR_31_o1 (u1/GND_6_o_GND_6_o_OR_31_o)
-     LUT6:I0->O            1   0.203   0.924  u1/Mmux_Paddr<12>81526 (u1/Mmux_Paddr<12>81525)
-     LUT6:I1->O            3   0.203   0.879  u1/Mmux_Paddr<12>815221 (Paddr<31>)
-     LUT3:I0->O            3   0.205   0.995  GND_3_o_Paddr[31]_equal_8_o<31>41 (GND_3_o_Paddr[31]_equal_8_o<31>4)
-     LUT6:I1->O            1   0.203   0.827  GND_3_o_Paddr[31]_equal_8_o<31>4 (GND_3_o_Paddr[31]_equal_8_o<31>5)
-     LUT6:I2->O            5   0.203   0.819  GND_3_o_Paddr[31]_equal_8_o<31>5 (GND_3_o_Paddr[31]_equal_8_o)
-     LUT5:I3->O           68   0.203   2.011  Mmux_flag<0>11 (flag<0>)
-     LUT6:I1->O            1   0.203   0.827  _n0367_inv3 (_n0367_inv3)
-     LUT4:I0->O            1   0.203   0.827  _n0367_inv5_SW0 (N406)
-     LUT6:I2->O           32   0.203   1.291  _n0367_inv5 (_n0367_inv)
-     FDCE:CE                   0.322          Data_out_0
+     LUT5:I4->O           23   0.205   1.258  u1/GND_6_o_GND_6_o_OR_25_o2 (u1/GND_6_o_GND_6_o_OR_25_o)
+     LUT6:I4->O           43   0.203   1.449  u1/GND_6_o_GND_6_o_OR_27_o2 (u1/GND_6_o_GND_6_o_OR_27_o)
+     LUT5:I4->O           30   0.205   1.608  u1/GND_6_o_GND_6_o_OR_28_o1 (u1/Mmux_Paddr<12>620)
+     LUT5:I0->O           26   0.203   1.207  u1/GND_6_o_GND_6_o_OR_30_o (u1/GND_6_o_GND_6_o_OR_30_o)
+     LUT5:I4->O           53   0.205   1.932  u1/GND_6_o_GND_6_o_OR_31_o1 (u1/GND_6_o_GND_6_o_OR_31_o)
+     LUT6:I0->O            1   0.203   0.924  u1/Mmux_Paddr<12>81446 (u1/Mmux_Paddr<12>81445)
+     LUT6:I1->O            5   0.203   0.943  u1/Mmux_Paddr<12>814421 (Paddr<30>)
+     LUT3:I0->O            4   0.205   0.684  GND_3_o_Paddr[31]_AND_153_o111 (GND_3_o_Paddr[31]_AND_153_o11)
+     LUT5:I4->O            3   0.205   0.995  GND_3_o_Paddr[31]_AND_153_o11 (GND_3_o_Paddr[31]_AND_153_o1)
+     LUT6:I1->O            4   0.203   1.048  GND_3_o_Paddr[31]_AND_153_o (GND_3_o_Paddr[31]_AND_153_o)
+     LUT6:I0->O           51   0.203   1.802  Mmux_flag31 (flag<2>)
+     LUT4:I0->O            1   0.203   0.924  Mmux_n023331 (Mmux_n02333)
+     LUT5:I0->O            1   0.203   0.808  Mmux_n023333 (Mmux_n023332)
+     LUT6:I3->O            1   0.205   0.000  Mmux_n023334 (n0233<2>)
+     FD:D                      0.102          bitmapx_2
     ----------------------------------------
-    Total                     30.710ns (5.419ns logic, 25.291ns route)
+    Total                     29.475ns (5.199ns logic, 24.276ns route)
                                        (17.6% logic, 82.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk11'
-  Total number of paths / destination ports: 1166174 / 514
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[6]_SW[5]_OR_158_o'
+  Total number of paths / destination ports: 10315 / 1
 -------------------------------------------------------------------------
-Offset:              23.862ns (Levels of Logic = 17)
+Offset:              23.081ns (Levels of Logic = 16)
   Source:            Vaddr<12> (PAD)
-  Destination:       u5/flash_state_FSM_FFd19 (FF)
-  Destination Clock: clk11 rising
+  Destination:       bitmap_15 (LATCH)
+  Destination Clock: SW[6]_SW[5]_OR_158_o falling
 
-  Data Path: Vaddr<12> to u5/flash_state_FSM_FFd19
+  Data Path: Vaddr<12> to bitmap_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           190   1.222   2.273  Vaddr_12_IBUF (Vaddr_12_IBUF)
+     IBUF:I->O           209   1.222   2.284  Vaddr_12_IBUF (Vaddr_12_IBUF)
      LUT3:I0->O            2   0.205   0.961  u1/Mmux_Paddr<12>813611_SW0 (u1/GND_6_o_GND_6_o_OR_20_o1)
      LUT6:I1->O           44   0.203   1.463  u1/GND_6_o_GND_6_o_OR_20_o3 (u1/GND_6_o_GND_6_o_OR_20_o)
-     LUT5:I4->O           29   0.205   1.478  u1/GND_6_o_GND_6_o_OR_21_o1 (u1/Mmux_Paddr<12>6146)
-     LUT5:I2->O           27   0.205   1.221  u1/GND_6_o_GND_6_o_OR_23_o (u1/GND_6_o_GND_6_o_OR_23_o)
+     LUT5:I4->O           29   0.205   1.594  u1/GND_6_o_GND_6_o_OR_21_o1 (u1/Mmux_Paddr<12>6146)
+     LUT5:I0->O           27   0.203   1.221  u1/GND_6_o_GND_6_o_OR_23_o (u1/GND_6_o_GND_6_o_OR_23_o)
      LUT5:I4->O           24   0.205   1.173  u1/GND_6_o_GND_6_o_OR_24_o1 (u1/GND_6_o_GND_6_o_OR_24_o)
-     LUT5:I4->O           22   0.205   1.238  u1/GND_6_o_GND_6_o_OR_25_o2 (u1/GND_6_o_GND_6_o_OR_25_o)
-     LUT6:I4->O           44   0.203   1.463  u1/GND_6_o_GND_6_o_OR_27_o2 (u1/GND_6_o_GND_6_o_OR_27_o)
-     LUT5:I4->O           29   0.205   1.478  u1/GND_6_o_GND_6_o_OR_28_o1 (u1/Mmux_Paddr<12>620)
-     LUT5:I2->O           25   0.205   1.193  u1/GND_6_o_GND_6_o_OR_30_o (u1/GND_6_o_GND_6_o_OR_30_o)
-     LUT3:I2->O           18   0.205   1.414  u1/Mmux_Paddr<12>6211 (u1/Mmux_Paddr<12>621)
-     LUT6:I0->O            1   0.203   0.580  u1/Mmux_Paddr<12>8165 (u1/Mmux_Paddr<12>8164)
-     LUT6:I5->O            2   0.205   0.864  u1/Mmux_Paddr<12>8167 (u1/Mmux_Paddr<12>8166)
-     LUT6:I2->O            7   0.203   1.138  u1/Mmux_Paddr<12>81623 (Paddr<14>)
-     LUT6:I0->O            3   0.203   0.755  GND_3_o_Paddr[31]_equal_8_o<31>1 (GND_3_o_Paddr[31]_equal_8_o<31>1)
-     LUT5:I3->O            1   0.203   0.580  u5/flash_state_FSM_FFd19-In_SW0 (N140)
-     LUT6:I5->O            2   0.205   0.000  u5/flash_state_FSM_FFd19-In (u5/flash_state_FSM_FFd19-In)
-     FDC:D                     0.102          u5/flash_state_FSM_FFd19
+     LUT5:I4->O           23   0.205   1.258  u1/GND_6_o_GND_6_o_OR_25_o2 (u1/GND_6_o_GND_6_o_OR_25_o)
+     LUT6:I4->O           43   0.203   1.449  u1/GND_6_o_GND_6_o_OR_27_o2 (u1/GND_6_o_GND_6_o_OR_27_o)
+     LUT5:I4->O           30   0.205   1.608  u1/GND_6_o_GND_6_o_OR_28_o1 (u1/Mmux_Paddr<12>620)
+     LUT5:I0->O           26   0.203   1.311  u1/GND_6_o_GND_6_o_OR_30_o (u1/GND_6_o_GND_6_o_OR_30_o)
+     LUT3:I1->O           18   0.203   1.414  u1/Mmux_Paddr<12>6211 (u1/Mmux_Paddr<12>621)
+     LUT6:I0->O            1   0.203   0.580  u1/Mmux_Paddr<12>8245 (u1/Mmux_Paddr<12>8244)
+     LUT6:I5->O            2   0.205   0.864  u1/Mmux_Paddr<12>8247 (u1/Mmux_Paddr<12>8246)
+     LUT6:I2->O            7   0.203   0.774  u1/Mmux_Paddr<12>82424 (Paddr<15>)
+     LUT6:I5->O            1   0.205   0.808  Mmux_bitmap1011 (Mmux_bitmap101)
+     LUT4:I1->O            1   0.205   0.000  Mmux_bitmap1013 (tlb_bitmap[15]_SW[5]_MUX_3362_o)
+     LD:D                      0.037          bitmap_15
     ----------------------------------------
-    Total                     23.862ns (4.592ns logic, 19.270ns route)
-                                       (19.2% logic, 80.8% route)
+    Total                     23.081ns (4.320ns logic, 18.761ns route)
+                                       (18.7% logic, 81.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_mm'
+  Total number of paths / destination ports: 902285 / 348
+-------------------------------------------------------------------------
+Offset:              23.790ns (Levels of Logic = 17)
+  Source:            Vaddr<12> (PAD)
+  Destination:       u5/flash_state_FSM_FFd5 (FF)
+  Destination Clock: clk_mm rising
+
+  Data Path: Vaddr<12> to u5/flash_state_FSM_FFd5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           209   1.222   2.284  Vaddr_12_IBUF (Vaddr_12_IBUF)
+     LUT3:I0->O            2   0.205   0.961  u1/Mmux_Paddr<12>813611_SW0 (u1/GND_6_o_GND_6_o_OR_20_o1)
+     LUT6:I1->O           44   0.203   1.463  u1/GND_6_o_GND_6_o_OR_20_o3 (u1/GND_6_o_GND_6_o_OR_20_o)
+     LUT5:I4->O           29   0.205   1.594  u1/GND_6_o_GND_6_o_OR_21_o1 (u1/Mmux_Paddr<12>6146)
+     LUT5:I0->O           27   0.203   1.221  u1/GND_6_o_GND_6_o_OR_23_o (u1/GND_6_o_GND_6_o_OR_23_o)
+     LUT5:I4->O           24   0.205   1.173  u1/GND_6_o_GND_6_o_OR_24_o1 (u1/GND_6_o_GND_6_o_OR_24_o)
+     LUT5:I4->O           23   0.205   1.258  u1/GND_6_o_GND_6_o_OR_25_o2 (u1/GND_6_o_GND_6_o_OR_25_o)
+     LUT6:I4->O           43   0.203   1.449  u1/GND_6_o_GND_6_o_OR_27_o2 (u1/GND_6_o_GND_6_o_OR_27_o)
+     LUT5:I4->O           30   0.205   1.608  u1/GND_6_o_GND_6_o_OR_28_o1 (u1/Mmux_Paddr<12>620)
+     LUT5:I0->O           26   0.203   1.311  u1/GND_6_o_GND_6_o_OR_30_o (u1/GND_6_o_GND_6_o_OR_30_o)
+     LUT3:I1->O           18   0.203   1.414  u1/Mmux_Paddr<12>6211 (u1/Mmux_Paddr<12>621)
+     LUT6:I0->O            1   0.203   0.580  u1/Mmux_Paddr<12>8325 (u1/Mmux_Paddr<12>8324)
+     LUT6:I5->O            2   0.205   0.864  u1/Mmux_Paddr<12>8327 (u1/Mmux_Paddr<12>8326)
+     LUT6:I2->O            7   0.203   1.118  u1/Mmux_Paddr<12>83224 (Paddr<16>)
+     LUT6:I1->O            2   0.203   0.981  u5/GND_140_o_GND_140_o_equal_2_o<16>3 (u5/GND_140_o_GND_140_o_equal_2_o)
+     LUT6:I0->O            1   0.203   0.000  u5/flash_state_FSM_FFd5-In3_F (N396)
+     MUXF7:I0->O           3   0.131   0.000  u5/flash_state_FSM_FFd5-In3 (u5/flash_state_FSM_FFd5-In)
+     FDC:D                     0.102          u5/flash_state_FSM_FFd5
+    ----------------------------------------
+    Total                     23.790ns (4.512ns logic, 19.278ns route)
+                                       (19.0% logic, 81.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_com'
+  Total number of paths / destination ports: 128 / 62
+-------------------------------------------------------------------------
+Offset:              5.515ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       u6/com_status_1 (FF)
+  Destination Clock: clk_com rising
+
+  Data Path: rst to u6/com_status_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            43   1.222   1.448  rst_IBUF (rst_IBUF)
+     INV:I->O           1010   0.206   2.209  u6/rst_inv1_INV_0 (u1/rst_inv)
+     FDPE:PRE                  0.430          u6/com_status_0
+    ----------------------------------------
+    Total                      5.515ns (1.858ns logic, 3.657ns route)
+                                       (33.7% logic, 66.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'TLBWrite'
   Total number of paths / destination ports: 6048 / 3024
 -------------------------------------------------------------------------
-Offset:              4.999ns (Levels of Logic = 2)
+Offset:              5.515ns (Levels of Logic = 2)
   Source:            rst (PAD)
   Destination:       u1/tlb_0_62 (FF)
   Destination Clock: TLBWrite rising
@@ -1050,40 +1216,41 @@ Offset:              4.999ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            13   1.222   0.932  rst_IBUF (rst_IBUF)
-     INV:I->O           1009   0.206   2.209  u6/rst_inv1_INV_0 (u1/rst_inv)
+     IBUF:I->O            43   1.222   1.448  rst_IBUF (rst_IBUF)
+     INV:I->O           1010   0.206   2.209  u6/rst_inv1_INV_0 (u1/rst_inv)
      FDCE:CLR                  0.430          u1/tlb_14_0
     ----------------------------------------
-    Total                      4.999ns (1.858ns logic, 3.141ns route)
-                                       (37.2% logic, 62.8% route)
+    Total                      5.515ns (1.858ns logic, 3.657ns route)
+                                       (33.7% logic, 66.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50'
-  Total number of paths / destination ports: 67 / 67
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_cpu'
+  Total number of paths / destination ports: 110 / 82
 -------------------------------------------------------------------------
-Offset:              3.668ns (Levels of Logic = 1)
-  Source:            ready (FF)
-  Destination:       ready (PAD)
-  Source Clock:      clk50 rising
+Offset:              5.324ns (Levels of Logic = 2)
+  Source:            comWrite (FF)
+  Destination:       bitmap<11> (PAD)
+  Source Clock:      clk_cpu rising
 
-  Data Path: ready to ready
+  Data Path: comWrite to bitmap<11>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.447   0.650  ready (ready_OBUF)
-     OBUF:I->O                 2.571          ready_OBUF (ready)
+     FD:C->Q              41   0.447   1.524  comWrite (comWrite)
+     LUT6:I4->O            1   0.203   0.579  Mmux_bitmap63 (bitmap_11_OBUF)
+     OBUF:I->O                 2.571          bitmap_11_OBUF (bitmap<11>)
     ----------------------------------------
-    Total                      3.668ns (3.018ns logic, 0.650ns route)
-                                       (82.3% logic, 17.7% route)
+    Total                      5.324ns (3.221ns logic, 2.103ns route)
+                                       (60.5% logic, 39.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk11'
-  Total number of paths / destination ports: 360 / 152
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_mm'
+  Total number of paths / destination ports: 262 / 150
 -------------------------------------------------------------------------
 Offset:              5.923ns (Levels of Logic = 2)
   Source:            u3/Ram1_State[2]_clk_DFF_123 (FF)
   Destination:       Ram1Data<31> (PAD)
-  Source Clock:      clk11 rising
+  Source Clock:      clk_mm rising
 
   Data Path: u3/Ram1_State[2]_clk_DFF_123 to Ram1Data<31>
                                 Gate     Net
@@ -1097,41 +1264,176 @@ Offset:              5.923ns (Levels of Logic = 2)
                                        (54.4% logic, 45.6% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_com'
+  Total number of paths / destination ports: 100 / 36
+-------------------------------------------------------------------------
+Offset:              5.835ns (Levels of Logic = 2)
+  Source:            u6/fr_state[2]_clk_DFF_261 (FF)
+  Destination:       Ram1Data<31> (PAD)
+  Source Clock:      clk_com rising
+
+  Data Path: u6/fr_state[2]_clk_DFF_261 to Ram1Data<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             34   0.447   1.321  u6/fr_state[2]_clk_DFF_261 (u6/fr_state[2]_clk_DFF_261)
+     LUT2:I1->O           32   0.205   1.291  N331 (N33)
+     IOBUF:T->IO               2.571          Ram1Data_31_IOBUF (Ram1Data<31>)
+    ----------------------------------------
+    Total                      5.835ns (3.223ns logic, 2.612ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SW[6]_SW[5]_OR_158_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            bitmap_15 (LATCH)
+  Destination:       bitmap<15> (PAD)
+  Source Clock:      SW[6]_SW[5]_OR_158_o falling
+
+  Data Path: bitmap_15 to bitmap<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  bitmap_15 (bitmap_15)
+     OBUF:I->O                 2.571          bitmap_15_OBUF (bitmap<15>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'TLBWrite'
+  Total number of paths / destination ports: 1278518 / 15
+-------------------------------------------------------------------------
+Offset:              29.070ns (Levels of Logic = 25)
+  Source:            u1/tlb_0_44 (FF)
+  Destination:       bitmap<1> (PAD)
+  Source Clock:      TLBWrite rising
+
+  Data Path: u1/tlb_0_44 to bitmap<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.447   0.981  u1/tlb_0_44 (u1/tlb_0_44)
+     LUT6:I0->O            1   0.203   0.000  u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_lut<0> (u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<0> (u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<1> (u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<2> (u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<3> (u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<4> (u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<5> (u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<5>)
+     MUXCY:CI->O          30   0.213   1.264  u1/Mcompar_tlb[0][62]_Vaddr[31]_equal_3_o_cy<6> (u1/tlb[0][62]_Vaddr[31]_equal_3_o)
+     LUT6:I5->O           44   0.205   1.463  u1/GND_6_o_GND_6_o_OR_20_o3 (u1/GND_6_o_GND_6_o_OR_20_o)
+     LUT5:I4->O           29   0.205   1.594  u1/GND_6_o_GND_6_o_OR_21_o1 (u1/Mmux_Paddr<12>6146)
+     LUT5:I0->O           27   0.203   1.221  u1/GND_6_o_GND_6_o_OR_23_o (u1/GND_6_o_GND_6_o_OR_23_o)
+     LUT5:I4->O           24   0.205   1.173  u1/GND_6_o_GND_6_o_OR_24_o1 (u1/GND_6_o_GND_6_o_OR_24_o)
+     LUT5:I4->O           23   0.205   1.258  u1/GND_6_o_GND_6_o_OR_25_o2 (u1/GND_6_o_GND_6_o_OR_25_o)
+     LUT6:I4->O           43   0.203   1.449  u1/GND_6_o_GND_6_o_OR_27_o2 (u1/GND_6_o_GND_6_o_OR_27_o)
+     LUT5:I4->O           30   0.205   1.608  u1/GND_6_o_GND_6_o_OR_28_o1 (u1/Mmux_Paddr<12>620)
+     LUT5:I0->O           26   0.203   1.207  u1/GND_6_o_GND_6_o_OR_30_o (u1/GND_6_o_GND_6_o_OR_30_o)
+     LUT5:I4->O           53   0.205   1.932  u1/GND_6_o_GND_6_o_OR_31_o1 (u1/GND_6_o_GND_6_o_OR_31_o)
+     LUT6:I0->O            1   0.203   0.924  u1/Mmux_Paddr<12>81446 (u1/Mmux_Paddr<12>81445)
+     LUT6:I1->O            5   0.203   0.943  u1/Mmux_Paddr<12>814421 (Paddr<30>)
+     LUT3:I0->O            4   0.205   0.684  GND_3_o_Paddr[31]_AND_153_o111 (GND_3_o_Paddr[31]_AND_153_o11)
+     LUT5:I4->O            3   0.205   0.995  GND_3_o_Paddr[31]_AND_153_o11 (GND_3_o_Paddr[31]_AND_153_o1)
+     LUT6:I1->O            4   0.203   1.048  GND_3_o_Paddr[31]_AND_153_o (GND_3_o_Paddr[31]_AND_153_o)
+     LUT6:I0->O           70   0.203   1.784  Mmux_flag28 (flag<1>)
+     LUT6:I4->O            1   0.203   0.579  Mmux_bitmap143 (bitmap_1_OBUF)
+     OBUF:I->O                 2.571          bitmap_1_OBUF (bitmap<1>)
+    ----------------------------------------
+    Total                     29.070ns (6.965ns logic, 22.105ns route)
+                                       (24.0% logic, 76.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1213834 / 15
+-------------------------------------------------------------------------
+Delay:               30.365ns (Levels of Logic = 19)
+  Source:            Vaddr<12> (PAD)
+  Destination:       bitmap<1> (PAD)
+
+  Data Path: Vaddr<12> to bitmap<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           209   1.222   2.284  Vaddr_12_IBUF (Vaddr_12_IBUF)
+     LUT3:I0->O            2   0.205   0.961  u1/Mmux_Paddr<12>813611_SW0 (u1/GND_6_o_GND_6_o_OR_20_o1)
+     LUT6:I1->O           44   0.203   1.463  u1/GND_6_o_GND_6_o_OR_20_o3 (u1/GND_6_o_GND_6_o_OR_20_o)
+     LUT5:I4->O           29   0.205   1.594  u1/GND_6_o_GND_6_o_OR_21_o1 (u1/Mmux_Paddr<12>6146)
+     LUT5:I0->O           27   0.203   1.221  u1/GND_6_o_GND_6_o_OR_23_o (u1/GND_6_o_GND_6_o_OR_23_o)
+     LUT5:I4->O           24   0.205   1.173  u1/GND_6_o_GND_6_o_OR_24_o1 (u1/GND_6_o_GND_6_o_OR_24_o)
+     LUT5:I4->O           23   0.205   1.258  u1/GND_6_o_GND_6_o_OR_25_o2 (u1/GND_6_o_GND_6_o_OR_25_o)
+     LUT6:I4->O           43   0.203   1.449  u1/GND_6_o_GND_6_o_OR_27_o2 (u1/GND_6_o_GND_6_o_OR_27_o)
+     LUT5:I4->O           30   0.205   1.608  u1/GND_6_o_GND_6_o_OR_28_o1 (u1/Mmux_Paddr<12>620)
+     LUT5:I0->O           26   0.203   1.207  u1/GND_6_o_GND_6_o_OR_30_o (u1/GND_6_o_GND_6_o_OR_30_o)
+     LUT5:I4->O           53   0.205   1.932  u1/GND_6_o_GND_6_o_OR_31_o1 (u1/GND_6_o_GND_6_o_OR_31_o)
+     LUT6:I0->O            1   0.203   0.924  u1/Mmux_Paddr<12>81446 (u1/Mmux_Paddr<12>81445)
+     LUT6:I1->O            5   0.203   0.943  u1/Mmux_Paddr<12>814421 (Paddr<30>)
+     LUT3:I0->O            4   0.205   0.684  GND_3_o_Paddr[31]_AND_153_o111 (GND_3_o_Paddr[31]_AND_153_o11)
+     LUT5:I4->O            3   0.205   0.995  GND_3_o_Paddr[31]_AND_153_o11 (GND_3_o_Paddr[31]_AND_153_o1)
+     LUT6:I1->O            4   0.203   1.048  GND_3_o_Paddr[31]_AND_153_o (GND_3_o_Paddr[31]_AND_153_o)
+     LUT6:I0->O           70   0.203   1.784  Mmux_flag28 (flag<1>)
+     LUT6:I4->O            1   0.203   0.579  Mmux_bitmap143 (bitmap_1_OBUF)
+     OBUF:I->O                 2.571          bitmap_1_OBUF (bitmap<1>)
+    ----------------------------------------
+    Total                     30.365ns (7.260ns logic, 23.105ns route)
+                                       (23.9% logic, 76.1% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock clk11
+Clock to Setup on destination clock SW[6]_SW[5]_OR_158_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-TLBWrite       |   22.541|         |         |         |
-clk11          |    4.365|         |         |         |
-clk50          |    5.231|         |         |         |
+TLBWrite       |         |         |   21.786|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock clk50
+Clock to Setup on destination clock clk_com
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-TLBWrite       |   29.389|         |         |         |
-clk11          |    5.236|         |         |         |
-clk50          |    2.634|         |         |         |
+clk_com        |    3.197|         |         |         |
+clk_cpu        |    3.711|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_cpu
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+TLBWrite       |   28.179|         |         |         |
+clk_com        |    4.104|         |         |         |
+clk_cpu        |    2.516|         |         |         |
+clk_mm         |    4.584|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_mm
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+TLBWrite       |   22.495|         |         |         |
+clk_cpu        |    5.018|         |         |         |
+clk_mm         |    3.563|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 42.00 secs
-Total CPU time to Xst completion: 41.89 secs
+Total CPU time to Xst completion: 42.46 secs
  
 --> 
 
-Total memory usage is 331796 kilobytes
+Total memory usage is 335060 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   19 (   0 filtered)
-Number of infos    :   12 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
 

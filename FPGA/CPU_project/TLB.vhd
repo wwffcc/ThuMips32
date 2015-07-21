@@ -41,7 +41,10 @@ entity TLB is
            Paddr : out  STD_LOGIC_VECTOR (31 downto 0);
            TLBWrite : in  STD_LOGIC;
            flag_missing : out  STD_LOGIC;
-           flag_writable : out  STD_LOGIC);
+           flag_writable : out  STD_LOGIC;
+			  SW:in STD_LOGIC_VECTOR(5 downto 0);
+			  bitmap:out STD_LOGIC_VECTOR(15 downto 0)
+			  );
 end TLB;
 
 architecture Behavioral of TLB is
@@ -92,6 +95,23 @@ begin
 			tlb(CONV_INTEGER(Index(3 downto 0)))(1)<=EntryLo1(1);
 			tlb(CONV_INTEGER(Index(3 downto 0)))(0)<=EntryLo1(2);
 		end if;
+	end process;
+	
+	process(SW,tlb)
+	begin
+		case SW(5 downto 4) is
+			when "00"=>
+				bitmap<=tlb(CONV_INTEGER(SW(3 downto 0)))(15 downto 0);
+			when "01"=>
+				bitmap<=tlb(CONV_INTEGER(SW(3 downto 0)))(31 downto 16);
+			when "10"=>
+				bitmap<=tlb(CONV_INTEGER(SW(3 downto 0)))(47 downto 32);
+			when "11"=>
+				bitmap(14 downto 0)<=tlb(CONV_INTEGER(SW(3 downto 0)))(62 downto 48);
+				bitmap(15)<='0';
+			when others=>
+				bitmap<=(others=>'0');
+		end case;
 	end process;
 end Behavioral;
 

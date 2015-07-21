@@ -42,7 +42,9 @@ entity Device_Ram1 is
 			  data_in:in STD_LOGIC_VECTOR(31 downto 0);
 			  data_out:out STD_LOGIC_VECTOR(31 downto 0);
            Ram1Write : in  STD_LOGIC;
-           Ram1Read : in  STD_LOGIC);
+           Ram1Read : in  STD_LOGIC;
+			  bitmap:out STD_LOGIC_VECTOR(3 downto 0)
+			  );
 end Device_Ram1;
 
 architecture Behavioral of Device_Ram1 is
@@ -92,6 +94,19 @@ begin
 			end case;
 		end if;
 	end process;
-
+	
+	process(ram1_state)
+	begin
+		case ram1_state is
+			when ram1_init=>bitmap<="0000";
+			when ram1_read0=>bitmap<="0001";
+			when ram1_read1=>bitmap<="0010";
+			when ram1_read2=>bitmap<="0011";
+			when ram1_write0=>bitmap<="0100";
+			when ram1_write1=>bitmap<="0101";
+			when others=>bitmap<="ZZZZ";
+		end case;
+	end process;
+	
 end Behavioral;
 

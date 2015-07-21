@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-07-16T22:16:37</DateModified>
-  <ModuleName>CPU</ModuleName>
+  <DateModified>2015-07-20T15:33:42</DateModified>
+  <ModuleName>mm_manager</ModuleName>
   <SummaryTimeStamp>2015-07-16T22:16:28</SummaryTimeStamp>
   <SavedFilePath>C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/iseconfig/mm_manager.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project\</ImplementationReportsDirectory>

@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/MULX/multiplication.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/MULX/multiplication.syr" 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/MULX/multiplication.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/MULX/multiplication.syr" 
