@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Tue Jul 21 16:05:07 2015
+# Process ID: 26640
+# Log file: C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/pa.fromNetlist.tcl

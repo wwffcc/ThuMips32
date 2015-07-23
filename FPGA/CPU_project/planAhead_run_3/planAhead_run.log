@@ -1,0 +1,73 @@
+
+****** PlanAhead v14.6 (64-bit)
+  **** Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+    ** Copyright 1986-1999, 2001-2012 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from E:/application/Xilinx/Xilinx_ISE/14.6/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [E:/application/Xilinx/Xilinx_ISE/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [E:/application/Xilinx/Xilinx_ISE/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/pa.fromNetlist.tcl
+# create_project -name CPU_project -dir "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/planAhead_run_3" -part xc6slx100fgg676-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "CPU.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.ucf' to fileset 'constrs_1'
+# add_files [list {CPU.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx100fgg676-3
+Release 14.6 - ngc2edif P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design CPU.ngc ...
+WARNING:NetListWriters:298 - No output is written to CPU.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus SW[3]_ALUOut[31]_wide_mux_110_OUT<15 :
+   1> on block CPU is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus SW[3]_ALUOut[15]_wide_mux_109_OUT<15 :
+   7> on block CPU is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus immediate<26 : 0> on block CPU is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus u1/romdata<31 : 0> on block CPU is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   u1/flag[2]_Data_out[31]_wide_mux_23_OUT<31 : 0> on block CPU is not
+   reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file CPU.edif ...
+ngc2edif: Total memory usage is 120788 kilobytes
+
+Parsing EDIF File [./planAhead_run_3/CPU_project.data/cache/CPU_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_3/CPU_project.data/cache/CPU_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 81 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'CPU' is not ideal for floorplanning, since the cellview 'CPU' defined in file 'CPU.ngc' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+Loading clock regions from E:/application/Xilinx/Xilinx_ISE/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/ClockRegion.xml
+Loading clock buffers from E:/application/Xilinx/Xilinx_ISE/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/ClockBuffers.xml
+Loading package pin functions from E:/application/Xilinx/Xilinx_ISE/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from E:/application/Xilinx/Xilinx_ISE/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/fgg676/Package.xml
+Loading io standards from E:/application/Xilinx/Xilinx_ISE/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from E:/application/Xilinx/Xilinx_ISE/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : E:/application/Xilinx/Xilinx_ISE/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.ucf]
+Finished Parsing UCF File [C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 81 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+  IOBUF => IOBUF (OBUFT, IBUF): 80 instances
+
+Phase 0 | Netlist Checksum: 58a82d7f
+link_design: Time (s): elapsed = 00:00:22 . Memory (MB): peak = 715.930 ; gain = 203.660
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue Jul 21 16:13:57 2015...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -65,6 +65,7 @@ begin
 					Ram1EN<='0';				--enable ram1
 					Ram1OE<='1';
 					Ram1WE<='1';
+					Ram1_Ready<='0';
 					if Ram1Write = '1' then						
 						Ram1_State<=ram1_write0;
 					else						
@@ -87,6 +88,7 @@ begin
 					Ram1_State<=ram1_read2;
 				when ram1_read2=>
 					Ram1OE<='1';
+					Ram1_Ready<='1';
 					data_out<=Ram1Data;
 					ram1_state<=ram1_init;
 				when others=>

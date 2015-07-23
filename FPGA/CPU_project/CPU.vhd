@@ -139,7 +139,7 @@ component mm_manager
 				com_Int:out STD_LOGIC;
 				
 				DYP1:out STD_LOGIC_VECTOR(6 downto 0);
-				bitmap:STD_LOGIC_VECTOR(15 downto 0);
+				bitmap:out STD_LOGIC_VECTOR(15 downto 0);
 				SW:in STD_LOGIC_VECTOR(6 downto 0)
 			  );
 end component;
@@ -147,7 +147,7 @@ signal MemWrite:STD_LOGIC:='0';
 signal MemRead:STD_LOGIC:='0';
 signal Data_out:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal Data_in:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
-signal mm_bitmap:STD_LOGIC_VECTOR(15 downto 0):=(others=>'Z');
+signal mm_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
 
 component RegistersFile
 	Port ( rst : in  STD_LOGIC;
@@ -170,7 +170,7 @@ signal RegDataSrcx:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal RegData1:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal RegData2:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal RegWrite:STD_LOGIC:='0';
-signal reg_bitmap:STD_LOGIC_VECTOR(15 downto 0);
+signal reg_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
 
 --CP0
 signal Status:STD_LOGIC_VECTOR(31 downto 0):=x"FFFFFFFF";
@@ -365,7 +365,7 @@ begin
 		--	clk_flag
 		end if;
 	end process;
-	
+		
 	process(enable_debug,SW)
 	begin
 		if enable_debug = '0' then
@@ -374,7 +374,7 @@ begin
 			case SW(10 downto 8) is
 				when "000"=>
 					LED<=ctrl_bitmap;
-				when "001"=>
+				when "001"=>					
 					LED<=mm_bitmap;
 				when "010"=>
 					LED<=reg_bitmap;
@@ -386,7 +386,7 @@ begin
 					LED<=(others=>'0');
 			end case;
 		end if;
-	end process;
+	end process;	
 	
 	--EBase<=x"80000000";	
 
@@ -552,10 +552,18 @@ begin
 		end if;
 	end process;
 	
-	process(ALUOutWrite)
+--	process(ALUOutWrite)
+--	begin		
+--		if rising_edge(ALUOutWrite) then
+--			ALUOut<=ALUResult;
+--		end if;
+--	end process;
+	process(ALUOutWrite,clk_cpu)
 	begin
-		if rising_edge(ALUOutWrite) then
-			ALUOut<=ALUResult;
+		if rising_edge(clk_cpu) then
+			if ALUOutWrite = '1' then
+				ALUOut<=ALUResult;
+			end if;
 		end if;
 	end process;
 	
@@ -569,7 +577,8 @@ begin
 	process(rst,PCWrite,PCWriteCond,PCSrc)						--update PC
 	begin
 		if rst = '0' then
-			PC<=x"BFC00000";
+			--PC<=x"BFC00000";
+			PC<=SW;														--debug
 		elsif rising_edge(PCWrite) then
 			case PCWriteCond is
 				when "000"=>
@@ -586,19 +595,19 @@ begin
 						PC<=ALUOut;
 					end if;
 				when "010"=>										--BGEZ
-					if ALUResult<=0 then
+					if ALUResult = 0 or ALUResult(31)='1' then		--ALUResult<=0
 						PC<=ALUOut;
 					end if;
 				when "011"=>										--BGTZ
-					if ALUResult<0 then
+					if ALUResult(31)='1' then
 						PC<=ALUOut;
 					end if;
 				when "100"=>										--BLEZ
-					if ALUResult>=0 then
+					if ALUResult = 0 or ALUResult(31)='0' then
 						PC<=ALUOut;
 					end if;
 				when "101"=>
-					if ALUResult>0 then							--BLTZ
+					if ALUResult(31)='0' then							--BLTZ
 						PC<=ALUOut;
 					end if;
 				when "110"=>										--BNE
@@ -741,7 +750,8 @@ begin
 					RegDataSrcx<=RPC;
 			when "101"=>
 					RegDataSrcx(31 downto 16)<=immediate(15 downto 0);
-					RegDataSrcx(15 downto 0)<=RegData2(15 downto 0);
+					RegDataSrcx(15 downto 0)<=(others=>'0');
+					--RegDataSrcx(15 downto 0)<=RegData2(15 downto 0);
 			when "110"=>
 					RegDataSrcx(31 downto 0)<=C;
 			when others=>

@@ -9,3 +9,51 @@ Processing design ...
 Writing EDIF netlist file CPU.edif ...
 ngc2edif: Total memory usage is 105364 kilobytes
 
+Release 14.6 - ngc2edif P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design CPU.ngc ...
+WARNING:NetListWriters:298 - No output is written to CPU.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus SW[3]_ALUOut[31]_wide_mux_110_OUT<15 :
+   1> on block CPU is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus SW[3]_ALUOut[15]_wide_mux_109_OUT<15 :
+   7> on block CPU is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus immediate<26 : 0> on block CPU is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus u1/romdata<31 : 0> on block CPU is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   u1/flag[2]_Data_out[31]_wide_mux_23_OUT<31 : 0> on block CPU is not
+   reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file CPU.edif ...
+ngc2edif: Total memory usage is 121428 kilobytes
+
+Release 14.6 - ngc2edif P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design CPU.ngc ...
+WARNING:NetListWriters:298 - No output is written to CPU.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus SW[3]_ALUOut[31]_wide_mux_110_OUT<15 :
+   1> on block CPU is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus SW[3]_ALUOut[15]_wide_mux_109_OUT<15 :
+   7> on block CPU is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus immediate<26 : 0> on block CPU is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus u1/romdata<31 : 0> on block CPU is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   u1/flag[2]_Data_out[31]_wide_mux_23_OUT<31 : 0> on block CPU is not
+   reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file CPU.edif ...
+ngc2edif: Total memory usage is 120788 kilobytes
+

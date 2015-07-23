@@ -61,24 +61,26 @@ begin
 			Paddr(31 downto 29)<="000";
 			flag_missing<='0';
 			flag_writable<='1';
-		else																			--kuseg or kseg2
-			flag_missing<='1';
-			Paddr(11 downto 0)<=Vaddr(11 downto 0);						--Page table
-			for i in 0 to 15 LOOP												--search for PTE
-				if tlb(i)(62 downto 44) = Vaddr(31 downto 13) then
-					if Vaddr(12)='0' and tlb(i)(23)='1' then				--even PTE,and page is valid
-						Paddr(31 downto 12)<=tlb(i)(43 downto 24);
-						flag_missing<='0';
-						flag_writable<=tlb(i)(22);
-						exit;
-					elsif Vaddr(12)='1' and tlb(i)(1)='1' then			--odd PTE,and page is valid
-						Paddr(31 downto 12)<=tlb(i)(21 downto 2);
-						flag_missing<='0';
-						flag_writable<=tlb(i)(0);
-						exit;
-					end if;
-				end if;
-			end LOOP;
+		else		
+			Paddr<=Vaddr;
+																				--kuseg or kseg2
+--			flag_missing<='1';
+--			Paddr(11 downto 0)<=Vaddr(11 downto 0);						--Page table
+--			for i in 0 to 15 LOOP												--search for PTE
+--				if tlb(i)(62 downto 44) = Vaddr(31 downto 13) then
+--					if Vaddr(12)='0' and tlb(i)(23)='1' then				--even PTE,and page is valid
+--						Paddr(31 downto 12)<=tlb(i)(43 downto 24);
+--						flag_missing<='0';
+--						flag_writable<=tlb(i)(22);
+--						exit;
+--					elsif Vaddr(12)='1' and tlb(i)(1)='1' then			--odd PTE,and page is valid
+--						Paddr(31 downto 12)<=tlb(i)(21 downto 2);
+--						flag_missing<='0';
+--						flag_writable<=tlb(i)(0);
+--						exit;
+--					end if;
+--				end if;
+--			end LOOP;
 		end if;
 	end process;
 	

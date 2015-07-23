@@ -331,6 +331,14 @@ begin
 			mem_error<="00";
 			BadVAddr<=x"00000000";
 			bitmapx<="ZZZZ";
+			ram1Read<='0';
+			ram1Write<='0';
+			ram2Read<='0';
+			ram2Write<='0';
+			flashRead<='0';
+			flashWrite<='0';
+			comRead<='0';
+			comWrite<='0';
 		elsif rising_edge(clk_cpu) then
 			if (Vaddr(31)='1' and Status(4)='1' and Status(1)='0' and Status(2)='0')	--user mode but access kseg
 				or Vaddr(1 downto 0) /="00" then
@@ -419,6 +427,7 @@ begin
 							mem_error<="10";
 						else							
 							comWrite<='0';
+							comRead<='0';
 							Data_out(1 downto 0)<=com_status;
 							Data_out(31 downto 2)<=(others=>'0');
 							ready<='1';						
@@ -458,6 +467,8 @@ begin
 	process(SW,Paddr,Vaddr,flag,flag_missing,flag_writable,ram1Write,ram1Read,ram2Write,ram2Read,flashWrite,
 				flashRead,comWrite,comRead,com_status,tlb_bitmap)
 	begin
+		--bitmap<=(others=>'1');
+		bitmap<=(others=>'0');
 		if SW(6)='0' then
 			case SW(5 downto 4) is
 				when "00"=>
@@ -484,13 +495,15 @@ begin
 						bitmap(10)<=flashRead;
 						bitmap(11)<=comWrite;
 						bitmap(12)<=comRead;
-						bitmap(14 downto 13)<=com_status;											
+						bitmap(14 downto 13)<=com_status;
+				when "11"=>
+					bitmap<=(others=>'1');
 				when others=>bitmap<=(others=>'0');
 			end case;			
 		else
 			bitmap<=tlb_bitmap;
 		end if;
-	end process;
+	end process;	
 	
 end Behavioral;
 

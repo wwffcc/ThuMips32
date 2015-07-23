@@ -194,6 +194,7 @@ begin
 				   ALUSrcB<="010";
 					ALUOp<="0000";
 					PCSrc<="000";
+					ALUOutWrite<='1';						--ALUOutWritex
 				when execute=>
 					PCWrite<='0';
 					g_state<=write_back;
@@ -403,7 +404,7 @@ begin
 							ALUSrcB<="001";
 							ALUOp<="1001";
 							PCSrc<="001";
-							ALUOutWrite<='1';
+							ALUOutWrite<='0';
 							PCWriteCond<="001";
 						when "000001"=>									
 							case instructions(20 downto 16) is
@@ -412,14 +413,14 @@ begin
 								ALUSrcB<="011";
 								ALUOp<="1001";
 								PCSrc<="001";
-								ALUOutWrite<='1';
+								ALUOutWrite<='0';
 								PCWriteCond<="010";
 							when "00000"=>						--BLTZ
 								ALUSrcA<="01";
 								ALUsrcB<="011";
 								ALUOp<="1001";
 								PCSrc<="001";
-								ALUOutWrite<='1';
+								ALUOutWrite<='0';
 								PCWriteCond<="101";
 							when others=>
 								g_state<=interrupt;
@@ -431,7 +432,7 @@ begin
 								ALUsrcB<="011";
 								ALUOp<="1001";
 								PCSrc<="001";
-								ALUOutWrite<='1';
+								ALUOutWrite<='0';
 								PCWriteCond<="011";
 							else
 								g_state<=interrupt;
@@ -443,7 +444,7 @@ begin
 								ALUsrcB<="011";
 								ALUOp<="1001";
 								PCSrc<="001";
-								ALUOutWrite<='1';
+								ALUOutWrite<='0';
 								PCWriteCond<="100";
 							else
 								g_state<=interrupt;
@@ -454,7 +455,7 @@ begin
 							ALUsrcB<="001";
 							ALUOp<="1001";
 							PCSrc<="001";
-							ALUOutWrite<='1';
+							ALUOutWrite<='0';
 							PCWriteCond<="110";
 						when "000010"=>								--J							
 							ExtendOp<="011";
@@ -515,6 +516,7 @@ begin
 							if instructions(25 downto 21) = "00000" then   --LUI								
 								RegDst<="01";
 								RegDataSrc<="101";	
+								ExtendOp<="000";
 							else
 								g_state<=interrupt;
 								exc_code<="01010";

@@ -44,10 +44,10 @@ rst = '0':所有信号清零，关闭debug
 		SW[6:6]
 		"0":
 			SW[5:0]:
-			"00XX0":Paddr[15:0]
-			"00XX1":Paddr[31:16]
-			"01XX0":Vaddr[15:0]
-			"01XX1":Vaddr[31:16]
+			"00XXX0":Paddr[15:0]
+			"00XXX1":Paddr[31:16]
+			"01XXX0":Vaddr[15:0]
+			"01XXX1":Vaddr[31:16]
 			"10":15 [14 13] 	[12]	 [11] 		[10] 		[9] 		[8] 		[7] 		[6] 		[5] 
 					com_status	comRead	 comWrite	flashRead	flashWrite	ram2Read	ram2Write	ram1Read	ram1Write
 				[4]					[3]				[2:0]

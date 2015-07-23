@@ -127,3 +127,124 @@ map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -r
 par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf 
 bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf 
+netgen -intstyle ise -s 3  -pcf CPU.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim CPU.ncd CPU_timesim.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc6slx100-fgg676-3 CPU.ngc CPU.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -w -intstyle ise -ol high -mt off CPU_map.ncd CPU.ncd CPU.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f CPU.ut CPU.ncd 
