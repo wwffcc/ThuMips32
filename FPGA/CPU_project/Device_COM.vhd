@@ -58,7 +58,7 @@ architecture Behavioral of Device_COM is
 
 type com_type is(com_init,recv0,recv1,recv2,send0,send1,send2,send3);
 signal fr_state:com_type:=com_init;
---signal com_status:STD_LOGIC_VECTOR(1 downto 0):="00";
+signal com_statusx:STD_LOGIC_VECTOR(1 downto 0):="00";
 
 begin		
 	process(rst,clk,COM_Write,COM_Read)
@@ -69,17 +69,17 @@ begin
 			Ram1Data<=(others=>'Z');
 			COM_Ready<='0';
 			Data_out<=(others=>'0');						
-			com_status<="11";						
-			fr_state<=com_init;
-		elsif COM_Write ='0' and COM_Read='0' then
+			com_statusx<="11";						
+			fr_state<=com_init;			 
+		elsif COM_Write ='0' and COM_Read='0' and com_statusx="11" then
 			rdn<='1';
 			wrn<='1';
 			Ram1Data<=(others=>'Z');
 			COM_Ready<='0';
 			Data_out<=(others=>'0');			
-			--com_status<=(others=>'1');					
-			fr_state<=com_init;
-		elsif rising_edge(clk) then
+			--com_statusx<=(others=>'1');					
+			fr_state<=com_init;			
+		elsif rising_edge(clk) then			
 			case fr_state is
 				when com_init=>
 					wrn<='1';
@@ -88,12 +88,10 @@ begin
 					COM_Ready<='0';
 					if COM_Write = '1' then						
 						fr_state<=send0;
-						com_status(0)<='0';				--TESTW
-					elsif data_ready = '1' then
-						Ram1Data<=(others=>'Z');
-						com_status(1)<='0';				--TESTR
+						com_statusx(0)<='0';				--TESTW						
+					else											
 						fr_state<=recv0;
-					end if;
+					end if;									
 				when send0=>
 					if tbre='1' then
 						fr_state<=send1;
@@ -115,24 +113,30 @@ begin
 					wrn<='1';
 					Ram1Data<=(others=>'Z');
 					--COM_Ready<='1';
-					com_status(0)<='1';
+					com_statusx(0)<='1';
 					fr_state<=com_init;			
-				when recv0=>
-					rdn<='0';
-					fr_state<=recv1;
+				when recv0=>					
+					if data_ready = '1' then
+						wrn<='1';
+						rdn<='0';
+						com_statusx(1)<='0';				--TESTR
+						fr_state<=recv1;
+					end if;									
 				when recv1=>
 					wrn<='1';
 					rdn<='1';
 					Data_out(7 downto 0)<=Ram1Data(7 downto 0);
 					Data_out(31 downto 8)<=(others=>'0');
 					COM_Ready<='1';
-					com_status(1)<='1';
-					com_status(0)<='0';
+					com_statusx(1)<='1';
+					com_statusx(0)<='0';
 					fr_state<=send0;
 				when others=>NULL;
 			end case;
 		end if;		
 	end process;
+	
+	com_status<=com_statusx;
 	
 	COM_INT<='0';
 		
@@ -157,6 +161,6 @@ begin
 			when others=>
 				bitmap<="ZZZZ";				
 		end case;		
-	end process;	
+	end process;					
 	
 end Behavioral;

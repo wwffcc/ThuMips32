@@ -5,313 +5,316 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 85: Using initial value <arg fmt="%s" index="1">&apos;0&apos;</arg> for <arg fmt="%s" index="2">clk_com</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 379: <arg fmt="%s" index="1">ctrl_bitmap</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 376: <arg fmt="%s" index="1">ctrl_bitmap</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 381: <arg fmt="%s" index="1">mm_bitmap</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 378: <arg fmt="%s" index="1">mm_bitmap</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 383: <arg fmt="%s" index="1">reg_bitmap</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 380: <arg fmt="%s" index="1">reg_bitmap</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 385: <arg fmt="%s" index="1">host_bitmap</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 382: <arg fmt="%s" index="1">host_bitmap</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 387: <arg fmt="%s" index="1">cp0_bitmap</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 384: <arg fmt="%s" index="1">cp0_bitmap</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd" Line 74: <arg fmt="%s" index="1">com_statusx</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 581: <arg fmt="%s" index="1">sw</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 586: <arg fmt="%s" index="1">sw</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 882: <arg fmt="%s" index="1">index</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 910: <arg fmt="%s" index="1">index</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 884: <arg fmt="%s" index="1">entrylo0</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 912: <arg fmt="%s" index="1">entrylo0</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 886: <arg fmt="%s" index="1">entrylo1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 914: <arg fmt="%s" index="1">entrylo1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 888: <arg fmt="%s" index="1">badvaddr</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 916: <arg fmt="%s" index="1">badvaddr</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 890: <arg fmt="%s" index="1">count</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 918: <arg fmt="%s" index="1">count</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 892: <arg fmt="%s" index="1">entryhi</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 920: <arg fmt="%s" index="1">entryhi</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 894: <arg fmt="%s" index="1">compare</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 922: <arg fmt="%s" index="1">compare</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 896: <arg fmt="%s" index="1">status</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 924: <arg fmt="%s" index="1">status</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 898: <arg fmt="%s" index="1">cause</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 926: <arg fmt="%s" index="1">cause</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 900: <arg fmt="%s" index="1">epc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 928: <arg fmt="%s" index="1">epc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 902: <arg fmt="%s" index="1">ebase</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 930: <arg fmt="%s" index="1">ebase</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 904: <arg fmt="%s" index="1">lo</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 932: <arg fmt="%s" index="1">lo</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 906: <arg fmt="%s" index="1">hi</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 934: <arg fmt="%s" index="1">hi</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 908: <arg fmt="%s" index="1">pc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 936: <arg fmt="%s" index="1">pc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 910: <arg fmt="%s" index="1">rpc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 938: <arg fmt="%s" index="1">rpc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 912: <arg fmt="%s" index="1">aluout</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 940: <arg fmt="%s" index="1">aluout</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 919: <arg fmt="%s" index="1">index</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 947: <arg fmt="%s" index="1">index</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 921: <arg fmt="%s" index="1">entrylo0</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 949: <arg fmt="%s" index="1">entrylo0</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 923: <arg fmt="%s" index="1">entrylo1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 951: <arg fmt="%s" index="1">entrylo1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 925: <arg fmt="%s" index="1">badvaddr</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 953: <arg fmt="%s" index="1">badvaddr</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 927: <arg fmt="%s" index="1">count</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 955: <arg fmt="%s" index="1">count</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 929: <arg fmt="%s" index="1">entryhi</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 957: <arg fmt="%s" index="1">entryhi</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 931: <arg fmt="%s" index="1">compare</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 959: <arg fmt="%s" index="1">compare</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 933: <arg fmt="%s" index="1">status</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 961: <arg fmt="%s" index="1">status</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 935: <arg fmt="%s" index="1">cause</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 963: <arg fmt="%s" index="1">cause</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 937: <arg fmt="%s" index="1">epc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 965: <arg fmt="%s" index="1">epc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 939: <arg fmt="%s" index="1">ebase</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 967: <arg fmt="%s" index="1">ebase</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 941: <arg fmt="%s" index="1">lo</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 969: <arg fmt="%s" index="1">lo</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 943: <arg fmt="%s" index="1">hi</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 971: <arg fmt="%s" index="1">hi</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 945: <arg fmt="%s" index="1">pc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 973: <arg fmt="%s" index="1">pc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 947: <arg fmt="%s" index="1">rpc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 975: <arg fmt="%s" index="1">rpc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 949: <arg fmt="%s" index="1">aluout</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 977: <arg fmt="%s" index="1">aluout</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 961: <arg fmt="%s" index="1">pcwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 989: <arg fmt="%s" index="1">pcwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 963: <arg fmt="%s" index="1">iord</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 991: <arg fmt="%s" index="1">iord</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 965: <arg fmt="%s" index="1">tlbwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 993: <arg fmt="%s" index="1">tlbwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 967: <arg fmt="%s" index="1">memread</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 995: <arg fmt="%s" index="1">memread</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 969: <arg fmt="%s" index="1">memwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 997: <arg fmt="%s" index="1">memwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 971: <arg fmt="%s" index="1">memdatasrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 999: <arg fmt="%s" index="1">memdatasrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 973: <arg fmt="%s" index="1">memaddrsrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1001: <arg fmt="%s" index="1">memaddrsrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 975: <arg fmt="%s" index="1">irwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1003: <arg fmt="%s" index="1">irwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 977: <arg fmt="%s" index="1">regdst</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1005: <arg fmt="%s" index="1">regdst</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 979: <arg fmt="%s" index="1">regdatasrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1007: <arg fmt="%s" index="1">regdatasrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 981: <arg fmt="%s" index="1">regwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1009: <arg fmt="%s" index="1">regwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 983: <arg fmt="%s" index="1">alusrca</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1011: <arg fmt="%s" index="1">alusrca</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 985: <arg fmt="%s" index="1">alusrcb</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1013: <arg fmt="%s" index="1">alusrcb</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 987: <arg fmt="%s" index="1">pcsrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1015: <arg fmt="%s" index="1">pcsrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 989: <arg fmt="%s" index="1">pcwritecond</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1017: <arg fmt="%s" index="1">pcwritecond</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 991: <arg fmt="%s" index="1">hisrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1019: <arg fmt="%s" index="1">hisrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 993: <arg fmt="%s" index="1">losrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1021: <arg fmt="%s" index="1">losrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 995: <arg fmt="%s" index="1">hiwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1023: <arg fmt="%s" index="1">hiwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 997: <arg fmt="%s" index="1">lowrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1025: <arg fmt="%s" index="1">lowrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 999: <arg fmt="%s" index="1">aluop</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1027: <arg fmt="%s" index="1">aluop</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1001: <arg fmt="%s" index="1">extendop</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1029: <arg fmt="%s" index="1">extendop</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1003: <arg fmt="%s" index="1">aluoutwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1031: <arg fmt="%s" index="1">aluoutwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1005: <arg fmt="%s" index="1">rpcwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1033: <arg fmt="%s" index="1">rpcwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1007: <arg fmt="%s" index="1">cp0write</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1035: <arg fmt="%s" index="1">cp0write</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1009: <arg fmt="%s" index="1">exc_code</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1037: <arg fmt="%s" index="1">exc_code</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1011: <arg fmt="%s" index="1">epcwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1039: <arg fmt="%s" index="1">epcwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1013: <arg fmt="%s" index="1">set_cause</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1041: <arg fmt="%s" index="1">set_cause</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1015: <arg fmt="%s" index="1">set_exl</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1043: <arg fmt="%s" index="1">set_exl</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1017: <arg fmt="%s" index="1">cause_ip</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1044: <arg fmt="%s" index="1">rm_exl</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1019: <arg fmt="%s" index="1">timer_int</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1045: <arg fmt="%s" index="1">exp_type</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1020: <arg fmt="%s" index="1">com_int</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1047: <arg fmt="%s" index="1">cause_ip</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1022: <arg fmt="%s" index="1">mem_error</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1049: <arg fmt="%s" index="1">timer_int</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1033: <arg fmt="%s" index="1">instructions</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1050: <arg fmt="%s" index="1">com_int</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1035: <arg fmt="%s" index="1">instructions</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1052: <arg fmt="%s" index="1">mem_error</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1041: <arg fmt="%s" index="1">data_in</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1063: <arg fmt="%s" index="1">instructions</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1043: <arg fmt="%s" index="1">data_in</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1065: <arg fmt="%s" index="1">instructions</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1047: <arg fmt="%s" index="1">data_out</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1071: <arg fmt="%s" index="1">data_in</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1049: <arg fmt="%s" index="1">data_out</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1073: <arg fmt="%s" index="1">data_in</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1056: <arg fmt="%s" index="1">regdstx</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1077: <arg fmt="%s" index="1">data_out</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1059: <arg fmt="%s" index="1">regdatasrcx</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1079: <arg fmt="%s" index="1">data_out</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1061: <arg fmt="%s" index="1">regdatasrcx</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1086: <arg fmt="%s" index="1">regdstx</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1063: <arg fmt="%s" index="1">regdata1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1089: <arg fmt="%s" index="1">regdatasrcx</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1065: <arg fmt="%s" index="1">regdata1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1091: <arg fmt="%s" index="1">regdatasrcx</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1067: <arg fmt="%s" index="1">regdata2</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1093: <arg fmt="%s" index="1">regdata1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1069: <arg fmt="%s" index="1">regdata2</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1095: <arg fmt="%s" index="1">regdata1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1077: <arg fmt="%s" index="1">alusrcax</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1097: <arg fmt="%s" index="1">regdata2</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1079: <arg fmt="%s" index="1">alusrcax</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1099: <arg fmt="%s" index="1">regdata2</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1083: <arg fmt="%s" index="1">alusrcbx</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1107: <arg fmt="%s" index="1">alusrcax</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1085: <arg fmt="%s" index="1">alusrcbx</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1109: <arg fmt="%s" index="1">alusrcax</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1090: <arg fmt="%s" index="1">aluresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1113: <arg fmt="%s" index="1">alusrcbx</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1092: <arg fmt="%s" index="1">aluresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1115: <arg fmt="%s" index="1">alusrcbx</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1097: <arg fmt="%s" index="1">mul_start</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1120: <arg fmt="%s" index="1">aluresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1098: <arg fmt="%s" index="1">mul_ready</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1122: <arg fmt="%s" index="1">aluresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1103: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1127: <arg fmt="%s" index="1">mul_start</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1105: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1128: <arg fmt="%s" index="1">mul_ready</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1107: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1133: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1109: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1135: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1117: <arg fmt="%s" index="1">immediate</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1137: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1119: <arg fmt="%s" index="1">immediate</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1139: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1121: <arg fmt="%s" index="1">c</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1147: <arg fmt="%s" index="1">immediate</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1123: <arg fmt="%s" index="1">c</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1149: <arg fmt="%s" index="1">immediate</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Compare&lt;23&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1151: <arg fmt="%s" index="1">c</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1153: <arg fmt="%s" index="1">c</arg> should be on the sensitivity list of the process
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;3:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;3:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;31:5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -356,7 +359,7 @@
 <msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">reg&lt;0&gt;</arg>&lt;<arg fmt="%d" index="2">1</arg>:<arg fmt="%d" index="3">32</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">RegistersFile</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;3:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;3:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;9:5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -380,157 +383,16 @@
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">flash_state[4]_clk_DFF_251</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flash_state[4]_clk_DFF_243&gt; &lt;flash_state[4]_clk_DFF_244&gt; &lt;flash_state[4]_clk_DFF_245&gt; &lt;flash_state[4]_clk_DFF_246&gt; &lt;flash_state[4]_clk_DFF_247&gt; &lt;flash_state[4]_clk_DFF_248&gt; &lt;flash_state[4]_clk_DFF_249&gt; &lt;flash_state[4]_clk_DFF_250&gt; &lt;flash_state[4]_clk_DFF_252&gt; &lt;flash_state[4]_clk_DFF_253&gt; &lt;flash_state[4]_clk_DFF_254&gt; &lt;flash_state[4]_clk_DFF_255&gt; &lt;flash_state[4]_clk_DFF_258&gt; &lt;flash_state[4]_clk_DFF_256&gt; &lt;flash_state[4]_clk_DFF_257&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_264</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u6</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;fr_state[2]_clk_DFF_262&gt; &lt;fr_state[2]_clk_DFF_263&gt; &lt;fr_state[2]_clk_DFF_265&gt; &lt;fr_state[2]_clk_DFF_266&gt; &lt;fr_state[2]_clk_DFF_269&gt; &lt;fr_state[2]_clk_DFF_267&gt; &lt;fr_state[2]_clk_DFF_268&gt; &lt;fr_state[2]_clk_DFF_270&gt; &lt;fr_state[2]_clk_DFF_271&gt; &lt;fr_state[2]_clk_DFF_274&gt; &lt;fr_state[2]_clk_DFF_272&gt; &lt;fr_state[2]_clk_DFF_273&gt; &lt;fr_state[2]_clk_DFF_277&gt; &lt;fr_state[2]_clk_DFF_275&gt; &lt;fr_state[2]_clk_DFF_276&gt; &lt;fr_state[2]_clk_DFF_280&gt; &lt;fr_state[2]_clk_DFF_278&gt; &lt;fr_state[2]_clk_DFF_279&gt; &lt;fr_state[2]_clk_DFF_281&gt; &lt;fr_state[2]_clk_DFF_282&gt; &lt;fr_state[2]_clk_DFF_285&gt; &lt;fr_state[2]_clk_DFF_283&gt; &lt;fr_state[2]_clk_DFF_284&gt; &lt;fr_state[2]_clk_DFF_286&gt; &lt;fr_state[2]_clk_DFF_287&gt; &lt;fr_state[2]_clk_DFF_290&gt; &lt;fr_state[2]_clk_DFF_288&gt; &lt;fr_state[2]_clk_DFF_289&gt; &lt;fr_state[2]_clk_DFF_291&gt; &lt;fr_state[2]_clk_DFF_292&gt; &lt;fr_state[2]_clk_DFF_293&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Data_out_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u6</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">23 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Data_out_9&gt; &lt;Data_out_10&gt; &lt;Data_out_11&gt; &lt;Data_out_12&gt; &lt;Data_out_13&gt; &lt;Data_out_14&gt; &lt;Data_out_15&gt; &lt;Data_out_16&gt; &lt;Data_out_17&gt; &lt;Data_out_18&gt; &lt;Data_out_19&gt; &lt;Data_out_20&gt; &lt;Data_out_21&gt; &lt;Data_out_22&gt; &lt;Data_out_23&gt; &lt;Data_out_24&gt; &lt;Data_out_25&gt; &lt;Data_out_26&gt; &lt;Data_out_27&gt; &lt;Data_out_28&gt; &lt;Data_out_29&gt; &lt;Data_out_30&gt; &lt;Data_out_31&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Data_out_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u6</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">23 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Data_out_9&gt; &lt;Data_out_10&gt; &lt;Data_out_11&gt; &lt;Data_out_12&gt; &lt;Data_out_13&gt; &lt;Data_out_14&gt; &lt;Data_out_15&gt; &lt;Data_out_16&gt; &lt;Data_out_17&gt; &lt;Data_out_18&gt; &lt;Data_out_19&gt; &lt;Data_out_20&gt; &lt;Data_out_21&gt; &lt;Data_out_22&gt; &lt;Data_out_23&gt; &lt;Data_out_24&gt; &lt;Data_out_25&gt; &lt;Data_out_26&gt; &lt;Data_out_27&gt; &lt;Data_out_28&gt; &lt;Data_out_29&gt; &lt;Data_out_30&gt; &lt;Data_out_31&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_263</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u6</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;fr_state[2]_clk_DFF_262&gt; &lt;fr_state[2]_clk_DFF_264&gt; &lt;fr_state[2]_clk_DFF_265&gt; &lt;fr_state[2]_clk_DFF_268&gt; &lt;fr_state[2]_clk_DFF_266&gt; &lt;fr_state[2]_clk_DFF_267&gt; &lt;fr_state[2]_clk_DFF_271&gt; &lt;fr_state[2]_clk_DFF_269&gt; &lt;fr_state[2]_clk_DFF_270&gt; &lt;fr_state[2]_clk_DFF_274&gt; &lt;fr_state[2]_clk_DFF_272&gt; &lt;fr_state[2]_clk_DFF_273&gt; &lt;fr_state[2]_clk_DFF_275&gt; &lt;fr_state[2]_clk_DFF_276&gt; &lt;fr_state[2]_clk_DFF_279&gt; &lt;fr_state[2]_clk_DFF_277&gt; &lt;fr_state[2]_clk_DFF_278&gt; &lt;fr_state[2]_clk_DFF_282&gt; &lt;fr_state[2]_clk_DFF_280&gt; &lt;fr_state[2]_clk_DFF_281&gt; &lt;fr_state[2]_clk_DFF_285&gt; &lt;fr_state[2]_clk_DFF_283&gt; &lt;fr_state[2]_clk_DFF_284&gt; &lt;fr_state[2]_clk_DFF_286&gt; &lt;fr_state[2]_clk_DFF_287&gt; &lt;fr_state[2]_clk_DFF_290&gt; &lt;fr_state[2]_clk_DFF_288&gt; &lt;fr_state[2]_clk_DFF_289&gt; &lt;fr_state[2]_clk_DFF_291&gt; &lt;fr_state[2]_clk_DFF_292&gt; &lt;fr_state[2]_clk_DFF_293&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">flag[2]_clk_cpu_DFF_307</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flag[2]_clk_cpu_DFF_308&gt; &lt;flag[2]_clk_cpu_DFF_309&gt; &lt;flag[2]_clk_cpu_DFF_310&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">R_62</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u4</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;R_63&gt; </arg>
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_24</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_25</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_26</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_27</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_28</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_29</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_30</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">COM_Ready</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">wrn</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">rdn</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">com_status_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">com_status_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_264</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_14</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_15</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_16</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_17</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_18</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_22</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_23</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">Data_out</arg>&lt;<arg fmt="%d" index="2">31</arg>:<arg fmt="%d" index="3">8</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">Device_COM</arg>&gt;.
@@ -545,241 +407,10 @@
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_DYP1</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_flag[2]_GND_280_o_Mux_53_o</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_flag[2]_GND_280_o_Mux_54_o</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_282</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_281</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_279</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_278</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_280</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_276</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_275</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_277</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_273</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_272</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_274</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_271</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_270</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_268</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_267</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_269</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_266</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_265</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_263</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_293</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_292</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_291</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_289</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_288</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_290</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_287</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_286</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_284</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_283</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_285</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_18</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_17</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_16</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_15</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_14</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_262</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_264</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">com_status_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">com_status_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">rdn</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">wrn</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">COM_Ready</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_30</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_29</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_28</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_27</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_26</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_25</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_24</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_23</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_22</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Ram1Data_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">flag[2]_clk_cpu_DFF_307</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mm_manager</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flag[2]_clk_cpu_DFF_308&gt; &lt;flag[2]_clk_cpu_DFF_309&gt; &lt;flag[2]_clk_cpu_DFF_310&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">flag[2]_clk_cpu_DFF_307</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mm_manager</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flag[2]_clk_cpu_DFF_310&gt; &lt;flag[2]_clk_cpu_DFF_308&gt; &lt;flag[2]_clk_cpu_DFF_309&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Ram1_State[2]_clk_DFF_126</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_Ram1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Ram1_State[2]_clk_DFF_127&gt; &lt;Ram1_State[2]_clk_DFF_128&gt; &lt;Ram1_State[2]_clk_DFF_131&gt; &lt;Ram1_State[2]_clk_DFF_129&gt; &lt;Ram1_State[2]_clk_DFF_130&gt; &lt;Ram1_State[2]_clk_DFF_132&gt; &lt;Ram1_State[2]_clk_DFF_133&gt; &lt;Ram1_State[2]_clk_DFF_134&gt; &lt;Ram1_State[2]_clk_DFF_135&gt; &lt;Ram1_State[2]_clk_DFF_136&gt; &lt;Ram1_State[2]_clk_DFF_137&gt; &lt;Ram1_State[2]_clk_DFF_140&gt; &lt;Ram1_State[2]_clk_DFF_138&gt; &lt;Ram1_State[2]_clk_DFF_139&gt; &lt;Ram1_State[2]_clk_DFF_141&gt; &lt;Ram1_State[2]_clk_DFF_142&gt; &lt;Ram1_State[2]_clk_DFF_143&gt; &lt;Ram1_State[2]_clk_DFF_144&gt; &lt;Ram1_State[2]_clk_DFF_145&gt; &lt;Ram1_State[2]_clk_DFF_146&gt; &lt;Ram1_State[2]_clk_DFF_149&gt; &lt;Ram1_State[2]_clk_DFF_147&gt; &lt;Ram1_State[2]_clk_DFF_148&gt; &lt;Ram1_State[2]_clk_DFF_150&gt; &lt;Ram1_State[2]_clk_DFF_151&gt; &lt;Ram1_State[2]_clk_DFF_152&gt; &lt;Ram1_State[2]_clk_DFF_153&gt; &lt;Ram1_State[2]_clk_DFF_154&gt; &lt;Ram1_State[2]_clk_DFF_155&gt; &lt;Ram1_State[2]_clk_DFF_156&gt; &lt;Ram1_State[2]_clk_DFF_157&gt; </arg>
@@ -791,22 +422,13 @@
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">flash_state[4]_clk_DFF_251</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_Flash</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flash_state[4]_clk_DFF_244&gt; &lt;flash_state[4]_clk_DFF_243&gt; &lt;flash_state[4]_clk_DFF_245&gt; &lt;flash_state[4]_clk_DFF_246&gt; &lt;flash_state[4]_clk_DFF_247&gt; &lt;flash_state[4]_clk_DFF_248&gt; &lt;flash_state[4]_clk_DFF_249&gt; &lt;flash_state[4]_clk_DFF_250&gt; &lt;flash_state[4]_clk_DFF_252&gt; &lt;flash_state[4]_clk_DFF_253&gt; &lt;flash_state[4]_clk_DFF_254&gt; &lt;flash_state[4]_clk_DFF_255&gt; &lt;flash_state[4]_clk_DFF_258&gt; &lt;flash_state[4]_clk_DFF_256&gt; &lt;flash_state[4]_clk_DFF_257&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">R_62</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MUL</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;R_63&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_264</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;fr_state[2]_clk_DFF_262&gt; &lt;fr_state[2]_clk_DFF_263&gt; &lt;fr_state[2]_clk_DFF_265&gt; &lt;fr_state[2]_clk_DFF_266&gt; &lt;fr_state[2]_clk_DFF_269&gt; &lt;fr_state[2]_clk_DFF_267&gt; &lt;fr_state[2]_clk_DFF_268&gt; &lt;fr_state[2]_clk_DFF_272&gt; &lt;fr_state[2]_clk_DFF_270&gt; &lt;fr_state[2]_clk_DFF_271&gt; &lt;fr_state[2]_clk_DFF_275&gt; &lt;fr_state[2]_clk_DFF_273&gt; &lt;fr_state[2]_clk_DFF_274&gt; &lt;fr_state[2]_clk_DFF_276&gt; &lt;fr_state[2]_clk_DFF_277&gt; &lt;fr_state[2]_clk_DFF_280&gt; &lt;fr_state[2]_clk_DFF_278&gt; &lt;fr_state[2]_clk_DFF_279&gt; &lt;fr_state[2]_clk_DFF_283&gt; &lt;fr_state[2]_clk_DFF_281&gt; &lt;fr_state[2]_clk_DFF_282&gt; &lt;fr_state[2]_clk_DFF_286&gt; &lt;fr_state[2]_clk_DFF_284&gt; &lt;fr_state[2]_clk_DFF_285&gt; &lt;fr_state[2]_clk_DFF_287&gt; &lt;fr_state[2]_clk_DFF_288&gt; &lt;fr_state[2]_clk_DFF_291&gt; &lt;fr_state[2]_clk_DFF_289&gt; &lt;fr_state[2]_clk_DFF_290&gt; &lt;fr_state[2]_clk_DFF_292&gt; &lt;fr_state[2]_clk_DFF_293&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">d_state</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">CPU</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;enable_debug&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">FlashAddr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_Flash</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state_FSM_FFd1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state_FSM_FFd3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">fr_state_FSM_FFd2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_COM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">cause_IP_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -819,6 +441,9 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">cause_IP_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">EPCWrite</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Controller</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;set_Cause&gt; &lt;set_EXL&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="3002" delta="old" >This design contains one or more registers/latches that are directly
@@ -844,6 +469,8 @@ Xilinx highly recommends one of the following:
 
 <msg type="warning" file="Xst" num="2042" delta="old" >Unit <arg fmt="%s" index="1">CPU</arg>: <arg fmt="%d" index="2">4</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
 
+<msg type="warning" file="Xst" num="2040" delta="old" >Unit <arg fmt="%s" index="1">CPU</arg>: <arg fmt="%d" index="2">32</arg> multi-source signals are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">exc_code_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -851,6 +478,14 @@ Xilinx highly recommends one of the following:
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">u5/cause_IP_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">CPU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">EBase_31_LD</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">CPU</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Status_0_LD</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">CPU</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

@@ -180,7 +180,7 @@ signal EntryLo1:STD_LOGIC_VECTOR (31 downto 0):=x"00000000";
 signal EntryHi:STD_LOGIC_VECTOR (31 downto 0):=x"00000000";     
 signal BadVAddr:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";     
 signal Count:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
-signal Compare:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal Compare:STD_LOGIC_VECTOR(31 downto 0):=x"02FAF080";
 signal Cause:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal EPC:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal EBase:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
@@ -200,7 +200,7 @@ signal ALUSrcBx:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal ALUOp:STD_LOGIC_VECTOR(3 downto 0):="0000";
 signal ALUResult:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 
-component MUL
+component p_MUL
 	Port ( rst : in  STD_LOGIC;
            clk : in  STD_LOGIC;
            start : in  STD_LOGIC;
@@ -254,8 +254,9 @@ component Controller
 			  Status:in STD_LOGIC_VECTOR(31 downto 0);
 			  set_Cause:out STD_LOGIC;
 			  set_EXL:out STD_LOGIC;
+			  rm_EXL:out STD_LOGIC;
 			  cause_IP:out STD_LOGIC_VECTOR(5 downto 0);
-			  
+			  EXP_type:out STD_LOGIC;
 			  DYP0:out STD_LOGIC_VECTOR(6 downto 0)			  
 			  );
 end component;
@@ -289,7 +290,9 @@ signal exc_code:STD_LOGIC_VECTOR(4 downto 0):="00000";
 signal EPCWrite:STD_LOGIC:='0';
 signal set_Cause: STD_LOGIC:='0';
 signal set_EXL: STD_LOGIC:='0';
+signal rm_EXL:STD_LOGIC:='0';
 signal cause_IP: STD_LOGIC_VECTOR(5 downto 0):="000000";
+signal EXP_type:STD_LOGIC:='0';
 
 component Extend
 	Port ( instruction : in  STD_LOGIC_VECTOR (25 downto 0);
@@ -389,6 +392,7 @@ begin
 	end process;	
 	
 	--EBase<=x"80000000";	
+	clk_com<=clk_step;
 
 	u0:Clock PORT MAP(
 		clk50=>clk50,
@@ -472,7 +476,7 @@ begin
        result=>ALUResult
 	);
 	
-	u4:MUL PORT MAP(
+	u4:p_MUL PORT MAP(
 		rst=>rst,
       clk=>clk_cpu,
       start=>MUL_start,
@@ -523,8 +527,9 @@ begin
 		  Status=>Status,
 		  set_Cause=>set_Cause,
 			set_EXL=>set_EXL,
+			rm_EXL=>rm_EXL,
 			cause_IP=>cause_IP,
-			
+			EXP_type=>EXP_type,
 		 DYP0=>DYP0
 	);
 	
@@ -585,7 +590,7 @@ begin
 					case PCSrc is
 						when "000"=>PC<=ALUResult;
 						when "001"=>PC<=ALUOut;
-						when "010"=>PC<=immediate;
+						when "010"=>PC(27 downto 0)<=immediate(27 downto 0);
 						when "011"=>PC<=RegData1;
 						when "100"=>PC<=EPC;
 						when others=>NULL;				
@@ -603,11 +608,11 @@ begin
 						PC<=ALUOut;
 					end if;
 				when "100"=>										--BLEZ
-					if ALUResult = 0 or ALUResult(31)='0' then
+					if ALUResult(31)='0' then
 						PC<=ALUOut;
 					end if;
 				when "101"=>
-					if ALUResult(31)='0' then							--BLTZ
+					if ALUResult = 1 then							--BLTZ
 						PC<=ALUOut;
 					end if;
 				when "110"=>										--BNE
@@ -630,9 +635,9 @@ begin
 				Vaddr<=ALUResult;
 				case MemAddrSrc is				
 					when "01"=>						
-						Vaddr(1)<='0';				
+						Vaddr(1 downto 0)<="00";				
 					when "10"=>
-						Vaddr(1 downto 0)<="00";
+						Vaddr(1)<='0';
 					when others=>null;
 				end case;
 			when others=>NULL;			
@@ -715,36 +720,52 @@ begin
 					RegDataSrcx<=HI;
 			when "011"=>
 					--RegDataSrcx<=Data_out;
-					case ALUResult(1 downto 0) is
-						when "00"=>
-							RegDataSrcx(7 downto 0)<=Data_out(7 downto 0);
-							if instructions(28)='0' then
-								RegDataSrcx(31 downto 8)<=(others=>Data_out(7));
-							else
-								RegDataSrcx(31 downto 8)<=(others=>'0');
-							end if;
+					case instructions(27 downto 26) is
+						when "00"=>																	--LB,SB,LBU
+							case ALUResult(1 downto 0) is
+								when "00"=>
+									RegDataSrcx(7 downto 0)<=Data_out(7 downto 0);
+									if instructions(28)='0' then
+										RegDataSrcx(31 downto 8)<=(others=>Data_out(7));
+									else
+										RegDataSrcx(31 downto 8)<=(others=>'0');
+									end if;
+								when "01"=>
+									RegDataSrcx(7 downto 0)<=Data_out(15 downto 8);							
+									if instructions(28)='0' then							--LB
+										RegDataSrcx(31 downto 8)<=(others=>Data_out(15));
+									else
+										RegDataSrcx(31 downto 8)<=(others=>'0');
+									end if;
+								when "10"=>
+									RegDataSrcx(7 downto 0)<=Data_out(23 downto 16);
+									if instructions(28)='0' then
+										RegDataSrcx(31 downto 8)<=(others=>Data_out(23));
+									else
+										RegDataSrcx(31 downto 8)<=(others=>'0');
+									end if;
+								when "11"=>
+									RegDataSrcx(7 downto 0)<=Data_out(31 downto 24);
+									if instructions(28)='0' then
+										RegDataSrcx(31 downto 8)<=(others=>Data_out(31));						
+									else
+										RegDataSrcx(31 downto 8)<=(others=>'0');
+									end if;
+								when others=>NULL;
+							end case;
 						when "01"=>
-							RegDataSrcx(7 downto 0)<=Data_out(15 downto 8);							
-							if instructions(28)='0' then							--LB
-								RegDataSrcx(31 downto 8)<=(others=>Data_out(15));
-							else
-								RegDataSrcx(31 downto 8)<=(others=>'0');
-							end if;
-						when "10"=>
-							RegDataSrcx(7 downto 0)<=Data_out(23 downto 16);
-							if instructions(28)='0' then
-								RegDataSrcx(31 downto 8)<=(others=>Data_out(23));
-							else
-								RegDataSrcx(31 downto 8)<=(others=>'0');
-							end if;
-						when "11"=>
-							RegDataSrcx(7 downto 0)<=Data_out(31 downto 24);
-							if instructions(28)='0' then
-								RegDataSrcx(31 downto 8)<=(others=>Data_out(31));						
-							else
-								RegDataSrcx(31 downto 8)<=(others=>'0');
-							end if;
-						when others=>NULL;
+							case ALUResult(1) is
+								when '0'=>
+									RegDataSrcx(15 downto 0)<=Data_out(15 downto 0);
+									RegDataSrcx(31 downto 16)<=(others=>'0');
+								when '1'=>
+									RegDataSrcx(15 downto 0)<=Data_out(31 downto 16);
+									RegDataSrcx(31 downto 16)<=(others=>'0');
+								when others=>
+									null;
+							end case;
+						when others=>
+							RegDataSrcx<=Data_out;
 					end case;
 			when "100"=>
 					RegDataSrcx<=RPC;
@@ -811,6 +832,8 @@ begin
 			EntryLo1<=(others=>'0');
 			EntryHi<=(others=>'0');
 			Status<=(others=>'1');
+			Status(0)<='0';
+			Status(4)<='0';
 			EBase<=x"80000000";
 			Cause<=(others=>'0');
 			EPC<=(others=>'0');
@@ -829,16 +852,16 @@ begin
 						NULL;
 					when "01011"=>								--EntryHi	11
 						EntryHi<=RegData2;
-					when "01100"=>								--compare	12
+					when "01100"=>								--Compare	12
 						NULL;
 					when "01101"=>								--Status		13
 						Status<=RegData2;
 					when "01111"=>								--Cause 		15
 						Cause<=RegData2;					
 					when "10000"=>								--EPC			16
-						Cause<=RegData2;
+						EPC<=RegData2;
 					when "10010"=>								--EBase		18
-						Cause<=EBase;
+						EBase<=RegData2;
 					when others=>NULL;
 				end case;	
 			else
@@ -849,11 +872,16 @@ begin
 				end if;
 				if set_EXL = '1' then
 					Status(1)<='1';
-				else
+				elsif rm_EXL = '1' then
 					Status(1)<='0';
 				end if;
+				
 				if EPCWrite = '1' then
-					EPC<=PC-4;
+					case EXP_type is
+						when '0'=>EPC<=PC;
+						when '1'=>EPC<=PC-4;
+						when others=>NULL;
+					end case;
 				end if;
 			end if;
 		end if;
@@ -867,7 +895,7 @@ begin
 			BadVAddr						when "01001",
 			Count							when "01010",
 			EntryHi						when "01011",
-			compare						when "01100",
+			Compare						when "01100",
 			Status						when "01101",
 			Cause							when "01111",
 			EPC							when "10000",
@@ -891,7 +919,7 @@ begin
 				when "0101"=>
 					CP0_bitmap<=EntryHi(15 downto 0);
 				when "0110"=>
-					CP0_bitmap<=compare(15 downto 0);
+					CP0_bitmap<=Compare(15 downto 0);
 				when "0111"=>
 					CP0_bitmap<=Status(15 downto 0);
 				when "1000"=>
@@ -928,7 +956,7 @@ begin
 				when "0101"=>
 					CP0_bitmap<=EntryHi(31 downto 16);
 				when "0110"=>
-					CP0_bitmap<=compare(31 downto 16);
+					CP0_bitmap<=Compare(31 downto 16);
 				when "0111"=>
 					CP0_bitmap<=Status(31 downto 16);
 				when "1000"=>
@@ -1013,6 +1041,8 @@ begin
 				ctrl_bitmap(0)<=set_Cause;
 			when "11011"=>
 				ctrl_bitmap(0)<=set_EXL;
+				ctrl_bitmap(1)<=rm_EXL;
+				ctrl_bitmap(2)<=EXP_type;
 			when "11100"=>
 				ctrl_bitmap(5 downto 0)<=cause_IP;	
 			when "11101"=>

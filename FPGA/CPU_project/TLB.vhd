@@ -62,7 +62,7 @@ begin
 			flag_missing<='0';
 			flag_writable<='1';
 		else		
-			Paddr<=Vaddr;
+			Paddr<=Vaddr;flag_writable <= '1';
 																				--kuseg or kseg2
 --			flag_missing<='1';
 --			Paddr(11 downto 0)<=Vaddr(11 downto 0);						--Page table

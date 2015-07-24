@@ -12,7 +12,7 @@ rst = '0':所有信号清零，关闭debug
 		"00001"=>IorD
 		"00010"=>TLBWrite
 		"00011"=>MemRead
-		"00010"=>MemWrite
+		"00100"=>MemWrite
 		"00101"=>MemDataSrc
 		"00110"=>MemAddrSrc
 		"00111"=>IRWrite
@@ -35,7 +35,7 @@ rst = '0':所有信号清零，关闭debug
 		"11000"=>exc_code
 		"11001"=>EPCWrite
 		"11010"=>set_Cause
-		"11011"=>set_EXL
+		"11011"=>0:set_EXL	1:rm_EXL	2:EXP_type
 		"11100"=>cause_IP
 		"11101"=>1:com_Int   0:timer_Int
 		"11110"=>mem_error
@@ -105,7 +105,7 @@ rst = '0':所有信号清零，关闭debug
 			"0011":BadVAddr[15:0]
 			"0100":Count[15:0]
 			"0101":EntryHi[15:0]
-			"0110":compare[15:0]
+			"0110":Compare[15:0]
 			"0111":Status[15:0]
 			"1000":Cause[15:0]
 			"1001":EPC[15:0]

@@ -10,40 +10,40 @@ Target Device  : xc6slx100
 Target Package : fgg676
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Jul 23 04:51:45 2015
+Mapped Date    : Fri Jul 24 11:13:23 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:   32
 Slice Logic Utilization:
-  Number of Slice Registers:                 3,079 out of 126,576    2%
-    Number used as Flip Flops:               3,046
-    Number used as Latches:                     33
+  Number of Slice Registers:                 3,167 out of 126,576    2%
+    Number used as Flip Flops:               3,130
+    Number used as Latches:                     34
     Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      4,061 out of  63,288    6%
-    Number used as logic:                    4,060 out of  63,288    6%
-      Number using O6 output only:           3,669
-      Number using O5 output only:               0
-      Number using O5 and O6:                  391
+    Number used as AND/OR logics:                3
+  Number of Slice LUTs:                      5,390 out of  63,288    8%
+    Number used as logic:                    5,365 out of  63,288    8%
+      Number using O6 output only:           4,308
+      Number using O5 output only:             102
+      Number using O5 and O6:                  955
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  15,616    0%
-    Number used exclusively as route-thrus:      1
-      Number with same-slice register load:      1
-      Number with same-slice carry load:         0
+    Number used exclusively as route-thrus:     25
+      Number with same-slice register load:     13
+      Number with same-slice carry load:        12
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 2,008 out of  15,822   12%
-  Number of MUXCYs used:                       240 out of  31,644    1%
-  Number of LUT Flip Flop pairs used:        5,866
-    Number with an unused Flip Flop:         2,868 out of   5,866   48%
-    Number with an unused LUT:               1,805 out of   5,866   30%
-    Number of fully used LUT-FF pairs:       1,193 out of   5,866   20%
-    Number of unique control sets:             185
+  Number of occupied Slices:                 2,491 out of  15,822   15%
+  Number of MUXCYs used:                     1,332 out of  31,644    4%
+  Number of LUT Flip Flop pairs used:        7,327
+    Number with an unused Flip Flop:         4,268 out of   7,327   58%
+    Number with an unused LUT:               1,937 out of   7,327   26%
+    Number of fully used LUT-FF pairs:       1,122 out of   7,327   15%
+    Number of unique control sets:             193
     Number of slice register sites lost
-      to control set restrictions:             793 out of 126,576    1%
+      to control set restrictions:             820 out of 126,576    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -80,11 +80,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.21
+Average Fanout of Non-Clock Nets:                4.05
 
-Peak Memory Usage:  689 MB
-Total REAL time to MAP completion:  2 mins 12 secs 
-Total CPU time to MAP completion:   2 mins 11 secs 
+Peak Memory Usage:  710 MB
+Total REAL time to MAP completion:  2 mins 21 secs 
+Total CPU time to MAP completion:   2 mins 21 secs 
 
 Table of Contents
 -----------------
@@ -107,112 +107,109 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[2]_AND_332_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[27]_AND_280_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[3]_AND_330_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[29]_AND_276_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[0]_AND_336_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[10]_AND_313_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[4]_AND_328_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[20]_AND_293_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[1]_AND_334_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[13]_AND_307_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[5]_AND_326_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[30]_AND_273_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[6]_AND_324_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[25]_AND_284_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[7]_AND_322_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[18]_AND_297_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[8]_AND_320_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[28]_AND_278_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[9]_AND_318_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[12]_AND_309_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[13]_AND_310_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[16]_AND_301_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[14]_AND_308_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[17]_AND_299_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[23]_AND_291_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[24]_AND_286_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[26]_AND_285_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[1]_AND_331_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[18]_AND_300_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[2]_AND_329_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[12]_AND_312_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[3]_AND_327_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[22]_AND_293_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[7]_AND_319_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[25]_AND_287_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[8]_AND_317_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[17]_AND_302_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[9]_AND_315_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[11]_AND_314_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[23]_AND_288_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[21]_AND_294_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[15]_AND_303_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[31]_AND_275_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[0]_AND_333_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[24]_AND_289_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[4]_AND_325_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[16]_AND_304_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[5]_AND_323_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[28]_AND_281_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[6]_AND_321_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[19]_AND_298_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[11]_AND_311_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[29]_AND_279_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[31]_AND_272_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[10]_AND_316_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[14]_AND_305_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[20]_AND_296_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[21]_AND_291_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[30]_AND_276_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[22]_AND_290_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[15]_AND_306_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[26]_AND_282_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[27]_AND_283_o is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rst_SW[19]_AND_295_o is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network clk50_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 4 more times for the following
+INFO:LIT:395 - The above info message is repeated 1 more times for the following
    (max. 5 shown):
-   clk11_IBUF,
-   data_ready_IBUF,
-   tbre_IBUF,
-   tsre_IBUF
+   clk11_IBUF
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -228,7 +225,7 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   2 block(s) optimized away
+   3 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
@@ -237,6 +234,7 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
+GND 		u4/m/blk00000001/blk00000002
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.

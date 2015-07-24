@@ -19,6 +19,7 @@ int main(int argc,char** argv)
 	unsigned int f_addr=0;
 	int mode = 1;
 	int flag = 1;
+	int flagx = 1;
 	for(int i=1;i<argc;i++)
 	{
 		if(strcmp(argv[i],"-h")==0)
@@ -61,7 +62,8 @@ int main(int argc,char** argv)
 					sscanf(argv[i+2],"%x",&addr);
 			}
 			else if(strcmp(argv[i],"-k")==0)
-			{				
+			{		
+				flagx = 0;		
 				mode = 4;
 				for(int k=0;k<argc;k++)
 				{
@@ -71,7 +73,7 @@ int main(int argc,char** argv)
 						break;
 					}					
 				}								
-				if(i==(argc-3))
+				if(i==(argc-2))
 				{					
 					fprintf(stderr, "option error!exit!\n");
 					return -1;	
@@ -80,7 +82,8 @@ int main(int argc,char** argv)
 					sscanf(argv[i+1],"%x",&addr);
 				for(int j=0;j<4;j++)
 					sscanf(argv[i+2],"%x",&f_addr);
-				filename =argv[i+3];
+				if(i==(argc-3))
+					filename =argv[i+3];
 			}
 		}
 	}
@@ -88,7 +91,7 @@ int main(int argc,char** argv)
 	{
 		if(com_name ==NULL)
 			com_name = (char*)"COM1";
-		if(filename==NULL)
+		if(filename==NULL && flagx)
 			filename = (char*)"kernel.dat";		
 		FlashAndRam(com_name,filename,addr,f_addr,mode);
 	}

@@ -1,51 +1,51 @@
-ADDIU
-ADDU
-SLT
-SLTI
-SLIIU
-SLTU
-SUBU
-MULT
-MFLO
-MFHI
-MTLO
-MTHI
-BEQ
-BGEZ
-BGTZ
-BLEZ
-BLTZ
-BNE
-J
-JAL
-JALR
-JR
-LW
-SW
-LB
-LBU
-SB
-AND
-ANDI
-LUI
-NOR
-OR
-ORI
-XOR
-XORI
-SLL
-SLLV
-SRA
-SRAV
-SRL
-SRLV
+ADDIU     \
+ADDU	  \
+SLT		  \
+SLTI      \
+SLIIU     \
+SLTU	  \
+SUBU	  \		
+MULT	  \
+MFLO	  \
+MFHI	  \
+MTLO      \
+MTHI      \
+BEQ		  \
+BGEZ	  \
+BGTZ	  \
+BLEZ	  \
+BLTZ      \
+BNE		  \
+J		  \
+JAL		  \
+JALR      \
+JR		  \
+LW		  \
+SW        \
+LB		 \
+LBU		 \
+SB		 \
+AND		\
+ANDI	\
+LUI		\
+NOR		\
+OR		\
+ORI		\
+XOR		\
+XORI	\
+SLL     \
+SLLV	\
+SRA		\
+SRAV	\
+SRL		\
+SRLV	\
 SYSCALL
-CACHE(NOP)
+CACHE(NOP) \
 ERET
-MFC0
-MTC0
+MFC0    \
+MTC0    \
 TLBWI
-LHU
+LHU		\
 
 # rs:instruction[25:21]
 # rt:instruction[20:16]

@@ -115,14 +115,13 @@ void Translator::parse(char* filename)
 				continue;
 		}
 		code = it->second;
-		char *p =buf;
+		char *p =buf;		
 		if(strcmp(op_code,"addiu")==0 || strcmp(op_code,"slti")==0 || strcmp(op_code,"sltiu")==0 \
 			|| strcmp(op_code,"beq")==0 || strcmp(op_code,"bne")==0 || strcmp(op_code,"lw")==0 \
 			|| strcmp(op_code,"sw")==0 || strcmp(op_code,"lb")==0 || strcmp(op_code,"lbu")==0  \
 			|| strcmp(op_code,"sb")==0 || strcmp(op_code,"andi")==0 || strcmp(op_code,"ori")==0 \
 			|| strcmp(op_code,"xori")==0 || strcmp(op_code,"lhu")==0)
-		{
-			//printf("*****************1\n");
+		{			
 			p = strchr(buf,'$');			
 			if(sscanf(++p,"%d",&op1)==EOF)
 			 	goto Error;	
@@ -132,7 +131,7 @@ void Translator::parse(char* filename)
 			 	goto Error;
 						
 			if(strcmp(op_code,"beq")==0 || strcmp(op_code,"bne")==0)
-			{
+			{				
 				op1<<=21;
 				op2<<=16;
 
@@ -348,7 +347,7 @@ void Translator::parse(char* filename)
 			op3<<=16;
 			code |= op1 | op2 | op3;			
 		}
-		else if(strcmp(op_code,"sllv")==0 || strcmp(op_code,"srav") || strcmp(op_code,"srlv"))
+		else if(strcmp(op_code,"sllv")==0 || strcmp(op_code,"srav")==0 || strcmp(op_code,"srlv")==0)
 		{
 			//printf("*****************13\n");
 			p = strchr(buf,'$');			

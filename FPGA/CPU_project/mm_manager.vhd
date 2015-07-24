@@ -326,7 +326,7 @@ begin
 	process(rst,clk_cpu,MemRead,MemWrite)
 	begin
 		if rst = '0' or (MemRead = '0' and MemWrite='0') then
-			Data_out<=(others=>'0');
+			--Data_out<=(others=>'0');
 			ready<='0';
 			mem_error<="00";
 			BadVAddr<=x"00000000";
@@ -340,7 +340,7 @@ begin
 			comRead<='0';
 			comWrite<='0';
 		elsif rising_edge(clk_cpu) then
-			if (Vaddr(31)='1' and Status(4)='1' and Status(1)='0' and Status(2)='0')	--user mode but access kseg
+			if (Vaddr(31)='1' and Status(4)='1' and Status(1)='0')	--user mode but access kseg
 				or Vaddr(1 downto 0) /="00" then
 				BadVAddr<=Vaddr;
 				ready<='1';
@@ -439,7 +439,7 @@ begin
 				end case;
 			end if;
 		end if;				
-	end process;
+	end process;		
 	
 	process(bitmapx)
 	begin

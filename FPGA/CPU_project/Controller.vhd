@@ -70,8 +70,9 @@ entity Controller is
 			  Status:in STD_LOGIC_VECTOR(31 downto 0);			  
 			  set_Cause:out STD_LOGIC;
 			  set_EXL:out STD_LOGIC;
+			  rm_EXL:out STD_LOGIC;
 			  cause_IP:out STD_LOGIC_VECTOR(5 downto 0);
-			  
+			  EXP_type:out STD_LOGIC;
 			  DYP0:out STD_LOGIC_VECTOR(6 downto 0)
 			  );
 end Controller;
@@ -122,9 +123,11 @@ begin
 					MUL_start<='0';
 					set_Cause<='0';
 					set_EXL<='0';
+					rm_EXL<='0';
 					cause_IP<=(others=>'0');
+					EXP_type<='0';
 				when instruction_fetch=>
-					if (Status(0)='1' and Status(1)='0' and Status(2)='0') --enable interrupt
+					if (Status(0)='1' and Status(1)='0') 				--enable interrupt
 						and ((Status(15)='1' and timer_Int='1') or (Status(10)='1' and com_Int='1')) then
 						exc_code<="00000";
 						--Cause(15)<=Status(15) and timer_Int;
@@ -132,6 +135,7 @@ begin
 						--cause_IP<=Cause(15 downto 10);
 						cause_IP(5)<=Status(15) and timer_Int;
 						cause_IP(0)<=Status(10) and com_Int;
+						EXP_type<='0';
 						g_state<=interrupt;
 					else
 						--g_state<=decode;
@@ -164,6 +168,7 @@ begin
 						MUL_start<='0';					
 						set_Cause<='0';
 						set_EXL<='0';
+						rm_EXL<='0';
 						cause_IP<=(others=>'0');
 						if Mem_ready='1' then
 							if mem_error /= "00" then
@@ -541,15 +546,18 @@ begin
 							if instructions(25 downto 0)="10000000000000000000011000" then --ERET	
 								if Status(4)='1' and Status(1) = '0' then
 									exc_code<="01011";
+									EXP_type<='1';
 									g_state<=interrupt;
 								else
-									set_EXL<='0';
+									--set_EXL<='0';
+									rm_EXL<='1';
 									--Status(1)<='0';				--enable int
 									PCSrc<="100";
 								end if;
 							elsif instructions(25 downto 0)="10000000000000000000000010" then --TLBWI	
 								if Status(4)='1' and Status(1)='0' then
 									exc_code<="01011";
+									EXP_type<='1';
 									g_state<=interrupt;
 								else								
 									TLBWrite<='1';
@@ -557,6 +565,7 @@ begin
 							elsif instructions(25 downto 21) = "00000" AND instructions(10 downto 0)="00000000000" then --MFC0
 								if Status(4)='1' and Status(1)='0' then
 									exc_code<="01011";
+									EXP_type<='1';
 									g_state<=interrupt;
 								else								
 									RegDst<="01";
@@ -565,6 +574,7 @@ begin
 							elsif instructions(25 downto 21)="00100" AND instructions(10 downto 0)="00000000000" then --MTC0
 								if Status(4)='1' and Status(1)='0' then
 									exc_code<="01011";
+									EXP_type<='1';
 									g_state<=interrupt;
 								else								
 									CP0Write<='1';
@@ -841,6 +851,7 @@ begin
 						when "010000"=>
 							if instructions(25 downto 0)="10000000000000000000011000" then --ERET								
 								PCWrite<='1';
+								rm_EXL<='0';
 							elsif instructions(25 downto 0)="10000000000000000000000010" then --TLBWI								
 								TLBWrite<='0';
 							elsif instructions(25 downto 21) = "00000" AND instructions(10 downto 0)="00000000000" then --MFC0
@@ -871,25 +882,25 @@ begin
 						when others=>
 							null;
 					end case;	
-				when interrupt=>									--exception
-					g_state<=interrupt2;
-					if Status(1) = '0' then
-						EPCWrite<='1';
-						g_state<=interruptx;
-					end if;
+				when interrupt=>									--exception										
+					EPCWrite<='1';					
 					set_Cause<='1';
 					set_EXL<='1';
 					--Cause(6 downto 2)<=exc_code;
 					--Status(1)<='1';
 					PCWriteCond<="111";					
+					g_state<=interruptx;
 				when interruptx=>
+					EPCWrite<='0';					
+					set_EXL<='0';
+					set_Cause<='0';
 					g_state<=interrupt2;
 				when interrupt2=>
 					PCWrite<='1';
 					g_state<=interrupt3;
 				when interrupt3=>
 					PCWrite<='0';
-					set_Cause<='0';
+					--set_Cause<='0';
 					--set_EXL<='0';
 					g_state<=instruction_fetch;
 				when others=>null;

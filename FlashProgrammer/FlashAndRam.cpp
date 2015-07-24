@@ -120,20 +120,24 @@ void FlashAndRam::read_com(){
     unsigned char ch;
     DWORD size;
     send_com();
-    readKernel();  
+    if(file_name)
+        readKernel();  
     for(unsigned int i=addr;i<f_addr;i++)
     {
         ReadFile(com,&ch,1,&size,NULL);
         if(mode == 3)
             printf("%02x ",ch);
-        if(ch != kernel_data.front())
+        if(file_name)
         {
-            printf("\ncheck error in address %08x\n",i);
-            printf("kernel_data: %02x\n",kernel_data.front());
-            printf("error_data: %02x\n",ch);
-            exit(-1);
+            if(ch != kernel_data.front())
+            {
+                printf("\ncheck error in address %08x\n",i);
+                printf("kernel_data: %02x\n",kernel_data.front());
+                printf("error_data: %02x\n",ch);
+                exit(-1);
+            }
+            kernel_data.pop();
         }
-        kernel_data.pop();
     }
     printf("\ncorrect!\n");
 }

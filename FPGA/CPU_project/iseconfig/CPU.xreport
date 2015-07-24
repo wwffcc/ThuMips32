@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-07-23T10:10:08</DateModified>
+  <DateModified>2015-07-24T09:48:16</DateModified>
   <ModuleName>CPU</ModuleName>
-  <SummaryTimeStamp>2015-07-23T04:21:47</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-07-24T02:20:27</SummaryTimeStamp>
   <SavedFilePath>C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/iseconfig/CPU.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project\</ImplementationReportsDirectory>
   <DateInitialized>2015-07-21T11:42:15</DateInitialized>
