@@ -7,7 +7,6 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/CPU - Behavioral C:|Users|lx|Desktop|CPU_works|FPGA|CPU_project|CPU.vhd/u1 - mm_manager - Behavioral</ClosedNode>
          <ClosedNode>/CPU - Behavioral C:|Users|lx|Desktop|CPU_works|FPGA|CPU_project|CPU.vhd/u4 - p_MUL - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
@@ -15,7 +14,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000017d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000017d0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000018d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000018d0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>CPU - Behavioral (C:/Users/lx/Desktop/CPU_works/FPGA/CPU_project/CPU.vhd)</CurrentItem>
    </ItemView>

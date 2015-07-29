@@ -1,0 +1,403 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    23:15:31 07/16/2015 
+-- Design Name: 
+-- Module Name:    flashAndram - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity flashAndram is
+    Port ( rst : in  STD_LOGIC;
+           clk11 : in  STD_LOGIC;
+			  
+			  SW: in STD_LOGIC_VECTOR(31 downto 0);
+			  LED: out STD_LOGIC_VECTOR(15 downto 0);
+			  DYP0:out STD_LOGIC_VECTOR(6 downto 0);
+			  DYP1:out STD_LOGIC_VECTOR(6 downto 0);
+			  
+           Ram1Addr : out  STD_LOGIC_VECTOR (19 downto 0);
+           Ram1Data : inout  STD_LOGIC_VECTOR (31 downto 0);
+           Ram1EN : out  STD_LOGIC;
+           Ram1OE : out  STD_LOGIC;
+           Ram1WE : out  STD_LOGIC;
+           Ram2Addr : out  STD_LOGIC_VECTOR (19 downto 0);
+           Ram2Data : inout  STD_LOGIC_VECTOR (31 downto 0);
+           Ram2EN : out  STD_LOGIC;
+           Ram2OE : out  STD_LOGIC;
+           Ram2WE : out  STD_LOGIC;
+           data_ready : in  STD_LOGIC;
+           rdn : out  STD_LOGIC;
+           tbre : in  STD_LOGIC;
+           tsre : in  STD_LOGIC;
+           wrn : out  STD_LOGIC);
+end flashAndram;
+
+architecture Behavioral of flashAndram is
+signal recv_byte:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal Paddr:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal flag:STD_LOGIC_VECTOR(1 downto 0):="11";					--00 ram1;01 ram2;10 flash
+
+type flashAndram_state is (init_state,recv0,ctrl,send0,send1,send2,send3,ram1_save0,ram1_save1,ram2_save0,ram2_save1,
+									ram_save,flash_save0,check_state,ram1_check0,ram1_check1,ram1_check2,ram1_check3,ram2_check0,
+								ram2_check1,ram2_check2,ram2_check3,flash_check0,send_check0,send_check1,send_check2,send_check3
+									);
+signal fr_state:flashAndram_state:=init_state;
+
+signal cond:STD_LOGIC_VECTOR(3 downto 0):="0000";
+signal cond2:STD_LOGIC_VECTOR(1 downto 0):="00";
+signal flag_next:STD_LOGIC_VECTOR(1 downto 0):="11";
+signal final_addr:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal temp_data:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal cond3:STD_LOGIC_VECTOR(2 downto 0):="000";
+begin
+	--Paddr<= recv_byte when cond = "0100" else Paddr;
+
+	--flag_next<="11" when rst = '0' else
+	--				flag when cond = "0101" else flag_next;
+	
+	process(rst,clk11)
+	begin
+		if rst = '0' then
+			recv_byte<=(others=>'0');
+			Paddr<=x"00000000";			
+			flag<="11";
+			--flag_next<="11";
+			wrn<='1';
+			rdn<='1';
+			Ram1EN<='1';
+			Ram2EN<='1';
+			Ram1WE<='1';
+			Ram1OE<='1';
+			Ram2WE<='1';
+			Ram2OE<='1';
+			Ram1Data<=(others=>'Z');
+			Ram2Data<=(others=>'Z');
+			fr_state<=init_state;
+			cond<="0000";
+			cond2<="00";
+			cond3<="000";
+			flag_next<="11";
+			LED<=(others=>'0');
+			final_addr<=(others=>'0');
+		elsif rising_edge(clk11) then
+			case fr_state is
+				when init_state=>	
+					wrn<='1';
+					rdn<='1';
+					Ram1EN<='1';									
+					if data_ready = '1' then
+						rdn<='0';
+						fr_state<=recv0;
+					end if;																
+				when recv0=>					
+					rdn<='1';
+					case cond2 is
+						when "00"=>
+							recv_byte(7 downto 0)<=Ram1Data(7 downto 0);
+						when "01"=>
+							recv_byte(15 downto 8)<=Ram1Data(7 downto 0);
+						when "10"=>
+							recv_byte(23 downto 16)<=Ram1Data(7 downto 0);
+						when "11"=>
+							recv_byte(31 downto 24)<=Ram1Data(7 downto 0);
+						when others=>
+							NULL;							
+					end case;
+					if cond = "0000" then						
+						fr_state<=ctrl;
+					else
+						fr_state<=send0;
+					end if;
+				when ctrl=>
+					flag<=recv_byte(1 downto 0);
+					fr_state<=send0;
+				when send0=>					
+					Ram1EN<='1';
+					if tbre='1' then
+						fr_state<=send1;
+					end if;					
+				when send1=>
+					if tsre='1' then
+						Ram1Data<=x"00000023";
+						fr_state<=send2;
+					end if;					
+				when send2=>
+					wrn<='0';
+					fr_state<=send3;					
+				when send3=>					
+					wrn<='1';
+					Ram1Data<=(others=>'Z');
+					--fr_state<=init_state;					
+					--cond<=cond+1;								
+					cond2<=cond2+1;
+					case cond is
+						when "0000"=>cond<=cond+1;cond2<=cond2;
+						when "0001"=>cond<=cond+1;
+						when "0010"=>cond<=cond+1;
+						when "0011"=>cond<=cond+1;
+						when "0100"=>
+							Paddr<=recv_byte;
+							flag_next<=flag;
+							cond<=cond+1;
+						when others=>
+							--Paddr<=Paddr+1;	
+								NULL;
+					end case;
+					if cond2 = "11" then
+						case flag_next is
+							when "00"=>
+								fr_state<=ram1_save0;
+							when "01"=>
+								fr_state<=ram2_save0;
+							when "10"=>
+								fr_state<=flash_save0;
+							when "11"=>
+								if cond = "0101" then
+									fr_state<=check_state;
+									final_addr<=recv_byte;
+								else
+									fr_state<=init_state;
+								end if;
+							when others=>
+								fr_state<=init_state;
+						end case;					
+					else
+						fr_state<=init_state;
+					end if;
+				when ram1_save0=>
+					rdn<='1';
+					wrn<='1';
+					Ram1EN<='0';
+					Ram1WE<='1';
+					Ram1OE<='1';
+					Ram1Addr<=Paddr(21 downto 2);
+					Ram1Data<=recv_byte;
+					fr_state<=ram1_save1;
+				when ram1_save1=>
+					Ram1WE<='0';
+					fr_state<=ram_save;
+				when ram_save=>
+					Ram1EN<='1';
+					Ram2EN<='1';
+					Ram1WE<='1';
+					Ram2WE<='1';
+					Ram1Data<=(others=>'Z');
+					Ram2Data<=(others=>'Z');
+					fr_state<=init_state;
+					Paddr<=Paddr+4;
+					recv_byte<=(others=>'0');
+				when ram2_save0=>
+					rdn<='1';
+					wrn<='1';
+					Ram2EN<='0';
+					Ram2WE<='1';
+					Ram2OE<='1';
+					Ram2Addr<=Paddr(21 downto 2);
+					Ram2Data<=recv_byte;
+					fr_state<=ram2_save1;
+				when ram2_save1=>
+					Ram2WE<='0';
+					fr_state<=ram_save;	
+				when flash_save0=>
+					fr_state<=init_state;
+					Paddr<=Paddr+4;
+					recv_byte<=(others=>'0');
+				when check_state=>
+					--final_addr<=recv_byte;					
+					if Paddr>=0 and Paddr<=x"003FFFFF" then
+						fr_state<=ram1_check0;
+					elsif Paddr<=x"007FFFFF" then
+						fr_state<=ram2_check0;
+					elsif Paddr>=x"1E000000" and Paddr<=x"1EFFFFFF" then
+						fr_state<=flash_check0;
+					else
+						fr_state<=init_state;
+					end if;
+					cond3<="000";
+				when ram1_check0=>
+					wrn<='1';
+					rdn<='1';
+					Ram1EN<='0';
+					Ram1WE<='1';
+					Ram1OE<='1';
+					Ram1Data<=(others=>'Z');
+					Ram1Addr<=Paddr(21 downto 2);
+					fr_state<=ram1_check1;
+				when ram1_check1=>
+					Ram1OE<='0';
+					fr_state<=ram1_check2;
+				when ram1_check2=>
+					Ram1OE<='1';
+					Ram1EN<='1';
+					wrn<='1';
+					rdn<='1';
+					temp_data<=Ram1Data;	
+					fr_state<=send_check0;
+				when send_check0=>
+					if tbre = '1' then
+						fr_state<=send_check1;
+					end if;
+				when send_check1=>
+					if tsre='1' then
+						case cond3 is
+							when "000"=>
+								Ram1Data(7 downto 0)<=temp_data(7 downto 0);
+															fr_state<=send_check2;
+							when "001"=>
+								Ram1Data(7 downto 0)<=temp_data(15 downto 8);
+															fr_state<=send_check2;
+							when "010"=>
+								Ram1Data(7 downto 0)<=temp_data(23 downto 16);
+															fr_state<=send_check2;
+							when "011"=>
+								Ram1Data(7 downto 0)<=temp_data(31 downto 24);
+															fr_state<=send_check2;
+							when others=>
+								fr_state<=check_state;	
+						end case;
+						Ram1Data(31 downto 8)<=x"000000";
+						cond3<=cond3+1;
+						--Ram1Data<=temp_data;
+						--fr_state<=send_check2;
+					end if;
+				when send_check2=>
+					wrn<='0';
+					fr_state<=send_check3;
+				when send_check3=>
+					wrn<='1';
+					Ram1Data<=(others=>'Z');
+					Ram1EN<='1';
+					if cond3 = "100" then
+						if Paddr = final_addr then
+							fr_state<=init_state;
+						else
+							Paddr<=Paddr+4;
+							fr_state<=check_state;
+						end if;
+					else
+						fr_state<=send_check0;
+					end if;						
+				when ram2_check0=>
+					wrn<='1';
+					rdn<='1';
+					Ram2EN<='0';
+					Ram2WE<='1';
+					Ram2OE<='1';
+					Ram2Data<=(others=>'Z');
+					Ram2Addr<=Paddr(21 downto 2);
+					fr_state<=ram2_check1;
+				when ram2_check1=>
+					Ram2OE<='0';
+					fr_state<=ram2_check2;
+				when ram2_check2=>
+					Ram2OE<='1';
+					Ram2EN<='1';
+					wrn<='1';
+					rdn<='1';
+					temp_data<=Ram2Data;	
+					fr_state<=send_check0;				
+				when flash_check0=>
+					fr_state<=send_check0;
+				when others=>NULL;
+			end case;
+		end if;
+		
+		case fr_state is
+		when init_state=> DYP0<=not "1000000";
+		when recv0=> DYP0<=not "1111001";
+		when ctrl=> DYP0<=not "0100100";
+		when send0=> DYP0<=not "0110000";
+		when send1=> DYP0<=not "0011001";
+		when send2=> DYP0<=not "0010010";
+		when send3=> DYP0<=not "0000010";
+		when check_state=> DYP0<=not "1111000";
+		when ram2_check0=> DYP0<=not "0000000";
+		when ram2_check1=> DYP0<=not "0010000";
+		when ram2_check2=> DYP0<=not "0001000";
+		when ram2_check3=> DYP0<=not "0000011";
+		when send_check0=> DYP0<=not "1000110";
+		when send_check1=> DYP0<=not "0100001";
+		when send_check2=> DYP0<=not "0000110";
+		when send_check3=> DYP0<=not "0001110";
+		when others=> DYP0<=not "1111111";
+		end case;
+		
+		case SW(15 downto 0) is
+			when "0000000000000001"=>LED<=recv_byte(15 downto 0);
+			when "0000000000000010"=>LED<=recv_byte(31 downto 16);
+			when "0000000000000100"=>LED<=Paddr(15 downto 0);
+			when "0000000000001000"=>LED<=Paddr(31 downto 16);
+			when "0000000000010000"=>LED<=final_addr(15 downto 0);
+			when "0000000000100000"=>LED<=final_addr(31 downto 16);
+			when "0000000001000000"=>LED(1 downto 0)<=flag;LED(15 downto 2)<=(others=>'0');
+			when "0000000010000000"=>LED(3 downto 0)<=cond;LED(15 downto 4)<=(others=>'0');
+			when "0000000100000000"=>LED(1 downto 0)<=cond2;LED(15 downto 2)<=(others=>'0');
+			when "0000001000000000"=>LED(1 downto 0)<=flag_next;LED(15 downto 2)<=(others=>'0');
+			when "0000010000000000"=>LED(0)<=data_ready;LED(15 downto 1)<=(others=>'0');
+			when "0000100000000000"=>LED<=temp_data(15 downto 0);
+			when "0001000000000000"=>LED<=temp_data(31 downto 16);
+			when "1000000000000000"=>LED<=Ram2Data(31 downto 16);
+			when others=>LED<=Ram2Data(15 downto 0);
+		end case;
+--		case SW(15 downto 0) is
+--			when "0000000000000001"=>LED<="0000000000000001";
+--			when "0000000000000010"=>LED<="0000000000000010";
+--			when "0000000000000100"=>LED<="0000000000000100";
+--			when "0000000000001000"=>LED<="0000000000001000";
+--			when "0000000000010000"=>LED<="0000000000010000";
+--			when "0000000000100000"=>LED<="0000000000100000";
+--			when "0000000001000000"=>LED<="0000000001000000";
+--			when "0000000010000000"=>LED<="0000000010000000";
+--			when "0000000100000000"=>LED<="0000000100000000";
+--			when "0000001000000000"=>LED<="0000001000000000";
+--			when "0000010000000000"=>LED<="0000010000000000";
+--			when others=>NULL;
+--		end case;
+		
+		case cond is
+		when "0000"=> DYP1<=not "1000000";
+		when "0001"=> DYP1<=not "1111001";
+		when "0010"=> DYP1<=not "0100100";
+		when "0011"=> DYP1<=not "0110000";
+		when "0100"=> DYP1<=not "0011001";
+		when others=> DYP1<=not "0010010";
+		--when RT3=> DYP0<=not "0000010";
+		--when RT4=> DYP0<=not "1111000";
+--		when ST8=> DYP0<=not "0000000";
+--		when ST9=> DYP0<=not "0010000";
+--		when TTA=> DYP0<=not "0001000";
+--		when TTb=> DYP0<=not "0000011";
+--		when TTC=> DYP0<=not "1000110";
+--		when TTd=> DYP0<=not "0100001";
+--		when TTE=> DYP0<=not "0000110";
+--		when TTF=> DYP0<=not "0001110";
+		--when others=> DYP0<=not "1111111";
+		end case;
+	end process;
+end Behavioral;
+

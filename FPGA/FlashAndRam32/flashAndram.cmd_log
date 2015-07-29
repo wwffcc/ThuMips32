@@ -346,3 +346,21 @@ map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -r
 par -w -intstyle ise -ol high -mt off flashAndram_map.ncd flashAndram.ncd flashAndram.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml flashAndram.twx flashAndram.ncd -o flashAndram.twr flashAndram.pcf -ucf flashAndram.ucf 
 bitgen -intstyle ise -f flashAndram.ut flashAndram.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/FlashAndRam32/flashAndram.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/FlashAndRam32/flashAndram.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flashAndram.ucf -p xc6slx100-fgg676-3 flashAndram.ngc flashAndram.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o flashAndram_map.ncd flashAndram.ngd flashAndram.pcf 
+par -w -intstyle ise -ol high -mt off flashAndram_map.ncd flashAndram.ncd flashAndram.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml flashAndram.twx flashAndram.ncd -o flashAndram.twr flashAndram.pcf -ucf flashAndram.ucf 
+bitgen -intstyle ise -f flashAndram.ut flashAndram.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/FlashAndRam32/flashAndram.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/FlashAndRam32/flashAndram.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flashAndram.ucf -p xc6slx100-fgg676-3 flashAndram.ngc flashAndram.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o flashAndram_map.ncd flashAndram.ngd flashAndram.pcf 
+par -w -intstyle ise -ol high -mt off flashAndram_map.ncd flashAndram.ncd flashAndram.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml flashAndram.twx flashAndram.ncd -o flashAndram.twr flashAndram.pcf -ucf flashAndram.ucf 
+bitgen -intstyle ise -f flashAndram.ut flashAndram.ncd 
+xst -intstyle ise -ifn "C:/Users/lx/Desktop/CPU_works/FPGA/FlashAndRam32/flashAndram.xst" -ofn "C:/Users/lx/Desktop/CPU_works/FPGA/FlashAndRam32/flashAndram.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flashAndram.ucf -p xc6slx100-fgg676-3 flashAndram.ngc flashAndram.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o flashAndram_map.ncd flashAndram.ngd flashAndram.pcf 
+par -w -intstyle ise -ol high -mt off flashAndram_map.ncd flashAndram.ncd flashAndram.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml flashAndram.twx flashAndram.ncd -o flashAndram.twr flashAndram.pcf -ucf flashAndram.ucf 
+bitgen -intstyle ise -f flashAndram.ut flashAndram.ncd 

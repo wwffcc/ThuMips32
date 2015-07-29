@@ -61,26 +61,26 @@ begin
 			Paddr(31 downto 29)<="000";
 			flag_missing<='0';
 			flag_writable<='1';
-		else		
-			Paddr<=Vaddr;flag_writable <= '1';
-																				--kuseg or kseg2
---			flag_missing<='1';
---			Paddr(11 downto 0)<=Vaddr(11 downto 0);						--Page table
---			for i in 0 to 15 LOOP												--search for PTE
---				if tlb(i)(62 downto 44) = Vaddr(31 downto 13) then
---					if Vaddr(12)='0' and tlb(i)(23)='1' then				--even PTE,and page is valid
---						Paddr(31 downto 12)<=tlb(i)(43 downto 24);
---						flag_missing<='0';
---						flag_writable<=tlb(i)(22);
---						exit;
---					elsif Vaddr(12)='1' and tlb(i)(1)='1' then			--odd PTE,and page is valid
---						Paddr(31 downto 12)<=tlb(i)(21 downto 2);
---						flag_missing<='0';
---						flag_writable<=tlb(i)(0);
---						exit;
---					end if;
---				end if;
---			end LOOP;
+		else	
+			--Paddr<=Vaddr;flag_missing<='0';
+									--kuseg or kseg2
+			flag_missing<='1';
+			Paddr(11 downto 0)<=Vaddr(11 downto 0);						--Page table
+			for i in 0 to 15 LOOP												--search for PTE
+				if tlb(i)(62 downto 44) = Vaddr(31 downto 13) then
+					if Vaddr(12) = '1' and tlb(i)(22) = '1' then						
+						Paddr(31 downto 12) <= tlb(i)(43 downto 24);
+						flag_writable <= tlb(i)(23);
+						flag_missing <= '0';
+						exit;
+					elsif Vaddr(12) = '0' and tlb(i)(0) = '1' then						
+						Paddr(31 downto 12) <= tlb(i)(21 downto 2);
+						flag_writable <= tlb(i)(1);
+						flag_missing <= '0';
+						exit;
+					end if;
+				end if;
+			end LOOP;
 		end if;
 	end process;
 	
@@ -89,13 +89,11 @@ begin
 		if rst='0' then
 			tlb<=(others=>(others=>'0'));
 		elsif rising_edge(TLBWrite) then
-			tlb(CONV_INTEGER(Index(3 downto 0)))(62 downto 44)<=EntryHi(31 downto 13);
-			tlb(CONV_INTEGER(Index(3 downto 0)))(43 downto 24)<=EntryLo0(25 downto 6);
-			tlb(CONV_INTEGER(Index(3 downto 0)))(23)<=EntryLo0(1);
-			tlb(CONV_INTEGER(Index(3 downto 0)))(22)<=EntryLo0(2);
-			tlb(CONV_INTEGER(Index(3 downto 0)))(21 downto 2)<=EntryLo1(25 downto 6);			
-			tlb(CONV_INTEGER(Index(3 downto 0)))(1)<=EntryLo1(1);
-			tlb(CONV_INTEGER(Index(3 downto 0)))(0)<=EntryLo1(2);
+			tlb(CONV_INTEGER(Index(3 downto 0)))(62 downto 44) <= EntryHi(31 downto 13);
+			tlb(CONV_INTEGER(Index(3 downto 0)))(43 downto 24) <= EntryLo1(25 downto 6);
+			tlb(CONV_INTEGER(Index(3 downto 0)))(23 downto 22) <= EntryLo1(2 downto 1);
+			tlb(CONV_INTEGER(Index(3 downto 0)))(21 downto 2) <= EntryLo0(25 downto 6);
+			tlb(CONV_INTEGER(Index(3 downto 0)))(1 downto 0) <= EntryLo0(2 downto 1);
 		end if;
 	end process;
 	

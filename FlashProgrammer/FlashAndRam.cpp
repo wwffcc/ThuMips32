@@ -90,6 +90,7 @@ void FlashAndRam::send_com(){
     unsigned char ch;
     DWORD size;
     printf("writing.....\n");
+    int i=1;
     while(true){
         if(com==INVALID_HANDLE_VALUE){
             printf("COM lost\n");
@@ -99,12 +100,15 @@ void FlashAndRam::send_com(){
             ch=kernel_data.front();
             ch=ch&0x00ff;
             size=0;
-            //printf("send %02x\n",ch);
+            //printf("%x\tsend %02x\n",i-5,ch);
+            //if(i%0x1b60==0)
+            //   Sleep(3000);
             while(size==0)
             {                
                 WriteFile(com,&ch,1,&size,NULL);               
             }
             kernel_data.pop();
+            i++;
         }else{
             printf("write successfully\n");
             return;
@@ -116,7 +120,7 @@ void FlashAndRam::send_com(){
     }
 }
 
-void FlashAndRam::read_com(){
+void FlashAndRam::read_com(){    
     unsigned char ch;
     DWORD size;
     send_com();
@@ -128,7 +132,7 @@ void FlashAndRam::read_com(){
         if(mode == 3)
             printf("%02x ",ch);
         if(file_name)
-        {
+        {            
             if(ch != kernel_data.front())
             {
                 printf("\ncheck error in address %08x\n",i);
@@ -139,7 +143,8 @@ void FlashAndRam::read_com(){
             kernel_data.pop();
         }
     }
-    printf("\ncorrect!\n");
+    if(file_name)
+        printf("\ncorrect!\n");
 }
 
 int FlashAndRam::readKernel(){

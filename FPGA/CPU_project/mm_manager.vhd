@@ -206,17 +206,21 @@ component Device_COM
            Data_in : in  STD_LOGIC_VECTOR (31 downto 0);
            Data_out : out  STD_LOGIC_VECTOR (31 downto 0);
 			  			 
-			  com_status:out STD_LOGIC_VECTOR(1 downto 0);
-			  bitmap:out STD_LOGIC_VECTOR(3 downto 0)
+			  com_status:out STD_LOGIC_VECTOR(21 downto 0);
+			  bitmap:out STD_LOGIC_VECTOR(3 downto 0);
+			  
+			  SW:in STD_LOGIC_VECTOR(3 downto 0);
+			  buffer_bitmap:out STD_LOGIC_VECTOR(15 downto 0)			  
 			  );			  
 end component;
 signal com_ready:STD_LOGIC:='0';
 signal comWrite:STD_LOGIC:='0';
 signal comRead:STD_LOGIC:='0';
 --signal com_Int:STD_LOGIC:='0';
-signal com_status:STD_LOGIC_VECTOR(1 downto 0):="11";
+signal com_status:STD_LOGIC_VECTOR(21 downto 0):=(others=>'0');
 signal com_data:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal com_bitmap:STD_LOGIC_VECTOR(3 downto 0):="0000";
+signal comBuffer_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
 
 signal flag:STD_LOGIC_VECTOR(2 downto 0):="111";
 signal bitmapx:STD_LOGIC_VECTOR(3 downto 0):="ZZZZ";
@@ -297,7 +301,7 @@ begin
 	);
 	
 	u6:Device_COM PORT MAP(
-		rst=>rst,
+		 rst=>rst,
 		  clk=>clk_com,
 		  data_ready=>data_ready,
 		  rdn=>rdn,
@@ -307,12 +311,14 @@ begin
 		  Ram1Data=>Ram1Data,
 		  COM_Ready=>com_ready,
 		  COM_Write=>comWrite,
-		  COM_Read=>comRead,		 
+		  COM_Read=>comRead,
 		  COM_INT=>com_Int,
 		  Data_in=>Data_in,
-		  Data_out=>com_data,
+		  Data_out=>com_data,					 
 		  com_status=>com_status,
-		  bitmap=>com_bitmap		
+		  bitmap=>com_bitmap,		  
+		  SW=>SW(3 downto 0),
+		  buffer_bitmap=>comBuffer_bitmap
 	);
 	
 	flag<="000" when Paddr>=x"1FC00000" and Paddr<=x"1FC00FFF" else
@@ -428,8 +434,8 @@ begin
 						else							
 							comWrite<='0';
 							comRead<='0';
-							Data_out(1 downto 0)<=com_status;
-							Data_out(31 downto 2)<=(others=>'0');
+							Data_out(21 downto 0)<=com_status;
+							Data_out(31 downto 22)<=(others=>'0');
 							ready<='1';						
 						end if;
 						bitmapx<=com_bitmap;						
@@ -495,9 +501,9 @@ begin
 						bitmap(10)<=flashRead;
 						bitmap(11)<=comWrite;
 						bitmap(12)<=comRead;
-						bitmap(14 downto 13)<=com_status;
+						bitmap(14 downto 13)<=com_status(1 downto 0);
 				when "11"=>
-					bitmap<=(others=>'1');
+					bitmap<=comBuffer_bitmap;
 				when others=>bitmap<=(others=>'0');
 			end case;			
 		else

@@ -346,6 +346,7 @@ begin
 										if instructions(25 downto 11) = "000000000000000" then		--SYSCALL
 											g_state<=interrupt;
 											exc_code<="01000";
+											EXP_type<='0';
 										else
 											g_state<=interrupt;
 											exc_code<="01010";

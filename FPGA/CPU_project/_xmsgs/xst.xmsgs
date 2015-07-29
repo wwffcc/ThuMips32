@@ -5,448 +5,712 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 379: <arg fmt="%s" index="1">ctrl_bitmap</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 366: <arg fmt="%s" index="1">enable_step</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 381: <arg fmt="%s" index="1">mm_bitmap</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 379: <arg fmt="%s" index="1">clk11</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 383: <arg fmt="%s" index="1">reg_bitmap</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 382: <arg fmt="%s" index="1">clk_step</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 385: <arg fmt="%s" index="1">host_bitmap</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 385: <arg fmt="%s" index="1">clk11</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 387: <arg fmt="%s" index="1">cp0_bitmap</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 398: <arg fmt="%s" index="1">ctrl_bitmap</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\Device_COM.vhd" Line 74: <arg fmt="%s" index="1">com_statusx</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 400: <arg fmt="%s" index="1">mm_bitmap</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 586: <arg fmt="%s" index="1">sw</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 402: <arg fmt="%s" index="1">reg_bitmap</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 910: <arg fmt="%s" index="1">index</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 404: <arg fmt="%s" index="1">host_bitmap</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 912: <arg fmt="%s" index="1">entrylo0</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 406: <arg fmt="%s" index="1">cp0_bitmap</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 914: <arg fmt="%s" index="1">entrylo1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\mm_manager.vhd" Line 506: <arg fmt="%s" index="1">combuffer_bitmap</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 916: <arg fmt="%s" index="1">badvaddr</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 929: <arg fmt="%s" index="1">index</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 918: <arg fmt="%s" index="1">count</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 931: <arg fmt="%s" index="1">entrylo0</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 920: <arg fmt="%s" index="1">entryhi</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 933: <arg fmt="%s" index="1">entrylo1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 922: <arg fmt="%s" index="1">compare</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 935: <arg fmt="%s" index="1">badvaddr</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 924: <arg fmt="%s" index="1">status</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 937: <arg fmt="%s" index="1">count</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 926: <arg fmt="%s" index="1">cause</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 939: <arg fmt="%s" index="1">entryhi</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 928: <arg fmt="%s" index="1">epc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 941: <arg fmt="%s" index="1">compare</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 930: <arg fmt="%s" index="1">ebase</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 943: <arg fmt="%s" index="1">status</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 932: <arg fmt="%s" index="1">lo</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 945: <arg fmt="%s" index="1">cause</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 934: <arg fmt="%s" index="1">hi</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 947: <arg fmt="%s" index="1">epc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 936: <arg fmt="%s" index="1">pc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 949: <arg fmt="%s" index="1">ebase</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 938: <arg fmt="%s" index="1">rpc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 951: <arg fmt="%s" index="1">lo</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 940: <arg fmt="%s" index="1">aluout</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 953: <arg fmt="%s" index="1">hi</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 947: <arg fmt="%s" index="1">index</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 955: <arg fmt="%s" index="1">pc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 949: <arg fmt="%s" index="1">entrylo0</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 957: <arg fmt="%s" index="1">rpc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 951: <arg fmt="%s" index="1">entrylo1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 959: <arg fmt="%s" index="1">aluout</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 953: <arg fmt="%s" index="1">badvaddr</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 966: <arg fmt="%s" index="1">index</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 955: <arg fmt="%s" index="1">count</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 968: <arg fmt="%s" index="1">entrylo0</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 957: <arg fmt="%s" index="1">entryhi</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 970: <arg fmt="%s" index="1">entrylo1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 959: <arg fmt="%s" index="1">compare</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 972: <arg fmt="%s" index="1">badvaddr</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 961: <arg fmt="%s" index="1">status</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 974: <arg fmt="%s" index="1">count</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 963: <arg fmt="%s" index="1">cause</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 976: <arg fmt="%s" index="1">entryhi</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 965: <arg fmt="%s" index="1">epc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 978: <arg fmt="%s" index="1">compare</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 967: <arg fmt="%s" index="1">ebase</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 980: <arg fmt="%s" index="1">status</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 969: <arg fmt="%s" index="1">lo</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 982: <arg fmt="%s" index="1">cause</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 971: <arg fmt="%s" index="1">hi</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 984: <arg fmt="%s" index="1">epc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 973: <arg fmt="%s" index="1">pc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 986: <arg fmt="%s" index="1">ebase</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 975: <arg fmt="%s" index="1">rpc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 988: <arg fmt="%s" index="1">lo</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 977: <arg fmt="%s" index="1">aluout</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 990: <arg fmt="%s" index="1">hi</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 989: <arg fmt="%s" index="1">pcwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 992: <arg fmt="%s" index="1">pc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 991: <arg fmt="%s" index="1">iord</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 994: <arg fmt="%s" index="1">rpc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 993: <arg fmt="%s" index="1">tlbwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 996: <arg fmt="%s" index="1">aluout</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 995: <arg fmt="%s" index="1">memread</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1008: <arg fmt="%s" index="1">pcwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 997: <arg fmt="%s" index="1">memwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1010: <arg fmt="%s" index="1">iord</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 999: <arg fmt="%s" index="1">memdatasrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1012: <arg fmt="%s" index="1">tlbwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1001: <arg fmt="%s" index="1">memaddrsrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1014: <arg fmt="%s" index="1">memread</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1003: <arg fmt="%s" index="1">irwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1016: <arg fmt="%s" index="1">memwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1005: <arg fmt="%s" index="1">regdst</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1018: <arg fmt="%s" index="1">memdatasrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1007: <arg fmt="%s" index="1">regdatasrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1020: <arg fmt="%s" index="1">memaddrsrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1009: <arg fmt="%s" index="1">regwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1022: <arg fmt="%s" index="1">irwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1011: <arg fmt="%s" index="1">alusrca</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1024: <arg fmt="%s" index="1">regdst</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1013: <arg fmt="%s" index="1">alusrcb</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1026: <arg fmt="%s" index="1">regdatasrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1015: <arg fmt="%s" index="1">pcsrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1028: <arg fmt="%s" index="1">regwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1017: <arg fmt="%s" index="1">pcwritecond</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1030: <arg fmt="%s" index="1">alusrca</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1019: <arg fmt="%s" index="1">hisrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1032: <arg fmt="%s" index="1">alusrcb</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1021: <arg fmt="%s" index="1">losrc</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1034: <arg fmt="%s" index="1">pcsrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1023: <arg fmt="%s" index="1">hiwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1036: <arg fmt="%s" index="1">pcwritecond</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1025: <arg fmt="%s" index="1">lowrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1038: <arg fmt="%s" index="1">hisrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1027: <arg fmt="%s" index="1">aluop</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1040: <arg fmt="%s" index="1">losrc</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1029: <arg fmt="%s" index="1">extendop</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1042: <arg fmt="%s" index="1">hiwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1031: <arg fmt="%s" index="1">aluoutwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1044: <arg fmt="%s" index="1">lowrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1033: <arg fmt="%s" index="1">rpcwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1046: <arg fmt="%s" index="1">aluop</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1035: <arg fmt="%s" index="1">cp0write</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1048: <arg fmt="%s" index="1">extendop</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1037: <arg fmt="%s" index="1">exc_code</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1050: <arg fmt="%s" index="1">aluoutwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1039: <arg fmt="%s" index="1">epcwrite</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1052: <arg fmt="%s" index="1">rpcwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1041: <arg fmt="%s" index="1">set_cause</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1054: <arg fmt="%s" index="1">cp0write</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1043: <arg fmt="%s" index="1">set_exl</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1056: <arg fmt="%s" index="1">exc_code</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1044: <arg fmt="%s" index="1">rm_exl</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1058: <arg fmt="%s" index="1">epcwrite</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1045: <arg fmt="%s" index="1">exp_type</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1060: <arg fmt="%s" index="1">set_cause</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1047: <arg fmt="%s" index="1">cause_ip</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1062: <arg fmt="%s" index="1">set_exl</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1049: <arg fmt="%s" index="1">timer_int</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1063: <arg fmt="%s" index="1">rm_exl</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1050: <arg fmt="%s" index="1">com_int</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1064: <arg fmt="%s" index="1">exp_type</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1052: <arg fmt="%s" index="1">mem_error</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1066: <arg fmt="%s" index="1">cause_ip</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1063: <arg fmt="%s" index="1">instructions</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1068: <arg fmt="%s" index="1">timer_int</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1065: <arg fmt="%s" index="1">instructions</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1069: <arg fmt="%s" index="1">com_int</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1071: <arg fmt="%s" index="1">data_in</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1071: <arg fmt="%s" index="1">mem_error</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1073: <arg fmt="%s" index="1">data_in</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1082: <arg fmt="%s" index="1">instructions</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1077: <arg fmt="%s" index="1">data_out</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1084: <arg fmt="%s" index="1">instructions</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1079: <arg fmt="%s" index="1">data_out</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1090: <arg fmt="%s" index="1">data_in</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1086: <arg fmt="%s" index="1">regdstx</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1092: <arg fmt="%s" index="1">data_in</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1089: <arg fmt="%s" index="1">regdatasrcx</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1096: <arg fmt="%s" index="1">data_out</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1091: <arg fmt="%s" index="1">regdatasrcx</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1098: <arg fmt="%s" index="1">data_out</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1093: <arg fmt="%s" index="1">regdata1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1105: <arg fmt="%s" index="1">regdstx</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1095: <arg fmt="%s" index="1">regdata1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1108: <arg fmt="%s" index="1">regdatasrcx</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1097: <arg fmt="%s" index="1">regdata2</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1110: <arg fmt="%s" index="1">regdatasrcx</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1099: <arg fmt="%s" index="1">regdata2</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1112: <arg fmt="%s" index="1">regdata1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1107: <arg fmt="%s" index="1">alusrcax</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1114: <arg fmt="%s" index="1">regdata1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1109: <arg fmt="%s" index="1">alusrcax</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1116: <arg fmt="%s" index="1">regdata2</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1113: <arg fmt="%s" index="1">alusrcbx</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1118: <arg fmt="%s" index="1">regdata2</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1115: <arg fmt="%s" index="1">alusrcbx</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1126: <arg fmt="%s" index="1">alusrcax</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1120: <arg fmt="%s" index="1">aluresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1128: <arg fmt="%s" index="1">alusrcax</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1122: <arg fmt="%s" index="1">aluresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1132: <arg fmt="%s" index="1">alusrcbx</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1127: <arg fmt="%s" index="1">mul_start</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1134: <arg fmt="%s" index="1">alusrcbx</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1128: <arg fmt="%s" index="1">mul_ready</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1139: <arg fmt="%s" index="1">aluresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1133: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1141: <arg fmt="%s" index="1">aluresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1135: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1146: <arg fmt="%s" index="1">mul_start</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1137: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1147: <arg fmt="%s" index="1">mul_ready</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1139: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1152: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1147: <arg fmt="%s" index="1">immediate</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1154: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1149: <arg fmt="%s" index="1">immediate</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1156: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1151: <arg fmt="%s" index="1">c</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1158: <arg fmt="%s" index="1">mulresult</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1153: <arg fmt="%s" index="1">c</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1166: <arg fmt="%s" index="1">immediate</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1168: <arg fmt="%s" index="1">immediate</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;3:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1170: <arg fmt="%s" index="1">c</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;31:5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1172: <arg fmt="%s" index="1">c</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Index&lt;31:4&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1178: <arg fmt="%s" index="1">breakpoint</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">EntryLo0&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\lx\Desktop\CPU_works\FPGA\CPU_project\CPU.vhd" Line 1180: <arg fmt="%s" index="1">breakpoint</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">EntryLo0&lt;5:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">enable_step</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">EntryLo0&lt;31:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Status&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">EntryLo1&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Status&lt;3:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">EntryLo1&lt;5:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Status&lt;31:5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">EntryLo1&lt;31:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Index&lt;31:4&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">EntryHi&lt;12:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">EntryLo0&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3019" delta="old" >HDL ADVISOR - <arg fmt="%s" index="1">1008</arg> flip-flops were inferred for signal &lt;<arg fmt="%s" index="2">tlb</arg>&gt;. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">EntryLo0&lt;5:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Paddr&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">EntryLo0&lt;31:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Paddr&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">EntryLo1&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">recv2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">EntryLo1&lt;5:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">reg&lt;0&gt;</arg>&lt;<arg fmt="%d" index="2">1</arg>:<arg fmt="%d" index="3">32</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">RegistersFile</arg>&gt;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">EntryLo1&lt;31:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;3:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">EntryHi&lt;12:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;9:5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3019" delta="new" >HDL ADVISOR - <arg fmt="%s" index="1">1008</arg> flip-flops were inferred for signal &lt;<arg fmt="%s" index="2">tlb</arg>&gt;. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;14:11&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Paddr&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Status&lt;31:16&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Paddr&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+<msg type="info" file="Xst" num="1799" delta="new" >State <arg fmt="%s" index="1">send0</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">au_state</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Ram1_State[2]_clk_DFF_126</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Ram1_State[2]_clk_DFF_127&gt; &lt;Ram1_State[2]_clk_DFF_128&gt; &lt;Ram1_State[2]_clk_DFF_131&gt; &lt;Ram1_State[2]_clk_DFF_129&gt; &lt;Ram1_State[2]_clk_DFF_130&gt; &lt;Ram1_State[2]_clk_DFF_132&gt; &lt;Ram1_State[2]_clk_DFF_133&gt; &lt;Ram1_State[2]_clk_DFF_134&gt; &lt;Ram1_State[2]_clk_DFF_135&gt; &lt;Ram1_State[2]_clk_DFF_136&gt; &lt;Ram1_State[2]_clk_DFF_137&gt; &lt;Ram1_State[2]_clk_DFF_140&gt; &lt;Ram1_State[2]_clk_DFF_138&gt; &lt;Ram1_State[2]_clk_DFF_139&gt; &lt;Ram1_State[2]_clk_DFF_141&gt; &lt;Ram1_State[2]_clk_DFF_142&gt; &lt;Ram1_State[2]_clk_DFF_143&gt; &lt;Ram1_State[2]_clk_DFF_144&gt; &lt;Ram1_State[2]_clk_DFF_145&gt; &lt;Ram1_State[2]_clk_DFF_146&gt; &lt;Ram1_State[2]_clk_DFF_149&gt; &lt;Ram1_State[2]_clk_DFF_147&gt; &lt;Ram1_State[2]_clk_DFF_148&gt; &lt;Ram1_State[2]_clk_DFF_150&gt; &lt;Ram1_State[2]_clk_DFF_151&gt; &lt;Ram1_State[2]_clk_DFF_152&gt; &lt;Ram1_State[2]_clk_DFF_153&gt; &lt;Ram1_State[2]_clk_DFF_154&gt; &lt;Ram1_State[2]_clk_DFF_155&gt; &lt;Ram1_State[2]_clk_DFF_156&gt; &lt;Ram1_State[2]_clk_DFF_157&gt; </arg>
+<msg type="info" file="Xst" num="1799" delta="new" >State <arg fmt="%s" index="1">send1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">au_state</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Ram2_State[2]_clk_DFF_162</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u4</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Ram2_State[2]_clk_DFF_163&gt; &lt;Ram2_State[2]_clk_DFF_164&gt; &lt;Ram2_State[2]_clk_DFF_167&gt; &lt;Ram2_State[2]_clk_DFF_165&gt; &lt;Ram2_State[2]_clk_DFF_166&gt; &lt;Ram2_State[2]_clk_DFF_168&gt; &lt;Ram2_State[2]_clk_DFF_169&gt; &lt;Ram2_State[2]_clk_DFF_170&gt; &lt;Ram2_State[2]_clk_DFF_171&gt; &lt;Ram2_State[2]_clk_DFF_172&gt; &lt;Ram2_State[2]_clk_DFF_173&gt; &lt;Ram2_State[2]_clk_DFF_176&gt; &lt;Ram2_State[2]_clk_DFF_174&gt; &lt;Ram2_State[2]_clk_DFF_175&gt; &lt;Ram2_State[2]_clk_DFF_177&gt; &lt;Ram2_State[2]_clk_DFF_178&gt; &lt;Ram2_State[2]_clk_DFF_179&gt; &lt;Ram2_State[2]_clk_DFF_180&gt; &lt;Ram2_State[2]_clk_DFF_181&gt; &lt;Ram2_State[2]_clk_DFF_182&gt; &lt;Ram2_State[2]_clk_DFF_185&gt; &lt;Ram2_State[2]_clk_DFF_183&gt; &lt;Ram2_State[2]_clk_DFF_184&gt; &lt;Ram2_State[2]_clk_DFF_186&gt; &lt;Ram2_State[2]_clk_DFF_187&gt; &lt;Ram2_State[2]_clk_DFF_188&gt; &lt;Ram2_State[2]_clk_DFF_189&gt; &lt;Ram2_State[2]_clk_DFF_190&gt; &lt;Ram2_State[2]_clk_DFF_191&gt; &lt;Ram2_State[2]_clk_DFF_192&gt; &lt;Ram2_State[2]_clk_DFF_193&gt; </arg>
+<msg type="info" file="Xst" num="1799" delta="new" >State <arg fmt="%s" index="1">send2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">au_state</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">flash_state[4]_clk_DFF_251</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flash_state[4]_clk_DFF_243&gt; &lt;flash_state[4]_clk_DFF_244&gt; &lt;flash_state[4]_clk_DFF_245&gt; &lt;flash_state[4]_clk_DFF_246&gt; &lt;flash_state[4]_clk_DFF_247&gt; &lt;flash_state[4]_clk_DFF_248&gt; &lt;flash_state[4]_clk_DFF_249&gt; &lt;flash_state[4]_clk_DFF_250&gt; &lt;flash_state[4]_clk_DFF_252&gt; &lt;flash_state[4]_clk_DFF_253&gt; &lt;flash_state[4]_clk_DFF_254&gt; &lt;flash_state[4]_clk_DFF_255&gt; &lt;flash_state[4]_clk_DFF_258&gt; &lt;flash_state[4]_clk_DFF_256&gt; &lt;flash_state[4]_clk_DFF_257&gt; </arg>
+<msg type="info" file="Xst" num="1799" delta="new" >State <arg fmt="%s" index="1">send3</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">au_state</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Data_out_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u6</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">23 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Data_out_9&gt; &lt;Data_out_10&gt; &lt;Data_out_11&gt; &lt;Data_out_12&gt; &lt;Data_out_13&gt; &lt;Data_out_14&gt; &lt;Data_out_15&gt; &lt;Data_out_16&gt; &lt;Data_out_17&gt; &lt;Data_out_18&gt; &lt;Data_out_19&gt; &lt;Data_out_20&gt; &lt;Data_out_21&gt; &lt;Data_out_22&gt; &lt;Data_out_23&gt; &lt;Data_out_24&gt; &lt;Data_out_25&gt; &lt;Data_out_26&gt; &lt;Data_out_27&gt; &lt;Data_out_28&gt; &lt;Data_out_29&gt; &lt;Data_out_30&gt; &lt;Data_out_31&gt; </arg>
+<msg type="info" file="Xst" num="1799" delta="new" >State <arg fmt="%s" index="1">recv2</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">fr_state</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_263</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u6</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;fr_state[2]_clk_DFF_262&gt; &lt;fr_state[2]_clk_DFF_264&gt; &lt;fr_state[2]_clk_DFF_265&gt; &lt;fr_state[2]_clk_DFF_268&gt; &lt;fr_state[2]_clk_DFF_266&gt; &lt;fr_state[2]_clk_DFF_267&gt; &lt;fr_state[2]_clk_DFF_271&gt; &lt;fr_state[2]_clk_DFF_269&gt; &lt;fr_state[2]_clk_DFF_270&gt; &lt;fr_state[2]_clk_DFF_274&gt; &lt;fr_state[2]_clk_DFF_272&gt; &lt;fr_state[2]_clk_DFF_273&gt; &lt;fr_state[2]_clk_DFF_275&gt; &lt;fr_state[2]_clk_DFF_276&gt; &lt;fr_state[2]_clk_DFF_279&gt; &lt;fr_state[2]_clk_DFF_277&gt; &lt;fr_state[2]_clk_DFF_278&gt; &lt;fr_state[2]_clk_DFF_282&gt; &lt;fr_state[2]_clk_DFF_280&gt; &lt;fr_state[2]_clk_DFF_281&gt; &lt;fr_state[2]_clk_DFF_285&gt; &lt;fr_state[2]_clk_DFF_283&gt; &lt;fr_state[2]_clk_DFF_284&gt; &lt;fr_state[2]_clk_DFF_286&gt; &lt;fr_state[2]_clk_DFF_287&gt; &lt;fr_state[2]_clk_DFF_290&gt; &lt;fr_state[2]_clk_DFF_288&gt; &lt;fr_state[2]_clk_DFF_289&gt; &lt;fr_state[2]_clk_DFF_291&gt; &lt;fr_state[2]_clk_DFF_292&gt; &lt;fr_state[2]_clk_DFF_293&gt; </arg>
+<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">comBuffer</arg>&gt;, simulation mismatch.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">flag[2]_clk_cpu_DFF_307</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flag[2]_clk_cpu_DFF_308&gt; &lt;flag[2]_clk_cpu_DFF_309&gt; &lt;flag[2]_clk_cpu_DFF_310&gt; </arg>
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">reg&lt;0&gt;</arg>&lt;<arg fmt="%d" index="2">1</arg>:<arg fmt="%d" index="3">32</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">RegistersFile</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Data_out_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">u6</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Status&lt;3:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">Data_out</arg>&lt;<arg fmt="%d" index="2">31</arg>:<arg fmt="%d" index="3">8</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">Device_COM</arg>&gt;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Status&lt;9:5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_cond_flash[1]_GND_144_o_Mux_29_o</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Status&lt;14:11&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_data</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Status&lt;31:16&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_DYP1</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_flag[2]_GND_280_o_Mux_54_o</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Ram1_State[2]_clk_DFF_125</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Ram1_State[2]_clk_DFF_126&gt; &lt;Ram1_State[2]_clk_DFF_127&gt; &lt;Ram1_State[2]_clk_DFF_130&gt; &lt;Ram1_State[2]_clk_DFF_128&gt; &lt;Ram1_State[2]_clk_DFF_129&gt; &lt;Ram1_State[2]_clk_DFF_131&gt; &lt;Ram1_State[2]_clk_DFF_132&gt; &lt;Ram1_State[2]_clk_DFF_133&gt; &lt;Ram1_State[2]_clk_DFF_134&gt; &lt;Ram1_State[2]_clk_DFF_135&gt; &lt;Ram1_State[2]_clk_DFF_136&gt; &lt;Ram1_State[2]_clk_DFF_139&gt; &lt;Ram1_State[2]_clk_DFF_137&gt; &lt;Ram1_State[2]_clk_DFF_138&gt; &lt;Ram1_State[2]_clk_DFF_140&gt; &lt;Ram1_State[2]_clk_DFF_141&gt; &lt;Ram1_State[2]_clk_DFF_142&gt; &lt;Ram1_State[2]_clk_DFF_143&gt; &lt;Ram1_State[2]_clk_DFF_144&gt; &lt;Ram1_State[2]_clk_DFF_145&gt; &lt;Ram1_State[2]_clk_DFF_148&gt; &lt;Ram1_State[2]_clk_DFF_146&gt; &lt;Ram1_State[2]_clk_DFF_147&gt; &lt;Ram1_State[2]_clk_DFF_149&gt; &lt;Ram1_State[2]_clk_DFF_150&gt; &lt;Ram1_State[2]_clk_DFF_151&gt; &lt;Ram1_State[2]_clk_DFF_152&gt; &lt;Ram1_State[2]_clk_DFF_153&gt; &lt;Ram1_State[2]_clk_DFF_154&gt; &lt;Ram1_State[2]_clk_DFF_155&gt; &lt;Ram1_State[2]_clk_DFF_156&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">flag[2]_clk_cpu_DFF_307</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mm_manager</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flag[2]_clk_cpu_DFF_310&gt; &lt;flag[2]_clk_cpu_DFF_308&gt; &lt;flag[2]_clk_cpu_DFF_309&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Ram2_State[2]_clk_DFF_161</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u4</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Ram2_State[2]_clk_DFF_162&gt; &lt;Ram2_State[2]_clk_DFF_163&gt; &lt;Ram2_State[2]_clk_DFF_166&gt; &lt;Ram2_State[2]_clk_DFF_164&gt; &lt;Ram2_State[2]_clk_DFF_165&gt; &lt;Ram2_State[2]_clk_DFF_167&gt; &lt;Ram2_State[2]_clk_DFF_168&gt; &lt;Ram2_State[2]_clk_DFF_169&gt; &lt;Ram2_State[2]_clk_DFF_170&gt; &lt;Ram2_State[2]_clk_DFF_171&gt; &lt;Ram2_State[2]_clk_DFF_172&gt; &lt;Ram2_State[2]_clk_DFF_175&gt; &lt;Ram2_State[2]_clk_DFF_173&gt; &lt;Ram2_State[2]_clk_DFF_174&gt; &lt;Ram2_State[2]_clk_DFF_176&gt; &lt;Ram2_State[2]_clk_DFF_177&gt; &lt;Ram2_State[2]_clk_DFF_178&gt; &lt;Ram2_State[2]_clk_DFF_179&gt; &lt;Ram2_State[2]_clk_DFF_180&gt; &lt;Ram2_State[2]_clk_DFF_181&gt; &lt;Ram2_State[2]_clk_DFF_184&gt; &lt;Ram2_State[2]_clk_DFF_182&gt; &lt;Ram2_State[2]_clk_DFF_183&gt; &lt;Ram2_State[2]_clk_DFF_185&gt; &lt;Ram2_State[2]_clk_DFF_186&gt; &lt;Ram2_State[2]_clk_DFF_187&gt; &lt;Ram2_State[2]_clk_DFF_188&gt; &lt;Ram2_State[2]_clk_DFF_189&gt; &lt;Ram2_State[2]_clk_DFF_190&gt; &lt;Ram2_State[2]_clk_DFF_191&gt; &lt;Ram2_State[2]_clk_DFF_192&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Ram1_State[2]_clk_DFF_126</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_Ram1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Ram1_State[2]_clk_DFF_127&gt; &lt;Ram1_State[2]_clk_DFF_128&gt; &lt;Ram1_State[2]_clk_DFF_131&gt; &lt;Ram1_State[2]_clk_DFF_129&gt; &lt;Ram1_State[2]_clk_DFF_130&gt; &lt;Ram1_State[2]_clk_DFF_132&gt; &lt;Ram1_State[2]_clk_DFF_133&gt; &lt;Ram1_State[2]_clk_DFF_134&gt; &lt;Ram1_State[2]_clk_DFF_135&gt; &lt;Ram1_State[2]_clk_DFF_136&gt; &lt;Ram1_State[2]_clk_DFF_137&gt; &lt;Ram1_State[2]_clk_DFF_140&gt; &lt;Ram1_State[2]_clk_DFF_138&gt; &lt;Ram1_State[2]_clk_DFF_139&gt; &lt;Ram1_State[2]_clk_DFF_141&gt; &lt;Ram1_State[2]_clk_DFF_142&gt; &lt;Ram1_State[2]_clk_DFF_143&gt; &lt;Ram1_State[2]_clk_DFF_144&gt; &lt;Ram1_State[2]_clk_DFF_145&gt; &lt;Ram1_State[2]_clk_DFF_146&gt; &lt;Ram1_State[2]_clk_DFF_149&gt; &lt;Ram1_State[2]_clk_DFF_147&gt; &lt;Ram1_State[2]_clk_DFF_148&gt; &lt;Ram1_State[2]_clk_DFF_150&gt; &lt;Ram1_State[2]_clk_DFF_151&gt; &lt;Ram1_State[2]_clk_DFF_152&gt; &lt;Ram1_State[2]_clk_DFF_153&gt; &lt;Ram1_State[2]_clk_DFF_154&gt; &lt;Ram1_State[2]_clk_DFF_155&gt; &lt;Ram1_State[2]_clk_DFF_156&gt; &lt;Ram1_State[2]_clk_DFF_157&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">flash_state[4]_clk_DFF_250</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flash_state[4]_clk_DFF_242&gt; &lt;flash_state[4]_clk_DFF_243&gt; &lt;flash_state[4]_clk_DFF_244&gt; &lt;flash_state[4]_clk_DFF_245&gt; &lt;flash_state[4]_clk_DFF_246&gt; &lt;flash_state[4]_clk_DFF_247&gt; &lt;flash_state[4]_clk_DFF_248&gt; &lt;flash_state[4]_clk_DFF_249&gt; &lt;flash_state[4]_clk_DFF_251&gt; &lt;flash_state[4]_clk_DFF_252&gt; &lt;flash_state[4]_clk_DFF_253&gt; &lt;flash_state[4]_clk_DFF_254&gt; &lt;flash_state[4]_clk_DFF_257&gt; &lt;flash_state[4]_clk_DFF_255&gt; &lt;flash_state[4]_clk_DFF_256&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Ram2_State[2]_clk_DFF_162</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_Ram2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Ram2_State[2]_clk_DFF_163&gt; &lt;Ram2_State[2]_clk_DFF_164&gt; &lt;Ram2_State[2]_clk_DFF_167&gt; &lt;Ram2_State[2]_clk_DFF_165&gt; &lt;Ram2_State[2]_clk_DFF_166&gt; &lt;Ram2_State[2]_clk_DFF_168&gt; &lt;Ram2_State[2]_clk_DFF_169&gt; &lt;Ram2_State[2]_clk_DFF_170&gt; &lt;Ram2_State[2]_clk_DFF_171&gt; &lt;Ram2_State[2]_clk_DFF_172&gt; &lt;Ram2_State[2]_clk_DFF_173&gt; &lt;Ram2_State[2]_clk_DFF_176&gt; &lt;Ram2_State[2]_clk_DFF_174&gt; &lt;Ram2_State[2]_clk_DFF_175&gt; &lt;Ram2_State[2]_clk_DFF_177&gt; &lt;Ram2_State[2]_clk_DFF_178&gt; &lt;Ram2_State[2]_clk_DFF_179&gt; &lt;Ram2_State[2]_clk_DFF_180&gt; &lt;Ram2_State[2]_clk_DFF_181&gt; &lt;Ram2_State[2]_clk_DFF_182&gt; &lt;Ram2_State[2]_clk_DFF_185&gt; &lt;Ram2_State[2]_clk_DFF_183&gt; &lt;Ram2_State[2]_clk_DFF_184&gt; &lt;Ram2_State[2]_clk_DFF_186&gt; &lt;Ram2_State[2]_clk_DFF_187&gt; &lt;Ram2_State[2]_clk_DFF_188&gt; &lt;Ram2_State[2]_clk_DFF_189&gt; &lt;Ram2_State[2]_clk_DFF_190&gt; &lt;Ram2_State[2]_clk_DFF_191&gt; &lt;Ram2_State[2]_clk_DFF_192&gt; &lt;Ram2_State[2]_clk_DFF_193&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">PWR_276_o_clk_DFF_280</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u6</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;PWR_272_o_clk_DFF_278&gt; &lt;PWR_274_o_clk_DFF_279&gt; &lt;PWR_278_o_clk_DFF_281&gt; &lt;PWR_280_o_clk_DFF_282&gt; &lt;PWR_286_o_clk_DFF_285&gt; &lt;PWR_282_o_clk_DFF_283&gt; &lt;PWR_284_o_clk_DFF_284&gt; &lt;PWR_288_o_clk_DFF_286&gt; &lt;PWR_290_o_clk_DFF_287&gt; &lt;PWR_296_o_clk_DFF_290&gt; &lt;PWR_292_o_clk_DFF_288&gt; &lt;PWR_294_o_clk_DFF_289&gt; &lt;PWR_302_o_clk_DFF_293&gt; &lt;PWR_298_o_clk_DFF_291&gt; &lt;PWR_300_o_clk_DFF_292&gt; &lt;PWR_308_o_clk_DFF_296&gt; &lt;PWR_304_o_clk_DFF_294&gt; &lt;PWR_306_o_clk_DFF_295&gt; &lt;PWR_310_o_clk_DFF_297&gt; &lt;PWR_312_o_clk_DFF_298&gt; &lt;PWR_318_o_clk_DFF_301&gt; &lt;PWR_314_o_clk_DFF_299&gt; &lt;PWR_316_o_clk_DFF_300&gt; &lt;PWR_320_o_clk_DFF_302&gt; &lt;PWR_322_o_clk_DFF_303&gt; &lt;PWR_328_o_clk_DFF_306&gt; &lt;PWR_324_o_clk_DFF_304&gt; &lt;PWR_326_o_clk_DFF_305&gt; &lt;PWR_330_o_clk_DFF_307&gt; &lt;PWR_332_o_clk_DFF_308&gt; &lt;PWR_334_o_clk_DFF_309&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">flash_state[4]_clk_DFF_251</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_Flash</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flash_state[4]_clk_DFF_244&gt; &lt;flash_state[4]_clk_DFF_243&gt; &lt;flash_state[4]_clk_DFF_245&gt; &lt;flash_state[4]_clk_DFF_246&gt; &lt;flash_state[4]_clk_DFF_247&gt; &lt;flash_state[4]_clk_DFF_248&gt; &lt;flash_state[4]_clk_DFF_249&gt; &lt;flash_state[4]_clk_DFF_250&gt; &lt;flash_state[4]_clk_DFF_252&gt; &lt;flash_state[4]_clk_DFF_253&gt; &lt;flash_state[4]_clk_DFF_254&gt; &lt;flash_state[4]_clk_DFF_255&gt; &lt;flash_state[4]_clk_DFF_258&gt; &lt;flash_state[4]_clk_DFF_256&gt; &lt;flash_state[4]_clk_DFF_257&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">au_state[2]_clk_DFF_312</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u6</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;au_state[2]_clk_DFF_311&gt; &lt;au_state[2]_clk_DFF_315&gt; &lt;au_state[2]_clk_DFF_313&gt; &lt;au_state[2]_clk_DFF_314&gt; &lt;au_state[2]_clk_DFF_318&gt; &lt;au_state[2]_clk_DFF_316&gt; &lt;au_state[2]_clk_DFF_317&gt; &lt;au_state[2]_clk_DFF_319&gt; &lt;au_state[2]_clk_DFF_320&gt; &lt;au_state[2]_clk_DFF_323&gt; &lt;au_state[2]_clk_DFF_321&gt; &lt;au_state[2]_clk_DFF_322&gt; &lt;au_state[2]_clk_DFF_324&gt; &lt;au_state[2]_clk_DFF_325&gt; &lt;au_state[2]_clk_DFF_328&gt; &lt;au_state[2]_clk_DFF_326&gt; &lt;au_state[2]_clk_DFF_327&gt; &lt;au_state[2]_clk_DFF_329&gt; &lt;au_state[2]_clk_DFF_330&gt; &lt;au_state[2]_clk_DFF_333&gt; &lt;au_state[2]_clk_DFF_331&gt; &lt;au_state[2]_clk_DFF_332&gt; &lt;au_state[2]_clk_DFF_334&gt; &lt;au_state[2]_clk_DFF_335&gt; &lt;au_state[2]_clk_DFF_338&gt; &lt;au_state[2]_clk_DFF_336&gt; &lt;au_state[2]_clk_DFF_337&gt; &lt;au_state[2]_clk_DFF_339&gt; &lt;au_state[2]_clk_DFF_340&gt; &lt;au_state[2]_clk_DFF_341&gt; &lt;au_state[2]_clk_DFF_342&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">fr_state[2]_clk_DFF_264</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;fr_state[2]_clk_DFF_262&gt; &lt;fr_state[2]_clk_DFF_263&gt; &lt;fr_state[2]_clk_DFF_265&gt; &lt;fr_state[2]_clk_DFF_266&gt; &lt;fr_state[2]_clk_DFF_269&gt; &lt;fr_state[2]_clk_DFF_267&gt; &lt;fr_state[2]_clk_DFF_268&gt; &lt;fr_state[2]_clk_DFF_272&gt; &lt;fr_state[2]_clk_DFF_270&gt; &lt;fr_state[2]_clk_DFF_271&gt; &lt;fr_state[2]_clk_DFF_275&gt; &lt;fr_state[2]_clk_DFF_273&gt; &lt;fr_state[2]_clk_DFF_274&gt; &lt;fr_state[2]_clk_DFF_276&gt; &lt;fr_state[2]_clk_DFF_277&gt; &lt;fr_state[2]_clk_DFF_280&gt; &lt;fr_state[2]_clk_DFF_278&gt; &lt;fr_state[2]_clk_DFF_279&gt; &lt;fr_state[2]_clk_DFF_283&gt; &lt;fr_state[2]_clk_DFF_281&gt; &lt;fr_state[2]_clk_DFF_282&gt; &lt;fr_state[2]_clk_DFF_286&gt; &lt;fr_state[2]_clk_DFF_284&gt; &lt;fr_state[2]_clk_DFF_285&gt; &lt;fr_state[2]_clk_DFF_287&gt; &lt;fr_state[2]_clk_DFF_288&gt; &lt;fr_state[2]_clk_DFF_291&gt; &lt;fr_state[2]_clk_DFF_289&gt; &lt;fr_state[2]_clk_DFF_290&gt; &lt;fr_state[2]_clk_DFF_292&gt; &lt;fr_state[2]_clk_DFF_293&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">flag[2]_clk_cpu_DFF_356</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flag[2]_clk_cpu_DFF_357&gt; &lt;flag[2]_clk_cpu_DFF_358&gt; &lt;flag[2]_clk_cpu_DFF_359&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">d_state</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">CPU</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;enable_debug&gt; </arg>
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_comBuffer</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">FlashAddr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_Flash</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_comBuffer1</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">cause_IP_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_au_state[2]_PWR_337_o_Mux_115_o</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">cause_IP_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_cond_flash[1]_GND_144_o_Mux_29_o</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">cause_IP_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_data</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">cause_IP_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_DYP1</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">EPCWrite</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Controller</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;set_Cause&gt; &lt;set_EXL&gt; </arg>
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_flag[2]_GND_336_o_Mux_54_o</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="3002" delta="old" >This design contains one or more registers/latches that are directly
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">flag[2]_clk_cpu_DFF_356</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mm_manager</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flag[2]_clk_cpu_DFF_359&gt; &lt;flag[2]_clk_cpu_DFF_357&gt; &lt;flag[2]_clk_cpu_DFF_358&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Ram1_State[2]_clk_DFF_125</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_Ram1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Ram1_State[2]_clk_DFF_126&gt; &lt;Ram1_State[2]_clk_DFF_127&gt; &lt;Ram1_State[2]_clk_DFF_130&gt; &lt;Ram1_State[2]_clk_DFF_128&gt; &lt;Ram1_State[2]_clk_DFF_129&gt; &lt;Ram1_State[2]_clk_DFF_131&gt; &lt;Ram1_State[2]_clk_DFF_132&gt; &lt;Ram1_State[2]_clk_DFF_133&gt; &lt;Ram1_State[2]_clk_DFF_134&gt; &lt;Ram1_State[2]_clk_DFF_135&gt; &lt;Ram1_State[2]_clk_DFF_136&gt; &lt;Ram1_State[2]_clk_DFF_139&gt; &lt;Ram1_State[2]_clk_DFF_137&gt; &lt;Ram1_State[2]_clk_DFF_138&gt; &lt;Ram1_State[2]_clk_DFF_140&gt; &lt;Ram1_State[2]_clk_DFF_141&gt; &lt;Ram1_State[2]_clk_DFF_142&gt; &lt;Ram1_State[2]_clk_DFF_143&gt; &lt;Ram1_State[2]_clk_DFF_144&gt; &lt;Ram1_State[2]_clk_DFF_145&gt; &lt;Ram1_State[2]_clk_DFF_148&gt; &lt;Ram1_State[2]_clk_DFF_146&gt; &lt;Ram1_State[2]_clk_DFF_147&gt; &lt;Ram1_State[2]_clk_DFF_149&gt; &lt;Ram1_State[2]_clk_DFF_150&gt; &lt;Ram1_State[2]_clk_DFF_151&gt; &lt;Ram1_State[2]_clk_DFF_152&gt; &lt;Ram1_State[2]_clk_DFF_153&gt; &lt;Ram1_State[2]_clk_DFF_154&gt; &lt;Ram1_State[2]_clk_DFF_155&gt; &lt;Ram1_State[2]_clk_DFF_156&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Ram2_State[2]_clk_DFF_161</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_Ram2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Ram2_State[2]_clk_DFF_162&gt; &lt;Ram2_State[2]_clk_DFF_163&gt; &lt;Ram2_State[2]_clk_DFF_166&gt; &lt;Ram2_State[2]_clk_DFF_164&gt; &lt;Ram2_State[2]_clk_DFF_165&gt; &lt;Ram2_State[2]_clk_DFF_167&gt; &lt;Ram2_State[2]_clk_DFF_168&gt; &lt;Ram2_State[2]_clk_DFF_169&gt; &lt;Ram2_State[2]_clk_DFF_170&gt; &lt;Ram2_State[2]_clk_DFF_171&gt; &lt;Ram2_State[2]_clk_DFF_172&gt; &lt;Ram2_State[2]_clk_DFF_175&gt; &lt;Ram2_State[2]_clk_DFF_173&gt; &lt;Ram2_State[2]_clk_DFF_174&gt; &lt;Ram2_State[2]_clk_DFF_176&gt; &lt;Ram2_State[2]_clk_DFF_177&gt; &lt;Ram2_State[2]_clk_DFF_178&gt; &lt;Ram2_State[2]_clk_DFF_179&gt; &lt;Ram2_State[2]_clk_DFF_180&gt; &lt;Ram2_State[2]_clk_DFF_181&gt; &lt;Ram2_State[2]_clk_DFF_184&gt; &lt;Ram2_State[2]_clk_DFF_182&gt; &lt;Ram2_State[2]_clk_DFF_183&gt; &lt;Ram2_State[2]_clk_DFF_185&gt; &lt;Ram2_State[2]_clk_DFF_186&gt; &lt;Ram2_State[2]_clk_DFF_187&gt; &lt;Ram2_State[2]_clk_DFF_188&gt; &lt;Ram2_State[2]_clk_DFF_189&gt; &lt;Ram2_State[2]_clk_DFF_190&gt; &lt;Ram2_State[2]_clk_DFF_191&gt; &lt;Ram2_State[2]_clk_DFF_192&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">flash_state[4]_clk_DFF_250</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_Flash</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;flash_state[4]_clk_DFF_243&gt; &lt;flash_state[4]_clk_DFF_242&gt; &lt;flash_state[4]_clk_DFF_244&gt; &lt;flash_state[4]_clk_DFF_245&gt; &lt;flash_state[4]_clk_DFF_246&gt; &lt;flash_state[4]_clk_DFF_247&gt; &lt;flash_state[4]_clk_DFF_248&gt; &lt;flash_state[4]_clk_DFF_249&gt; &lt;flash_state[4]_clk_DFF_251&gt; &lt;flash_state[4]_clk_DFF_252&gt; &lt;flash_state[4]_clk_DFF_253&gt; &lt;flash_state[4]_clk_DFF_254&gt; &lt;flash_state[4]_clk_DFF_257&gt; &lt;flash_state[4]_clk_DFF_255&gt; &lt;flash_state[4]_clk_DFF_256&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">PWR_272_o_clk_DFF_278</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;PWR_274_o_clk_DFF_279&gt; &lt;PWR_280_o_clk_DFF_282&gt; &lt;PWR_276_o_clk_DFF_280&gt; &lt;PWR_278_o_clk_DFF_281&gt; &lt;PWR_282_o_clk_DFF_283&gt; &lt;PWR_284_o_clk_DFF_284&gt; &lt;PWR_290_o_clk_DFF_287&gt; &lt;PWR_286_o_clk_DFF_285&gt; &lt;PWR_288_o_clk_DFF_286&gt; &lt;PWR_292_o_clk_DFF_288&gt; &lt;PWR_294_o_clk_DFF_289&gt; &lt;PWR_300_o_clk_DFF_292&gt; &lt;PWR_296_o_clk_DFF_290&gt; &lt;PWR_298_o_clk_DFF_291&gt; &lt;PWR_302_o_clk_DFF_293&gt; &lt;PWR_304_o_clk_DFF_294&gt; &lt;PWR_310_o_clk_DFF_297&gt; &lt;PWR_306_o_clk_DFF_295&gt; &lt;PWR_308_o_clk_DFF_296&gt; &lt;PWR_312_o_clk_DFF_298&gt; &lt;PWR_314_o_clk_DFF_299&gt; &lt;PWR_320_o_clk_DFF_302&gt; &lt;PWR_316_o_clk_DFF_300&gt; &lt;PWR_318_o_clk_DFF_301&gt; &lt;PWR_322_o_clk_DFF_303&gt; &lt;PWR_324_o_clk_DFF_304&gt; &lt;PWR_330_o_clk_DFF_307&gt; &lt;PWR_326_o_clk_DFF_305&gt; &lt;PWR_328_o_clk_DFF_306&gt; &lt;PWR_332_o_clk_DFF_308&gt; &lt;PWR_334_o_clk_DFF_309&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">au_state[2]_clk_DFF_313</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;au_state[2]_clk_DFF_311&gt; &lt;au_state[2]_clk_DFF_312&gt; &lt;au_state[2]_clk_DFF_316&gt; &lt;au_state[2]_clk_DFF_314&gt; &lt;au_state[2]_clk_DFF_315&gt; &lt;au_state[2]_clk_DFF_319&gt; &lt;au_state[2]_clk_DFF_317&gt; &lt;au_state[2]_clk_DFF_318&gt; &lt;au_state[2]_clk_DFF_320&gt; &lt;au_state[2]_clk_DFF_321&gt; &lt;au_state[2]_clk_DFF_324&gt; &lt;au_state[2]_clk_DFF_322&gt; &lt;au_state[2]_clk_DFF_323&gt; &lt;au_state[2]_clk_DFF_325&gt; &lt;au_state[2]_clk_DFF_326&gt; &lt;au_state[2]_clk_DFF_329&gt; &lt;au_state[2]_clk_DFF_327&gt; &lt;au_state[2]_clk_DFF_328&gt; &lt;au_state[2]_clk_DFF_330&gt; &lt;au_state[2]_clk_DFF_331&gt; &lt;au_state[2]_clk_DFF_334&gt; &lt;au_state[2]_clk_DFF_332&gt; &lt;au_state[2]_clk_DFF_333&gt; &lt;au_state[2]_clk_DFF_335&gt; &lt;au_state[2]_clk_DFF_336&gt; &lt;au_state[2]_clk_DFF_339&gt; &lt;au_state[2]_clk_DFF_337&gt; &lt;au_state[2]_clk_DFF_338&gt; &lt;au_state[2]_clk_DFF_340&gt; &lt;au_state[2]_clk_DFF_341&gt; &lt;au_state[2]_clk_DFF_342&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">FlashAddr_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Device_Flash</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer111</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer114</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer112</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer113</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer115</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer116</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer117</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer118</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer119</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer120</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer123</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer121</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer122</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer124</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer125</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer127</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer128</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer129</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer132</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer130</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer131</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer133</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer134</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer135</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer136</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer137</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer138</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer141</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer139</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer140</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer503</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer501</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer502</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer511</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer512</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer513</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer521</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer522</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1431</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1432</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1441</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1442</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1451</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1462</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1452</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1461</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1471</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1472</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1501</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1502</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1481</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1482</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1491</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1492</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1511</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1512</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1521</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1522</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1541</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1531</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1532</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1542</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1551</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1552</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1561</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1562</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1591</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1592</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1593</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1571</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1572</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1581</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1582</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1602</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1583</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mram_comBuffer1601</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Device_COM</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">cause_IP_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">cause_IP_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">cause_IP_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">cause_IP_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EPCWrite</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Controller</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;set_EXL&gt; &lt;set_Cause&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="3002" delta="new" >This design contains one or more registers/latches that are directly
 incompatible with the <arg fmt="%s" index="1">Spartan6</arg> architecture. The two primary causes of this is
 either a register or latch described with both an asynchronous set and
 asynchronous reset, or a register or latch described with an asynchronous
@@ -467,28 +731,120 @@ Xilinx highly recommends one of the following:
           (timing simulation highly recommended when using this option)
 </msg>
 
-<msg type="warning" file="Xst" num="2042" delta="old" >Unit <arg fmt="%s" index="1">CPU</arg>: <arg fmt="%d" index="2">4</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+<msg type="warning" file="Xst" num="2042" delta="new" >Unit <arg fmt="%s" index="1">CPU</arg>: <arg fmt="%d" index="2">8</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
 
-<msg type="warning" file="Xst" num="2040" delta="old" >Unit <arg fmt="%s" index="1">CPU</arg>: <arg fmt="%d" index="2">32</arg> multi-source signals are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+<msg type="warning" file="Xst" num="2040" delta="new" >Unit <arg fmt="%s" index="1">CPU</arg>: <arg fmt="%d" index="2">32</arg> multi-source signals are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">exc_code_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">exc_code_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">exc_code_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">exc_code_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Controller</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">u5/cause_IP_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">CPU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">u1/u6/au_state[2]_clk_DFF_313</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">CPU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">EBase_31_LD</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">CPU</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Status_0_LD</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">CPU</arg>.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u1/u6/Ram1Data_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">Status_0_LD</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">CPU</arg>.
 You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

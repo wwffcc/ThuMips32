@@ -83,7 +83,12 @@ int main(int argc,char** argv)
 				for(int j=0;j<4;j++)
 					sscanf(argv[i+2],"%x",&f_addr);
 				if(i==(argc-3))
-					filename =argv[i+3];
+				{
+					fprintf(stderr, "option error!exit!\n");
+					return -1;						
+				}
+				if(strcmp(argv[i+3],"-s")!=0)
+					filename = argv[i+3];
 			}
 		}
 	}

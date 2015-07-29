@@ -183,7 +183,7 @@ signal Count:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal Compare:STD_LOGIC_VECTOR(31 downto 0):=x"02FAF080";
 signal Cause:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal EPC:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
-signal EBase:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
+signal EBase:STD_LOGIC_VECTOR(31 downto 0):=x"80000000";
 
 --LO,HI
 signal LO:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
@@ -334,23 +334,26 @@ signal ctrl_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
 signal host_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
 --mm_bitmap
 --reg_bitmap
+
+signal enable_step:STD_LOGIC:='0';
+
 begin	
+	
+	enable_debug<='1';
 	
 	process(rst,SW(23),clk_step)
 	begin
 		if rst = '0' then
-			enable_debug<='0';
-			breakpoint<=x"00000000";
+			--enable_debug<='0';
+			--breakpoint<=x"00000000";
 			d_state<=debug_init;
 		elsif rising_edge(clk_step) then
 			case d_state is
 				when debug_init=>
-					breakpoint<=SW;
-					enable_debug<='1';
+					breakpoint<=SW;					
 					d_state<=debug1;					
 				when debug1=>					
-					if SW(23) ='1' then
-						enable_debug<='0';
+					if SW(16) ='1' then	
 						breakpoint<=x"00000000";
 						d_state<=debug_init;						
 					end if;
@@ -358,17 +361,33 @@ begin
 		end if;
 	end process;
 	
-	--clk_flag<="111";
-	process(PC,breakpoint,enable_debug)
+	process(rst,PC,breakpoint)
 	begin
-		clk_flag<="111";
-		if PC = breakpoint and enable_debug='1' then
-			clk_flag<="111";
-		--else
-		--	clk_flag
+		enable_step<=enable_step;
+		if rst = '0' then
+			enable_step<='0';
+		elsif PC = breakpoint then
+			enable_step<='1';
 		end if;
 	end process;
-		
+	
+	--clk_flag<="111";
+	process(rst,enable_step)
+	begin
+		if rst = '0' then
+			clk_flag<="100";
+			clk_com<=clk11;
+		elsif enable_step = '1' then			
+			clk_flag<="111";
+			clk_com<=clk_step;
+		else
+			clk_flag<="100";
+			clk_com<=clk11;
+		end if;
+	end process;
+	
+	--clk_com<=clk_step;
+	
 	process(enable_debug,SW)
 	begin
 		if enable_debug = '0' then
@@ -392,7 +411,7 @@ begin
 	end process;	
 	
 	--EBase<=x"80000000";	
-	clk_com<=clk_step;
+	--clk_com<=clk11;
 
 	u0:Clock PORT MAP(
 		clk50=>clk50,
@@ -582,8 +601,8 @@ begin
 	process(rst,PCWrite,PCWriteCond,PCSrc)						--update PC
 	begin
 		if rst = '0' then
-			--PC<=x"BFC00000";
-			PC<=SW;														--debug
+			PC<=x"BFC00000";
+			--PC<=SW;														--debug
 		elsif rising_edge(PCWrite) then
 			case PCWriteCond is
 				when "000"=>
@@ -1153,7 +1172,13 @@ begin
 						host_bitmap<=C(31 downto 16);
 					when others=>
 						host_bitmap<=(others=>'0');
-				end case;													
+				end case;								
+			when "110"=>
+				if SW(0) = '0' then
+					host_bitmap<=breakpoint(15 downto 0);
+				else
+					host_bitmap<=breakpoint(31 downto 16);
+				end if;
 			when others=>host_bitmap<=(others=>'0');
 		end case;
 	end process;
