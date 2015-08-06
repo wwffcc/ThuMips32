@@ -1,0 +1,50 @@
+
+Welcome to CS143 BlackJack!
+---------------------------
+Please enter a random number seed: Shuffling...done.
+How many players do we have today? What is the name of player #1? 
+First, let's take bets.
+Barack Obama, you have $1000.
+How much would you like to bet? How much would you like to bet? How much would you like to bet? 
+Dealer starts. Dealer was dealt a 2.
+
+Barack Obama's turn.
+Barack Obama was dealt a 6.
+Barack Obama was dealt a 11.
+Barack Obama, your total is 17.
+Would you like a hit? (0=No/1=Yes) Barack Obama stays at 17.
+
+Dealer's turn.
+Dealer was dealt a 6.
+Dealer was dealt a 10.
+Dealer stays at 18.
+
+Time to resolve bets.
+Barack Obama, you lost $1.
+
+Do you want to play another hand? (0=No/1=Yes) 
+First, let's take bets.
+Barack Obama, you have $999.
+How much would you like to bet? 
+Dealer starts. Dealer was dealt a 3.
+
+Barack Obama's turn.
+Barack Obama was dealt a 10.
+Barack Obama was dealt a 10.
+Barack Obama, your total is 20.
+Would you like a hit? (0=No/1=Yes) Barack Obama was dealt a 2.
+Barack Obama busts with the big 22!
+
+Dealer's turn.
+Dealer was dealt a 10.
+Dealer was dealt a 10.
+Dealer busts with the big 23!
+
+Time to resolve bets.
+Barack Obama, you lost $1.
+
+Do you want to play another hand? (0=No/1=Yes) Barack Obama, you have $998.
+Thank you for playing...come again soon.
+
+CS143 BlackJack Copyright (c) 1999 by Peter Mork.
+(2001 mods by jdz)

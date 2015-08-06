@@ -1,0 +1,11 @@
+class Math {
+    static int func(int a,int b,int c,int d,int e) {
+        return a+b+c+d+e;
+    }
+}
+
+class Main {   
+    static void main() {
+        Print(Math.func(1,2,3,4,5), "\n");        
+    }
+}

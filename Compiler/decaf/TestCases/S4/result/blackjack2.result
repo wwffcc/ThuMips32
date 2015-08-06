@@ -1,0 +1,42 @@
+
+Welcome to CS143 BlackJack!
+---------------------------
+Please enter a random number seed: Shuffling...done.
+How many players do we have today? What is the name of player #1? What is the name of player #2? 
+First, let's take bets.
+Jobs, you have $1000.
+How much would you like to bet? Gates, you have $1000.
+How much would you like to bet? 
+Dealer starts. Dealer was dealt a 3.
+
+Jobs's turn.
+Jobs was dealt a 11.
+Jobs was dealt a 10.
+Jobs, your total is 21.
+Would you like a hit? (0=No/1=Yes) Jobs was dealt a 3.
+Jobs, your total is 14.
+Would you like a hit? (0=No/1=Yes) Jobs stays at 14.
+
+Gates's turn.
+Gates was dealt a 11.
+Gates was dealt a 11.
+Gates, your total is 12.
+Would you like a hit? (0=No/1=Yes) Gates was dealt a 10.
+Gates, your total is 12.
+Would you like a hit? (0=No/1=Yes) Gates stays at 12.
+
+Dealer's turn.
+Dealer was dealt a 10.
+Dealer was dealt a 5.
+Dealer stays at 18.
+
+Time to resolve bets.
+Jobs, you lost $1000.
+Gates, you lost $1000.
+
+Do you want to play another hand? (0=No/1=Yes) Jobs, you have $0.
+Gates, you have $0.
+Thank you for playing...come again soon.
+
+CS143 BlackJack Copyright (c) 1999 by Peter Mork.
+(2001 mods by jdz)

@@ -1,0 +1,37 @@
+
+Welcome to CS143 BlackJack!
+---------------------------
+Please enter a random number seed: Shuffling...done.
+How many players do we have today? What is the name of player #1? What is the name of player #2? 
+First, let's take bets.
+Tom, you have $1000.
+How much would you like to bet? Henry, you have $1000.
+How much would you like to bet? How much would you like to bet? 
+Dealer starts. Dealer was dealt a 6.
+
+Tom's turn.
+Tom was dealt a 11.
+Tom was dealt a 4.
+Tom, your total is 15.
+Would you like a hit? (0=No/1=Yes) Tom stays at 15.
+
+Henry's turn.
+Henry was dealt a 6.
+Henry was dealt a 5.
+Would you like to double down? (0=No/1=Yes) Henry, your total is 11.
+Would you like a hit? (0=No/1=Yes) Henry stays at 11.
+
+Dealer's turn.
+Dealer was dealt a 11.
+Dealer stays at 17.
+
+Time to resolve bets.
+Tom, you lost $500.
+Henry, you lost $999.
+
+Do you want to play another hand? (0=No/1=Yes) Tom, you have $500.
+Henry, you have $1.
+Thank you for playing...come again soon.
+
+CS143 BlackJack Copyright (c) 1999 by Peter Mork.
+(2001 mods by jdz)

@@ -1,0 +1,58 @@
+
+Welcome to CS143 BlackJack!
+---------------------------
+Please enter a random number seed: Shuffling...done.
+How many players do we have today? What is the name of player #1? 
+First, let's take bets.
+Jack, you have $1000.
+How much would you like to bet? How much would you like to bet? 
+Dealer starts. Dealer was dealt a 4.
+
+Jack's turn.
+Jack was dealt a 5.
+Jack was dealt a 10.
+Jack, your total is 15.
+Would you like a hit? (0=No/1=Yes) Jack was dealt a 7.
+Jack busts with the big 22!
+
+Dealer's turn.
+Dealer was dealt a 6.
+Dealer was dealt a 2.
+Dealer was dealt a 4.
+Dealer was dealt a 3.
+Dealer stays at 19.
+
+Time to resolve bets.
+Jack, you lost $512.
+
+Do you want to play another hand? (0=No/1=Yes) 
+First, let's take bets.
+Jack, you have $488.
+How much would you like to bet? 
+Dealer starts. Dealer was dealt a 7.
+
+Jack's turn.
+Jack was dealt a 4.
+Jack was dealt a 4.
+Jack, your total is 8.
+Would you like a hit? (0=No/1=Yes) Jack was dealt a 10.
+Jack, your total is 18.
+Would you like a hit? (0=No/1=Yes) Jack was dealt a 3.
+Jack, your total is 21.
+Would you like a hit? (0=No/1=Yes) Jack was dealt a 4.
+Jack busts with the big 25!
+
+Dealer's turn.
+Dealer was dealt a 8.
+Dealer was dealt a 11.
+Dealer was dealt a 5.
+Dealer stays at 21.
+
+Time to resolve bets.
+Jack, you lost $244.
+
+Do you want to play another hand? (0=No/1=Yes) Jack, you have $244.
+Thank you for playing...come again soon.
+
+CS143 BlackJack Copyright (c) 1999 by Peter Mork.
+(2001 mods by jdz)
