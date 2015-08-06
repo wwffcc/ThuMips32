@@ -180,7 +180,7 @@ signal EntryLo1:STD_LOGIC_VECTOR (31 downto 0):=x"00000000";
 signal EntryHi:STD_LOGIC_VECTOR (31 downto 0):=x"00000000";     
 signal BadVAddr:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";     
 signal Count:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
-signal Compare:STD_LOGIC_VECTOR(31 downto 0):=x"02FAF080";
+signal Compare:STD_LOGIC_VECTOR(31 downto 0):=x"01000000";--x"02FAF080";
 signal Cause:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal EPC:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal EBase:STD_LOGIC_VECTOR(31 downto 0):=x"80000000";
@@ -324,10 +324,9 @@ signal RPC:STD_LOGIC_VECTOR(31 downto 0):=x"BFC00000";
 
 signal C:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";			--CP0 register
 
-type debug_state is(debug_init,debug1);
-signal d_state:debug_state:=debug_init;
 signal breakpoint:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal enable_debug:STD_LOGIC:='0';
+signal enable_step:STD_LOGIC:='0';
 
 signal CP0_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
 signal ctrl_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
@@ -335,54 +334,30 @@ signal host_bitmap:STD_LOGIC_VECTOR(15 downto 0):=x"0000";
 --mm_bitmap
 --reg_bitmap
 
-signal enable_step:STD_LOGIC:='0';
-
 begin	
 	
-	enable_debug<='1';
+	enable_debug<='1';		
 	
-	process(rst,SW(23),clk_step)
+	process(rst,clk50)
 	begin
-		if rst = '0' then
-			--enable_debug<='0';
-			--breakpoint<=x"00000000";
-			d_state<=debug_init;
-		elsif rising_edge(clk_step) then
-			case d_state is
-				when debug_init=>
-					breakpoint<=SW;					
-					d_state<=debug1;					
-				when debug1=>					
-					if SW(16) ='1' then	
-						breakpoint<=x"00000000";
-						d_state<=debug_init;						
-					end if;
-			end case;
-		end if;
-	end process;
-	
-	process(rst,PC,breakpoint)
-	begin
-		enable_step<=enable_step;
 		if rst = '0' then
 			enable_step<='0';
-		elsif PC = breakpoint then
-			enable_step<='1';
+			breakpoint<=SW;
+		elsif rising_edge(clk50) then
+			if PC = breakpoint then
+				enable_step<='1';
+			end if;
 		end if;
 	end process;
 	
-	--clk_flag<="111";
-	process(rst,enable_step)
+	process(enable_step)
 	begin
-		if rst = '0' then
+		if enable_step = '0' then
 			clk_flag<="100";
-			clk_com<=clk11;
-		elsif enable_step = '1' then			
+			clk_com<=clk11;			
+		else			
 			clk_flag<="111";
 			clk_com<=clk_step;
-		else
-			clk_flag<="100";
-			clk_com<=clk11;
 		end if;
 	end process;
 	
@@ -563,14 +538,14 @@ begin
 		if rst = '0' then
 			timer_Int<='0';
 			Count<=(others=>'0');
-			Compare<=x"02FAF080";						--Compare			
+			--Compare<=x"04000000";						--Compare			
 		elsif rising_edge(clk_cpu) then
 			Count<=Count+1;
 			if Count = Compare then
 				timer_Int<='1';							
 				Count<=(others=>'0');
 			end if;
-			if Status(1)='1' then
+			if Status(1)='1' or Status(0) = '0' then
 				timer_Int<='0';
 			end if;
 		end if;
@@ -794,6 +769,12 @@ begin
 					--RegDataSrcx(15 downto 0)<=RegData2(15 downto 0);
 			when "110"=>
 					RegDataSrcx(31 downto 0)<=C;
+			when "111"=>									--SLT,SLTI,SLTIU,SLTU
+					if ALUResult = 1 then
+						RegDataSrcx<=x"00000001";
+					else
+						RegDataSrcx<=x"00000000";
+					end if;
 			when others=>
 					RegDataSrcx(31 downto 0)<=ALUResult;
 		end case;
@@ -856,6 +837,7 @@ begin
 			EBase<=x"80000000";
 			Cause<=(others=>'0');
 			EPC<=(others=>'0');
+			Compare<=x"01000000";
 		elsif rising_edge(clk_cpu) then
 			if CP0Write='1' then
 				case instructions(15 downto 11) is
@@ -865,21 +847,21 @@ begin
 						EntryLo0<=RegData2;
 					when "00011"=>								--EntryLo1	3
 						EntryLo1<=RegData2;
-					when "01001"=>								--BadVAddr	9
+					when "01000"=>								--BadVAddr	8
 						NULL;--BadVAddr<=RegData2;
-					when "01010"=>								--Count		10
+					when "01001"=>								--Count		9
 						NULL;
-					when "01011"=>								--EntryHi	11
+					when "01010"=>								--EntryHi	10
 						EntryHi<=RegData2;
-					when "01100"=>								--Compare	12
-						NULL;
-					when "01101"=>								--Status		13
+					when "01011"=>								--Compare	11
+						Compare<=RegData2;
+					when "01100"=>								--Status		12
 						Status<=RegData2;
-					when "01111"=>								--Cause 		15
+					when "01101"=>								--Cause 		13
 						Cause<=RegData2;					
-					when "10000"=>								--EPC			16
+					when "01110"=>								--EPC			14
 						EPC<=RegData2;
-					when "10010"=>								--EBase		18
+					when "01111"=>								--EBase		15
 						EBase<=RegData2;
 					when others=>NULL;
 				end case;	
@@ -911,14 +893,14 @@ begin
 			Index							when "00000",
 			EntryLo0						when "00010",
 			EntryLo1						when "00011",
-			BadVAddr						when "01001",
-			Count							when "01010",
-			EntryHi						when "01011",
-			Compare						when "01100",
-			Status						when "01101",
-			Cause							when "01111",
-			EPC							when "10000",
-			EBase							when "10010",
+			BadVAddr						when "01000",
+			Count							when "01001",
+			EntryHi						when "01010",
+			Compare						when "01011",
+			Status						when "01100",
+			Cause							when "01101",
+			EPC							when "01110",
+			EBase							when "01111",
 			x"00000000"					when others;
 			
 	process(SW(4 downto 0))

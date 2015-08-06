@@ -331,11 +331,24 @@ begin
 	
 	process(rst,clk_cpu,MemRead,MemWrite)
 	begin
-		if rst = '0' or (MemRead = '0' and MemWrite='0') then
+		if rst = '0' then
 			--Data_out<=(others=>'0');
 			ready<='0';
 			mem_error<="00";
 			BadVAddr<=x"00000000";
+			bitmapx<="ZZZZ";
+			ram1Read<='0';
+			ram1Write<='0';
+			ram2Read<='0';
+			ram2Write<='0';
+			flashRead<='0';
+			flashWrite<='0';
+			comRead<='0';
+			comWrite<='0';
+		elsif MemRead = '0' and MemWrite='0' then
+			ready<='0';
+			mem_error<="00";
+			--BadVAddr<=x"00000000";
 			bitmapx<="ZZZZ";
 			ram1Read<='0';
 			ram1Write<='0';
@@ -489,19 +502,25 @@ begin
 					else
 						bitmap<=Vaddr(31 downto 16);
 					end if;
-				when "10"=>					
-						bitmap(2 downto 0)<=flag;
-						bitmap(3)<=flag_missing;
-						bitmap(4)<=flag_writable;
-						bitmap(5)<=ram1Write;
-						bitmap(6)<=ram1Read;
-						bitmap(7)<=ram2Write;
-						bitmap(8)<=ram2Read;
-						bitmap(9)<=flashWrite;
-						bitmap(10)<=flashRead;
-						bitmap(11)<=comWrite;
-						bitmap(12)<=comRead;
-						bitmap(14 downto 13)<=com_status(1 downto 0);
+				when "10"=>		
+						if SW(0) = '0' then
+							bitmap(2 downto 0)<=flag;
+							bitmap(3)<=flag_missing;
+							bitmap(4)<=flag_writable;
+							bitmap(5)<=ram1Write;
+							bitmap(6)<=ram1Read;
+							bitmap(7)<=ram2Write;
+							bitmap(8)<=ram2Read;
+							bitmap(9)<=flashWrite;
+							bitmap(10)<=flashRead;
+							bitmap(11)<=comWrite;
+							bitmap(12)<=comRead;
+							bitmap(14 downto 13)<=com_status(1 downto 0);
+							bitmap(15)<='0';
+						else
+							bitmap(7 downto 0)<=com_status(9 downto 2);
+							bitmap(15 downto 8)<=com_status(19 downto 12);
+						end if;
 				when "11"=>
 					bitmap<=comBuffer_bitmap;
 				when others=>bitmap<=(others=>'0');

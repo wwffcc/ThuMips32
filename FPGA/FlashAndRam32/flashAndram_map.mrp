@@ -11,7 +11,7 @@ Target Device  : xc6slx100
 Target Package : fgg676
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Wed Jul 29 10:19:41 2015
+Mapped Date    : Sat Jul 18 19:35:14 2015
 
 Design Summary
 --------------
@@ -36,12 +36,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   224 out of  15,822    1%
+  Number of occupied Slices:                   232 out of  15,822    1%
   Number of MUXCYs used:                        72 out of  31,644    1%
-  Number of LUT Flip Flop pairs used:          645
-    Number with an unused Flip Flop:           297 out of     645   46%
-    Number with an unused LUT:                  47 out of     645    7%
-    Number of fully used LUT-FF pairs:         301 out of     645   46%
+  Number of LUT Flip Flop pairs used:          655
+    Number with an unused Flip Flop:           306 out of     655   46%
+    Number with an unused LUT:                  57 out of     655    8%
+    Number of fully used LUT-FF pairs:         292 out of     655   44%
     Number of unique control sets:              16
     Number of slice register sites lost
       to control set restrictions:              61 out of 126,576    1%
@@ -83,9 +83,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                4.17
 
-Peak Memory Usage:  600 MB
-Total REAL time to MAP completion:  27 secs 
-Total CPU time to MAP completion:   26 secs 
+Peak Memory Usage:  599 MB
+Total REAL time to MAP completion:  26 secs 
+Total CPU time to MAP completion:   25 secs 
 
 Table of Contents
 -----------------

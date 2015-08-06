@@ -95,7 +95,6 @@ signal cond_flash:STD_LOGIC_VECTOR(1 downto 0):="00";
 signal flashDatax:STD_LOGIC_VECTOR(31 downto 0):=x"00000000";
 signal cond4:STD_LOGIC_VECTOR(1 downto 0):="00";
 --signal flashAddrx:STD_LOGIC_VECTOR(22 downto 0):=(others=>'0');
-signal clkx:STD_LOGIC:='0';
 begin
 	--Paddr<= recv_byte when cond = "0100" else Paddr;
 
@@ -106,15 +105,6 @@ begin
 	FlashVPEN <= '1';
 	FlashRP <= '1';
 	FlashBYTE <= '1';	
-	
-	process(rst,clk11)
-	begin
-		if rst = '0' then
-			clkx<='0';
-		elsif rising_edge(clk11) then
-			clkx<= not clkx;
-		end if;
-	end process;
 	
 	process(rst,clk11)
 	begin

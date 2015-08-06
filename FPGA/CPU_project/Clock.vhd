@@ -67,7 +67,7 @@ begin
 				clk_cpu<=counter;
 				clk_mm<=counter;
 			when "100"=>
-				clk_cpu<=counter;
+				clk_cpu<=clk11;
 				clk_mm<=clk11;
 			when "101"=>
 				clk_cpu<=counter;

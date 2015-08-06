@@ -136,6 +136,9 @@ begin
 						cause_IP(5)<=Status(15) and timer_Int;
 						cause_IP(0)<=Status(10) and com_Int;
 						EXP_type<='0';
+						PCWrite<='0';
+						MemRead<='0';
+						MemWrite<='0';
 						g_state<=interrupt;
 					else
 						--g_state<=decode;
@@ -169,11 +172,13 @@ begin
 						set_Cause<='0';
 						set_EXL<='0';
 						rm_EXL<='0';
+						EXP_type<='0';
 						cause_IP<=(others=>'0');
 						if Mem_ready='1' then
 							if mem_error /= "00" then
 								g_state<=interrupt;
 								MemRead<='0';
+								EXP_type<='0';
 								case mem_error is
 									when "01"=>
 										exc_code<="00010";
@@ -202,7 +207,8 @@ begin
 					ALUOutWrite<='1';						--ALUOutWritex
 				when execute=>
 					PCWrite<='0';
-					g_state<=write_back;
+					EXP_type<='1';
+					g_state<=write_back;					
 					case instructions(31 downto 26) is
 						when "001001"=>									--ADDIU							
 							RegDst<="01";
@@ -222,13 +228,13 @@ begin
 										ALUOp<="0000";
 									when "101010"=>						--SLT										
 										RegDst<="00";
-										RegDataSrc<="000";
+										RegDataSrc<="111";
 										ALUSrcA<="01";
 										ALUSrcB<="001";
 										ALUOp<="1001";
 									when "101011"=>						--SLTU										
 										RegDst<="00";
-										RegDataSrc<="000";
+										RegDataSrc<="111";
 										ALUSrcA<="01";
 										ALUSrcB<="001";
 										ALUOp<="1010";
@@ -346,7 +352,7 @@ begin
 										if instructions(25 downto 11) = "000000000000000" then		--SYSCALL
 											g_state<=interrupt;
 											exc_code<="01000";
-											EXP_type<='0';
+											--EXP_type<='0';
 										else
 											g_state<=interrupt;
 											exc_code<="01010";
@@ -393,14 +399,14 @@ begin
 							end if;						
 						when "001010"=>									--SLTI							
 							RegDst<="01";
-							RegDataSrc<="000";
+							RegDataSrc<="111";
 							ExtendOp<="000";
 							ALUSrcA<="01";
 							ALUSrcB<="010";
 							ALUOp<="1001";
 						when "001011"=>									--SLTIU							
 							RegDst<="01";
-							RegDataSrc<="000";
+							RegDataSrc<="111";
 							ExtendOp<="001";
 							ALUSrcA<="01";
 							ALUSrcB<="010";
@@ -598,6 +604,7 @@ begin
 					end case;
 				when mem_access=>
 					g_state<=write_back;
+					EXP_type<='1';
 					case instructions(31 downto 26) is
 						when "100011"=>							--LW				--wait to be modified
 							MemRead<='1';
@@ -641,6 +648,8 @@ begin
 							if Mem_ready = '1' then
 								MemRead<='0';
 								case mem_error is
+									when "00"=>
+										g_state<=write_back;
 									when "01"=>
 										exc_code<="00011";
 										g_state<=interrupt;
@@ -663,6 +672,7 @@ begin
 					end case;
 				when write_back=>					
 					g_state<=instruction_fetch;
+					EXP_type<='1';
 					case instructions(31 downto 26) is
 						when "001001"=>									--ADDIU
 							RegWrite<='1';
@@ -783,7 +793,7 @@ begin
 								MemRead<='0';
 								case mem_error is
 									when "00"=>RegWrite<='1';
-													--g_state<=instruction_fetch;
+													g_state<=instruction_fetch;
 									when "01"=>
 												exc_code<="00010";
 												g_state<=interrupt;
@@ -802,7 +812,7 @@ begin
 								MemRead<='0';
 								case mem_error is
 									when "00"=>RegWrite<='1';
-													--g_state<=instruction_fetch;
+													g_state<=instruction_fetch;
 									when "01"=>
 												exc_code<="00010";
 												g_state<=interrupt;
@@ -818,6 +828,7 @@ begin
 							--RegWrite<='1';
 						when "101000"=>								--SB
 							MemWrite<='1';
+							MemRead<='0';
 							if mem_ready = '1' then
 								MemWrite<='0';
 								case mem_error is
@@ -866,6 +877,7 @@ begin
 								case mem_error is
 									when "00"=>
 											RegWrite<='1';
+											g_state<=instruction_fetch;
 									when "01"=>
 											exc_code<="00010";
 											g_state<=interrupt;

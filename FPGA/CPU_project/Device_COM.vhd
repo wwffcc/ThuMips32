@@ -81,7 +81,7 @@ begin
 			Data_out<=(others=>'0');
 			Data_out<=(others=>'0');
 			
-			com_statusx<=(others=>'0');
+			--com_statusx<=(others=>'1');
 			--comBuffer<=(others=>(others=>'0'));
 			--header<=(others=>'0');
 			tailer<=(others=>'0');
@@ -93,10 +93,10 @@ begin
 			COM_Ready<='0';
 			Data_out<=(others=>'0');
 			
-			--com_status<=(others=>'1');
+			--com_statusx<=(others=>'1');
 			--comBuffer<=(others=>(others=>'0'));
 			--header<=(others=>'0');
-			tailer<=(others=>'0');
+			--tailer<=(others=>'0');
 			fr_state<=com_init;
 		elsif rising_edge(clk) then
 			case fr_state is
@@ -107,9 +107,9 @@ begin
 					COM_Ready<='0';
 					if COM_Write = '1' then						
 						fr_state<=send0;
-						com_statusx(0)<='1';
+						--com_statusx(0)<='1';
 					else
-						com_statusx(1)<='1';
+						--com_statusx(1)<='1';
 						fr_state<=recv0;
 					end if;
 				when send0=>
@@ -128,11 +128,12 @@ begin
 					wrn<='1';
 					--Ram1Data<=(others=>'Z');
 					COM_Ready<='1';
-					com_statusx(0)<='0';
+					--com_statusx(0)<='0';
 					fr_state<=com_init;			
 				when recv0=>
 					if tailer /=header then
 						Data_out(7 downto 0)<=comBuffer(CONV_INTEGER(tailer));
+						Data_out(31 downto 8)<=(others=>'0');
 						fr_state<=recv1;
 					--else
 					--	com_statusx(1)<='0';
@@ -141,18 +142,29 @@ begin
 				when recv1=>
 					tailer<=tailer+1;
 					COM_ready<='1';
-					com_statusx(1)<='0';
+					--com_statusx(1)<='0';
 					fr_state<=com_init;
 				when others=>NULL;
 			end case;
 		end if;		
 	end process;
 	
+	process(COM_Write,header,tailer)
+	begin
+		com_statusx(0)<=not COM_Write;
+		if header /= tailer then
+			com_statusx(1)<='1';
+		else
+			com_statusx(1)<='0';
+		end if;
+	end process;
+	
+	
 	COM_INT<='1' when header /= tailer else '0';
 	
 	com_status(1 downto 0)<=com_statusx;
-	com_status(11 downto 2)<=header -tailer;
-	com_status(21 downto 12)<=(others=>'0');
+	com_status(11 downto 2)<=header;
+	com_status(21 downto 12)<=tailer;
 	
 	process(rst,clk)
 	begin
